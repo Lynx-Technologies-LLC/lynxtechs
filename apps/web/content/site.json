@@ -1,0 +1,29 @@
+{
+  "companyName": "Lynx Technologies",
+  "tagline": "Real-time hardware for robotics and industrial automation",
+  "description": "Products and services for real-time hardware design in robotics and industrial automation.",
+  "salesEmail": "sales@lynxtechs.com",
+  "url": "https://lynxtechs.com",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Products", "href": "/products" },
+    { "label": "About", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "products": [
+      { "label": "LXMSTR", "href": "/products/lxmstr" },
+      { "label": "LXDIO33-16", "href": "/products/lxdio33-16" }
+    ],
+    "services": [
+      { "label": "EtherCAT Hardware Design", "href": "/services" },
+      { "label": "System Integration", "href": "/services" },
+      { "label": "Industrial Automation", "href": "/services" }
+    ],
+    "company": [
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ]
+  }
+}

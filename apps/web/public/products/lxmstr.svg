@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" fill="none">
+  <rect width="1200" height="600" fill="#f5f5f5"/>
+  <rect x="80" y="80" width="1040" height="440" rx="8" fill="#ffffff" stroke="#e5e5e5" stroke-width="2"/>
+  <rect x="120" y="120" width="200" height="120" rx="4" fill="#0a0a0a"/>
+  <text x="220" y="195" text-anchor="middle" fill="#ffffff" font-family="system-ui,sans-serif" font-size="28" font-weight="700">LXMSTR</text>
+  <circle cx="420" cy="180" r="40" fill="#0a0a0a"/>
+  <circle cx="540" cy="180" r="40" fill="none" stroke="#0a0a0a" stroke-width="3"/>
+  <circle cx="660" cy="180" r="40" fill="none" stroke="#0a0a0a" stroke-width="3"/>
+  <line x1="460" y1="180" x2="500" y2="180" stroke="#0a0a0a" stroke-width="2"/>
+  <line x1="580" y1="180" x2="620" y2="180" stroke="#0a0a0a" stroke-width="2"/>
+  <rect x="120" y="280" width="960" height="8" rx="2" fill="#e5e5e5"/>
+  <rect x="120" y="280" width="640" height="8" rx="2" fill="#0a0a0a"/>
+  <rect x="120" y="320" width="400" height="60" rx="4" fill="#f5f5f5" stroke="#e5e5e5" stroke-width="1"/>
+  <rect x="540" y="320" width="400" height="60" rx="4" fill="#f5f5f5" stroke="#e5e5e5" stroke-width="1"/>
+  <rect x="120" y="410" width="180" height="50" rx="4" fill="#0a0a0a"/>
+  <rect x="320" y="410" width="180" height="50" rx="4" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+  <rect x="520" y="410" width="180" height="50" rx="4" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+  <text x="600" y="530" text-anchor="middle" fill="#525252" font-family="system-ui,sans-serif" font-size="18">EtherCAT Master Software</text>
+</svg>

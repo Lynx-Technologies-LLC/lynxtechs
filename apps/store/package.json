@@ -1,0 +1,10 @@
+{
+  "name": "@lynxtechs/store",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Medusa headless commerce backend (Phase 2)",
+  "scripts": {
+    "dev": "echo 'Medusa not yet scaffolded. See README.md for setup.' && exit 1",
+    "build": "echo 'Medusa not yet scaffolded. See README.md for setup.' && exit 1"
+  }
+}

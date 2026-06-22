@@ -1,0 +1,21 @@
+{
+  "name": "lynxtechs",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "npm@9.2.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev --filter=@lynxtechs/web",
+    "build": "turbo build --filter=@lynxtechs/web",
+    "lint": "turbo lint --filter=@lynxtechs/web",
+    "start": "turbo start --filter=@lynxtechs/web"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.4"
+  }
+}
