@@ -61,6 +61,19 @@ lynxtechs/
 └── turbo.json
 ```
 
+## Deploy to Vercel
+
+This is a **monorepo**. Vercel must build the Next.js app inside `apps/web`, not the repo root.
+
+1. Import the GitHub repo in Vercel
+2. **Root Directory:** click Edit → select **`apps/web`** → Continue
+3. **Framework Preset:** Next.js (auto-detected)
+4. **Output Directory:** leave **empty** (do not set `public` or `.next`)
+5. **Node.js Version:** 22.x (Settings → General)
+6. Deploy — no environment variables needed for the marketing site
+
+If you see `No Output Directory named "public" found`, the Root Directory is wrong (still at repo root) or Output Directory was set to `public` in project settings. Clear Output Directory override and set Root Directory to `apps/web`, then redeploy.
+
 ## Phase 2 — Shop
 
 See [apps/store/README.md](apps/store/README.md) for headless commerce setup with Medusa + Stripe.
