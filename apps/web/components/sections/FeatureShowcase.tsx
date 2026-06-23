@@ -34,7 +34,7 @@ export function FeatureShowcase() {
     <section className="py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          label="Why Lynx Techs"
+          label="Why Lynx Technologies"
           title="Built for real-time robotics and industrial automation"
           description="Products and engineering services designed around EtherCAT — the fieldbus chosen when timing matters."
           align="center"
