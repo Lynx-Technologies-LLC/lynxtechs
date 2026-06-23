@@ -8,6 +8,32 @@ import { Logo } from "@/components/layout/Logo";
 import { Button } from "@/components/ui/button";
 import { getSiteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
+import type { NavItem } from "@/lib/site";
+
+const navLinkClassName =
+  "rounded-md border border-transparent px-3 py-2 text-sm font-medium text-background/80 transition-colors hover:border-white/30 hover:bg-white/10 hover:text-background";
+
+function NavLink({ item, onClick }: { item: NavItem; onClick?: () => void }) {
+  if (item.external) {
+    return (
+      <a
+        href={item.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={navLinkClassName}
+        onClick={onClick}
+      >
+        {item.label}
+      </a>
+    );
+  }
+
+  return (
+    <Link href={item.href} className={navLinkClassName} onClick={onClick}>
+      {item.label}
+    </Link>
+  );
+}
 
 export function Header() {
   const site = getSiteConfig();
@@ -20,13 +46,7 @@ export function Header() {
 
         <nav className="hidden items-center gap-2 md:flex">
           {site.nav.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="rounded-md border border-transparent px-3 py-2 text-sm font-medium text-background/80 transition-colors hover:border-white/30 hover:bg-white/10 hover:text-background"
-            >
-              {item.label}
-            </Link>
+            <NavLink key={item.href} item={item} />
           ))}
           <Button
             asChild
@@ -55,14 +75,11 @@ export function Header() {
       >
         <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6 lg:px-8">
           {site.nav.map((item) => (
-            <Link
+            <NavLink
               key={item.href}
-              href={item.href}
-              className="rounded-md border border-transparent px-3 py-2.5 text-sm font-medium text-background/80 transition-colors hover:border-white/30 hover:bg-white/10 hover:text-background"
+              item={item}
               onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
+            />
           ))}
           <Button
             asChild

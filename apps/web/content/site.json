@@ -9,6 +9,7 @@
     { "label": "Services", "href": "/services" },
     { "label": "Products", "href": "/products" },
     { "label": "About", "href": "/about" },
+    { "label": "Docs", "href": "https://docs.lynxtechs.com", "external": true },
     { "label": "Contact", "href": "/contact" }
   ],
   "footer": {

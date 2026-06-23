@@ -3,6 +3,7 @@ import siteConfig from "@/content/site.json";
 export type NavItem = {
   label: string;
   href: string;
+  external?: boolean;
 };
 
 export type SiteConfig = {
