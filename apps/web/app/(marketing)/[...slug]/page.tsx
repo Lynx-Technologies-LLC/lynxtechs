@@ -6,7 +6,7 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { CTA } from "@/components/sections/CTA";
 import { PageHero } from "@/components/sections/PageHero";
 import { ProductCatalog } from "@/components/sections/ProductCatalog";
-import { ProductDetail } from "@/components/sections/ProductDetail";
+import { ProductPage } from "@/components/sections/ProductPage";
 import { getAllPageSlugs, getPageBySlug } from "@/lib/mdx";
 import { getSiteConfig } from "@/lib/site";
 
@@ -51,7 +51,7 @@ export default async function ContentPage({ params }: PageProps) {
 
   return (
     <>
-      {!isProductsIndex ? (
+      {!isProductsIndex && !isProductDetail ? (
         <PageHero
           headline={page.frontmatter.hero?.headline ?? page.frontmatter.title}
           subcopy={page.frontmatter.hero?.subcopy}
@@ -63,10 +63,10 @@ export default async function ContentPage({ params }: PageProps) {
           {isProductsIndex ? (
             <ProductCatalog />
           ) : isProductDetail && page.frontmatter.product ? (
-            <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
-              <MdxContent source={page.content} />
-              <ProductDetail product={page.frontmatter.product} />
-            </div>
+            <ProductPage
+              slug={page.slug}
+              product={page.frontmatter.product}
+            />
           ) : isContact ? (
             <div className="grid gap-10 lg:grid-cols-2">
               <MdxContent source={page.content} />
@@ -80,7 +80,7 @@ export default async function ContentPage({ params }: PageProps) {
         </div>
       </section>
 
-      {!isContact ? (
+      {!isContact && !isProductDetail ? (
         <CTA
           buttonHref="/contact"
           subcopy={`Contact ${site.salesEmail} to discuss your project.`}

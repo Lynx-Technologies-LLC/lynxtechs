@@ -15,6 +15,11 @@ export type PageFrontmatter = {
     name: string;
     type: "Software" | "Hardware";
     summary: string;
+    sku?: string;
+    images?: { src: string; alt?: string }[];
+    overview?: string;
+    specs?: { label: string; value: string }[];
+    documentation?: { label: string; href: string }[];
     highlights?: string[];
     cta?: string;
   };
