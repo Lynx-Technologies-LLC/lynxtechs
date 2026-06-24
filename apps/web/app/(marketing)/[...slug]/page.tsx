@@ -5,8 +5,6 @@ import { MdxContent } from "@/components/mdx/MdxContent";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { CTA } from "@/components/sections/CTA";
 import { PageHero } from "@/components/sections/PageHero";
-import { ProductCatalog } from "@/components/sections/ProductCatalog";
-import { ProductPage } from "@/components/sections/ProductPage";
 import { getAllPageSlugs, getPageBySlug } from "@/lib/mdx";
 import { getSiteConfig } from "@/lib/site";
 
@@ -14,10 +12,14 @@ type PageProps = {
   params: Promise<{ slug: string[] }>;
 };
 
+const DEDICATED_PAGE_SLUGS = new Set(["products"]);
+
 export async function generateStaticParams() {
-  return getAllPageSlugs().map((slug) => ({
-    slug: slug.split("/"),
-  }));
+  return getAllPageSlugs()
+    .filter((slug) => !DEDICATED_PAGE_SLUGS.has(slug))
+    .map((slug) => ({
+      slug: slug.split("/"),
+    }));
 }
 
 export async function generateMetadata({
@@ -46,28 +48,17 @@ export default async function ContentPage({ params }: PageProps) {
 
   const site = getSiteConfig();
   const isContact = page.slug === "contact";
-  const isProductsIndex = page.slug === "products";
-  const isProductDetail = page.slug.startsWith("products/") && page.slug !== "products";
 
   return (
     <>
-      {!isProductsIndex && !isProductDetail ? (
-        <PageHero
-          headline={page.frontmatter.hero?.headline ?? page.frontmatter.title}
-          subcopy={page.frontmatter.hero?.subcopy}
-        />
-      ) : null}
+      <PageHero
+        headline={page.frontmatter.hero?.headline ?? page.frontmatter.title}
+        subcopy={page.frontmatter.hero?.subcopy}
+      />
 
-      <section className={isProductsIndex ? "py-12" : "py-16"}>
+      <section className="py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          {isProductsIndex ? (
-            <ProductCatalog />
-          ) : isProductDetail && page.frontmatter.product ? (
-            <ProductPage
-              slug={page.slug}
-              product={page.frontmatter.product}
-            />
-          ) : isContact ? (
+          {isContact ? (
             <div className="grid gap-10 lg:grid-cols-2">
               <MdxContent source={page.content} />
               <ContactForm />
@@ -80,7 +71,7 @@ export default async function ContentPage({ params }: PageProps) {
         </div>
       </section>
 
-      {!isContact && !isProductDetail ? (
+      {!isContact ? (
         <CTA
           buttonHref="/contact"
           subcopy={`Contact ${site.salesEmail} to discuss your project.`}

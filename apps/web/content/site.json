@@ -13,10 +13,6 @@
     { "label": "Contact", "href": "/contact" }
   ],
   "footer": {
-    "products": [
-      { "label": "LXMSTR", "href": "/products/lxmstr" },
-      { "label": "LXDIO33-16", "href": "/products/lxdio33-16" }
-    ],
     "services": [
       { "label": "EtherCAT Hardware Design", "href": "/services" },
       { "label": "System Integration", "href": "/services" },

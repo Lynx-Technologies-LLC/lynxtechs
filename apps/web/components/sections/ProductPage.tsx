@@ -3,29 +3,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import type { PageFrontmatter } from "@/lib/mdx";
+import type { Product } from "@/lib/product-types";
 import { getSiteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type ProductPageProps = {
-  slug: string;
-  product: NonNullable<PageFrontmatter["product"]>;
+  product: Product;
 };
 
-type ProductImage = {
-  src: string;
-  alt: string;
-};
-
-function getProductSlug(slug: string) {
-  return slug.replace(/^products\//, "");
-}
-
-function ProductImageGallery({ images }: { images: ProductImage[] }) {
+function ProductImageGallery({
+  images,
+}: {
+  images: Product["images"];
+}) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const selectedImage = images[selectedIndex] ?? images[0];
 
@@ -74,11 +68,7 @@ function ProductImageGallery({ images }: { images: ProductImage[] }) {
   );
 }
 
-function ProductPurchasePanel({
-  product,
-}: {
-  product: NonNullable<PageFrontmatter["product"]>;
-}) {
+function ProductPurchasePanel({ product }: { product: Product }) {
   const site = getSiteConfig();
 
   return (
@@ -114,11 +104,7 @@ function ProductPurchasePanel({
   );
 }
 
-function ProductTabs({
-  product,
-}: {
-  product: NonNullable<PageFrontmatter["product"]>;
-}) {
+function ProductTabs({ product }: { product: Product }) {
   const site = getSiteConfig();
   const docsUrl =
     site.nav.find((item) => item.label === "Docs")?.href ??
@@ -229,29 +215,11 @@ function ProductTabs({
   );
 }
 
-export function ProductPage({ slug, product }: ProductPageProps) {
-  const productSlug = getProductSlug(slug);
-
-  const images = useMemo<ProductImage[]>(() => {
-    if (product.images && product.images.length > 0) {
-      return product.images.map((image) => ({
-        src: image.src,
-        alt: image.alt ?? product.name,
-      }));
-    }
-
-    return [
-      {
-        src: `/products/${productSlug}.svg`,
-        alt: product.name,
-      },
-    ];
-  }, [product.images, product.name, productSlug]);
-
+export function ProductPage({ product }: ProductPageProps) {
   return (
     <div className="space-y-16">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-        <ProductImageGallery images={images} />
+        <ProductImageGallery images={product.images} />
         <ProductPurchasePanel product={product} />
       </div>
 

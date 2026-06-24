@@ -7,32 +7,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import type { ProductSummary } from "@/lib/product-types";
 import { cn } from "@/lib/utils";
-
-const slides = [
-  {
-    name: "LXMSTR",
-    type: "Software",
-    description: "EtherCAT master software for real-time control.",
-    href: "/products/lxmstr",
-    image: "/products/lxmstr.svg",
-    alt: "LXMSTR EtherCAT master software",
-  },
-  {
-    name: "LXDIO33-16",
-    type: "Hardware",
-    description: "3.3 V EtherCAT digital I/O PCB module.",
-    href: "/products/lxdio33-16",
-    image: "/products/lxdio33-16.svg",
-    alt: "LXDIO33-16 EtherCAT digital I/O module",
-  },
-];
 
 const INTERVAL_MS = 10000;
 
 type CinematicHeroProps = {
   headline: string;
   subcopy: string;
+  products: ProductSummary[];
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 };
@@ -40,24 +23,36 @@ type CinematicHeroProps = {
 export function CinematicHero({
   headline,
   subcopy,
+  products,
   primaryCta = { label: "Contact Sales", href: "/contact" },
   secondaryCta = { label: "View Products", href: "/products" },
 }: CinematicHeroProps) {
   const [current, setCurrent] = useState(0);
 
-  const goTo = useCallback((index: number) => {
-    setCurrent((index + slides.length) % slides.length);
-  }, []);
+  const goTo = useCallback(
+    (index: number) => {
+      if (products.length === 0) {
+        return;
+      }
+
+      setCurrent((index + products.length) % products.length);
+    },
+    [products.length],
+  );
 
   const next = useCallback(() => goTo(current + 1), [current, goTo]);
   const prev = useCallback(() => goTo(current - 1), [current, goTo]);
 
   useEffect(() => {
+    if (products.length <= 1) {
+      return;
+    }
+
     const timer = setInterval(next, INTERVAL_MS);
     return () => clearInterval(timer);
-  }, [next]);
+  }, [next, products.length]);
 
-  const slide = slides[current];
+  const slide = products[current];
 
   return (
     <section
@@ -65,25 +60,27 @@ export function CinematicHero({
       aria-label="Product slideshow"
       aria-roledescription="carousel"
     >
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={slide.name}
-          initial={{ opacity: 0, scale: 1.03 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.7 }}
-          className="absolute inset-0"
-        >
-          <Image
-            src={slide.image}
-            alt={slide.alt}
-            fill
-            priority
-            className="object-cover object-center opacity-90"
-            sizes="100vw"
-          />
-        </motion.div>
-      </AnimatePresence>
+      {slide ? (
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={slide.handle}
+            initial={{ opacity: 0, scale: 1.03 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.7 }}
+            className="absolute inset-0"
+          >
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority
+              className="object-cover object-center opacity-90"
+              sizes="100vw"
+            />
+          </motion.div>
+        </AnimatePresence>
+      ) : null}
 
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
@@ -119,65 +116,69 @@ export function CinematicHero({
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.25 }}
-            className="lg:text-right"
-          >
-            <Link
-              href={slide.href}
-              className="group inline-block rounded-xl border border-white/20 bg-white/5 p-6 backdrop-blur-md transition-colors hover:bg-white/10"
+          {slide ? (
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="lg:text-right"
             >
-              <span className="text-xs font-medium uppercase tracking-wider text-white/60">
-                Featured product
-              </span>
-              <p className="mt-2 text-2xl font-bold text-white">{slide.name}</p>
-              <p className="mt-1 text-sm text-white/70">{slide.description}</p>
-              <span className="mt-4 inline-block text-sm font-medium text-white group-hover:underline">
-                Explore {slide.name} →
-              </span>
-            </Link>
-          </motion.div>
+              <Link
+                href={slide.href}
+                className="group inline-block rounded-xl border border-white/20 bg-white/5 p-6 backdrop-blur-md transition-colors hover:bg-white/10"
+              >
+                <span className="text-xs font-medium uppercase tracking-wider text-white/60">
+                  Featured product
+                </span>
+                <p className="mt-2 text-2xl font-bold text-white">{slide.name}</p>
+                <p className="mt-1 text-sm text-white/70">{slide.summary}</p>
+                <span className="mt-4 inline-block text-sm font-medium text-white group-hover:underline">
+                  Explore {slide.name} →
+                </span>
+              </Link>
+            </motion.div>
+          ) : null}
         </div>
 
-        <div className="mt-12 flex items-center justify-between">
-          <div className="flex gap-2">
-            {slides.map((item, index) => (
+        {products.length > 1 ? (
+          <div className="mt-12 flex items-center justify-between">
+            <div className="flex gap-2">
+              {products.map((item, index) => (
+                <button
+                  key={item.handle}
+                  type="button"
+                  onClick={() => goTo(index)}
+                  className={cn(
+                    "h-1 rounded-full transition-all",
+                    index === current
+                      ? "w-10 bg-white"
+                      : "w-4 bg-white/40 hover:bg-white/70",
+                  )}
+                  aria-label={`Go to ${item.name}`}
+                  aria-current={index === current ? "true" : undefined}
+                />
+              ))}
+            </div>
+            <div className="flex gap-2">
               <button
-                key={item.name}
                 type="button"
-                onClick={() => goTo(index)}
-                className={cn(
-                  "h-1 rounded-full transition-all",
-                  index === current
-                    ? "w-10 bg-white"
-                    : "w-4 bg-white/40 hover:bg-white/70",
-                )}
-                aria-label={`Go to ${item.name}`}
-                aria-current={index === current ? "true" : undefined}
-              />
-            ))}
+                onClick={prev}
+                className="rounded-full border border-white/20 bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="h-5 w-5" />
+              </button>
+              <button
+                type="button"
+                onClick={next}
+                className="rounded-full border border-white/20 bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="h-5 w-5" />
+              </button>
+            </div>
           </div>
-          <div className="flex gap-2">
-            <button
-              type="button"
-              onClick={prev}
-              className="rounded-full border border-white/20 bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-              aria-label="Previous slide"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              onClick={next}
-              className="rounded-full border border-white/20 bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
-              aria-label="Next slide"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-        </div>
+        ) : null}
       </div>
     </section>
   );

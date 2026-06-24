@@ -14,7 +14,6 @@ export type SiteConfig = {
   url: string;
   nav: NavItem[];
   footer: {
-    products: NavItem[];
     services: NavItem[];
     company: NavItem[];
   };

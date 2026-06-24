@@ -11,18 +11,6 @@ export type PageFrontmatter = {
     headline: string;
     subcopy?: string;
   };
-  product?: {
-    name: string;
-    type: "Software" | "Hardware";
-    summary: string;
-    sku?: string;
-    images?: { src: string; alt?: string }[];
-    overview?: string;
-    specs?: { label: string; value: string }[];
-    documentation?: { label: string; href: string }[];
-    highlights?: string[];
-    cta?: string;
-  };
 };
 
 export type PageContent = {

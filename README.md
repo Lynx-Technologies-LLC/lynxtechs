@@ -50,6 +50,49 @@ Open [http://localhost:3000](http://localhost:3000).
 
 For nested routes, use folders: `content/pages/docs/guide.mdx` → `/docs/guide`
 
+## Adding a product
+
+Product marketing content lives in dedicated product files. The catalog, homepage teasers, footer links, and product detail pages all read from the same source — no React edits needed.
+
+### Folder structure
+
+```text
+apps/web/
+├── content/products/
+│   └── my-module.mdx           # product copy + frontmatter
+├── content/pages/
+│   └── products.mdx            # catalog page intro only
+└── public/products/
+    └── my-module/
+        ├── hero.svg            # primary image (default if images omitted)
+        ├── front.jpg           # optional gallery images
+        └── datasheet.pdf       # optional downloadable docs
+```
+
+### Steps
+
+1. Create `apps/web/content/products/my-module.mdx` with product frontmatter (copy an existing product as a template).
+2. Add images and PDFs under `apps/web/public/products/my-module/`.
+3. Set `listed: true` to show the product in the catalog, homepage, and footer; use `order` to control sort position (lower numbers first).
+4. Deploy — catalog, teasers, footer, and detail page update automatically.
+
+### Frontmatter fields
+
+| Field | Purpose |
+|-------|---------|
+| `title`, `description` | SEO / browser tab |
+| `name`, `type`, `summary` | Purchase panel and catalog cards |
+| `sku` | SKU line on detail page |
+| `images` | Gallery images (`/products/{handle}/...` paths) |
+| `overview`, `highlights` | Overview tab |
+| `specs` | Specs tab (label/value pairs) |
+| `documentation` | Documentation tab links |
+| `cta` | Primary quote button label |
+| `listed` | Show in catalog/teasers/footer (default `true`) |
+| `order` | Sort order in lists (default `0`) |
+
+Price and cart will come from Medusa in Phase 2 ([apps/store/README.md](apps/store/README.md)); marketing copy stays in `content/products/`.
+
 ## Project structure
 
 ```text
