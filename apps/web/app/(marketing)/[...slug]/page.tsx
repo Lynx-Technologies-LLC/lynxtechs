@@ -60,7 +60,7 @@ export default async function ContentPage({ params }: PageProps) {
       <section className="py-16">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {isContact ? (
-            <div className="grid gap-10 lg:grid-cols-2">
+            <div className="grid items-start gap-10 lg:grid-cols-2">
               <div className="space-y-6">
                 <p className="text-muted-foreground">
                   Email us at{" "}
@@ -74,12 +74,13 @@ export default async function ContentPage({ params }: PageProps) {
                 </p>
                 <ContactForm />
               </div>
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border lg:aspect-auto lg:min-h-full">
+              <div className="self-start overflow-hidden rounded-2xl border border-border">
                 <Image
                   src="/office-building.png"
                   alt="Lynx Technologies office"
-                  fill
-                  className="object-cover"
+                  width={1245}
+                  height={688}
+                  className="h-auto w-full"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
