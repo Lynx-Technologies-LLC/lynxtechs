@@ -1,4 +1,3 @@
-import { AboutTeaser } from "@/components/sections/AboutTeaser";
 import { CTA } from "@/components/sections/CTA";
 import { CinematicHero } from "@/components/sections/CinematicHero";
 import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
@@ -31,7 +30,6 @@ export default function HomePage() {
       <ProcessSteps />
       <IndustriesGrid />
       <Testimonials />
-      <AboutTeaser />
       <CTA
         headline="Ready to design your next real-time system?"
         subcopy={`Talk with our sales team at ${site.salesEmail} about EtherCAT hardware, LXMSTR, or custom engineering support.`}

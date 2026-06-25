@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 
 import { MdxContent } from "@/components/mdx/MdxContent";
@@ -60,7 +61,18 @@ export default async function ContentPage({ params }: PageProps) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {isContact ? (
             <div className="grid gap-10 lg:grid-cols-2">
-              <MdxContent source={page.content} />
+              <div className="space-y-8">
+                <MdxContent source={page.content} />
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
+                  <Image
+                    src="/office-building.png"
+                    alt="Lynx Technologies office"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
               <ContactForm />
             </div>
           ) : (

@@ -8,7 +8,6 @@
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },
     { "label": "Products", "href": "/products" },
-    { "label": "About", "href": "/about" },
     { "label": "Docs", "href": "https://docs.lynxtechs.com", "external": true },
     { "label": "Contact", "href": "/contact" }
   ],
@@ -19,7 +18,6 @@
       { "label": "Industrial Automation", "href": "/services" }
     ],
     "company": [
-      { "label": "About", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ]
   }
