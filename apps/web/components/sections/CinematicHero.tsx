@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import type { ProductSummary } from "@/lib/product-types";
 import { cn } from "@/lib/utils";
 
-const INTERVAL_MS = 10000;
+const INTERVAL_MS = 5000;
 
 type CinematicHeroProps = {
   headline: string;

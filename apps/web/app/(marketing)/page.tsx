@@ -3,8 +3,6 @@ import { CinematicHero } from "@/components/sections/CinematicHero";
 import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { ProductsTeaser } from "@/components/sections/ProductsTeaser";
-import { ServicesTeaser } from "@/components/sections/ServicesTeaser";
 import { StatsBar } from "@/components/sections/StatsBar";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { getListedProductSummaries } from "@/lib/products";
@@ -25,8 +23,6 @@ export default function HomePage() {
       />
       <StatsBar />
       <FeatureShowcase />
-      <ServicesTeaser />
-      <ProductsTeaser products={products} />
       <ProcessSteps />
       <IndustriesGrid />
       <Testimonials />
