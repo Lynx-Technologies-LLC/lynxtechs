@@ -12,9 +12,26 @@ import type {
 export type { Product, ProductSummary } from "@/lib/product-types";
 
 const productsDirectory = path.join(process.cwd(), "content/products");
+const publicDirectory = path.join(process.cwd(), "public");
 
 function getDefaultHeroImage(handle: string): string {
   return `/products/${handle}/hero.svg`;
+}
+
+function cacheBustLocalSrc(src: string): string {
+  if (!src.startsWith("/")) {
+    return src;
+  }
+
+  const [pathname] = src.split("?");
+  const filePath = path.join(publicDirectory, pathname);
+
+  if (!fs.existsSync(filePath)) {
+    return src;
+  }
+
+  const { mtimeMs } = fs.statSync(filePath);
+  return `${pathname}?v=${Math.floor(mtimeMs)}`;
 }
 
 function resolveImages(
@@ -23,14 +40,14 @@ function resolveImages(
 ): { src: string; alt: string }[] {
   if (product.images && product.images.length > 0) {
     return product.images.map((image) => ({
-      src: image.src,
+      src: cacheBustLocalSrc(image.src),
       alt: image.alt ?? product.name,
     }));
   }
 
   return [
     {
-      src: getDefaultHeroImage(handle),
+      src: cacheBustLocalSrc(getDefaultHeroImage(handle)),
       alt: product.name,
     },
   ];
