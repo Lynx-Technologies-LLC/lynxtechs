@@ -3,7 +3,6 @@ import { Suspense } from "react";
 
 import { MdxContent } from "@/components/mdx/MdxContent";
 import { CTA } from "@/components/sections/CTA";
-import { PageHero } from "@/components/sections/PageHero";
 import { ProductCatalog } from "@/components/sections/ProductCatalog";
 import { getPageBySlug } from "@/lib/mdx";
 import { getListedProductSummaries } from "@/lib/products";
@@ -33,11 +32,6 @@ export default function ProductsPage() {
 
   return (
     <>
-      <PageHero
-        headline={page.frontmatter.hero?.headline ?? page.frontmatter.title}
-        subcopy={page.frontmatter.hero?.subcopy}
-      />
-
       <section className="py-12">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6">
           {page.content.trim() ? (
