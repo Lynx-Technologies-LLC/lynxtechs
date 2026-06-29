@@ -26,12 +26,12 @@ export function ProductCard({ product, variant, className }: ProductCardProps) {
     return (
       <Link href={product.href} className={className}>
         <Card className="h-full overflow-hidden transition-colors hover:border-primary/40">
-          <div className="relative aspect-[16/9] bg-muted">
+          <div className="relative aspect-[4/3] bg-white">
             <Image
               src={product.image}
               alt={product.alt}
               fill
-              className="object-cover"
+              className="object-contain p-4"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -66,12 +66,12 @@ export function ProductCard({ product, variant, className }: ProductCardProps) {
         className,
       )}
     >
-      <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+      <div className="relative aspect-[4/3] overflow-hidden bg-white">
         <Image
           src={product.image}
           alt={product.alt}
           fill
-          className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+          className="object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         <div className="absolute left-4 top-4 rounded-full border border-border bg-background/90 px-3 py-1 text-xs font-medium backdrop-blur-sm">
