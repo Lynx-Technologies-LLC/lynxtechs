@@ -68,22 +68,22 @@ export function CinematicHero({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.7 }}
-            className="absolute inset-0"
+            className="absolute inset-0 bg-white"
           >
             <Image
               src={slide.image}
               alt={slide.alt}
               fill
               priority
-              className="object-cover object-center opacity-90"
+              className="object-contain object-center p-8 sm:p-16 lg:p-24"
               sizes="100vw"
             />
           </motion.div>
         </AnimatePresence>
       ) : null}
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-black/20" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
       <div className="relative mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-32 sm:px-6 lg:px-8 lg:pb-20">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-end">

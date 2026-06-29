@@ -29,7 +29,7 @@ function ProductImageGallery({
 
   return (
     <div className="space-y-4">
-      <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-card">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-white">
         <Image
           src={selectedImage.src}
           alt={selectedImage.alt}
@@ -47,7 +47,7 @@ function ProductImageGallery({
               type="button"
               onClick={() => setSelectedIndex(index)}
               className={cn(
-                "relative h-16 w-16 overflow-hidden rounded-md border bg-card transition-colors",
+                "relative h-16 w-16 overflow-hidden rounded-md border bg-white transition-colors",
                 selectedIndex === index
                   ? "border-foreground"
                   : "border-border hover:border-foreground/40",
