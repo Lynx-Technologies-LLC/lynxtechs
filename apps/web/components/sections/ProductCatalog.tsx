@@ -16,9 +16,11 @@ type ProductCatalogProps = {
 const categories: ProductType[] = ["Software", "Hardware"];
 
 export function ProductCatalog({ products }: ProductCatalogProps) {
-  const [category, setCategory] = useState<ProductType>("Software");
+  const [category, setCategory] = useState<ProductType | null>(null);
 
-  const filtered = products.filter((product) => product.type === category);
+  const filtered = category
+    ? products.filter((product) => product.type === category)
+    : products;
 
   return (
     <div className="space-y-8">
@@ -29,7 +31,9 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
             type="button"
             size="lg"
             variant={category === item ? "default" : "secondary"}
-            onClick={() => setCategory(item)}
+            onClick={() =>
+              setCategory((current) => (current === item ? null : item))
+            }
             className={cn(
               "min-w-[10rem] px-8 text-base",
               category !== item && "bg-muted",
@@ -50,10 +54,12 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
             />
           ))}
         </div>
-      ) : (
+      ) : category ? (
         <p className="text-muted-foreground">
           No {category.toLowerCase()} products listed yet.
         </p>
+      ) : (
+        <p className="text-muted-foreground">No products listed yet.</p>
       )}
     </div>
   );
