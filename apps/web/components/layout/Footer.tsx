@@ -76,9 +76,8 @@ export function Footer({ products }: FooterProps) {
       </div>
 
       <div className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:px-6 sm:flex-row sm:items-center sm:justify-between lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 py-8 text-sm text-muted-foreground sm:px-6 lg:px-8">
           <p>Copyright © {new Date().getFullYear()} {site.companyName}. All rights reserved.</p>
-          <p>EtherCAT is a registered trademark of Beckhoff Automation GmbH.</p>
         </div>
       </div>
     </footer>
