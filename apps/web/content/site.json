@@ -12,6 +12,10 @@
     { "label": "Contact", "href": "/contact" }
   ],
   "footer": {
+    "products": [
+      { "label": "Software", "href": "/products?type=Software" },
+      { "label": "Hardware", "href": "/products?type=Hardware" }
+    ],
     "services": [
       { "label": "EtherCAT Hardware Design", "href": "/services" },
       { "label": "System Integration", "href": "/services" },

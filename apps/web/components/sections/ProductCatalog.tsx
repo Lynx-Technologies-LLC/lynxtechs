@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useMemo } from "react";
 
 import { ProductCard } from "@/components/product/ProductCard";
 import { Button } from "@/components/ui/button";
@@ -15,8 +16,39 @@ type ProductCatalogProps = {
 
 const categories: ProductType[] = ["Software", "Hardware"];
 
+function parseCategory(value: string | null): ProductType | null {
+  if (value === "Software" || value === "Hardware") {
+    return value;
+  }
+
+  return null;
+}
+
 export function ProductCatalog({ products }: ProductCatalogProps) {
-  const [category, setCategory] = useState<ProductType | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const category = useMemo(
+    () => parseCategory(searchParams.get("type")),
+    [searchParams],
+  );
+
+  const setCategory = useCallback(
+    (next: ProductType | null) => {
+      const params = new URLSearchParams(searchParams.toString());
+
+      if (next) {
+        params.set("type", next);
+      } else {
+        params.delete("type");
+      }
+
+      const query = params.toString();
+      router.replace(query ? `/products?${query}` : "/products", {
+        scroll: false,
+      });
+    },
+    [router, searchParams],
+  );
 
   const filtered = category
     ? products.filter((product) => product.type === category)
@@ -32,7 +64,7 @@ export function ProductCatalog({ products }: ProductCatalogProps) {
             size="lg"
             variant={category === item ? "default" : "secondary"}
             onClick={() =>
-              setCategory((current) => (current === item ? null : item))
+              setCategory(category === item ? null : item)
             }
             className={cn(
               "min-w-[10rem] px-8 text-base",

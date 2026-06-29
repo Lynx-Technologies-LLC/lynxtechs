@@ -1,14 +1,9 @@
 import Link from "next/link";
 
 import { Logo } from "@/components/layout/Logo";
-import type { ProductSummary } from "@/lib/product-types";
 import { getSiteConfig } from "@/lib/site";
 
-type FooterProps = {
-  products: ProductSummary[];
-};
-
-export function Footer({ products }: FooterProps) {
+export function Footer() {
   const site = getSiteConfig();
 
   return (
@@ -29,13 +24,13 @@ export function Footer({ products }: FooterProps) {
         <div>
           <p className="text-sm font-semibold">Products</p>
           <ul className="mt-3 space-y-2">
-            {products.map((product) => (
-              <li key={product.href}>
+            {site.footer.products.map((item) => (
+              <li key={item.href}>
                 <Link
-                  href={product.href}
+                  href={item.href}
                   className="text-sm text-muted-foreground hover:text-foreground"
                 >
-                  {product.name}
+                  {item.label}
                 </Link>
               </li>
             ))}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 import { MdxContent } from "@/components/mdx/MdxContent";
 import { CTA } from "@/components/sections/CTA";
@@ -44,7 +45,15 @@ export default function ProductsPage() {
               <MdxContent source={page.content} />
             </div>
           ) : null}
-          <ProductCatalog products={products} />
+          <Suspense
+            fallback={
+              <p className="text-center text-muted-foreground">
+                Loading products...
+              </p>
+            }
+          >
+            <ProductCatalog products={products} />
+          </Suspense>
         </div>
       </section>
 
