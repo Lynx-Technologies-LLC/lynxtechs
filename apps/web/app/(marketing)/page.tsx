@@ -28,7 +28,7 @@ export default function HomePage() {
       <Testimonials />
       <CTA
         headline="Ready to design your next real-time system?"
-        subcopy={`Talk with our sales team at ${site.salesEmail} about EtherCAT hardware, LXMSTR, or custom engineering support.`}
+        subcopy={`Talk with our sales team at ${site.salesEmail} about EtherCAT hardware, LXMASTER, or custom engineering support.`}
       />
     </>
   );

@@ -22,7 +22,7 @@ const services = [
   {
     title: "Bring-up and validation",
     description:
-      "Lab verification, timing analysis, and integration with LXMSTR or third-party masters.",
+      "Lab verification, timing analysis, and integration with LXMASTER or third-party masters.",
   },
   {
     title: "Production support",

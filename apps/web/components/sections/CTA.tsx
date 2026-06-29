@@ -14,7 +14,7 @@ type CTAProps = {
 
 export function CTA({
   headline = "Ready to design your next real-time system?",
-  subcopy = "Talk with our sales team about EtherCAT hardware, LXMSTR, or custom engineering support.",
+  subcopy = "Talk with our sales team about EtherCAT hardware, LXMASTER, or custom engineering support.",
   buttonLabel = "Contact Sales",
   buttonHref = "/contact",
 }: CTAProps) {

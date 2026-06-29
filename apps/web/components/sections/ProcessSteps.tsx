@@ -14,7 +14,7 @@ const steps = [
   {
     step: "03",
     title: "Validation",
-    description: "Lab bring-up, timing analysis, and integration with LXMSTR or your master stack.",
+    description: "Lab bring-up, timing analysis, and integration with LXMASTER or your master stack.",
   },
   {
     step: "04",

@@ -51,11 +51,11 @@ This directory is reserved for the Lynx Technologies headless shop backend.
    NEXT_PUBLIC_MEDUSA_PUBLISHABLE_KEY=pk_...
    ```
 
-6. Seed products (LXMSTR, LXDIO33-16) in Medusa Admin and build shop pages.
+6. Seed products (LXMASTER, LXDIO33-16) in Medusa Admin and build shop pages.
 
 ## Products to seed
 
-- **LXMSTR** — Software license / integration package
+- **LXMASTER** — Software license / integration package
 - **LXDIO33-16** — Hardware module (quote or purchasable SKU)
 
 ## Deployment

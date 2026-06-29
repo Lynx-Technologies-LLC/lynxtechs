@@ -16,7 +16,7 @@ export default function ShopPlaceholderPage() {
       <section className="py-16">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <p className="text-muted-foreground">
-            For now, contact our sales team to order LXMSTR or LXDIO33-16.
+            For now, contact our sales team to order LXMASTER or LXDIO33-16.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild>

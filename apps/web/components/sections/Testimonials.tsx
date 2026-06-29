@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/sections/SectionHeader";
 const testimonials = [
   {
     quote:
-      "Lynx helped us integrate EtherCAT I/O into our robotics cell faster than we expected. The LXMSTR stack and module hardware worked together cleanly.",
+      "Lynx helped us integrate EtherCAT I/O into our robotics cell faster than we expected. The LXMASTER stack and module hardware worked together cleanly.",
     author: "Automation Engineering Lead",
     company: "Industrial Robotics OEM",
   },

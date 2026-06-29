@@ -18,7 +18,7 @@ const features = [
     label: "Open platform",
     title: "One stack — software, modules, and custom design",
     description:
-      "Combine LXMSTR master software, LXDIO33-16 I/O modules, and Lynx engineering services to build complete real-time control systems.",
+      "Combine LXMASTER master software, LXDIO33-16 I/O modules, and Lynx engineering services to build complete real-time control systems.",
   },
   {
     icon: Clock,
