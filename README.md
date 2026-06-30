@@ -92,6 +92,21 @@ apps/web/
 | `listed` | Show in catalog/teasers/footer (default `true`) |
 | `order` | Sort order in lists (default `0`) |
 
+### Compressing 3D models (GLB)
+
+Large GLB files should be compressed before committing. The repo includes a script that applies Draco mesh compression and skips files that are already compressed.
+
+```bash
+# Compress one or more files in place
+npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber5.glb
+
+# Preview without writing
+npm run compress-glb -- --dry-run path/to/model.glb
+
+# Recompress even if already Draco-compressed
+npm run compress-glb -- --force path/to/model.glb
+```
+
 Price and cart will come from Medusa in Phase 2 ([apps/store/README.md](apps/store/README.md)); marketing copy stays in `content/products/`.
 
 ## Project structure
