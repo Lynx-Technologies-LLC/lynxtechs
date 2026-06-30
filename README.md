@@ -84,6 +84,7 @@ apps/web/
 | `name`, `type`, `summary` | Purchase panel and catalog cards |
 | `sku` | SKU line on detail page |
 | `images` | Gallery images (`/products/{handle}/...` paths) |
+| `model3d` | Optional 3D model (`src`, optional `poster` and `alt`; loaded only when the user selects the 3D gallery view) |
 | `overview`, `highlights` | Overview tab |
 | `specs` | Specs tab (label/value pairs) |
 | `documentation` | Documentation tab links |
