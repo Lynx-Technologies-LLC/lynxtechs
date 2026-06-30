@@ -47,7 +47,7 @@ Options:
   --help, -h      Show this help message
 
 Examples:
-  npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber5.glb
+  npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber-3d.glb
   npm run compress-glb -- --dry-run apps/web/public/products/**/*.glb
 `);
 }

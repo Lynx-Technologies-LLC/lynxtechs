@@ -98,7 +98,7 @@ Large GLB files should be compressed before committing. The repo includes a scri
 
 ```bash
 # Compress one or more files in place
-npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber5.glb
+npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber-3d.glb
 
 # Preview without writing
 npm run compress-glb -- --dry-run path/to/model.glb
