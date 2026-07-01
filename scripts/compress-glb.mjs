@@ -138,15 +138,24 @@ async function processFile(io, filePath, options) {
 
   await compressDocument(document);
 
+  // Must end in .glb — gltf-transform writes split glTF+json otherwise.
   const tmpPath = path.join(
     path.dirname(filePath),
-    `.${path.basename(filePath)}.${process.pid}.tmp`,
+    `.${path.basename(filePath, ".glb")}.${process.pid}.glb`,
   );
 
-  await io.write(tmpPath, document);
+  let outputSize = 0;
 
-  const outputSize = fs.statSync(tmpPath).size;
-  fs.renameSync(tmpPath, filePath);
+  try {
+    await io.write(tmpPath, document);
+
+    outputSize = fs.statSync(tmpPath).size;
+    fs.renameSync(tmpPath, filePath);
+  } finally {
+    if (fs.existsSync(tmpPath)) {
+      fs.unlinkSync(tmpPath);
+    }
+  }
 
   const ratio =
     inputSize > 0
