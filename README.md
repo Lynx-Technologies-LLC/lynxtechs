@@ -84,12 +84,28 @@ apps/web/
 | `name`, `type`, `summary` | Purchase panel and catalog cards |
 | `sku` | SKU line on detail page |
 | `images` | Gallery images (`/products/{handle}/...` paths) |
+| `model3d` | Optional 3D model (`src`, optional `poster` and `alt`; loaded only when the user selects the 3D gallery view) |
 | `overview`, `highlights` | Overview tab |
 | `specs` | Specs tab (label/value pairs) |
 | `documentation` | Documentation tab links |
 | `cta` | Primary quote button label |
 | `listed` | Show in catalog/teasers/footer (default `true`) |
 | `order` | Sort order in lists (default `0`) |
+
+### Compressing 3D models (GLB)
+
+Large GLB files should be compressed before committing. The repo includes a script that applies Draco mesh compression and skips files that are already compressed.
+
+```bash
+# Compress one or more files in place
+npm run compress-glb -- apps/web/public/products/lxfiber/lxfiber-3d.glb
+
+# Preview without writing
+npm run compress-glb -- --dry-run path/to/model.glb
+
+# Recompress even if already Draco-compressed
+npm run compress-glb -- --force path/to/model.glb
+```
 
 Price and cart will come from Medusa in Phase 2 ([apps/store/README.md](apps/store/README.md)); marketing copy stays in `content/products/`.
 

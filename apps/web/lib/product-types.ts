@@ -1,9 +1,16 @@
+export type ProductModel3d = {
+  src: string;
+  alt?: string;
+  poster?: string;
+};
+
 export type ProductFrontmatter = {
   name: string;
   type: "Software" | "Hardware";
   summary: string;
   sku?: string;
   images?: { src: string; alt?: string }[];
+  model3d?: ProductModel3d;
   overview?: string;
   specs?: { label: string; value: string }[];
   documentation?: { label: string; href: string }[];
@@ -28,6 +35,7 @@ export type Product = {
   summary: string;
   sku?: string;
   images: { src: string; alt: string }[];
+  model3d?: ProductModel3d;
   overview?: string;
   specs?: { label: string; value: string }[];
   documentation?: { label: string; href: string }[];
