@@ -26,31 +26,33 @@ export function ProductCard({ product, variant, className }: ProductCardProps) {
     return (
       <Link href={product.href} className={className}>
         <Card className="h-full overflow-hidden transition-colors hover:border-primary/40">
-          <div className="relative aspect-[4/3] bg-white">
+          <div className="relative aspect-square bg-white">
             <Image
               src={product.image}
               alt={product.alt}
               fill
-              className="object-contain p-4"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-contain p-3"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
           </div>
-          <CardHeader>
-            <div className="mb-2 flex items-center justify-between">
-              <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                <Icon className="h-5 w-5" />
+          <CardHeader className="space-y-2 p-4">
+            <div className="flex items-center justify-between gap-2">
+              <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                <Icon className="h-4 w-4" />
               </div>
-              <span className="rounded-full bg-muted px-3 py-1 text-xs font-medium">
+              <span className="rounded-full bg-muted px-2 py-0.5 text-[10px] font-medium">
                 {product.type}
               </span>
             </div>
-            <CardTitle>{product.name}</CardTitle>
-            <CardDescription>{product.summary}</CardDescription>
+            <CardTitle className="text-base">{product.name}</CardTitle>
+            <CardDescription className="line-clamp-2 text-xs leading-relaxed">
+              {product.summary}
+            </CardDescription>
           </CardHeader>
-          <CardContent>
-            <span className="inline-flex items-center gap-1 text-sm font-medium text-primary">
+          <CardContent className="px-4 pb-4 pt-0">
+            <span className="inline-flex items-center gap-1 text-xs font-medium text-primary">
               View product
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-3 w-3" />
             </span>
           </CardContent>
         </Card>
