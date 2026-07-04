@@ -109,6 +109,11 @@ const config: Config = {
           position: 'left',
           label: 'LXMASTER',
         },
+        {
+          type: 'docsVersionDropdown',
+          docsPluginId: 'lxmaster',
+          position: 'right',
+        },
       ],
     },
     footer: {
