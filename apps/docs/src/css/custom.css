@@ -27,15 +27,12 @@
 }
 
 /* Hide the LXMASTER version dropdown when not browsing the /lxmaster/ section.
-   Root.tsx toggles the `lxmaster-section` class on <html> based on the route. */
-.navbar__items--right .navbar__item.dropdown:has(
-  a[href^="/lxmaster"]
-) {
+   Root.tsx toggles the `lxmaster-section` class on <html> based on the route.
+   We target ALL right-side dropdowns since the version picker is the only one. */
+html:not(.lxmaster-section) .navbar__items--right .navbar__item.dropdown {
   display: none;
 }
 
-html.lxmaster-section .navbar__items--right .navbar__item.dropdown:has(
-  a[href^="/lxmaster"]
-) {
+html.lxmaster-section .navbar__items--right .navbar__item.dropdown {
   display: flex;
 }
