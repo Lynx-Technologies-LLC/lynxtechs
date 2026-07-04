@@ -25,3 +25,17 @@
   --ifm-color-primary-lightest: #9cccf0;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Hide the LXMASTER version dropdown when not browsing the /lxmaster/ section.
+   Root.tsx toggles the `lxmaster-section` class on <html> based on the route. */
+.navbar__items--right .navbar__item.dropdown:has(
+  a[href^="/lxmaster"]
+) {
+  display: none;
+}
+
+html.lxmaster-section .navbar__items--right .navbar__item.dropdown:has(
+  a[href^="/lxmaster"]
+) {
+  display: flex;
+}
