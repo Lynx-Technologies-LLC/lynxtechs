@@ -91,8 +91,7 @@ const config: Config = {
       logo: {
         alt: 'Lynx Technologies Logo',
         src: 'img/logo.png',
-        href: 'https://lynxtechs.com',
-        target: '_self',
+        href: '/',
       },
       items: [
         {
