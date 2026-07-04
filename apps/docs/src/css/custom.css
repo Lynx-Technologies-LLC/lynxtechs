@@ -26,13 +26,5 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Hide the LXMASTER version dropdown when not browsing the /lxmaster/ section.
-   Root.tsx toggles the `lxmaster-section` class on <html> based on the route.
-   We target ALL right-side dropdowns since the version picker is the only one. */
-html:not(.lxmaster-section) .navbar__items--right .navbar__item.dropdown {
-  display: none;
-}
-
-html.lxmaster-section .navbar__items--right .navbar__item.dropdown {
-  display: flex;
-}
+/* Version dropdown visibility is handled by src/theme/Root.tsx via an inline
+   <style> tag so React keeps it in sync with client-side navigation. */

@@ -1,29 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from '@docusaurus/router';
 
 /**
- * Hides the LXMASTER version dropdown when not on an /lxmaster/ page.
+ * Hides the LXMASTER version dropdown on every page except /lxmaster/*.
  *
- * The CSS rule (custom.css) hides it by default (html:not(.lxmaster-section)).
- * This component adds/removes `lxmaster-section` on <html> after every route
- * change so the CSS responds immediately to client-side navigation.
+ * A React-managed <style> tag is the only reliable approach: direct DOM
+ * manipulation gets overwritten by Docusaurus's navbar re-renders, and a
+ * plain CSS class toggle can lose the race against hydration.
  */
 export default function Root({ children }: { children: React.ReactNode }) {
   const { pathname } = useLocation();
+  const isLxmaster = pathname === '/lxmaster' || pathname.startsWith('/lxmaster/');
 
-  useEffect(() => {
-    const isLxmaster = pathname === '/lxmaster' || pathname.startsWith('/lxmaster/');
-    document.documentElement.classList.toggle('lxmaster-section', isLxmaster);
-
-    // Belt-and-suspenders: also set visibility directly on the dropdown element
-    // in case the CSS rule hasn't applied yet (e.g. very first paint).
-    const dropdowns = document.querySelectorAll<HTMLElement>(
-      '.navbar__items--right .navbar__item.dropdown',
-    );
-    dropdowns.forEach((el) => {
-      el.style.display = isLxmaster ? '' : 'none';
-    });
-  }, [pathname]);
-
-  return <>{children}</>;
+  return (
+    <>
+      {!isLxmaster && (
+        <style>{`
+          .navbar__items--right .navbar__item.dropdown { display: none !important; }
+        `}</style>
+      )}
+      {children}
+    </>
+  );
 }
