@@ -54,7 +54,10 @@ jobs:
       - name: Open a pull request with the new version
         uses: peter-evans/create-pull-request@v6
         with:
-          token: ${{ secrets.DOCS_DEPLOY_TOKEN }}
+          # Uses GITHUB_TOKEN so the PR is authored by github-actions[bot],
+          # which allows any team member (including the repo owner) to approve it.
+          # Requires "Allow GitHub Actions to create and approve pull requests"
+          # to be enabled in repo Settings → Actions → General.
           branch: docs/version-${{ steps.v.outputs.version }}
           title: "docs: cut LXMASTER ${{ steps.v.outputs.version }} version"
           commit-message: "docs: cut LXMASTER ${{ steps.v.outputs.version }} version"
@@ -64,6 +67,6 @@ jobs:
             This snapshots the current docs (including the generated API reference
             and release notes for this version) into `versioned_docs/`.
           add-paths: |
-            apps/docs/versioned_docs/**
-            apps/docs/versioned_sidebars/**
-            apps/docs/versions.json
+            apps/docs/lxmaster_versioned_docs/**
+            apps/docs/lxmaster_versioned_sidebars/**
+            apps/docs/lxmaster_versions.json

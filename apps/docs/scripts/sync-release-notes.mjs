@@ -33,6 +33,20 @@ function safeName(tag) {
   return tag.replace(/^v/, '').replace(/[^A-Za-z0-9._-]/g, '-');
 }
 
+// Strip links that would point at the private lxmaster repository, which is
+// inaccessible to the public.  GitHub's auto-generated release body contains:
+//   - "Full Changelog: https://github.com/.../compare/..."
+//   - PR contribution lines: "* @user made their first contribution in https://..."
+//   - PR merge lines: "* Feature/... by @user in https://...pull/N"
+function sanitizeReleaseBody(body) {
+  return body
+    .replace(/^\*\*Full Changelog\*\*:.*$/gm, '')
+    .replace(/^.*https:\/\/github\.com\/[^ ]+\/[^ ]+\/pull\/\d+.*$/gm, '')
+    .replace(/^.*made their first contribution.*$/gm, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
+}
+
 export async function syncReleaseNotes() {
   const url = `https://api.github.com/repos/${repoSlug}/releases?per_page=100`;
   const res = await fetch(url, {headers: ghHeaders()});
@@ -47,7 +61,8 @@ export async function syncReleaseNotes() {
     const tag = r.tag_name ?? `release-${i}`;
     const title = (r.name && r.name.trim()) || tag;
     const date = r.published_at ? r.published_at.slice(0, 10) : '';
-    const body = (r.body ?? '').trim() || '_No release notes were provided for this version._';
+    const rawBody = (r.body ?? '').trim();
+    const body = sanitizeReleaseBody(rawBody) || '_No release notes were provided for this version._';
     const prerelease = r.prerelease ? ' (pre-release)' : '';
 
     const frontmatter =
@@ -59,8 +74,7 @@ export async function syncReleaseNotes() {
 
     const header =
       `# ${title}${prerelease}\n\n` +
-      (date ? `_Released ${date}_ · ` : '') +
-      `[View on GitHub](${r.html_url})\n\n`;
+      (date ? `_Released ${date}_\n\n` : '');
 
     const content = frontmatter + header + body + '\n';
     writeFileSync(resolve(outDir, `${safeName(tag)}.md`), content, 'utf8');

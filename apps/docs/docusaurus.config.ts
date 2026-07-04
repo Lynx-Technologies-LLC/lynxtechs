@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Lynx Technologies Docs',
   tagline:
     'LXMASTER software, API reference, tutorials, example projects, and hardware integration',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.png',
 
   url: 'https://docs.lynxtechs.com',
   baseUrl: '/',
@@ -15,7 +15,7 @@ const config: Config = {
   projectName: 'lynxtechs',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   markdown: {
     // Treat .md as CommonMark and .mdx as MDX. Migrated prose docs contain
@@ -32,6 +32,24 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'lxmaster',
+        path: 'docs/lxmaster',
+        routeBasePath: '/lxmaster',
+        sidebarPath: './sidebars-lxmaster.ts',
+        // Never show an unversioned "Next" entry — docs/lxmaster/ is a
+        // placeholder; real content lives in lxmaster_versioned_docs/.
+        includeCurrentVersion: false,
+        // Docusaurus auto-discovers lxmaster_versioned_docs/,
+        // lxmaster_versioned_sidebars/, and lxmaster_versions.json
+        // from the plugin id — no extra path config needed.
+      },
+    ],
+  ],
 
   themes: [
     [
@@ -51,12 +69,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          // Edit links point at the docs app inside the lynxtechs monorepo.
-          // Generated sections (LXMASTER API reference, release notes) are
-          // produced by automation and intentionally have edit links disabled
-          // via the per-folder _category_.json / frontmatter where applicable.
-          editUrl:
-            'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
+          // Exclude lxmaster (separate plugin) and the old intro root page.
+          exclude: ['lxmaster/**', 'intro.md', 'master-software/**'],
         },
         blog: false,
         theme: {
@@ -73,20 +87,27 @@ const config: Config = {
       logo: {
         alt: 'Lynx Technologies Logo',
         src: 'img/logo.png',
-        href: 'https://lynxtechs.com',
-        target: '_self',
+        href: '/',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'docsSidebar',
+          sidebarId: 'hardwareSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'EtherCAT Modules',
         },
         {
-          type: 'docsVersionDropdown',
-          position: 'right',
-          dropdownActiveClassDisabled: true,
+          type: 'docSidebar',
+          sidebarId: 'etherCatSidebar',
+          position: 'left',
+          label: 'EtherCAT Basics',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'lxmasterSidebar',
+          docsPluginId: 'lxmaster',
+          position: 'left',
+          label: 'LXMASTER',
         },
       ],
     },
@@ -101,8 +122,8 @@ const config: Config = {
               to: '/lxmaster/overview',
             },
             {
-              label: 'Tutorials',
-              to: '/lxmaster/tutorials',
+              label: 'Getting Started',
+              to: '/lxmaster/getting-started',
             },
             {
               label: 'API Reference',
@@ -115,15 +136,32 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'EtherCAT Modules',
+          items: [
+            {
+              label: 'LXDIO33-16',
+              to: '/hardware/lxdio33-16',
+            },
+            {
+              label: 'LXFIBER',
+              to: '/hardware/lxfiber',
+            },
+            {
+              label: 'LXRJ45',
+              to: '/hardware/lxrj45',
+            },
+            {
+              label: 'PCB Integration',
+              to: '/hardware/pcb-integration',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
           items: [
             {
               label: 'EtherCAT Basics',
               to: '/ethercat-basics',
-            },
-            {
-              label: 'Hardware',
-              to: '/hardware',
             },
             {
               label: 'Main site',

@@ -30,10 +30,10 @@ console.log(`==> Syncing generated content for LXMASTER ${version}`);
 execFileSync('node', ['scripts/prebuild.mjs'], {cwd: appDir, stdio: 'inherit', env});
 
 console.log(`==> Cutting Docusaurus docs version ${version}`);
-execFileSync('npx', ['docusaurus', 'docs:version', version], {
+execFileSync('npx', ['docusaurus', 'docs:version:lxmaster', version], {
   cwd: appDir,
   stdio: 'inherit',
   env,
 });
 
-console.log(`==> Done. Review versioned_docs/version-${version}/ and commit.`);
+console.log(`==> Done. Review lxmaster_versioned_docs/version-${version}/ and commit.`);

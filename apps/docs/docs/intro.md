@@ -13,7 +13,7 @@ to integrate them into your own designs.
 
 ## What's in these docs
 
-- **[LXMASTER Software](./lxmaster/overview.md)** - the Linux EtherCAT master
+- **[LXMASTER Software](/lxmaster/overview)** - the Linux EtherCAT master
   stack: overview, getting started, tutorials, example projects, the API
   reference, and release notes.
 - **[EtherCAT Basics](./ethercat-basics/overview.md)** - a high-level
