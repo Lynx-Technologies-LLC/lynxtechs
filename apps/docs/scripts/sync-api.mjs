@@ -4,7 +4,7 @@
 //
 // Env:
 //   LXMASTER_DOCS_VERSION  version to fetch, e.g. "1.0.10" (default: latest release)
-//   LXMASTER_REPO_SLUG     owner/repo for lxmaster (default: Lynx-Robotics-LLC/lxmaster)
+//   LXMASTER_REPO_SLUG     owner/repo for lxmaster (default: Lynx-Technologies-LLC/lxmaster)
 //   LXMASTER_DOCS_TOKEN /
 //   GITHUB_TOKEN           token for a private repo (optional if public)
 //
@@ -20,7 +20,7 @@ import {tmpdir} from 'node:os';
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const apiDir = resolve(scriptDir, '..', 'docs', 'lxmaster', 'api');
 
-const repoSlug = process.env.LXMASTER_REPO_SLUG ?? 'Lynx-Robotics-LLC/lxmaster';
+const repoSlug = process.env.LXMASTER_REPO_SLUG ?? 'Lynx-Technologies-LLC/lxmaster';
 const token = process.env.LXMASTER_DOCS_TOKEN ?? process.env.GITHUB_TOKEN ?? '';
 
 function ghHeaders(extra = {}) {

@@ -48,7 +48,7 @@ Generated folders are git-ignored except their placeholder `index.md` /
 | --- | --- | --- |
 | `LXMASTER_DOCS_TOKEN` / `GITHUB_TOKEN` | api / release-notes / examples sync | Required only if the lxmaster repos are private. |
 | `LXMASTER_DOCS_VERSION` | api / release-notes sync, version cut | Defaults to the latest release. |
-| `LXMASTER_REPO_SLUG` | api / release-notes sync | Default `Lynx-Robotics-LLC/lxmaster`. |
+| `LXMASTER_REPO_SLUG` | api / release-notes sync | Default `Lynx-Technologies-LLC/lxmaster`. |
 | `LXMASTER_DEMOS_SLUG` | examples sync | Default `Lynx-Technologies-LLC/lxmaster-demos`. |
 | `SYNC_STRICT=1` | prebuild | Make a failed sync fatal (used by the version cut). |
 
@@ -81,4 +81,4 @@ The marketing site (`apps/web`) already links to `https://docs.lynxtechs.com`, s
 no change is needed there.
 
 > The previous standalone `lynxtechsdocs` repository is superseded by this app
-> and can be archived: `gh repo archive Lynx-Robotics-LLC/lynxtechsdocs`.
+> and can be archived: `gh repo archive Lynx-Technologies-LLC/lynxtechsdocs`.

@@ -9,7 +9,7 @@ title: Release Notes
 # LXMASTER Release Notes
 
 Release notes are generated from the [`lxmaster` GitHub
-Releases](https://github.com/Lynx-Robotics-LLC/lxmaster/releases), which are
+Releases](https://github.com/Lynx-Technologies-LLC/lxmaster/releases), which are
 produced with GitHub's auto-generated notes from each `v*` tag.
 
 :::info Synced from GitHub Releases

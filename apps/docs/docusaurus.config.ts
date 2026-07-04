@@ -11,7 +11,7 @@ const config: Config = {
   url: 'https://docs.lynxtechs.com',
   baseUrl: '/',
 
-  organizationName: 'Lynx-Robotics-LLC',
+  organizationName: 'Lynx-Technologies-LLC',
   projectName: 'lynxtechs',
   trailingSlash: false,
 
@@ -56,7 +56,7 @@ const config: Config = {
           // produced by automation and intentionally have edit links disabled
           // via the per-folder _category_.json / frontmatter where applicable.
           editUrl:
-            'https://github.com/Lynx-Robotics-LLC/lynxtechs/tree/main/apps/docs/',
+            'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
         },
         blog: false,
         theme: {
@@ -92,7 +92,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/Lynx-Robotics-LLC/lxmaster',
+          href: 'https://github.com/Lynx-Technologies-LLC/lxmaster',
           label: 'GitHub',
           position: 'right',
         },
