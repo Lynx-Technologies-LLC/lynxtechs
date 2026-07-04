@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::IMotionProfile\""
-summary:" \"Facade-facing contract for a motion (drive) device.\""
+title: "ecdev::IMotionProfile"
+summary: "Facade-facing contract for a motion (drive) device."
 
 slug: /api/classes/IMotionProfile
 sidebar_label: "IMotionProfile"

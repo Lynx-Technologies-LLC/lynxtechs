@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::CiA406EncoderProfile\""
-summary:" \"CiA 406 (encoder) profile.\""
+title: "ecdev::CiA406EncoderProfile"
+summary: "CiA 406 (encoder) profile."
 
 slug: /api/classes/CiA406EncoderProfile
 sidebar_label: "CiA406EncoderProfile"

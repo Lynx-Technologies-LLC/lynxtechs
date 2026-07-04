@@ -1,5 +1,5 @@
 ---
-title:" \"ecdev::CiA402DriveProfile::Config\""
+title: "ecdev::CiA402DriveProfile::Config"
 
 slug: /api/classes/CiA402DriveProfile-Config
 sidebar_label: "Config"

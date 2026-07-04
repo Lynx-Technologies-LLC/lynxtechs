@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::ProfileRegistry\""
-summary:" \"Registry of IProfileFactory plugins.\""
+title: "ecdev::ProfileRegistry"
+summary: "Registry of IProfileFactory plugins."
 
 slug: /api/classes/ProfileRegistry
 sidebar_label: "ProfileRegistry"

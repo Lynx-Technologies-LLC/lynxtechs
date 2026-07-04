@@ -1,5 +1,5 @@
 ---
-title:" \"ecdev::CiA402DriveProfile::OutputSnapshot\""
+title: "ecdev::CiA402DriveProfile::OutputSnapshot"
 
 slug: /api/classes/CiA402DriveProfile-OutputSnapshot
 sidebar_label: "OutputSnapshot"

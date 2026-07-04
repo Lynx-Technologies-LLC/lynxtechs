@@ -1,6 +1,6 @@
 ---
-title:" \"ecnet::EcNetwork\""
-summary:" \"User-facing runtime facade for an EtherCAT network.\""
+title: "ecnet::EcNetwork"
+summary: "User-facing runtime facade for an EtherCAT network."
 
 slug: /api/classes/EcNetwork
 sidebar_label: "EcNetwork"

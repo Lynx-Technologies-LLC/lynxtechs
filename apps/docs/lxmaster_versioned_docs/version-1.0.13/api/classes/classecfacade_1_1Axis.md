@@ -1,6 +1,6 @@
 ---
-title:" \"ecfacade::Axis\""
-summary:" \"High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT \\\"NC axis\\\".\""
+title: "ecfacade::Axis"
+summary: "High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT \\\"NC axis\\\"."
 
 slug: /api/classes/Axis
 sidebar_label: "Axis"

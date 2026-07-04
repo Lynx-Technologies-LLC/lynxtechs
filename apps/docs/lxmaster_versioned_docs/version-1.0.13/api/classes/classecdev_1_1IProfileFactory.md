@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::IProfileFactory\""
-summary:" \"Builds the device-class profile for one slave.\""
+title: "ecdev::IProfileFactory"
+summary: "Builds the device-class profile for one slave."
 
 slug: /api/classes/IProfileFactory
 sidebar_label: "IProfileFactory"

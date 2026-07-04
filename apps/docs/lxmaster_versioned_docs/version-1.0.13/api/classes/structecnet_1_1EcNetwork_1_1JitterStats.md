@@ -1,6 +1,6 @@
 ---
-title:" \"ecnet::EcNetwork::JitterStats\""
-summary:" \"End-of-run jitter summary (populated by the cyclic thread).\""
+title: "ecnet::EcNetwork::JitterStats"
+summary: "End-of-run jitter summary (populated by the cyclic thread)."
 
 slug: /api/classes/EcNetwork-JitterStats
 sidebar_label: "JitterStats"

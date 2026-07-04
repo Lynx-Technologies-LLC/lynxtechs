@@ -1,6 +1,6 @@
 ---
-title:" \"ecnet::EcNetwork::DcSyncStats\""
-summary:" \"End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock).\""
+title: "ecnet::EcNetwork::DcSyncStats"
+summary: "End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock)."
 
 slug: /api/classes/EcNetwork-DcSyncStats
 sidebar_label: "DcSyncStats"

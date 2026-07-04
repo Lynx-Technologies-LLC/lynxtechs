@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::CiA402DriveProfile\""
-summary:" \"CiA 402 (CANopen-over-EtherCAT) servo-drive profile.\""
+title: "ecdev::CiA402DriveProfile"
+summary: "CiA 402 (CANopen-over-EtherCAT) servo-drive profile."
 
 slug: /api/classes/CiA402DriveProfile
 sidebar_label: "CiA402DriveProfile"

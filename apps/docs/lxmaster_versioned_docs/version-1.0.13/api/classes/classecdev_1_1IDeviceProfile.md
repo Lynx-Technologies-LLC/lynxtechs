@@ -1,6 +1,6 @@
 ---
-title:" \"ecdev::IDeviceProfile\""
-summary:" \"Device-class behaviour plugged onto a GenericEniDevice.\""
+title: "ecdev::IDeviceProfile"
+summary: "Device-class behaviour plugged onto a GenericEniDevice."
 
 slug: /api/classes/IDeviceProfile
 sidebar_label: "IDeviceProfile"
