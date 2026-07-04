@@ -22,7 +22,7 @@ target_link_libraries(my_app PRIVATE lxmaster::lxmaster)
 
 :::info Content synced from `lxmaster-demos`
 The example catalog on this page is generated at build time from the
-[`lxmaster-demos`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos)
+``lxmaster-demos``
 repository. Until the first sync runs, this is placeholder content.
 :::
 

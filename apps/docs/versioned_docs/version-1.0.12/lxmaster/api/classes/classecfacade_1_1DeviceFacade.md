@@ -10,10 +10,7 @@ sidebar_label: "DeviceFacade"
 
 # ecfacade::DeviceFacade
 
-
-
 Shared base for every application-facing device handle ([IoModule](/lxmaster/api/classes/IoModule), [Axis](), [Encoder](/lxmaster/api/classes/Encoder)).  [More...](#detailed-description)
-
 
 `#include <device_facade.hpp>`
 
@@ -70,7 +67,6 @@ a subclass of `[ecdev::CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProf
 
 To recover your concrete profile type, do NOT use `dynamic_cast`&ndash; this is an RT system and the runtime is RTTI-free. Guard on the unique `profileName()` you registered and `static_cast`, once, at setup, caching the typed pointer (never per cycle): [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)* p = handle->[deviceProfile()](/lxmaster/api/classes/DeviceFacade#function-deviceprofile); if (p && std::strcmp(p->profileName(), "vendor:my-device") == 0) my_ = static_cast<MyProfile*>(p); 
 
-
 ### function configure
 
 ```cpp
@@ -82,7 +78,6 @@ void configure(
 Opt this device into a maximum bring-up state. 
 
 Call only between `EcNetwork::prepare()` and `EcNetwork::start()`. Not calling `[configure()](/lxmaster/api/classes/DeviceFacade#function-configure)` leaves the device at its default PRE_OP. 
-
 
 ### function configure
 
@@ -101,7 +96,6 @@ DeviceFacade(
 )
 ```
 
-
 ## Protected Attributes Documentation
 
 ### variable name_
@@ -110,13 +104,11 @@ DeviceFacade(
 std::string name_;
 ```
 
-
 ### variable device_
 
 ```cpp
 ecdev::IEthercatDevice * device_;
 ```
-
 
 -------------------------------
 

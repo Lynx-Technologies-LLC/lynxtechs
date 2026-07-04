@@ -5,5 +5,4 @@ title: Tutorials
 
 # LXMASTER Tutorials
 
-Tutorials are coming soon. Check back after the next release, or watch the
-[GitHub repository](https://github.com/Lynx-Technologies-LLC/lxmaster) for updates.
+Tutorials are coming soon. Check back after the next release or [contact us](https://lynxtechs.com) for more information.

@@ -9,10 +9,6 @@ sidebar_label: "SdoI8"
 
 # ecnet::diag::SdoI8
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -28,13 +24,11 @@ sidebar_label: "SdoI8"
 std::int8_t value {0};
 ```
 
-
 ### variable present
 
 ```cpp
 bool present {false};
 ```
-
 
 -------------------------------
 

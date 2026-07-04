@@ -10,10 +10,7 @@ sidebar_label: "GenericIoProfile"
 
 # ecdev::GenericIoProfile
 
-
-
 Protocol-agnostic digital/analog I/O profile.  [More...](#detailed-description)
-
 
 `#include <generic_io_profile.hpp>`
 
@@ -68,7 +65,6 @@ Inherited by [ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)
 | -------------- | -------------- |
 | virtual | **[~IIoProfile](/lxmaster/api/classes/IIoProfile#function-~iioprofile)**() =default |
 
-
 ## Detailed Description
 
 ```cpp
@@ -98,9 +94,7 @@ virtual void writeOutputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)
-
 
 ### function setDigitalOutput
 
@@ -115,7 +109,6 @@ Command a digital output channel; out-of-range is a no-op.
 
 **Reimplements**: [ecdev::IIoProfile::setDigitalOutput](/lxmaster/api/classes/IIoProfile#function-setdigitaloutput)
 
-
 ### function setAnalogOutput
 
 ```cpp
@@ -129,7 +122,6 @@ Command an analog output channel (raw counts); out-of-range is a no-op.
 
 **Reimplements**: [ecdev::IIoProfile::setAnalogOutput](/lxmaster/api/classes/IIoProfile#function-setanalogoutput)
 
-
 ### function resolveTopology
 
 ```cpp
@@ -142,9 +134,7 @@ Resolve the static channel/PDO topology from the ENI-derived process image.
 
 **Reimplements**: [ecdev::IDeviceProfile::resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)
 
-
 Called once when the profile is attached to its device (during binding, before `start()`), so facade capability queries such as `IIoProfile::digitalOutputCount()` are valid as soon as the bus is bound — before any live PRE_OP SDO work. The image carries only ENI geometry here (it is not yet bound to the live IOmap), which is all a structural resolve needs. Default: no-op. Idempotent: `configurePreOp` may resolve again from the same image during `start()`. 
-
 
 ### function readInputs
 
@@ -156,9 +146,7 @@ virtual void readInputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)
-
 
 ### function profileName
 
@@ -170,9 +158,7 @@ Stable identifier for diagnostics (e.g.
 
 **Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)
 
-
 "CiA402-drive"). 
-
 
 ### function digitalOutputCount
 
@@ -180,9 +166,7 @@ Stable identifier for diagnostics (e.g.
 inline virtual std::size_t digitalOutputCount() const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::digitalOutputCount](/lxmaster/api/classes/IIoProfile#function-digitaloutputcount)
-
 
 ### function digitalOutput
 
@@ -192,9 +176,7 @@ inline virtual bool digitalOutput(
 ) const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::digitalOutput](/lxmaster/api/classes/IIoProfile#function-digitaloutput)
-
 
 ### function digitalInputCount
 
@@ -202,9 +184,7 @@ inline virtual bool digitalOutput(
 inline virtual std::size_t digitalInputCount() const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::digitalInputCount](/lxmaster/api/classes/IIoProfile#function-digitalinputcount)
-
 
 ### function digitalInput
 
@@ -218,7 +198,6 @@ Read a digital input/output channel; out-of-range returns false.
 
 **Reimplements**: [ecdev::IIoProfile::digitalInput](/lxmaster/api/classes/IIoProfile#function-digitalinput)
 
-
 ### function configurePreOp
 
 ```cpp
@@ -228,9 +207,7 @@ virtual std::string configurePreOp(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)
-
 
 ### function asIo
 
@@ -238,9 +215,7 @@ virtual std::string configurePreOp(
 inline virtual IIoProfile * asIo() override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::asIo](/lxmaster/api/classes/IDeviceProfile#function-asio)
-
 
 ### function analogOutputCount
 
@@ -248,9 +223,7 @@ inline virtual IIoProfile * asIo() override
 inline virtual std::size_t analogOutputCount() const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::analogOutputCount](/lxmaster/api/classes/IIoProfile#function-analogoutputcount)
-
 
 ### function analogOutput
 
@@ -260,9 +233,7 @@ inline virtual std::int32_t analogOutput(
 ) const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::analogOutput](/lxmaster/api/classes/IIoProfile#function-analogoutput)
-
 
 ### function analogInputCount
 
@@ -270,9 +241,7 @@ inline virtual std::int32_t analogOutput(
 inline virtual std::size_t analogInputCount() const override
 ```
 
-
 **Reimplements**: [ecdev::IIoProfile::analogInputCount](/lxmaster/api/classes/IIoProfile#function-analoginputcount)
-
 
 ### function analogInput
 
@@ -286,7 +255,6 @@ Read an analog input/output channel (raw counts); out-of-range returns 0.
 
 **Reimplements**: [ecdev::IIoProfile::analogInput](/lxmaster/api/classes/IIoProfile#function-analoginput)
 
-
 ## Public Attributes Documentation
 
 ### variable kMaxDigital
@@ -295,13 +263,11 @@ Read an analog input/output channel (raw counts); out-of-range returns 0.
 static constexpr std::size_t kMaxDigital = 256;
 ```
 
-
 ### variable kMaxAnalog
 
 ```cpp
 static constexpr std::size_t kMaxAnalog = 64;
 ```
-
 
 -------------------------------
 

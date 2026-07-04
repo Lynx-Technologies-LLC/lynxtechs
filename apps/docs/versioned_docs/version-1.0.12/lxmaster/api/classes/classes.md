@@ -7,9 +7,6 @@ title: "Classes"
 
 # Classes
 
-
-
-
 * **class [CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)** <br>CiA 401 (CANopen generic I/O) profile. 
 * **class [CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfile)** <br>CiA 402 (CANopen-over-EtherCAT) servo-drive profile. 
     * **struct [Config](/lxmaster/api/classes/CiA402DriveProfile-Config)** 
@@ -63,8 +60,6 @@ title: "Classes"
     * **struct [SdoU8](/lxmaster/api/classes/diag-SdoU8)** <br>Optional SDO scalar: `present` is false when the read failed / object is absent. 
     * **struct [StrictSyncReport](/lxmaster/api/classes/diag-StrictSyncReport)** 
     * **struct [StrictSyncSlave](/lxmaster/api/classes/diag-StrictSyncSlave)** 
-
-
 
 -------------------------------
 

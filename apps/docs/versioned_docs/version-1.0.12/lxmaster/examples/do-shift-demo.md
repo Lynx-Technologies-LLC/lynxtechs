@@ -7,8 +7,6 @@ sidebar_position: 2
 
 # Do Shift Demo
 
-> Buildable example from [`do_shift_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/do_shift_demo) in the `lxmaster-demos` repository.
-
 ## Source: `main.cpp`
 
 ```cpp

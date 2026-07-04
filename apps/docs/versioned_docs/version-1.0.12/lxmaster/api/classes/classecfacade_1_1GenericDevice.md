@@ -10,10 +10,7 @@ sidebar_label: "GenericDevice"
 
 # ecfacade::GenericDevice
 
-
-
 Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g.  [More...](#detailed-description)
-
 
 `#include <generic_device.hpp>`
 
@@ -43,7 +40,6 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 | std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
 | ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
 
-
 ## Detailed Description
 
 ```cpp
@@ -66,7 +62,6 @@ DeviceFacade(
     std::string name
 )
 ```
-
 
 -------------------------------
 

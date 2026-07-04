@@ -10,10 +10,7 @@ sidebar_label: "CiA406EncoderProfile"
 
 # ecdev::CiA406EncoderProfile
 
-
-
 CiA 406 (encoder) profile.  [More...](#detailed-description)
-
 
 `#include <cia406_encoder_profile.hpp>`
 
@@ -52,7 +49,6 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 | -------------- | -------------- |
 | virtual | **[~IEncoderProfile](/lxmaster/api/classes/IEncoderProfile#function-~iencoderprofile)**() =default |
 
-
 ## Detailed Description
 
 ```cpp
@@ -77,7 +73,6 @@ Latest velocity value, if the sensor maps one (otherwise 0).
 
 **Reimplements**: [ecdev::IEncoderProfile::velocity](/lxmaster/api/classes/IEncoderProfile#function-velocity)
 
-
 ### function status
 
 ```cpp
@@ -87,7 +82,6 @@ inline virtual std::uint16_t status() const override
 Raw status/operating-status word, if mapped (otherwise 0). 
 
 **Reimplements**: [ecdev::IEncoderProfile::status](/lxmaster/api/classes/IEncoderProfile#function-status)
-
 
 ### function readInputs
 
@@ -99,9 +93,7 @@ virtual void readInputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)
-
 
 ### function profileName
 
@@ -113,9 +105,7 @@ Stable identifier for diagnostics (e.g.
 
 **Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)
 
-
 "CiA402-drive"). 
-
 
 ### function position
 
@@ -127,7 +117,6 @@ Latest position value (counts) from the sensor.
 
 **Reimplements**: [ecdev::IEncoderProfile::position](/lxmaster/api/classes/IEncoderProfile#function-position)
 
-
 ### function configurePreOp
 
 ```cpp
@@ -137,9 +126,7 @@ virtual std::string configurePreOp(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)
-
 
 ### function asEncoder
 
@@ -147,9 +134,7 @@ virtual std::string configurePreOp(
 inline virtual IEncoderProfile * asEncoder() override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::asEncoder](/lxmaster/api/classes/IDeviceProfile#function-asencoder)
-
 
 -------------------------------
 

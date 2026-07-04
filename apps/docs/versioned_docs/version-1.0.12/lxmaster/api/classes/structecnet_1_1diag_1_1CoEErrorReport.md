@@ -9,10 +9,6 @@ sidebar_label: "CoEErrorReport"
 
 # ecnet::diag::CoEErrorReport
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -28,13 +24,11 @@ sidebar_label: "CoEErrorReport"
 std::string when_label;
 ```
 
-
 ### variable slaves
 
 ```cpp
 std::vector< CoEErrorSlave > slaves;
 ```
-
 
 -------------------------------
 

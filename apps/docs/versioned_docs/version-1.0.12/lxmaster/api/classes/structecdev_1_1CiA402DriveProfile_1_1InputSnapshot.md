@@ -9,10 +9,6 @@ sidebar_label: "InputSnapshot"
 
 # ecdev::CiA402DriveProfile::InputSnapshot
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -31,13 +27,11 @@ sidebar_label: "InputSnapshot"
 std::atomic< std::uint16_t > statusword {0};
 ```
 
-
 ### variable mode_display
 
 ```cpp
 std::atomic< std::int32_t > mode_display {0};
 ```
-
 
 ### variable actual_velocity
 
@@ -45,20 +39,17 @@ std::atomic< std::int32_t > mode_display {0};
 std::atomic< std::int32_t > actual_velocity {0};
 ```
 
-
 ### variable actual_torque
 
 ```cpp
 std::atomic< std::int32_t > actual_torque {0};
 ```
 
-
 ### variable actual_position
 
 ```cpp
 std::atomic< std::int32_t > actual_position {0};
 ```
-
 
 -------------------------------
 

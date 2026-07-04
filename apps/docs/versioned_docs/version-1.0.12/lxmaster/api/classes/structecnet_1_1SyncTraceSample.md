@@ -9,10 +9,6 @@ sidebar_label: "SyncTraceSample"
 
 # ecnet::SyncTraceSample
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -35,13 +31,11 @@ sidebar_label: "SyncTraceSample"
 std::int64_t toff_ns {0};
 ```
 
-
 ### variable rt_cycle
 
 ```cpp
 std::uint64_t rt_cycle {0};
 ```
-
 
 ### variable phase
 
@@ -49,13 +43,11 @@ std::uint64_t rt_cycle {0};
 SyncTracePhase phase {SyncTracePhase::Operational};
 ```
 
-
 ### variable operational_cycle_seq
 
 ```cpp
 std::uint64_t operational_cycle_seq {0};
 ```
-
 
 ### variable jitter_err_ns
 
@@ -63,13 +55,11 @@ std::uint64_t operational_cycle_seq {0};
 std::int64_t jitter_err_ns {0};
 ```
 
-
 ### variable integral_ns
 
 ```cpp
 std::int64_t integral_ns {0};
 ```
-
 
 ### variable expected_dc_reftime_ns
 
@@ -77,20 +67,17 @@ std::int64_t integral_ns {0};
 std::int64_t expected_dc_reftime_ns {0};
 ```
 
-
 ### variable dc_reftime_ns
 
 ```cpp
 std::int64_t dc_reftime_ns {0};
 ```
 
-
 ### variable dc_delta_ns
 
 ```cpp
 std::int64_t dc_delta_ns {0};
 ```
-
 
 -------------------------------
 

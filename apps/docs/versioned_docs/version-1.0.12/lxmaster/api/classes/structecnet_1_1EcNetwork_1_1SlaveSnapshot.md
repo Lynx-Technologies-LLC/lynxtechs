@@ -10,8 +10,6 @@ sidebar_label: "SlaveSnapshot"
 
 # ecnet::EcNetwork::SlaveSnapshot
 
-
-
 Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` does before `master_->close()`).  [More...](#detailed-description)
 
 ## Public Attributes
@@ -41,13 +39,11 @@ Snapshot of each slave's EtherCAT state + AL-status code taken while the master 
 bool valid {false};
 ```
 
-
 ### variable state
 
 ```cpp
 std::uint16_t state {0};
 ```
-
 
 ### variable is_lost
 
@@ -55,13 +51,11 @@ std::uint16_t state {0};
 bool is_lost {false};
 ```
 
-
 ### variable al_statuscode
 
 ```cpp
 std::uint16_t al_statuscode {0};
 ```
-
 
 -------------------------------
 

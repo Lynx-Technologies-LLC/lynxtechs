@@ -10,10 +10,7 @@ sidebar_label: "LostSlave"
 
 # ecnet::LostSlave
 
-
-
 One slave that stopped responding when the bus fault was diagnosed.  [More...](#detailed-description)
-
 
 `#include <bus_fault.hpp>`
 
@@ -42,13 +39,11 @@ One slave that stopped responding when the bus fault was diagnosed.
 std::string name;
 ```
 
-
 ### variable index
 
 ```cpp
 int index {0};
 ```
-
 
 -------------------------------
 

@@ -10,10 +10,7 @@ sidebar_label: "EniConfig"
 
 # ecnet::EniConfig
 
-
-
 ENI-driven configuration.  [More...](#detailed-description)
-
 
 `#include <network_config.hpp>`
 
@@ -42,7 +39,6 @@ Per-axis settings are applied after prepare() returns by iterating net.axes(): c
 ```cpp
 std::string eni_path;
 ```
-
 
 -------------------------------
 

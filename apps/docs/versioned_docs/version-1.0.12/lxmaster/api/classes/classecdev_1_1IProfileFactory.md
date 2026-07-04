@@ -10,10 +10,7 @@ sidebar_label: "IProfileFactory"
 
 # ecdev::IProfileFactory
 
-
-
 Builds the device-class profile for one slave.  [More...](#detailed-description)
-
 
 `#include <profile_registry.hpp>`
 
@@ -44,13 +41,11 @@ A new device class is supported by adding a new factory (typically via `[makeIde
 virtual ~IProfileFactory() =default
 ```
 
-
 ### function name
 
 ```cpp
 virtual const char * name() const =0
 ```
-
 
 ### function create
 
@@ -59,7 +54,6 @@ virtual std::unique_ptr< IDeviceProfile > create(
     const ProfileSelectionInput & in
 ) const =0
 ```
-
 
 ### function claim
 
@@ -72,7 +66,6 @@ virtual int claim(
 Claim strength for `slave`: `claim_score::kNone` = does not handle this slave; a positive value = this factory serves the slave (see `[claim_score](/lxmaster/api/namespaces/ecdev-claim_score)`). 
 
 The registry picks the highest-claiming factory (deterministic by registration order on ties). 
-
 
 -------------------------------
 

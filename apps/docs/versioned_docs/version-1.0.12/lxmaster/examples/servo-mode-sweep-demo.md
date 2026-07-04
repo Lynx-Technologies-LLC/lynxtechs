@@ -7,8 +7,6 @@ sidebar_position: 3
 
 # Servo Mode Sweep Demo
 
-> Buildable example from [`servo_mode_sweep_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/servo_mode_sweep_demo) in the `lxmaster-demos` repository.
-
 ## Source: `main.cpp`
 
 ```cpp

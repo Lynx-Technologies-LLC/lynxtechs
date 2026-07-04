@@ -9,10 +9,6 @@ sidebar_label: "StrictSyncReport"
 
 # ecnet::diag::StrictSyncReport
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -28,13 +24,11 @@ sidebar_label: "StrictSyncReport"
 std::vector< StrictSyncSlave > slaves;
 ```
 
-
 ### variable ok
 
 ```cpp
 bool ok {true};
 ```
-
 
 -------------------------------
 

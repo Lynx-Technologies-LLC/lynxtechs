@@ -10,10 +10,7 @@ sidebar_label: "SyncTraceReport"
 
 # ecnet::EcNetwork::SyncTraceReport
 
-
-
 Cached at `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`). 
-
 
 `#include <ec_network.hpp>`
 
@@ -42,20 +39,17 @@ Cycles where `|dc_delta|` exceeded `NetworkConfig::sync_trace_window_ns` (window
 std::uint64_t total_writes {0};
 ```
 
-
 ### variable samples
 
 ```cpp
 std::vector< SyncTraceSample > samples;
 ```
 
-
 ### variable ring_capacity
 
 ```cpp
 std::size_t ring_capacity {0};
 ```
-
 
 -------------------------------
 

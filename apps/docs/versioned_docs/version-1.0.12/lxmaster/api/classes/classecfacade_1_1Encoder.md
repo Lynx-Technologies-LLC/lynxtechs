@@ -10,10 +10,7 @@ sidebar_label: "Encoder"
 
 # ecfacade::Encoder
 
-
-
 High-level encoder handle.  [More...](#detailed-description)
-
 
 `#include <encoder.hpp>`
 
@@ -48,7 +45,6 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 | std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
 | ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
 
-
 ## Detailed Description
 
 ```cpp
@@ -67,13 +63,11 @@ Thin wrapper over an `[ecdev::IEncoderProfile](/lxmaster/api/classes/IEncoderPro
 std::int32_t velocity() const
 ```
 
-
 ### function status
 
 ```cpp
 std::uint16_t status() const
 ```
-
 
 ### function position
 
@@ -81,13 +75,11 @@ std::uint16_t status() const
 std::int32_t position() const
 ```
 
-
 ### function encoderProfile
 
 ```cpp
 ecdev::IEncoderProfile * encoderProfile() const
 ```
-
 
 ### function Encoder
 
@@ -98,7 +90,6 @@ Encoder(
     ecdev::IEthercatDevice * device
 )
 ```
-
 
 -------------------------------
 

@@ -10,10 +10,7 @@ sidebar_label: "ProcessImage"
 
 # ecdev::ProcessImage
 
-
-
 Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use.  [More...](#detailed-description)
-
 
 `#include <process_image.hpp>`
 
@@ -70,7 +67,6 @@ bool writeU8(
 )
 ```
 
-
 ### function writeU32
 
 ```cpp
@@ -79,7 +75,6 @@ bool writeU32(
     std::uint32_t value
 )
 ```
-
 
 ### function writeU16
 
@@ -90,7 +85,6 @@ bool writeU16(
 )
 ```
 
-
 ### function writeI8
 
 ```cpp
@@ -99,7 +93,6 @@ bool writeI8(
     std::int8_t value
 )
 ```
-
 
 ### function writeI32
 
@@ -110,7 +103,6 @@ bool writeI32(
 )
 ```
 
-
 ### function writeI16
 
 ```cpp
@@ -120,7 +112,6 @@ bool writeI16(
 )
 ```
 
-
 ### function writeBit
 
 ```cpp
@@ -129,7 +120,6 @@ bool writeBit(
     bool value
 )
 ```
-
 
 ### function resolve
 
@@ -144,7 +134,6 @@ Resolve a CoE object (index:sub) to a stable handle.
 
 Do this once at setup. 
 
-
 ### function readU8
 
 ```cpp
@@ -153,7 +142,6 @@ bool readU8(
     std::uint8_t * out
 ) const
 ```
-
 
 ### function readU32
 
@@ -164,7 +152,6 @@ bool readU32(
 ) const
 ```
 
-
 ### function readU16
 
 ```cpp
@@ -173,7 +160,6 @@ bool readU16(
     std::uint16_t * out
 ) const
 ```
-
 
 ### function readI8
 
@@ -184,7 +170,6 @@ bool readI8(
 ) const
 ```
 
-
 ### function readI32
 
 ```cpp
@@ -193,7 +178,6 @@ bool readI32(
     std::int32_t * out
 ) const
 ```
-
 
 ### function readI16
 
@@ -204,7 +188,6 @@ bool readI16(
 ) const
 ```
 
-
 ### function readBit
 
 ```cpp
@@ -213,7 +196,6 @@ bool readBit(
     bool * out
 ) const
 ```
-
 
 ### function fromSlaveConfig
 
@@ -231,7 +213,6 @@ Build the offset tables from an ENI slave (walks rx_pdos then tx_pdos in order).
 inline const std::vector< Entry > & entries() const
 ```
 
-
 ### function bind
 
 ```cpp
@@ -247,13 +228,11 @@ Bind the live PDO byte buffers for the current cycle.
 
 Cheap; call once per cycle. 
 
-
 ### function ProcessImage
 
 ```cpp
 ProcessImage() =default
 ```
-
 
 -------------------------------
 

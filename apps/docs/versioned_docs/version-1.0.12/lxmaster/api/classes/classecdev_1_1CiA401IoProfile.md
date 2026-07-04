@@ -10,10 +10,7 @@ sidebar_label: "CiA401IoProfile"
 
 # ecdev::CiA401IoProfile
 
-
-
 CiA 401 (CANopen generic I/O) profile.  [More...](#detailed-description)
-
 
 `#include <cia401_io_profile.hpp>`
 
@@ -86,7 +83,6 @@ Inherits from [ecdev::GenericIoProfile](/lxmaster/api/classes/GenericIoProfile),
 | virtual std::size_t | **[analogInputCount](/lxmaster/api/classes/IIoProfile#function-analoginputcount)**() const =0 |
 | virtual std::int32_t | **[analogInput](/lxmaster/api/classes/IIoProfile#function-analoginput)**(std::size_t channel) const =0<br>Read an analog input/output channel (raw counts); out-of-range returns 0.  |
 
-
 ## Detailed Description
 
 ```cpp
@@ -109,9 +105,7 @@ Stable identifier for diagnostics (e.g.
 
 **Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)
 
-
 "CiA402-drive"). 
-
 
 -------------------------------
 

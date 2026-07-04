@@ -9,10 +9,6 @@ sidebar_label: "SmGroup"
 
 # ecdev::PdoAssignment::SmGroup
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -27,7 +23,6 @@ sidebar_label: "SmGroup"
 ```cpp
 std::vector< PdoPlan > pdos;
 ```
-
 
 ### variable assignment_index
 

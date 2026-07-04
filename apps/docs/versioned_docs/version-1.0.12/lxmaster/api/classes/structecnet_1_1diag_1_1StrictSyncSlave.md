@@ -9,10 +9,6 @@ sidebar_label: "StrictSyncSlave"
 
 # ecnet::diag::StrictSyncSlave
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -47,20 +43,17 @@ PdoAssignObject rx;
 int idx {0};
 ```
 
-
 ### variable has_dc
 
 ```cpp
 bool has_dc {false};
 ```
 
-
 ### variable dc_path_enabled_but_absent
 
 ```cpp
 bool dc_path_enabled_but_absent {false};
 ```
-
 
 -------------------------------
 

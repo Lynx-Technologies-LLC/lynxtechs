@@ -9,10 +9,6 @@ sidebar_label: "SafeOpDcSlave"
 
 # ecnet::diag::SafeOpDcSlave
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -43,13 +39,11 @@ sidebar_label: "SafeOpDcSlave"
 std::uint16_t state {0};
 ```
 
-
 ### variable sm3_sync_mode
 
 ```cpp
 SdoU16 sm3_sync_mode;
 ```
-
 
 ### variable sm3_subcount
 
@@ -57,13 +51,11 @@ SdoU16 sm3_sync_mode;
 SdoU16 sm3_subcount;
 ```
 
-
 ### variable sm3_shift_time
 
 ```cpp
 SdoU32 sm3_shift_time;
 ```
-
 
 ### variable sm3_cycle_time
 
@@ -71,13 +63,11 @@ SdoU32 sm3_shift_time;
 SdoU32 sm3_cycle_time;
 ```
 
-
 ### variable sm2_sync_mode
 
 ```cpp
 SdoU16 sm2_sync_mode;
 ```
-
 
 ### variable sm2_subcount
 
@@ -85,13 +75,11 @@ SdoU16 sm2_sync_mode;
 SdoU16 sm2_subcount;
 ```
 
-
 ### variable sm2_shift_time
 
 ```cpp
 SdoU32 sm2_shift_time;
 ```
-
 
 ### variable sm2_cycle_time
 
@@ -99,13 +87,11 @@ SdoU32 sm2_shift_time;
 SdoU32 sm2_cycle_time;
 ```
 
-
 ### variable interp_time_period
 
 ```cpp
 SdoU16 interp_time_period;
 ```
-
 
 ### variable interp_time_index
 
@@ -113,13 +99,11 @@ SdoU16 interp_time_period;
 SdoU16 interp_time_index;
 ```
 
-
 ### variable in_safe_op
 
 ```cpp
 bool in_safe_op {false};
 ```
-
 
 ### variable idx
 
@@ -127,13 +111,11 @@ bool in_safe_op {false};
 int idx {0};
 ```
 
-
 ### variable has_dc
 
 ```cpp
 bool has_dc {false};
 ```
-
 
 ### variable dc_requested_but_absent
 
@@ -141,20 +123,17 @@ bool has_dc {false};
 bool dc_requested_but_absent {false};
 ```
 
-
 ### variable al_status_code
 
 ```cpp
 std::uint16_t al_status_code {0};
 ```
 
-
 ### variable al_error
 
 ```cpp
 bool al_error {false};
 ```
-
 
 -------------------------------
 

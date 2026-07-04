@@ -7,8 +7,6 @@ sidebar_position: 7
 
 # Sine Shift Demo
 
-> Buildable example from [`sine_shift_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/sine_shift_demo) in the `lxmaster-demos` repository.
-
 ## Source: `main.cpp`
 
 ```cpp

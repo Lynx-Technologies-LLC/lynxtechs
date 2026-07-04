@@ -10,10 +10,7 @@ sidebar_label: "Axis"
 
 # ecfacade::Axis
 
-
-
 High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis".  [More...](#detailed-description)
-
 
 `#include <axis.hpp>`
 
@@ -60,7 +57,6 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 | std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
 | ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
 
-
 ## Detailed Description
 
 ```cpp
@@ -81,7 +77,6 @@ All methods are safe to call from the application thread while the RT cycle runs
 std::uint16_t statusword() const
 ```
 
-
 ### function setDriveMode
 
 ```cpp
@@ -93,7 +88,6 @@ void setDriveMode(
 Select the cyclic operating mode (CSP / CSV / CST) this axis runs; the CiA402 profile writes 0x6060 to match. 
 
 Call before start() to choose the initial mode, or while running to switch live &ndash; a live switch takes effect only when the ENI maps 0x6060 into the RxPDO (eni_gen does this for CiA402 drives). RT-safe. 
-
 
 ### function resetFault
 
@@ -145,13 +139,11 @@ Drive-reported modes-of-operation display (0x6061; 8=CSP, 9=CSV, 10=CST); 0 if u
 bool isFaulted() const
 ```
 
-
 ### function isEnabled
 
 ```cpp
 bool isEnabled() const
 ```
-
 
 ### function enable
 
@@ -175,7 +167,6 @@ Request the drive to power down to a de-energised resting state.
 std::int32_t commandedPosition() const
 ```
 
-
 ### function applyTorque
 
 ```cpp
@@ -192,7 +183,6 @@ Command a target torque in per-mille of rated torque (CST).
 std::int32_t actualVelocity() const
 ```
 
-
 ### function actualTorque
 
 ```cpp
@@ -207,7 +197,6 @@ Drive-reported actual torque (0x6077, per-mille of rated); 0 if the profile does
 std::int32_t actualPosition() const
 ```
 
-
 ### function Axis
 
 ```cpp
@@ -217,7 +206,6 @@ Axis(
     ecdev::IEthercatDevice * device
 )
 ```
-
 
 -------------------------------
 

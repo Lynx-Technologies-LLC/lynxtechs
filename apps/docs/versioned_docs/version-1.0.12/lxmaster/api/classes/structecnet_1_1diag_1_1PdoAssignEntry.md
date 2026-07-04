@@ -9,10 +9,6 @@ sidebar_label: "PdoAssignEntry"
 
 # ecnet::diag::PdoAssignEntry
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -29,20 +25,17 @@ sidebar_label: "PdoAssignEntry"
 std::uint8_t sub {0};
 ```
 
-
 ### variable readable
 
 ```cpp
 bool readable {false};
 ```
 
-
 ### variable pdo_index
 
 ```cpp
 std::uint16_t pdo_index {0};
 ```
-
 
 -------------------------------
 

@@ -9,10 +9,6 @@ sidebar_label: "ShutdownConfig"
 
 # ecnet::ShutdownConfig
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -31,13 +27,11 @@ sidebar_label: "ShutdownConfig"
 int safeop_timeout_ms {2000};
 ```
 
-
 ### variable post_sod_settle_ms
 
 ```cpp
 int post_sod_settle_ms {200};
 ```
-
 
 ### variable device_timeout_ms
 
@@ -45,20 +39,17 @@ int post_sod_settle_ms {200};
 int device_timeout_ms {500};
 ```
 
-
 ### variable al_state_timeout_ms
 
 ```cpp
 int al_state_timeout_ms {2000};
 ```
 
-
 ### variable al_gate_timeout_ms
 
 ```cpp
 int al_gate_timeout_ms {2000};
 ```
-
 
 -------------------------------
 

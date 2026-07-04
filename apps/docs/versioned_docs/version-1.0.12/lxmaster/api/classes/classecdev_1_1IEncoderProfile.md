@@ -10,10 +10,7 @@ sidebar_label: "IEncoderProfile"
 
 # ecdev::IEncoderProfile
 
-
-
 Facade-facing contract for an encoder / position sensor (CiA 406 family).  [More...](#detailed-description)
-
 
 `#include <encoder_profile.hpp>`
 
@@ -46,7 +43,6 @@ The `Encoder` facade depends only on this. Safe to call from an application thre
 virtual ~IEncoderProfile() =default
 ```
 
-
 ### function velocity
 
 ```cpp
@@ -56,7 +52,6 @@ virtual std::int32_t velocity() const =0
 Latest velocity value, if the sensor maps one (otherwise 0). 
 
 **Reimplemented by**: [ecdev::CiA406EncoderProfile::velocity](/lxmaster/api/classes/CiA406EncoderProfile#function-velocity)
-
 
 ### function status
 
@@ -68,7 +63,6 @@ Raw status/operating-status word, if mapped (otherwise 0).
 
 **Reimplemented by**: [ecdev::CiA406EncoderProfile::status](/lxmaster/api/classes/CiA406EncoderProfile#function-status)
 
-
 ### function position
 
 ```cpp
@@ -78,7 +72,6 @@ virtual std::int32_t position() const =0
 Latest position value (counts) from the sensor. 
 
 **Reimplemented by**: [ecdev::CiA406EncoderProfile::position](/lxmaster/api/classes/CiA406EncoderProfile#function-position)
-
 
 -------------------------------
 

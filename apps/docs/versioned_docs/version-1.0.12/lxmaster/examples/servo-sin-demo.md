@@ -7,8 +7,6 @@ sidebar_position: 4
 
 # Servo Sin Demo
 
-> Buildable example from [`servo_sin_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/servo_sin_demo) in the `lxmaster-demos` repository.
-
 # servo_sin_demo — ENI-driven generic sine motion
 
 A sinusoidal CSP profile with DC-sync tuning. Bring-up is **fully generic**: slave identity,

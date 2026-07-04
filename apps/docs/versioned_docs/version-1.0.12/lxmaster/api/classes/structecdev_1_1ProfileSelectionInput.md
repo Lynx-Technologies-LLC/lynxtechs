@@ -10,10 +10,7 @@ sidebar_label: "ProfileSelectionInput"
 
 # ecdev::ProfileSelectionInput
 
-
-
 Inputs a factory uses to decide on and build a profile for one ENI slave. 
-
 
 `#include <profile_registry.hpp>`
 
@@ -38,13 +35,11 @@ Clear a residual fault present at OP entry (before the drive has ever enabled th
 
 On by default; mid-run faults stay terminal. 
 
-
 ### variable slave
 
 ```cpp
 const eni::SlaveConfig * slave {nullptr};
 ```
-
 
 ### variable op_mode
 
@@ -56,7 +51,6 @@ Initial operating mode baked into the profile at construction (CSP default).
 
 Overridable at runtime via Axis::configure() between prepare() and start(). 
 
-
 ### variable auto_fault_reset_and_recover
 
 ```cpp
@@ -66,7 +60,6 @@ bool auto_fault_reset_and_recover {false};
 Initial auto fault-reset/recover flag (off by default). 
 
 Overridable via Axis::configure(). 
-
 
 -------------------------------
 

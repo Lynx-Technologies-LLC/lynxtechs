@@ -7,8 +7,6 @@ sidebar_position: 6
 
 # Servo Sin Vel Demo
 
-> Buildable example from [`servo_sin_vel_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/servo_sin_vel_demo) in the `lxmaster-demos` repository.
-
 ## Source: `main.cpp`
 
 ```cpp

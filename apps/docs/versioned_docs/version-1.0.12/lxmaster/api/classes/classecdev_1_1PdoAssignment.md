@@ -10,10 +10,7 @@ sidebar_label: "PdoAssignment"
 
 # ecdev::PdoAssignment
 
-
-
 Generic, ENI-driven CoE PDO assignment.  [More...](#detailed-description)
-
 
 `#include <pdo_assignment.hpp>`
 
@@ -97,7 +94,6 @@ int apply(
 Program the assignment over CoE. 
 
 Returns the aggregate working counter. 
-
 
 -------------------------------
 

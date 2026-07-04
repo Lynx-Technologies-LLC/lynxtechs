@@ -10,10 +10,7 @@ sidebar_label: "CiA402DriveProfile"
 
 # ecdev::CiA402DriveProfile
 
-
-
 CiA 402 (CANopen-over-EtherCAT) servo-drive profile.  [More...](#detailed-description)
-
 
 `#include <cia402_drive_profile.hpp>`
 
@@ -87,7 +84,6 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 | -------------- | -------------- |
 | virtual | **[~IMotionProfile](/lxmaster/api/classes/IMotionProfile#function-~imotionprofile)**() =default |
 
-
 ## Detailed Description
 
 ```cpp
@@ -118,7 +114,6 @@ Cyclic operation mode this profile drives.
 
 CSP commands target position (0x607A); CSV commands target velocity (0x60FF); CST commands target torque (0x6071, INT16). The ENI/ESI must map the matching object and set the drive's modes-of-operation (0x6060) accordingly &ndash; the profile only validates the mapping. The per-mode cyclic facts live in the OpModeTraits table in cia402_drive_profile.cpp. 
 
-
 ## Public Functions Documentation
 
 ### function writeOutputs
@@ -130,9 +125,7 @@ virtual void writeOutputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)
-
 
 ### function targetPosition
 
@@ -140,9 +133,7 @@ virtual void writeOutputs(
 inline virtual std::int32_t targetPosition() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::targetPosition](/lxmaster/api/classes/IMotionProfile#function-targetposition)
-
 
 ### function statusword
 
@@ -150,9 +141,7 @@ inline virtual std::int32_t targetPosition() const override
 inline virtual std::uint16_t statusword() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::statusword](/lxmaster/api/classes/IMotionProfile#function-statusword)
-
 
 ### function setTargetVelocity
 
@@ -166,9 +155,7 @@ CSV target velocity in counts/s.
 
 **Reimplements**: [ecdev::IMotionProfile::setTargetVelocity](/lxmaster/api/classes/IMotionProfile#function-settargetvelocity)
 
-
 Has its own command slot (0x60FF) so a CSP position target and a CSV velocity target can coexist for bumpless live mode switching; only the object matching the active op-mode is honoured by the drive. 
-
 
 ### function setTargetTorque
 
@@ -182,9 +169,7 @@ CST target torque in per-mille of rated torque.
 
 **Reimplements**: [ecdev::IMotionProfile::setTargetTorque](/lxmaster/api/classes/IMotionProfile#function-settargettorque)
 
-
 Has its own command slot (0x6071) so it can coexist with position/velocity targets for bumpless live mode switching; only the object matching the active op-mode is honoured by the drive. 
-
 
 ### function setTargetPosition
 
@@ -198,7 +183,6 @@ Command CSP target position in encoder counts; implicitly leaves "hold actual" m
 
 **Reimplements**: [ecdev::IMotionProfile::setTargetPosition](/lxmaster/api/classes/IMotionProfile#function-settargetposition)
 
-
 ### function setOperatingMode
 
 ```cpp
@@ -211,9 +195,7 @@ Choose the operating mode.
 
 **Reimplements**: [ecdev::IMotionProfile::setOperatingMode](/lxmaster/api/classes/IMotionProfile#function-setoperatingmode)
 
-
 Pre-start this seeds the initial mode; while running it also switches live &ndash; when the ENI maps 0x6060 into the RxPDO the profile writes out_.desired_mode every cycle, so CSP/CSV/CST switch while OPERATIONAL. The atomic store is RT-safe; cfg_.op_mode (used only by the legacy no-0x6060 path, which is fixed at PRE_OP) is not read cyclically in PDO mode. 
-
 
 ### function setAutoFaultRecover
 
@@ -227,9 +209,7 @@ Set the CiA402 auto fault-reset/recover behaviour.
 
 **Reimplements**: [ecdev::IMotionProfile::setAutoFaultRecover](/lxmaster/api/classes/IMotionProfile#function-setautofaultrecover)
 
-
 Call between prepare() and start(); not RT-safe. 
-
 
 ### function requiresMotionShutdown
 
@@ -237,13 +217,11 @@ Call between prepare() and start(); not RT-safe.
 inline bool requiresMotionShutdown() const override
 ```
 
-
 ### function requiresAlShutdown
 
 ```cpp
 inline bool requiresAlShutdown() const override
 ```
-
 
 ### function requestFaultReset
 
@@ -255,7 +233,6 @@ One-shot fault-reset edge (acted on only while the drive reports Fault).
 
 **Reimplements**: [ecdev::IMotionProfile::requestFaultReset](/lxmaster/api/classes/IMotionProfile#function-requestfaultreset)
 
-
 ### function requestEnable
 
 ```cpp
@@ -265,7 +242,6 @@ inline virtual void requestEnable() override
 Request the drive walk to Operation Enabled (cancels a prior disable request). 
 
 **Reimplements**: [ecdev::IMotionProfile::requestEnable](/lxmaster/api/classes/IMotionProfile#function-requestenable)
-
 
 ### function requestDisable
 
@@ -277,20 +253,17 @@ Request the drive walk back to a de-energised resting state.
 
 **Reimplements**: [ecdev::IMotionProfile::requestDisable](/lxmaster/api/classes/IMotionProfile#function-requestdisable)
 
-
 ### function readyForShutdown
 
 ```cpp
 inline bool readyForShutdown() const override
 ```
 
-
 ### function readyForAlShutdown
 
 ```cpp
 bool readyForAlShutdown() const override
 ```
-
 
 ### function readInputs
 
@@ -302,9 +275,7 @@ virtual void readInputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)
-
 
 ### function profileName
 
@@ -316,9 +287,7 @@ Stable identifier for diagnostics (e.g.
 
 **Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)
 
-
 "CiA402-drive"). 
-
 
 ### function primeOutputs
 
@@ -328,16 +297,13 @@ virtual void primeOutputs(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)
-
 
 ### function prepareShutdown
 
 ```cpp
 inline void prepareShutdown() override
 ```
-
 
 ### function prepareSafeOp
 
@@ -348,9 +314,7 @@ virtual std::string prepareSafeOp(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)
-
 
 ### function modeDisplay
 
@@ -362,9 +326,7 @@ Drive's modes-of-operation display (CiA402 0x6061; 8=CSP, 9=CSV, 10=CST).
 
 **Reimplements**: [ecdev::IMotionProfile::modeDisplay](/lxmaster/api/classes/IMotionProfile#function-modedisplay)
 
-
 0 if unmapped. 
-
 
 ### function lastStatusWordForDiagnostics
 
@@ -372,16 +334,13 @@ Drive's modes-of-operation display (CiA402 0x6061; 8=CSP, 9=CSV, 10=CST).
 inline std::uint16_t lastStatusWordForDiagnostics() const override
 ```
 
-
 ### function isOperationEnabled
 
 ```cpp
 inline virtual bool isOperationEnabled() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::isOperationEnabled](/lxmaster/api/classes/IMotionProfile#function-isoperationenabled)
-
 
 ### function isFault
 
@@ -389,9 +348,7 @@ inline virtual bool isOperationEnabled() const override
 inline virtual bool isFault() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::isFault](/lxmaster/api/classes/IMotionProfile#function-isfault)
-
 
 ### function hasLeftOperationEnabled
 
@@ -399,20 +356,17 @@ inline virtual bool isFault() const override
 bool hasLeftOperationEnabled() const override
 ```
 
-
 ### function cyclicStopRequested
 
 ```cpp
 inline bool cyclicStopRequested() const override
 ```
 
-
 ### function cyclicStopReason
 
 ```cpp
 std::string cyclicStopReason() const override
 ```
-
 
 ### function configurePreOp
 
@@ -423,9 +377,7 @@ virtual std::string configurePreOp(
 ) override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)
-
 
 ### function captureExitDiagnostics
 
@@ -439,16 +391,13 @@ End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.
 
 **Reimplements**: [ecdev::IDeviceProfile::captureExitDiagnostics](/lxmaster/api/classes/IDeviceProfile#function-captureexitdiagnostics)
 
-
 ### function asMotion
 
 ```cpp
 inline virtual IMotionProfile * asMotion() override
 ```
 
-
 **Reimplements**: [ecdev::IDeviceProfile::asMotion](/lxmaster/api/classes/IDeviceProfile#function-asmotion)
-
 
 ### function actualVelocity
 
@@ -456,9 +405,7 @@ inline virtual IMotionProfile * asMotion() override
 inline virtual std::int32_t actualVelocity() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::actualVelocity](/lxmaster/api/classes/IMotionProfile#function-actualvelocity)
-
 
 ### function actualTorque
 
@@ -470,9 +417,7 @@ Drive's reported actual torque (CiA402 0x6077, per-mille of rated).
 
 **Reimplements**: [ecdev::IMotionProfile::actualTorque](/lxmaster/api/classes/IMotionProfile#function-actualtorque)
 
-
 0 if the profile does not map it. Diagnostic only. 
-
 
 ### function actualPosition
 
@@ -480,9 +425,7 @@ Drive's reported actual torque (CiA402 0x6077, per-mille of rated).
 inline virtual std::int32_t actualPosition() const override
 ```
 
-
 **Reimplements**: [ecdev::IMotionProfile::actualPosition](/lxmaster/api/classes/IMotionProfile#function-actualposition)
-
 
 ### function CiA402DriveProfile
 
@@ -491,7 +434,6 @@ explicit CiA402DriveProfile(
     Config cfg
 )
 ```
-
 
 -------------------------------
 

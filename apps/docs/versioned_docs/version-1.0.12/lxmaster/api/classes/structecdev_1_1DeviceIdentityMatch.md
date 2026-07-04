@@ -10,10 +10,7 @@ sidebar_label: "DeviceIdentityMatch"
 
 # ecdev::DeviceIdentityMatch
 
-
-
 Exact device identity a device class serves.  [More...](#detailed-description)
-
 
 `#include <identity_profile.hpp>`
 
@@ -52,7 +49,6 @@ bool matches(
 ) const
 ```
 
-
 ## Public Attributes Documentation
 
 ### variable vendor_id
@@ -60,7 +56,6 @@ bool matches(
 ```cpp
 std::uint32_t vendor_id {0};
 ```
-
 
 ### variable revision_min
 
@@ -83,7 +78,6 @@ std::uint32_t revision_max {0};
 ```cpp
 std::uint32_t product_code {0};
 ```
-
 
 -------------------------------
 

@@ -10,10 +10,7 @@ sidebar_label: "DcSyncStats"
 
 # ecnet::EcNetwork::DcSyncStats
 
-
-
 End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock). 
-
 
 `#include <ec_network.hpp>`
 
@@ -36,13 +33,11 @@ End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock).
 std::uint64_t samples {0};
 ```
 
-
 ### variable min_ns
 
 ```cpp
 std::int64_t min_ns {0};
 ```
-
 
 ### variable mean_ns
 
@@ -50,13 +45,11 @@ std::int64_t min_ns {0};
 std::int64_t mean_ns {0};
 ```
 
-
 ### variable mean_abs_ns
 
 ```cpp
 std::int64_t mean_abs_ns {0};
 ```
-
 
 ### variable max_ns
 
@@ -64,13 +57,11 @@ std::int64_t mean_abs_ns {0};
 std::int64_t max_ns {0};
 ```
 
-
 ### variable final_integral
 
 ```cpp
 std::int64_t final_integral {0};
 ```
-
 
 -------------------------------
 

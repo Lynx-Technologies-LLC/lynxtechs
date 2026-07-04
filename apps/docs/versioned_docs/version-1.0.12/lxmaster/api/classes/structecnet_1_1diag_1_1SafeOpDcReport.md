@@ -9,10 +9,6 @@ sidebar_label: "SafeOpDcReport"
 
 # ecnet::diag::SafeOpDcReport
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -31,13 +27,11 @@ sidebar_label: "SafeOpDcReport"
 bool sync0_enabled {false};
 ```
 
-
 ### variable slaves
 
 ```cpp
 std::vector< SafeOpDcSlave > slaves;
 ```
-
 
 ### variable ok
 
@@ -45,20 +39,17 @@ std::vector< SafeOpDcSlave > slaves;
 bool ok {true};
 ```
 
-
 ### variable dc_or_sync0_disabled_note
 
 ```cpp
 bool dc_or_sync0_disabled_note {false};
 ```
 
-
 ### variable dc_enabled
 
 ```cpp
 bool dc_enabled {false};
 ```
-
 
 -------------------------------
 

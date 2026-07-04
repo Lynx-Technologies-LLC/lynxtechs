@@ -10,10 +10,7 @@ sidebar_label: "EcNetwork"
 
 # ecnet::EcNetwork
 
-
-
 User-facing runtime facade for an EtherCAT network.  [More...](#detailed-description)
-
 
 `#include <ec_network.hpp>`
 
@@ -79,7 +76,6 @@ Two-phase bring-up (per-axis configuration). Operating mode and fault policy are
 ~EcNetwork()
 ```
 
-
 ### function syncTraceViolationCount
 
 ```cpp
@@ -89,7 +85,6 @@ std::uint64_t syncTraceViolationCount() const
 Live violation tally while the cyclic thread is running (`sync_trace_window_ns` > 0). 
 
 After `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)`, prefer `[syncTraceReport()](/lxmaster/api/classes/EcNetwork#function-synctracereport).violation_count`. 
-
 
 ### function syncTraceReport
 
@@ -101,7 +96,6 @@ Per-cycle DC-sync + host jitter capture from the last session (`NetworkConfig::s
 
 Populated when `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` joins the executor; empty if tracing was off or the bus never ran. 
 
-
 ### function syncMode
 
 ```cpp
@@ -111,7 +105,6 @@ SyncMode syncMode() const
 Synchronization mode resolved from the ENI (DcSync0 when the bus carries a SYNC0 device, else SmEvent). 
 
 Valid after `[prepare()](/lxmaster/api/classes/EcNetwork#function-prepare)` / `[start()](/lxmaster/api/classes/EcNetwork#function-start)`. Not an app input &ndash; the ENI decides. 
-
 
 ### function stop
 
@@ -123,7 +116,6 @@ Stop the cyclic thread and close the master.
 
 Safe to call multiple times. 
 
-
 ### function start
 
 ```cpp
@@ -133,7 +125,6 @@ bool start()
 Phase 2 of bring-up (runs `[prepare()]()` first if it has not been called): per-device CoE configuration (commits each drive's operating mode to 0x6060), configures DC, reaches SAFE_OP + OPERATIONAL, and spawns the cyclic thread. 
 
 Returns true on success; false + `[lastError()](/lxmaster/api/classes/EcNetwork#function-lasterror)` on failure. Failures at any step tear down what was initialized. 
-
 
 ### function reportDeviceStatus
 
@@ -147,7 +138,6 @@ Print each device's exit status via `reportExitStatus` to `os`.
 
 Call after `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` to surface device-specific end-of-run diagnostics (e.g. final statusword, CiA402 fault code 0x603F). 
 
-
 ### function prepare
 
 ```cpp
@@ -158,7 +148,6 @@ Phase 1 of bring-up: applies RT scheduling, loads + validates the ENI, opens the
 
 Crucially it stops _before_ any per-device CoE configuration, so the application can set per-axis intent (e.g. `axis->setOperatingMode(...)`) on the discovered drives before the operating mode is committed to the drive in `[start()](/lxmaster/api/classes/EcNetwork#function-start)`. Returns true on success; false + `[lastError()](/lxmaster/api/classes/EcNetwork#function-lasterror)` on failure (which tears down what was initialized). Idempotent: a second call after success is a no-op success. Calling it after `[start()](/lxmaster/api/classes/EcNetwork#function-start)` is an error. 
 
-
 ### function operator=
 
 ```cpp
@@ -166,7 +155,6 @@ EcNetwork & operator=(
     const EcNetwork & 
 ) =delete
 ```
-
 
 ### function lastError
 
@@ -177,7 +165,6 @@ std::string lastError() const
 Last human-readable error captured from the library (thread-safe). 
 
 Includes `[shutdown]` step failures accumulated during `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` after the cyclic thread has been joined. 
-
 
 ### function jitterStats
 
@@ -221,7 +208,6 @@ Every profile-carrying slave in bus order, as generic handles.
 
 This is the complete set: a device that also exposes a typed capability appears in both its typed list (`[axes()](/lxmaster/api/classes/EcNetwork#function-axes)` etc.) and here. Use this for brand-new device classes that fit none of the typed contracts (e.g. an IMU): `configure()` the handle to bring it to OPERATIONAL and `deviceProfile()` to reach its custom profile API. Valid after a successful `[start()](/lxmaster/api/classes/EcNetwork#function-start)`; storage is owned by this `[EcNetwork](/lxmaster/api/classes/EcNetwork)`. 
 
-
 ### function dcSyncStats
 
 ```cpp
@@ -232,7 +218,6 @@ Snapshot of DC-sync alignment quality (host cyclic wake vs reference-slave DC cl
 
 `samples == 0` outside DC-aligned mode. 
 
-
 ### function cycleTimeNs
 
 ```cpp
@@ -242,7 +227,6 @@ std::uint32_t cycleTimeNs() const
 Cyclic period in ns, adopted from the ENI's `<Config><Cyclic><CycleTime>`. 
 
 Valid (non-zero) after a successful `[start()](/lxmaster/api/classes/EcNetwork#function-start)`; 0 before the ENI is loaded. 
-
 
 ### function cycleCount
 
@@ -262,7 +246,6 @@ Motion axes in bus order, one per slave whose auto-selected profile exposes a mo
 
 CiA402 drives). Valid after a successful `[start()](/lxmaster/api/classes/EcNetwork#function-start)`; the storage is owned by this `[EcNetwork](/lxmaster/api/classes/EcNetwork)`. This is the high-level handle a PLC/application programmer uses (`[axes()](/lxmaster/api/classes/EcNetwork#function-axes)[0]->moveTo(...)`) &ndash; it never exposes CiA profiles, the ENI, or the backend. 
 
-
 ### function EcNetwork
 
 ```cpp
@@ -271,7 +254,6 @@ explicit EcNetwork(
 )
 ```
 
-
 ### function EcNetwork
 
 ```cpp
@@ -279,7 +261,6 @@ EcNetwork(
     const EcNetwork & 
 ) =delete
 ```
-
 
 -------------------------------
 

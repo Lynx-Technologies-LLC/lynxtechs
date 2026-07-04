@@ -10,10 +10,7 @@ sidebar_label: "SdoU8"
 
 # ecnet::diag::SdoU8
 
-
-
 Optional SDO scalar: `present` is false when the read failed / object is absent. 
-
 
 `#include <diagnostics.hpp>`
 
@@ -32,13 +29,11 @@ Optional SDO scalar: `present` is false when the read failed / object is absent.
 std::uint8_t value {0};
 ```
 
-
 ### variable present
 
 ```cpp
 bool present {false};
 ```
-
 
 -------------------------------
 

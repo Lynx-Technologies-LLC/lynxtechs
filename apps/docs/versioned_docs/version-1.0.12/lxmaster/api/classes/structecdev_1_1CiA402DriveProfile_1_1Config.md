@@ -9,10 +9,6 @@ sidebar_label: "Config"
 
 # ecdev::CiA402DriveProfile::Config
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -37,13 +33,11 @@ When a drive boots into OPERATIONAL already faulted (a residual fault from a pri
 
 A fault that appears after the drive was successfully enabled (genuine mid-run trip) is always terminal. 
 
-
 ### variable shutdown_require_switch_on_disabled
 
 ```cpp
 bool shutdown_require_switch_on_disabled {true};
 ```
-
 
 ### variable op_mode
 
@@ -51,13 +45,11 @@ bool shutdown_require_switch_on_disabled {true};
 OpMode op_mode {OpMode::Csp};
 ```
 
-
 ### variable hold_actual_position
 
 ```cpp
 bool hold_actual_position {true};
 ```
-
 
 ### variable fault_reset_arm_cycles
 
@@ -65,20 +57,17 @@ bool hold_actual_position {true};
 int fault_reset_arm_cycles {50};
 ```
 
-
 ### variable enable_fsm
 
 ```cpp
 bool enable_fsm {true};
 ```
 
-
 ### variable auto_fault_reset_and_recover
 
 ```cpp
 bool auto_fault_reset_and_recover {false};
 ```
-
 
 -------------------------------
 

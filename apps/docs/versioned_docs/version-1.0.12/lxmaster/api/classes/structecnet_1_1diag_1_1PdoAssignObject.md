@@ -9,10 +9,6 @@ sidebar_label: "PdoAssignObject"
 
 # ecnet::diag::PdoAssignObject
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -32,13 +28,11 @@ sidebar_label: "PdoAssignObject"
 bool subcount_readable {false};
 ```
 
-
 ### variable subcount
 
 ```cpp
 unsigned subcount {0};
 ```
-
 
 ### variable not_printed
 
@@ -46,13 +40,11 @@ unsigned subcount {0};
 unsigned not_printed {0};
 ```
 
-
 ### variable index
 
 ```cpp
 std::uint16_t index {0};
 ```
-
 
 ### variable entries
 
@@ -60,13 +52,11 @@ std::uint16_t index {0};
 std::vector< PdoAssignEntry > entries;
 ```
 
-
 ### variable empty
 
 ```cpp
 bool empty {false};
 ```
-
 
 -------------------------------
 

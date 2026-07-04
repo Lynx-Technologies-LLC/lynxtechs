@@ -10,10 +10,7 @@ sidebar_label: "BusFault"
 
 # ecnet::BusFault
 
-
-
 Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`).  [More...](#detailed-description)
-
 
 `#include <bus_fault.hpp>`
 
@@ -74,7 +71,6 @@ Slaves that stopped responding (downstream of the break).
 int expected_wkc {0};
 ```
 
-
 ### variable description
 
 ```cpp
@@ -100,7 +96,6 @@ int break_slave {0};
 1-based bus index of the still-responding slave whose downstream port dropped its link. 
 
 0 means no responder showed a dropped port (break at the master / first link). 
-
 
 ### variable break_port
 

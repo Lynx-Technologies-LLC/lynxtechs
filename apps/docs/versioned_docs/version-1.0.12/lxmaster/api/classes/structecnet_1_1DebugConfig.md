@@ -10,10 +10,7 @@ sidebar_label: "DebugConfig"
 
 # ecnet::DebugConfig
 
-
-
 Runtime logging configuration.  [More...](#detailed-description)
-
 
 `#include <network_config.hpp>`
 
@@ -47,20 +44,17 @@ A single gate (`enabled`) replaces the old `debug`/`diagnostics` pair; severity 
 std::uint32_t sync_trace_window_ns {0};
 ```
 
-
 ### variable sync_trace_capacity
 
 ```cpp
 std::size_t sync_trace_capacity {0};
 ```
 
-
 ### variable min_level
 
 ```cpp
 ecdev::LogLevel min_level {ecdev::LogLevel::Info};
 ```
-
 
 ### variable log_file
 
@@ -76,7 +70,6 @@ Empty => ConsoleSink (cerr for Error/Warn, cout otherwise); non-empty => rotatin
 bool enabled {false};
 ```
 
-
 ### variable debug_ring_capacity
 
 ```cpp
@@ -87,13 +80,11 @@ Debug ring capacity (process-data snapshots) for the RT->worker hand-off.
 
 Power of two; 0 => built-in default. Larger gives high-rate Trace logging more headroom before drops. 
 
-
 ### variable category_mask
 
 ```cpp
 std::uint32_t category_mask {ecdev::kLogCatAll};
 ```
-
 
 -------------------------------
 

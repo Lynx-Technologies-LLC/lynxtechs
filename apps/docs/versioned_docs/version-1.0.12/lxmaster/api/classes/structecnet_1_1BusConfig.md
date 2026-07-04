@@ -9,10 +9,6 @@ sidebar_label: "BusConfig"
 
 # ecnet::BusConfig
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -33,13 +29,11 @@ Resolved output, not an input: `EcNetwork::loadAndValidateEni` sets this from th
 
 The app does not choose it. 
 
-
 ### variable ifname
 
 ```cpp
 std::string ifname;
 ```
-
 
 ### variable cycle_ns
 
@@ -50,7 +44,6 @@ std::uint32_t cycle_ns {0};
 Cyclic period in ns. 
 
 0 = unset until the ENI is loaded; `[EcNetwork](/lxmaster/api/classes/EcNetwork)` adopts the ENI's `<Config><Cyclic><CycleTime>` as the single source of truth. There is no CLI/code override. 
-
 
 -------------------------------
 

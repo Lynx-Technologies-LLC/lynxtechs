@@ -9,10 +9,6 @@ sidebar_label: "SdoU16"
 
 # ecnet::diag::SdoU16
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -28,13 +24,11 @@ sidebar_label: "SdoU16"
 std::uint16_t value {0};
 ```
 
-
 ### variable present
 
 ```cpp
 bool present {false};
 ```
-
 
 -------------------------------
 

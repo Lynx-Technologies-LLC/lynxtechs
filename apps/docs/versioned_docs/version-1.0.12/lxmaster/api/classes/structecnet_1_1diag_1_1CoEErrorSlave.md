@@ -9,10 +9,6 @@ sidebar_label: "CoEErrorSlave"
 
 # ecnet::diag::CoEErrorSlave
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -34,7 +30,6 @@ sidebar_label: "CoEErrorSlave"
 ```cpp
 std::uint16_t state {0};
 ```
-
 
 ### variable predef_error_history
 
@@ -66,13 +61,11 @@ SdoI8 mode_of_op_display;
 int idx {0};
 ```
 
-
 ### variable history_not_shown
 
 ```cpp
 unsigned history_not_shown {0};
 ```
-
 
 ### variable error_register
 
@@ -95,7 +88,6 @@ SdoU16 cia402_error_code;
 ```cpp
 std::uint16_t al_status_code {0};
 ```
-
 
 -------------------------------
 

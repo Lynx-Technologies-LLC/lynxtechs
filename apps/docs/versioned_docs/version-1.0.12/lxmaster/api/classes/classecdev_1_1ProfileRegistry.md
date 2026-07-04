@@ -10,10 +10,7 @@ sidebar_label: "ProfileRegistry"
 
 # ecdev::ProfileRegistry
 
-
-
 Registry of `[IProfileFactory]()` plugins.  [More...](#detailed-description)
-
 
 `#include <profile_registry.hpp>`
 
@@ -48,7 +45,6 @@ std::unique_ptr< IDeviceProfile > select(
 ) const
 ```
 
-
 ### function select
 
 ```cpp
@@ -62,7 +58,6 @@ Like `select(in)`, but also considers app-supplied factories (e.g.
 
 `NetworkConfig::extra_profile_factories`) ahead of the built-ins, so an application can bind a device class for one run without static registration. Ties favour `extra_factories`. 
 
-
 ### function registerFactory
 
 ```cpp
@@ -70,7 +65,6 @@ void registerFactory(
     std::unique_ptr< IProfileFactory > factory
 )
 ```
-
 
 ### function builtin
 

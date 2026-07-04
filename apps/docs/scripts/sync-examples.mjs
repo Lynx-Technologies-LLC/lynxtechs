@@ -84,11 +84,10 @@ function titleFromName(name) {
     .replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
-// Rewrite README relative links to absolute repo URLs so they resolve on the
-// docs site (e.g. `[main.cpp](main.cpp)` -> the file on GitHub). Skips fenced
-// code blocks and leaves http/mailto/anchor links untouched.
-function rewriteReadmeLinks(readme, name) {
-  const gitRef = ref || 'main';
+// Strip relative links from the README that can't resolve on the docs site.
+// The lxmaster-demos repo is private so we must not generate GitHub URLs either;
+// we simply remove the link wrapper and keep just the label text.
+function sanitizeReadmeLinks(readme) {
   const lines = readme.split('\n');
   let inFence = false;
   return lines
@@ -98,15 +97,13 @@ function rewriteReadmeLinks(readme, name) {
         return line;
       }
       if (inFence) return line;
+      // Strip relative links — keep images as-is only if they're already absolute.
       return line.replace(/(!?)\[([^\]]*)\]\(([^)]+)\)/g, (full, bang, label, target) => {
         const t = target.trim();
+        // Keep absolute URLs and anchor-only links
         if (/^(https?:|mailto:|#)/.test(t)) return full;
-        const hashIdx = t.indexOf('#');
-        const pathPart = hashIdx === -1 ? t : t.slice(0, hashIdx);
-        const anchor = hashIdx === -1 ? '' : t.slice(hashIdx);
-        const clean = pathPart.replace(/^\.\//, '');
-        const blob = bang === '!' ? 'raw' : 'blob';
-        return `${bang}[${label}](https://github.com/${slug}/${blob}/${gitRef}/${name}/${clean}${anchor})`;
+        // For relative links: images become just the alt text, links become just the label
+        return bang ? '' : label;
       });
     })
     .join('\n');
@@ -130,18 +127,15 @@ export async function syncExamples() {
     const title = titleFromName(name);
     const readmePath = ['README.md', 'README.txt'].map((f) => join(demoDir, f)).find(existsSync);
     const readmeRaw = readmePath ? readFileSync(readmePath, 'utf8').trim() : '';
-    const readme = readmeRaw ? rewriteReadmeLinks(readmeRaw, name) : '';
+    const readme = readmeRaw ? sanitizeReadmeLinks(readmeRaw) : '';
 
     const srcPath = findPrimarySource(demoDir);
     const src = srcPath ? readFileSync(srcPath, 'utf8').trimEnd() : '';
     const srcName = srcPath ? srcPath.slice(demoDir.length + 1) : '';
 
-    const repoUrl = `https://github.com/${slug}/tree/${ref || 'main'}/${name}`;
-
     let body = `---\ntitle: ${JSON.stringify(title)}\nsidebar_position: ${i + 2}\n---\n\n`;
-    body += `<!-- GENERATED - do not edit. Synced from ${slug} by scripts/sync-examples.mjs. -->\n\n`;
+    body += `<!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->\n\n`;
     body += `# ${title}\n\n`;
-    body += `> Buildable example from [\`${name}\`](${repoUrl}) in the \`lxmaster-demos\` repository.\n\n`;
     if (readme) body += `${readme}\n\n`;
     if (src) {
       body += `## Source: \`${srcName}\`\n\n`;

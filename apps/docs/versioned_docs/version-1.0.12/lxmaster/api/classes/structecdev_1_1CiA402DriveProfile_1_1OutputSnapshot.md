@@ -9,10 +9,6 @@ sidebar_label: "OutputSnapshot"
 
 # ecdev::CiA402DriveProfile::OutputSnapshot
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -33,13 +29,11 @@ sidebar_label: "OutputSnapshot"
 std::atomic< std::int32_t > target_velocity {0};
 ```
 
-
 ### variable target_torque
 
 ```cpp
 std::atomic< std::int32_t > target_torque {0};
 ```
-
 
 ### variable target_position
 
@@ -47,13 +41,11 @@ std::atomic< std::int32_t > target_torque {0};
 std::atomic< std::int32_t > target_position {0};
 ```
 
-
 ### variable request_fault_reset
 
 ```cpp
 std::atomic< bool > request_fault_reset {false};
 ```
-
 
 ### variable request_disable
 
@@ -61,13 +53,11 @@ std::atomic< bool > request_fault_reset {false};
 std::atomic< bool > request_disable {false};
 ```
 
-
 ### variable have_target_position
 
 ```cpp
 std::atomic< bool > have_target_position {false};
 ```
-
 
 ### variable desired_mode
 
@@ -78,7 +68,6 @@ std::atomic< DriveOpMode > desired_mode {DriveOpMode::Csp};
 Live operating-mode request (PDO mode control). 
 
 Seeded from Config::op_mode in the ctor. 
-
 
 -------------------------------
 

@@ -10,10 +10,7 @@ sidebar_label: "IIoProfile"
 
 # ecdev::IIoProfile
 
-
-
 Facade-facing contract for a digital/analog I/O device (CiA 401 family).  [More...](#detailed-description)
-
 
 `#include <io_profile.hpp>`
 
@@ -53,7 +50,6 @@ The `IoModule` facade depends only on this &ndash; never on PDO offsets, CoE obj
 virtual ~IIoProfile() =default
 ```
 
-
 ### function setDigitalOutput
 
 ```cpp
@@ -66,7 +62,6 @@ virtual void setDigitalOutput(
 Command a digital output channel; out-of-range is a no-op. 
 
 **Reimplemented by**: [ecdev::GenericIoProfile::setDigitalOutput](/lxmaster/api/classes/GenericIoProfile#function-setdigitaloutput)
-
 
 ### function setAnalogOutput
 
@@ -81,16 +76,13 @@ Command an analog output channel (raw counts); out-of-range is a no-op.
 
 **Reimplemented by**: [ecdev::GenericIoProfile::setAnalogOutput](/lxmaster/api/classes/GenericIoProfile#function-setanalogoutput)
 
-
 ### function digitalOutputCount
 
 ```cpp
 virtual std::size_t digitalOutputCount() const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::digitalOutputCount](/lxmaster/api/classes/GenericIoProfile#function-digitaloutputcount)
-
 
 ### function digitalOutput
 
@@ -100,9 +92,7 @@ virtual bool digitalOutput(
 ) const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::digitalOutput](/lxmaster/api/classes/GenericIoProfile#function-digitaloutput)
-
 
 ### function digitalInputCount
 
@@ -110,9 +100,7 @@ virtual bool digitalOutput(
 virtual std::size_t digitalInputCount() const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::digitalInputCount](/lxmaster/api/classes/GenericIoProfile#function-digitalinputcount)
-
 
 ### function digitalInput
 
@@ -126,16 +114,13 @@ Read a digital input/output channel; out-of-range returns false.
 
 **Reimplemented by**: [ecdev::GenericIoProfile::digitalInput](/lxmaster/api/classes/GenericIoProfile#function-digitalinput)
 
-
 ### function analogOutputCount
 
 ```cpp
 virtual std::size_t analogOutputCount() const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::analogOutputCount](/lxmaster/api/classes/GenericIoProfile#function-analogoutputcount)
-
 
 ### function analogOutput
 
@@ -145,9 +130,7 @@ virtual std::int32_t analogOutput(
 ) const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::analogOutput](/lxmaster/api/classes/GenericIoProfile#function-analogoutput)
-
 
 ### function analogInputCount
 
@@ -155,9 +138,7 @@ virtual std::int32_t analogOutput(
 virtual std::size_t analogInputCount() const =0
 ```
 
-
 **Reimplemented by**: [ecdev::GenericIoProfile::analogInputCount](/lxmaster/api/classes/GenericIoProfile#function-analoginputcount)
-
 
 ### function analogInput
 
@@ -170,7 +151,6 @@ virtual std::int32_t analogInput(
 Read an analog input/output channel (raw counts); out-of-range returns 0. 
 
 **Reimplemented by**: [ecdev::GenericIoProfile::analogInput](/lxmaster/api/classes/GenericIoProfile#function-analoginput)
-
 
 -------------------------------
 

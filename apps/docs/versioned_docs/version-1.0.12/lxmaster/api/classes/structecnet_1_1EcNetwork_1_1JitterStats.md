@@ -10,10 +10,7 @@ sidebar_label: "JitterStats"
 
 # ecnet::EcNetwork::JitterStats
 
-
-
 End-of-run jitter summary (populated by the cyclic thread). 
-
 
 `#include <ec_network.hpp>`
 
@@ -35,13 +32,11 @@ End-of-run jitter summary (populated by the cyclic thread).
 std::uint64_t samples {0};
 ```
 
-
 ### variable min_ns
 
 ```cpp
 std::int64_t min_ns {0};
 ```
-
 
 ### variable mean_ns
 
@@ -49,20 +44,17 @@ std::int64_t min_ns {0};
 std::int64_t mean_ns {0};
 ```
 
-
 ### variable mean_abs_ns
 
 ```cpp
 std::int64_t mean_abs_ns {0};
 ```
 
-
 ### variable max_ns
 
 ```cpp
 std::int64_t max_ns {0};
 ```
-
 
 -------------------------------
 

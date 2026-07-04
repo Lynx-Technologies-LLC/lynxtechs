@@ -10,10 +10,7 @@ sidebar_label: "PdoEntryRef"
 
 # ecdev::PdoEntryRef
 
-
-
 Resolved location of one mapped CoE object inside a slave's process image.  [More...](#detailed-description)
-
 
 `#include <process_image.hpp>`
 
@@ -44,7 +41,6 @@ Produced once at setup time by `[ProcessImage::resolve](/lxmaster/api/classes/Pr
 ```cpp
 bool valid {false};
 ```
-
 
 ### variable is_output
 

@@ -10,10 +10,7 @@ sidebar_label: "IoModule"
 
 # ecfacade::IoModule
 
-
-
 High-level digital/analog I/O handle.  [More...](#detailed-description)
-
 
 `#include <io_module.hpp>`
 
@@ -55,7 +52,6 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 | std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
 | ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
 
-
 ## Detailed Description
 
 ```cpp
@@ -77,7 +73,6 @@ void writeDigital(
 )
 ```
 
-
 ### function writeAnalog
 
 ```cpp
@@ -87,7 +82,6 @@ void writeAnalog(
 )
 ```
 
-
 ### function readDigital
 
 ```cpp
@@ -95,7 +89,6 @@ bool readDigital(
     std::size_t channel
 ) const
 ```
-
 
 ### function readAnalog
 
@@ -105,13 +98,11 @@ std::int32_t readAnalog(
 ) const
 ```
 
-
 ### function ioProfile
 
 ```cpp
 ecdev::IIoProfile * ioProfile() const
 ```
-
 
 ### function digitalOutputState
 
@@ -121,20 +112,17 @@ bool digitalOutputState(
 ) const
 ```
 
-
 ### function digitalOutputCount
 
 ```cpp
 std::size_t digitalOutputCount() const
 ```
 
-
 ### function digitalInputCount
 
 ```cpp
 std::size_t digitalInputCount() const
 ```
-
 
 ### function analogOutputState
 
@@ -144,20 +132,17 @@ std::int32_t analogOutputState(
 ) const
 ```
 
-
 ### function analogOutputCount
 
 ```cpp
 std::size_t analogOutputCount() const
 ```
 
-
 ### function analogInputCount
 
 ```cpp
 std::size_t analogInputCount() const
 ```
-
 
 ### function IoModule
 
@@ -168,7 +153,6 @@ IoModule(
     ecdev::IEthercatDevice * device
 )
 ```
-
 
 -------------------------------
 

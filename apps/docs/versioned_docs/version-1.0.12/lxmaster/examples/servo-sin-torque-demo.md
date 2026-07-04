@@ -7,8 +7,6 @@ sidebar_position: 5
 
 # Servo Sin Torque Demo
 
-> Buildable example from [`servo_sin_torque_demo`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos/tree/main/servo_sin_torque_demo) in the `lxmaster-demos` repository.
-
 ## Source: `main.cpp`
 
 ```cpp

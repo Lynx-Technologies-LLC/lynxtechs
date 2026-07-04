@@ -10,10 +10,7 @@ sidebar_label: "Entry"
 
 # ecdev::ProcessImage::Entry
 
-
-
 All resolved entries, in image order (diagnostics / enumeration by facades). 
-
 
 `#include <process_image.hpp>`
 
@@ -36,13 +33,11 @@ All resolved entries, in image order (diagnostics / enumeration by facades).
 std::uint8_t sub_index {0};
 ```
 
-
 ### variable is_output
 
 ```cpp
 bool is_output {false};
 ```
-
 
 ### variable index
 
@@ -50,13 +45,11 @@ bool is_output {false};
 std::uint16_t index {0};
 ```
 
-
 ### variable byte_offset
 
 ```cpp
 std::uint32_t byte_offset {0};
 ```
-
 
 ### variable bit_offset
 
@@ -64,13 +57,11 @@ std::uint32_t byte_offset {0};
 std::uint8_t bit_offset {0};
 ```
 
-
 ### variable bit_len
 
 ```cpp
 std::uint8_t bit_len {0};
 ```
-
 
 -------------------------------
 

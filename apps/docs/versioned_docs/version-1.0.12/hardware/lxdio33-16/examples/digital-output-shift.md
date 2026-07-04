@@ -9,7 +9,7 @@ title: Digital Output Shift
 
 A minimal example that walks a "1" across the LXDIO33-16 output channels on each
 cycle, mirroring the `do_shift_demo` from the
-[`lxmaster-demos`](https://github.com/Lynx-Technologies-LLC/lxmaster-demos)
+``lxmaster-demos``
 repository.
 
 ```bash

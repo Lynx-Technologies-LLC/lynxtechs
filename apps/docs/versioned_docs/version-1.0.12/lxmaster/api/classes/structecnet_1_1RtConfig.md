@@ -9,10 +9,6 @@ sidebar_label: "RtConfig"
 
 # ecnet::RtConfig
 
-
-
-
-
 ## Public Attributes
 
 |                | Name           |
@@ -29,20 +25,17 @@ sidebar_label: "RtConfig"
 int rt_priority {49};
 ```
 
-
 ### variable enable_rt_scheduling
 
 ```cpp
 bool enable_rt_scheduling {true};
 ```
 
-
 ### variable cpu_affinity
 
 ```cpp
 int cpu_affinity {-1};
 ```
-
 
 -------------------------------
 
