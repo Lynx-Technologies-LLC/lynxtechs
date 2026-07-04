@@ -17,7 +17,7 @@ const SOFTWARE_CARDS = [
       { label: 'Getting Started', to: '/lxmaster/getting-started' },
       { label: 'API Reference', to: '/lxmaster/api' },
     ],
-    accent: 'var(--ifm-color-primary)',
+    accent: '#2c2c2c',
   },
 ];
 
@@ -31,7 +31,7 @@ const HARDWARE_CARDS = [
       { label: 'Overview', to: '/hardware/lxdio33-16' },
       { label: 'Getting Started', to: '/hardware/lxdio33-16/tutorials/getting-started' },
     ],
-    accent: '#0ea5a0',
+    accent: '#555555',
   },
   {
     title: 'LXFIBER',
@@ -42,7 +42,7 @@ const HARDWARE_CARDS = [
       { label: 'Overview', to: '/hardware/lxfiber' },
       { label: 'Getting Started', to: '/hardware/lxfiber/tutorials/getting-started' },
     ],
-    accent: '#0ea5a0',
+    accent: '#555555',
   },
   {
     title: 'LXRJ45',
@@ -53,7 +53,7 @@ const HARDWARE_CARDS = [
       { label: 'Overview', to: '/hardware/lxrj45' },
       { label: 'Getting Started', to: '/hardware/lxrj45/tutorials/getting-started' },
     ],
-    accent: '#0ea5a0',
+    accent: '#555555',
   },
 ];
 
