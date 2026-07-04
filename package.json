@@ -11,8 +11,12 @@
   ],
   "scripts": {
     "dev": "turbo dev --filter=@lynxtechs/web",
-    "build": "turbo build --filter=@lynxtechs/web",
+    "dev:docs": "turbo dev --filter=@lynxtechs/docs",
+    "build": "turbo build --filter=@lynxtechs/web --filter=@lynxtechs/docs",
+    "build:web": "turbo build --filter=@lynxtechs/web",
+    "build:docs": "turbo build --filter=@lynxtechs/docs",
     "lint": "turbo lint --filter=@lynxtechs/web",
+    "typecheck:docs": "turbo typecheck --filter=@lynxtechs/docs",
     "start": "turbo start --filter=@lynxtechs/web",
     "compress-glb": "node scripts/compress-glb.mjs"
   },

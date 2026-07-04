@@ -1,0 +1,31 @@
+# Dependencies
+/node_modules
+
+# Production build
+/build
+
+# Docusaurus generated files
+.docusaurus
+.cache-loader
+
+# Build-time content synced from lxmaster / lxmaster-demos (see scripts/).
+# The committed placeholder index pages and category configs are kept; all
+# generated pages are produced during the build and must not be committed.
+/docs/lxmaster/api/*
+!/docs/lxmaster/api/index.md
+!/docs/lxmaster/api/_category_.json
+/docs/lxmaster/examples/*.md
+!/docs/lxmaster/examples/index.md
+/docs/lxmaster/release-notes/*.md
+!/docs/lxmaster/release-notes/index.md
+
+# Misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

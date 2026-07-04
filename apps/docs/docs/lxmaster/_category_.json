@@ -1,0 +1,10 @@
+{
+  "label": "LXMASTER Software",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "slug": "/lxmaster",
+    "title": "LXMASTER Software",
+    "description": "The Linux EtherCAT master stack: overview, getting started, tutorials, example projects, API reference, and release notes."
+  }
+}
