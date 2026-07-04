@@ -2,7 +2,7 @@
 title: "ecnet::EcNetwork::SyncTraceReport"
 summary: "Cached at stop() from the cyclic executor's sync trace ring (see NetworkConfig::sync_trace_capacity)."
 
-slug: /lxmaster/api/classes/EcNetwork-SyncTraceReport
+slug: /api/classes/EcNetwork-SyncTraceReport
 sidebar_label: "SyncTraceReport"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

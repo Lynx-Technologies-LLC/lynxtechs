@@ -2,7 +2,7 @@
 title: "ecnet::EcNetwork"
 summary: "User-facing runtime facade for an EtherCAT network."
 
-slug: /lxmaster/api/classes/EcNetwork
+slug: /api/classes/EcNetwork
 sidebar_label: "EcNetwork"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

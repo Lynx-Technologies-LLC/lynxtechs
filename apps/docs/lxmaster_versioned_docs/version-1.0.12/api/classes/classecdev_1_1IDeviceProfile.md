@@ -2,7 +2,7 @@
 title: "ecdev::IDeviceProfile"
 summary: "Device-class behaviour plugged onto a GenericEniDevice."
 
-slug: /lxmaster/api/classes/IDeviceProfile
+slug: /api/classes/IDeviceProfile
 sidebar_label: "IDeviceProfile"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -23,13 +23,13 @@ Inherited by [ecdev::CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfil
 |                | Name           |
 | -------------- | -------------- |
 | | **[~IDeviceProfile](/lxmaster/api/classes/IDeviceProfile#function-~ideviceprofile)**() override =default |
-| virtual void | **[writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image, std::uint64_t cycle_count) |
-| virtual void | **[resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
-| virtual void | **[readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image, bool wkc_valid, bool operational) |
+| virtual void | **[writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)**(ProcessImage & image, std::uint64_t cycle_count) |
+| virtual void | **[resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)**(const ProcessImage & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
+| virtual void | **[readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)**(const ProcessImage & image, bool wkc_valid, bool operational) |
 | virtual const char * | **[profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)**() const =0<br>Stable identifier for diagnostics (e.g.  |
-| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
-| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
-| virtual std::string | **[configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**(ProcessImage & image) |
+| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, ProcessImage & image) |
+| virtual std::string | **[configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)**(ISlaveServices & svc, ProcessImage & image) |
 | virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/IDeviceProfile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
 | virtual [IMotionProfile](/lxmaster/api/classes/IMotionProfile) * | **[asMotion](/lxmaster/api/classes/IDeviceProfile#function-asmotion)**() |
 | virtual [IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[asIo](/lxmaster/api/classes/IDeviceProfile#function-asio)**() |
@@ -46,7 +46,7 @@ Device-class behaviour plugged onto a `[GenericEniDevice]`.
 A profile understands the PDO semantics of one EtherCAT device class (CiA 402 drive, CiA 401 digital/analog I/O, CiA 406 encoder, ...) and nothing about the backend, the ENI XML, or the master. It interacts with the world through exactly two narrow contracts:
 
 * `[ISlaveServices]` for setup-time SDO / register / PDO-pulse work (NOT on the RT path).
-* `[ProcessImage](/lxmaster/api/classes/ProcessImage)` for per-cycle reads/writes of mapped objects (RT path).
+* `ProcessImage` for per-cycle reads/writes of mapped objects (RT path).
 
 Selection is done by a `[ProfileRegistry](/lxmaster/api/classes/ProfileRegistry)`; a new device class is added by registering a new profile, with no change to the generic device or the orchestration layer.
 

@@ -2,7 +2,7 @@
 title: "ecdev::IProfileFactory"
 summary: "Builds the device-class profile for one slave."
 
-slug: /lxmaster/api/classes/IProfileFactory
+slug: /api/classes/IProfileFactory
 sidebar_label: "IProfileFactory"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

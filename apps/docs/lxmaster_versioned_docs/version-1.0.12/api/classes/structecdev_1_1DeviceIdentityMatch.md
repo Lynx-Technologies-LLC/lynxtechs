@@ -2,7 +2,7 @@
 title: "ecdev::DeviceIdentityMatch"
 summary: "Exact device identity a device class serves."
 
-slug: /lxmaster/api/classes/DeviceIdentityMatch
+slug: /api/classes/DeviceIdentityMatch
 sidebar_label: "DeviceIdentityMatch"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

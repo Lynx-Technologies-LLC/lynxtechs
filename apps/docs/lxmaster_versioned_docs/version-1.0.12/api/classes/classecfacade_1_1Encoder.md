@@ -2,7 +2,7 @@
 title: "ecfacade::Encoder"
 summary: "High-level encoder handle."
 
-slug: /lxmaster/api/classes/Encoder
+slug: /api/classes/Encoder
 sidebar_label: "Encoder"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -14,7 +14,7 @@ High-level encoder handle.  [More...](#detailed-description)
 
 `#include <encoder.hpp>`
 
-Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
+Inherits from ecfacade::DeviceFacade
 
 ## Public Functions
 
@@ -28,22 +28,22 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 
 ## Additional inherited members
 
-**Public Functions inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
+**Public Functions inherited from ecfacade::DeviceFacade**
 
 |                | Name           |
 | -------------- | -------------- |
-| const std::string & | **[name](/lxmaster/api/classes/DeviceFacade#function-name)**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
-| [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) * | **[deviceProfile](/lxmaster/api/classes/DeviceFacade#function-deviceprofile)**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
-| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
-| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
-| | **[DeviceFacade](/lxmaster/api/classes/DeviceFacade#function-devicefacade)**(ecdev::IEthercatDevice * device, std::string name) |
+| const std::string & | **name**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
+| [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) * | **deviceProfile**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
+| void | **configure**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
+| void | **configure**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
+| | **DeviceFacade**(ecdev::IEthercatDevice * device, std::string name) |
 
-**Protected Attributes inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
+**Protected Attributes inherited from ecfacade::DeviceFacade**
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
-| ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
+| std::string | **name_**  |
+| ecdev::IEthercatDevice * | **device_**  |
 
 ## Detailed Description
 

@@ -19,7 +19,7 @@ The master is the controller of the network. It:
 - Sends and receives the cyclic process data frames.
 
 In our product, the master role is fulfilled by the
-[LXMASTER software](../lxmaster/overview.md).
+[LXMASTER software](/lxmaster/overview).
 
 ## Devices
 

@@ -39,4 +39,4 @@ performance.
 ## Next steps
 
 - Learn about the different [devices](./devices.md) on an EtherCAT network.
-- See how our [LXMASTER software](../lxmaster/overview.md) drives the network.
+- See how our [LXMASTER software](/lxmaster/overview) drives the network.

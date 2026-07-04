@@ -2,7 +2,7 @@
 title: "ecnet::EcNetwork::DcSyncStats"
 summary: "End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock)."
 
-slug: /lxmaster/api/classes/EcNetwork-DcSyncStats
+slug: /api/classes/EcNetwork-DcSyncStats
 sidebar_label: "DcSyncStats"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

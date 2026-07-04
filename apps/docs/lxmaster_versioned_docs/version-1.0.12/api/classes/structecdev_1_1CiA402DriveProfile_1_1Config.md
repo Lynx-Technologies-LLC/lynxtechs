@@ -1,7 +1,7 @@
 ---
 title: "ecdev::CiA402DriveProfile::Config"
 
-slug: /lxmaster/api/classes/CiA402DriveProfile-Config
+slug: /api/classes/CiA402DriveProfile-Config
 sidebar_label: "Config"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

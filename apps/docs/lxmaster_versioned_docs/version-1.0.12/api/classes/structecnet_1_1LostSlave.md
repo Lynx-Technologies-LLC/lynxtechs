@@ -2,7 +2,7 @@
 title: "ecnet::LostSlave"
 summary: "One slave that stopped responding when the bus fault was diagnosed."
 
-slug: /lxmaster/api/classes/LostSlave
+slug: /api/classes/LostSlave
 sidebar_label: "LostSlave"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

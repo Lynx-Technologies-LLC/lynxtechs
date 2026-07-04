@@ -2,7 +2,7 @@
 title: "ecnet::BusFault"
 summary: "Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see NetworkConfig::watchdog_low_wkc_cycles)."
 
-slug: /lxmaster/api/classes/BusFault
+slug: /api/classes/BusFault
 sidebar_label: "BusFault"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

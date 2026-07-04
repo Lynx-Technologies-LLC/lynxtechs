@@ -65,4 +65,4 @@ Upstream device  ===>  [ IN ]  Module  [ OUT ]  ===>  Downstream device
 1. Power the carrier board and confirm the module's supply rails.
 2. Verify the host interface link (SPI/parallel) with a register read.
 3. Connect to an EtherCAT network and confirm the device is discovered by the
-   [LXMASTER software](../lxmaster/getting-started.md).
+   [LXMASTER software](/lxmaster/getting-started).

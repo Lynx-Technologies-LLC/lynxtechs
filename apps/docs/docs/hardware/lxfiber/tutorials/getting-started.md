@@ -26,4 +26,4 @@ sudo lxmaster run network_probe --eni network.eni.xml
 ## Next steps
 
 - Explore the [example projects](../examples) for this module.
-- See the [LXMASTER software](../../../lxmaster/overview.md) docs to drive the bus.
+- See the [LXMASTER software](/lxmaster/overview) docs to drive the bus.

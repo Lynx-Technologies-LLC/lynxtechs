@@ -2,7 +2,7 @@
 title: "ecnet::EcNetwork::SlaveSnapshot"
 summary: "Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing stop() does before master_->close())."
 
-slug: /lxmaster/api/classes/EcNetwork-SlaveSnapshot
+slug: /api/classes/EcNetwork-SlaveSnapshot
 sidebar_label: "SlaveSnapshot"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

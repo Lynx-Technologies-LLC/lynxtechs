@@ -9,7 +9,7 @@ title: Getting Started
 
 This tutorial walks through wiring the LXDIO33-16 into an EtherCAT segment and
 reading/writing its digital channels from the
-[LXMASTER software](../../../lxmaster/getting-started.md).
+[LXMASTER software](/lxmaster/getting-started).
 
 ## 1. Wire the module
 
@@ -28,7 +28,7 @@ sudo lxmaster run network_probe --eni network.eni.xml
 ## 3. Drive the I/O from C++
 
 Use an `IoModule` handle from the LXMASTER API to read inputs and write outputs.
-See the [LXMASTER Getting Started](../../../lxmaster/getting-started.md) guide and
+See the [LXMASTER Getting Started](/lxmaster/getting-started) guide and
 the [API Reference](../../../lxmaster/api) for details.
 
 ## Next steps

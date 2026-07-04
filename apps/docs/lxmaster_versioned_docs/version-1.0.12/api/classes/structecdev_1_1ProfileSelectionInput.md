@@ -2,7 +2,7 @@
 title: "ecdev::ProfileSelectionInput"
 summary: "Inputs a factory uses to decide on and build a profile for one ENI slave."
 
-slug: /lxmaster/api/classes/ProfileSelectionInput
+slug: /api/classes/ProfileSelectionInput
 sidebar_label: "ProfileSelectionInput"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

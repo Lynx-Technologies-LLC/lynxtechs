@@ -2,7 +2,7 @@
 title: "ecfacade::Axis"
 summary: "High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT \"NC axis\"."
 
-slug: /lxmaster/api/classes/Axis
+slug: /api/classes/Axis
 sidebar_label: "Axis"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -14,7 +14,7 @@ High-level motion handle a PLC/application programmer uses, analogous to a TwinC
 
 `#include <axis.hpp>`
 
-Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
+Inherits from ecfacade::DeviceFacade
 
 ## Public Functions
 
@@ -40,22 +40,22 @@ Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 
 ## Additional inherited members
 
-**Public Functions inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
+**Public Functions inherited from ecfacade::DeviceFacade**
 
 |                | Name           |
 | -------------- | -------------- |
-| const std::string & | **[name](/lxmaster/api/classes/DeviceFacade#function-name)**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
-| [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) * | **[deviceProfile](/lxmaster/api/classes/DeviceFacade#function-deviceprofile)**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
-| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
-| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
-| | **[DeviceFacade](/lxmaster/api/classes/DeviceFacade#function-devicefacade)**(ecdev::IEthercatDevice * device, std::string name) |
+| const std::string & | **name**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
+| [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) * | **deviceProfile**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
+| void | **configure**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
+| void | **configure**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
+| | **DeviceFacade**(ecdev::IEthercatDevice * device, std::string name) |
 
-**Protected Attributes inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
+**Protected Attributes inherited from ecfacade::DeviceFacade**
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
-| ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
+| std::string | **name_**  |
+| ecdev::IEthercatDevice * | **device_**  |
 
 ## Detailed Description
 
@@ -67,7 +67,7 @@ High-level motion handle a PLC/application programmer uses, analogous to a TwinC
 
 An `[Axis](/lxmaster/api/classes/Axis)` is a thin, safe wrapper over an `[ecdev::IMotionProfile](/lxmaster/api/classes/IMotionProfile)`. The application never sees CiA402 controlwords, PDO offsets, the ENI, or the backend: it commands positions and reads back status in engineering-relevant terms. The same `[Axis](/lxmaster/api/classes/Axis)` works for any drive family whose profile implements `IMotionProfile`, so swapping a CiA402 servo for a different drive class does not change application code.
 
-All methods are safe to call from the application thread while the RT cycle runs (the backing profile uses lock-free state). Exception: `[setDriveMode()](/lxmaster/api/classes/Axis#function-setdrivemode)` and the inherited `[configure()](/lxmaster/api/classes/DeviceFacade#function-configure)` must only be called between `EcNetwork::prepare()` and `EcNetwork::start()`. 
+All methods are safe to call from the application thread while the RT cycle runs (the backing profile uses lock-free state). Exception: `[setDriveMode()](/lxmaster/api/classes/Axis#function-setdrivemode)` and the inherited `configure()` must only be called between `EcNetwork::prepare()` and `EcNetwork::start()`. 
 
 ## Public Functions Documentation
 

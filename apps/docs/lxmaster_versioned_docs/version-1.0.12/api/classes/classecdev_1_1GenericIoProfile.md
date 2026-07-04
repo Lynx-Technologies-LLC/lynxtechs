@@ -2,7 +2,7 @@
 title: "ecdev::GenericIoProfile"
 summary: "Protocol-agnostic digital/analog I/O profile."
 
-slug: /lxmaster/api/classes/GenericIoProfile
+slug: /api/classes/GenericIoProfile
 sidebar_label: "GenericIoProfile"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -22,17 +22,17 @@ Inherited by [ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual void | **[writeOutputs](/lxmaster/api/classes/GenericIoProfile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image, std::uint64_t cycle_count) override |
+| virtual void | **[writeOutputs](/lxmaster/api/classes/GenericIoProfile#function-writeoutputs)**(ProcessImage & image, std::uint64_t cycle_count) override |
 | virtual void | **[setDigitalOutput](/lxmaster/api/classes/GenericIoProfile#function-setdigitaloutput)**(std::size_t channel, bool value) override<br>Command a digital output channel; out-of-range is a no-op.  |
 | virtual void | **[setAnalogOutput](/lxmaster/api/classes/GenericIoProfile#function-setanalogoutput)**(std::size_t channel, std::int32_t value) override<br>Command an analog output channel (raw counts); out-of-range is a no-op.  |
-| virtual void | **[resolveTopology](/lxmaster/api/classes/GenericIoProfile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
-| virtual void | **[readInputs](/lxmaster/api/classes/GenericIoProfile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image, bool wkc_valid, bool operational) override |
+| virtual void | **[resolveTopology](/lxmaster/api/classes/GenericIoProfile#function-resolvetopology)**(const ProcessImage & image) override<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
+| virtual void | **[readInputs](/lxmaster/api/classes/GenericIoProfile#function-readinputs)**(const ProcessImage & image, bool wkc_valid, bool operational) override |
 | virtual const char * | **[profileName](/lxmaster/api/classes/GenericIoProfile#function-profilename)**() const override<br>Stable identifier for diagnostics (e.g.  |
 | virtual std::size_t | **[digitalOutputCount](/lxmaster/api/classes/GenericIoProfile#function-digitaloutputcount)**() const override |
 | virtual bool | **[digitalOutput](/lxmaster/api/classes/GenericIoProfile#function-digitaloutput)**(std::size_t ch) const override |
 | virtual std::size_t | **[digitalInputCount](/lxmaster/api/classes/GenericIoProfile#function-digitalinputcount)**() const override |
 | virtual bool | **[digitalInput](/lxmaster/api/classes/GenericIoProfile#function-digitalinput)**(std::size_t channel) const override<br>Read a digital input/output channel; out-of-range returns false.  |
-| virtual std::string | **[configurePreOp](/lxmaster/api/classes/GenericIoProfile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override |
+| virtual std::string | **[configurePreOp](/lxmaster/api/classes/GenericIoProfile#function-configurepreop)**(ISlaveServices & svc, ProcessImage & image) override |
 | virtual [IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[asIo](/lxmaster/api/classes/GenericIoProfile#function-asio)**() override |
 | virtual std::size_t | **[analogOutputCount](/lxmaster/api/classes/GenericIoProfile#function-analogoutputcount)**() const override |
 | virtual std::int32_t | **[analogOutput](/lxmaster/api/classes/GenericIoProfile#function-analogoutput)**(std::size_t ch) const override |
@@ -53,8 +53,8 @@ Inherited by [ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)
 |                | Name           |
 | -------------- | -------------- |
 | | **[~IDeviceProfile](/lxmaster/api/classes/IDeviceProfile#function-~ideviceprofile)**() override =default |
-| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
-| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**(ProcessImage & image) |
+| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, ProcessImage & image) |
 | virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/IDeviceProfile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
 | virtual [IMotionProfile](/lxmaster/api/classes/IMotionProfile) * | **[asMotion](/lxmaster/api/classes/IDeviceProfile#function-asmotion)**() |
 | virtual [IEncoderProfile](/lxmaster/api/classes/IEncoderProfile) * | **[asEncoder](/lxmaster/api/classes/IDeviceProfile#function-asencoder)**() |

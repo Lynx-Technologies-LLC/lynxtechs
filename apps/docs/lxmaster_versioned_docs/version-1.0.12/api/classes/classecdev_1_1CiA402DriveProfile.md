@@ -2,7 +2,7 @@
 title: "ecdev::CiA402DriveProfile"
 summary: "CiA 402 (CANopen-over-EtherCAT) servo-drive profile."
 
-slug: /lxmaster/api/classes/CiA402DriveProfile
+slug: /api/classes/CiA402DriveProfile
 sidebar_label: "CiA402DriveProfile"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -32,7 +32,7 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual void | **[writeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image, std::uint64_t cycle_count) override |
+| virtual void | **[writeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-writeoutputs)**(ProcessImage & image, std::uint64_t cycle_count) override |
 | virtual std::int32_t | **[targetPosition](/lxmaster/api/classes/CiA402DriveProfile#function-targetposition)**() const override |
 | virtual std::uint16_t | **[statusword](/lxmaster/api/classes/CiA402DriveProfile#function-statusword)**() const override |
 | virtual void | **[setTargetVelocity](/lxmaster/api/classes/CiA402DriveProfile#function-settargetvelocity)**(std::int32_t counts_per_sec) override<br>CSV target velocity in counts/s.  |
@@ -47,11 +47,11 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 | virtual void | **[requestDisable](/lxmaster/api/classes/CiA402DriveProfile#function-requestdisable)**() override<br>Request the drive walk back to a de-energised resting state.  |
 | bool | **[readyForShutdown](/lxmaster/api/classes/CiA402DriveProfile#function-readyforshutdown)**() const override |
 | bool | **[readyForAlShutdown](/lxmaster/api/classes/CiA402DriveProfile#function-readyforalshutdown)**() const override |
-| virtual void | **[readInputs](/lxmaster/api/classes/CiA402DriveProfile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image, bool wkc_valid, bool operational) override |
+| virtual void | **[readInputs](/lxmaster/api/classes/CiA402DriveProfile#function-readinputs)**(const ProcessImage & image, bool wkc_valid, bool operational) override |
 | virtual const char * | **[profileName](/lxmaster/api/classes/CiA402DriveProfile#function-profilename)**() const override<br>Stable identifier for diagnostics (e.g.  |
-| virtual void | **[primeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override |
+| virtual void | **[primeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-primeoutputs)**(ProcessImage & image) override |
 | void | **[prepareShutdown](/lxmaster/api/classes/CiA402DriveProfile#function-prepareshutdown)**() override |
-| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/CiA402DriveProfile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override |
+| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/CiA402DriveProfile#function-preparesafeop)**(ISlaveServices & svc, ProcessImage & image) override |
 | virtual std::int32_t | **[modeDisplay](/lxmaster/api/classes/CiA402DriveProfile#function-modedisplay)**() const override<br>Drive's modes-of-operation display (CiA402 0x6061; 8=CSP, 9=CSV, 10=CST).  |
 | std::uint16_t | **[lastStatusWordForDiagnostics](/lxmaster/api/classes/CiA402DriveProfile#function-laststatuswordfordiagnostics)**() const override |
 | virtual bool | **[isOperationEnabled](/lxmaster/api/classes/CiA402DriveProfile#function-isoperationenabled)**() const override |
@@ -59,7 +59,7 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 | bool | **[hasLeftOperationEnabled](/lxmaster/api/classes/CiA402DriveProfile#function-hasleftoperationenabled)**() const override |
 | bool | **[cyclicStopRequested](/lxmaster/api/classes/CiA402DriveProfile#function-cyclicstoprequested)**() const override |
 | std::string | **[cyclicStopReason](/lxmaster/api/classes/CiA402DriveProfile#function-cyclicstopreason)**() const override |
-| virtual std::string | **[configurePreOp](/lxmaster/api/classes/CiA402DriveProfile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override |
+| virtual std::string | **[configurePreOp](/lxmaster/api/classes/CiA402DriveProfile#function-configurepreop)**(ISlaveServices & svc, ProcessImage & image) override |
 | virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/CiA402DriveProfile#function-captureexitdiagnostics)**(ISlaveServices & svc) override<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
 | virtual [IMotionProfile](/lxmaster/api/classes/IMotionProfile) * | **[asMotion](/lxmaster/api/classes/CiA402DriveProfile#function-asmotion)**() override |
 | virtual std::int32_t | **[actualVelocity](/lxmaster/api/classes/CiA402DriveProfile#function-actualvelocity)**() const override |
@@ -74,7 +74,7 @@ Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ec
 |                | Name           |
 | -------------- | -------------- |
 | | **[~IDeviceProfile](/lxmaster/api/classes/IDeviceProfile#function-~ideviceprofile)**() override =default |
-| virtual void | **[resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
+| virtual void | **[resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)**(const ProcessImage & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
 | virtual [IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[asIo](/lxmaster/api/classes/IDeviceProfile#function-asio)**() |
 | virtual [IEncoderProfile](/lxmaster/api/classes/IEncoderProfile) * | **[asEncoder](/lxmaster/api/classes/IDeviceProfile#function-asencoder)**() |
 
@@ -100,7 +100,7 @@ Plugs onto a `[GenericEniDevice]` and provides the drive-class behaviour that us
 
 It implements `[IMotionProfile](/lxmaster/api/classes/IMotionProfile)`, which is the only thing the `Axis` facade depends on, so the controlword/statusword stay hidden inside this profile.
 
-Extending it: this class is intentionally NOT `final`. To add vendor/extra PDO variables (objects the ENI maps beyond the standard CiA402 set), subclass it, override the relevant lifecycle method (typically `readInputs`, and optionally `resolveTopology`/`configurePreOp`), and CHAIN to the base (`CiA402DriveProfile::readInputs(...)`) before doing your own work. Resolve your extra objects with `ProcessImage::resolve(index, sub)` and publish them to application threads through your own lock-free state (atomics). `Axis` keeps working unchanged because the subclass inherits this profile's `asMotion()`. This mirrors the `[GenericIoProfile](/lxmaster/api/classes/GenericIoProfile)` -> `[CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)` precedent. The application reaches the subclass via `[ecfacade::DeviceFacade::deviceProfile()](/lxmaster/api/classes/DeviceFacade#function-deviceprofile)`. 
+Extending it: this class is intentionally NOT `final`. To add vendor/extra PDO variables (objects the ENI maps beyond the standard CiA402 set), subclass it, override the relevant lifecycle method (typically `readInputs`, and optionally `resolveTopology`/`configurePreOp`), and CHAIN to the base (`CiA402DriveProfile::readInputs(...)`) before doing your own work. Resolve your extra objects with `ProcessImage::resolve(index, sub)` and publish them to application threads through your own lock-free state (atomics). `Axis` keeps working unchanged because the subclass inherits this profile's `asMotion()`. This mirrors the `[GenericIoProfile](/lxmaster/api/classes/GenericIoProfile)` -> `[CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)` precedent. The application reaches the subclass via `ecfacade::DeviceFacade::deviceProfile()`. 
 
 ## Public Types Documentation
 

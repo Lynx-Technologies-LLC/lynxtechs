@@ -102,6 +102,13 @@ const config: Config = {
           label: 'Documentation',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'lxmasterSidebar',
+          docsPluginId: 'lxmaster',
+          position: 'left',
+          label: 'LXMASTER',
+        },
+        {
           type: 'docsVersionDropdown',
           position: 'right',
           docsPluginId: 'lxmaster',

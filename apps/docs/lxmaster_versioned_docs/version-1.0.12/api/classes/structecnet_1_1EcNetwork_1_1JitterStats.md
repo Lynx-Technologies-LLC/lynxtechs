@@ -2,7 +2,7 @@
 title: "ecnet::EcNetwork::JitterStats"
 summary: "End-of-run jitter summary (populated by the cyclic thread)."
 
-slug: /lxmaster/api/classes/EcNetwork-JitterStats
+slug: /api/classes/EcNetwork-JitterStats
 sidebar_label: "JitterStats"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

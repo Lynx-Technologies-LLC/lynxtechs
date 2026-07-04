@@ -2,7 +2,7 @@
 title: "ecnet::NetworkConfig"
 summary: "User-facing configuration for an EcNetwork."
 
-slug: /lxmaster/api/classes/NetworkConfig
+slug: /api/classes/NetworkConfig
 sidebar_label: "NetworkConfig"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
@@ -32,8 +32,8 @@ User-facing configuration for an [EcNetwork]().  [More...](#detailed-description
 | std::function< void(const [BusFault](/lxmaster/api/classes/BusFault) &)> | **[on_bus_fault](/lxmaster/api/classes/NetworkConfig#variable-on-bus-fault)** <br>Optional bus-fault notification.  |
 | constexpr std::int32_t | **[kDcSyncBusyWaitAuto](/lxmaster/api/classes/NetworkConfig#variable-kdcsyncbusywaitauto)**  |
 | std::vector< std::shared_ptr< [ecdev::IProfileFactory](/lxmaster/api/classes/IProfileFactory) > > | **[extra_profile_factories](/lxmaster/api/classes/NetworkConfig#variable-extra-profile-factories)** <br>App-supplied device classes, considered ahead of the self-registered built-ins when classifying each ENI slave (see `ecdev::ProfileRegistry::select`).  |
-| [EniConfig](/lxmaster/api/classes/EniConfig) | **[eni](/lxmaster/api/classes/NetworkConfig#variable-eni)**  |
-| [DebugConfig](/lxmaster/api/classes/DebugConfig) | **[debug](/lxmaster/api/classes/NetworkConfig#variable-debug)**  |
+| EniConfig | **[eni](/lxmaster/api/classes/NetworkConfig#variable-eni)**  |
+| DebugConfig | **[debug](/lxmaster/api/classes/NetworkConfig#variable-debug)**  |
 | DcConfig | **[dc](/lxmaster/api/classes/NetworkConfig#variable-dc)**  |
 | BusConfig | **[bus](/lxmaster/api/classes/NetworkConfig#variable-bus)**  |
 

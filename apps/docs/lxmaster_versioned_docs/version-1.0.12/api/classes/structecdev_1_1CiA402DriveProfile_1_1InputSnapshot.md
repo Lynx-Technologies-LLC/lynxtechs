@@ -1,7 +1,7 @@
 ---
 title: "ecdev::CiA402DriveProfile::InputSnapshot"
 
-slug: /lxmaster/api/classes/CiA402DriveProfile-InputSnapshot
+slug: /api/classes/CiA402DriveProfile-InputSnapshot
 sidebar_label: "InputSnapshot"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

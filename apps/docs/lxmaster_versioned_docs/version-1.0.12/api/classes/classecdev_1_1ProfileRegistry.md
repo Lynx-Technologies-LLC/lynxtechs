@@ -2,7 +2,7 @@
 title: "ecdev::ProfileRegistry"
 summary: "Registry of IProfileFactory plugins."
 
-slug: /lxmaster/api/classes/ProfileRegistry
+slug: /api/classes/ProfileRegistry
 sidebar_label: "ProfileRegistry"
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public
