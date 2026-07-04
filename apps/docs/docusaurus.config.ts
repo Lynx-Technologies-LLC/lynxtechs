@@ -44,8 +44,6 @@ const config: Config = {
         // Never show an unversioned "Next" entry — docs/lxmaster/ is a
         // placeholder; real content lives in lxmaster_versioned_docs/.
         includeCurrentVersion: false,
-        editUrl:
-          'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
         // Docusaurus auto-discovers lxmaster_versioned_docs/,
         // lxmaster_versioned_sidebars/, and lxmaster_versions.json
         // from the plugin id — no extra path config needed.
@@ -73,8 +71,6 @@ const config: Config = {
           routeBasePath: '/',
           // Exclude lxmaster (separate plugin) and the old intro root page.
           exclude: ['lxmaster/**', 'intro.md', 'master-software/**'],
-          editUrl:
-            'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
         },
         blog: false,
         theme: {
