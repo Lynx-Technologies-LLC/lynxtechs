@@ -1,6 +1,6 @@
 ---
-title: ecdev::claim_score
-summary: Claim-score tiers for IProfileFactory::claim. 
+title: "ecdev::claim_score"
+summary: "Claim-score tiers for IProfileFactory::claim."
 
 slug: /lxmaster/api/namespaces/ecdev-claim_score
 sidebar_label: "claim_score"

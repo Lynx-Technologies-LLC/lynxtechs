@@ -1,5 +1,5 @@
 ---
-title: ecdev::PdoAssignment::SmGroup
+title: "ecdev::PdoAssignment::SmGroup"
 
 slug: /lxmaster/api/classes/PdoAssignment-SmGroup
 sidebar_label: "SmGroup"

@@ -1,5 +1,5 @@
 ---
-title: LXMASTER API Reference
+title: "LXMASTER API Reference"
 
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

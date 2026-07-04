@@ -1,6 +1,6 @@
 ---
-title: ecdev::CiA401IoProfile
-summary: CiA 401 (CANopen generic I/O) profile. 
+title: "ecdev::CiA401IoProfile"
+summary: "CiA 401 (CANopen generic I/O) profile."
 
 slug: /lxmaster/api/classes/CiA401IoProfile
 sidebar_label: "CiA401IoProfile"

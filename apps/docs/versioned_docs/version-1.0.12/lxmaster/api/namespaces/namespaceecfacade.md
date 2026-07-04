@@ -1,5 +1,5 @@
 ---
-title: ecfacade
+title: "ecfacade"
 
 slug: /lxmaster/api/namespaces/ecfacade
 sidebar_label: "ecfacade"

@@ -1,5 +1,5 @@
 ---
-title: Namespaces
+title: "Namespaces"
 
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

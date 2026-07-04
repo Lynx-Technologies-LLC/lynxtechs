@@ -1,5 +1,5 @@
 ---
-title: libs/facade/include/facade/axis.hpp
+title: "libs/facade/include/facade/axis.hpp"
 
 slug: /lxmaster/api/files/axis_8hpp
 sidebar_label: "libs/facade/include/facade/axis.hpp"

@@ -1,5 +1,5 @@
 ---
-title: lxmaster
+title: "lxmaster"
 
 slug: /lxmaster/api/namespaces/lxmaster
 sidebar_label: "lxmaster"

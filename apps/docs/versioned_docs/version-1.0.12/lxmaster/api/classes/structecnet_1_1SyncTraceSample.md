@@ -1,5 +1,5 @@
 ---
-title: ecnet::SyncTraceSample
+title: "ecnet::SyncTraceSample"
 
 slug: /lxmaster/api/classes/SyncTraceSample
 sidebar_label: "SyncTraceSample"

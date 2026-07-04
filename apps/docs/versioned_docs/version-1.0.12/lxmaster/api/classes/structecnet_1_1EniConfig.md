@@ -1,6 +1,6 @@
 ---
-title: ecnet::EniConfig
-summary: ENI-driven configuration. 
+title: "ecnet::EniConfig"
+summary: "ENI-driven configuration."
 
 slug: /lxmaster/api/classes/EniConfig
 sidebar_label: "EniConfig"

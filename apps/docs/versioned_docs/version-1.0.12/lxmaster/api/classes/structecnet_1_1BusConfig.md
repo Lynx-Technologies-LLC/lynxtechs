@@ -1,5 +1,5 @@
 ---
-title: ecnet::BusConfig
+title: "ecnet::BusConfig"
 
 slug: /lxmaster/api/classes/BusConfig
 sidebar_label: "BusConfig"

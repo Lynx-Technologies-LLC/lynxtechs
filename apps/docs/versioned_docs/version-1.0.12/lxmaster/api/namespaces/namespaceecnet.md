@@ -1,5 +1,5 @@
 ---
-title: ecnet
+title: "ecnet"
 
 slug: /lxmaster/api/namespaces/ecnet
 sidebar_label: "ecnet"

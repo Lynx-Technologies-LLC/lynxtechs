@@ -1,5 +1,5 @@
 ---
-title: libs/ecnet/include/ecnet/bus_fault.hpp
+title: "libs/ecnet/include/ecnet/bus_fault.hpp"
 
 slug: /lxmaster/api/files/bus_fault_8hpp
 sidebar_label: "libs/ecnet/include/ecnet/bus_fault.hpp"

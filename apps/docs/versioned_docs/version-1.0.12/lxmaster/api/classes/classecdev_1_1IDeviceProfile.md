@@ -1,6 +1,6 @@
 ---
-title: ecdev::IDeviceProfile
-summary: Device-class behaviour plugged onto a GenericEniDevice. 
+title: "ecdev::IDeviceProfile"
+summary: "Device-class behaviour plugged onto a GenericEniDevice."
 
 slug: /lxmaster/api/classes/IDeviceProfile
 sidebar_label: "IDeviceProfile"

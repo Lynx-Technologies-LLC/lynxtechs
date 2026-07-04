@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/process_image.hpp
+title: "libs/devices/include/devices/process_image.hpp"
 
 slug: /lxmaster/api/files/process_image_8hpp
 sidebar_label: "libs/devices/include/devices/process_image.hpp"

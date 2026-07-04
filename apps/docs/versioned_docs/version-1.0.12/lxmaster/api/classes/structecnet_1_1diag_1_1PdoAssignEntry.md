@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::PdoAssignEntry
+title: "ecnet::diag::PdoAssignEntry"
 
 slug: /lxmaster/api/classes/diag-PdoAssignEntry
 sidebar_label: "PdoAssignEntry"

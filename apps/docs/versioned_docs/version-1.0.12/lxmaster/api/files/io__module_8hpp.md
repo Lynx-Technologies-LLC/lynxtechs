@@ -1,5 +1,5 @@
 ---
-title: libs/facade/include/facade/io_module.hpp
+title: "libs/facade/include/facade/io_module.hpp"
 
 slug: /lxmaster/api/files/io_module_8hpp
 sidebar_label: "libs/facade/include/facade/io_module.hpp"

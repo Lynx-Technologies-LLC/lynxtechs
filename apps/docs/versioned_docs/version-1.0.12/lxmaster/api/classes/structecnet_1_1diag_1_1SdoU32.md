@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::SdoU32
+title: "ecnet::diag::SdoU32"
 
 slug: /lxmaster/api/classes/diag-SdoU32
 sidebar_label: "SdoU32"

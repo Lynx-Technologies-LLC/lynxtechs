@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/cia402_drive_profile.hpp
+title: "libs/devices/include/devices/cia402_drive_profile.hpp"
 
 slug: /lxmaster/api/files/cia402_drive_profile_8hpp
 sidebar_label: "libs/devices/include/devices/cia402_drive_profile.hpp"

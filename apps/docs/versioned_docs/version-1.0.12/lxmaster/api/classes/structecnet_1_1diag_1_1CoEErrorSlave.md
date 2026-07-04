@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::CoEErrorSlave
+title: "ecnet::diag::CoEErrorSlave"
 
 slug: /lxmaster/api/classes/diag-CoEErrorSlave
 sidebar_label: "CoEErrorSlave"

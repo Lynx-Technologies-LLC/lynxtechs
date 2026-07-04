@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/motion_profile.hpp
+title: "libs/devices/include/devices/motion_profile.hpp"
 
 slug: /lxmaster/api/files/motion_profile_8hpp
 sidebar_label: "libs/devices/include/devices/motion_profile.hpp"

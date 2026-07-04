@@ -1,5 +1,5 @@
 ---
-title: ecnet::ShutdownConfig
+title: "ecnet::ShutdownConfig"
 
 slug: /lxmaster/api/classes/ShutdownConfig
 sidebar_label: "ShutdownConfig"

@@ -1,6 +1,6 @@
 ---
-title: ecfacade::DeviceFacade
-summary: Shared base for every application-facing device handle (IoModule, Axis, Encoder). 
+title: "ecfacade::DeviceFacade"
+summary: "Shared base for every application-facing device handle (IoModule, Axis, Encoder)."
 
 slug: /lxmaster/api/classes/DeviceFacade
 sidebar_label: "DeviceFacade"

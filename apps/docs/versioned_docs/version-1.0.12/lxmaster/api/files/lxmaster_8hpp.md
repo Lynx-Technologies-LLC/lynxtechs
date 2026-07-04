@@ -1,5 +1,5 @@
 ---
-title: libs/ecnet/include/lxmaster/lxmaster.hpp
+title: "libs/ecnet/include/lxmaster/lxmaster.hpp"
 
 slug: /lxmaster/api/files/lxmaster_8hpp
 sidebar_label: "libs/ecnet/include/lxmaster/lxmaster.hpp"

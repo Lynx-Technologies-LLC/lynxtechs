@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::CoEErrorReport
+title: "ecnet::diag::CoEErrorReport"
 
 slug: /lxmaster/api/classes/diag-CoEErrorReport
 sidebar_label: "CoEErrorReport"

@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/sync_mode.hpp
+title: "libs/devices/include/devices/sync_mode.hpp"
 
 slug: /lxmaster/api/files/sync_mode_8hpp
 sidebar_label: "libs/devices/include/devices/sync_mode.hpp"

@@ -1,5 +1,5 @@
 ---
-title: Classes
+title: "Classes"
 
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

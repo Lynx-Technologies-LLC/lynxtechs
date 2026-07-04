@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/identity_profile.hpp
+title: "libs/devices/include/devices/identity_profile.hpp"
 
 slug: /lxmaster/api/files/identity_profile_8hpp
 sidebar_label: "libs/devices/include/devices/identity_profile.hpp"

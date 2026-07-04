@@ -1,5 +1,5 @@
 ---
-title: ecnet::RtConfig
+title: "ecnet::RtConfig"
 
 slug: /lxmaster/api/classes/RtConfig
 sidebar_label: "RtConfig"

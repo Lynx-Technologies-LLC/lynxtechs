@@ -1,5 +1,5 @@
 ---
-title: libs/ecnet/include/ecnet/diagnostics.hpp
+title: "libs/ecnet/include/ecnet/diagnostics.hpp"
 
 slug: /lxmaster/api/files/diagnostics_8hpp
 sidebar_label: "libs/ecnet/include/ecnet/diagnostics.hpp"

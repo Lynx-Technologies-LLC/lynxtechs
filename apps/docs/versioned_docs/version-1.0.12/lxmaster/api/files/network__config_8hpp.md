@@ -1,5 +1,5 @@
 ---
-title: libs/ecnet/include/ecnet/network_config.hpp
+title: "libs/ecnet/include/ecnet/network_config.hpp"
 
 slug: /lxmaster/api/files/network_config_8hpp
 sidebar_label: "libs/ecnet/include/ecnet/network_config.hpp"

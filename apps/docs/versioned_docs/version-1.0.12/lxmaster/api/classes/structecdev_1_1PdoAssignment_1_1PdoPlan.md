@@ -1,5 +1,5 @@
 ---
-title: ecdev::PdoAssignment::PdoPlan
+title: "ecdev::PdoAssignment::PdoPlan"
 
 slug: /lxmaster/api/classes/PdoAssignment-PdoPlan
 sidebar_label: "PdoPlan"

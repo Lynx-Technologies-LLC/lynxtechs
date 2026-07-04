@@ -1,6 +1,6 @@
 ---
-title: ecdev::ProcessImage
-summary: Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use. 
+title: "ecdev::ProcessImage"
+summary: "Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use."
 
 slug: /lxmaster/api/classes/ProcessImage
 sidebar_label: "ProcessImage"

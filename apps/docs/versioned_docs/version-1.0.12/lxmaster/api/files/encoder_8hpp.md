@@ -1,5 +1,5 @@
 ---
-title: libs/facade/include/facade/encoder.hpp
+title: "libs/facade/include/facade/encoder.hpp"
 
 slug: /lxmaster/api/files/encoder_8hpp
 sidebar_label: "libs/facade/include/facade/encoder.hpp"

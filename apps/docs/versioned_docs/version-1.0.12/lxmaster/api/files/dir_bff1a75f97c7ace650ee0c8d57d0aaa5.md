@@ -1,5 +1,5 @@
 ---
-title: docs/api
+title: "docs/api"
 
 slug: /lxmaster/api/files/dir_bff1a75f97c7ace650ee0c8d57d0aaa5
 sidebar_label: "docs/api"

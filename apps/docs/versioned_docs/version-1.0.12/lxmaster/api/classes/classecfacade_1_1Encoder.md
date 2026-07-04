@@ -1,6 +1,6 @@
 ---
-title: ecfacade::Encoder
-summary: High-level encoder handle. 
+title: "ecfacade::Encoder"
+summary: "High-level encoder handle."
 
 slug: /lxmaster/api/classes/Encoder
 sidebar_label: "Encoder"

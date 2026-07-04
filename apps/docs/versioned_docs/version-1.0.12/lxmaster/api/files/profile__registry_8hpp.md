@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/profile_registry.hpp
+title: "libs/devices/include/devices/profile_registry.hpp"
 
 slug: /lxmaster/api/files/profile_registry_8hpp
 sidebar_label: "libs/devices/include/devices/profile_registry.hpp"

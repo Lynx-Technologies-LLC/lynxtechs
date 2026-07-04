@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::StrictSyncSlave
+title: "ecnet::diag::StrictSyncSlave"
 
 slug: /lxmaster/api/classes/diag-StrictSyncSlave
 sidebar_label: "StrictSyncSlave"

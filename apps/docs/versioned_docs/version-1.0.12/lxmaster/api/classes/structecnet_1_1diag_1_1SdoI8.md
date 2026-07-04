@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::SdoI8
+title: "ecnet::diag::SdoI8"
 
 slug: /lxmaster/api/classes/diag-SdoI8
 sidebar_label: "SdoI8"

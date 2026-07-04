@@ -1,6 +1,6 @@
 ---
-title: ecdev::GenericIoProfile
-summary: Protocol-agnostic digital/analog I/O profile. 
+title: "ecdev::GenericIoProfile"
+summary: "Protocol-agnostic digital/analog I/O profile."
 
 slug: /lxmaster/api/classes/GenericIoProfile
 sidebar_label: "GenericIoProfile"

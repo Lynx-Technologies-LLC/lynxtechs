@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/encoder_profile.hpp
+title: "libs/devices/include/devices/encoder_profile.hpp"
 
 slug: /lxmaster/api/files/encoder_profile_8hpp
 sidebar_label: "libs/devices/include/devices/encoder_profile.hpp"

@@ -1,6 +1,6 @@
 ---
-title: ecnet::NetworkConfig
-summary: User-facing configuration for an EcNetwork. 
+title: "ecnet::NetworkConfig"
+summary: "User-facing configuration for an EcNetwork."
 
 slug: /lxmaster/api/classes/NetworkConfig
 sidebar_label: "NetworkConfig"

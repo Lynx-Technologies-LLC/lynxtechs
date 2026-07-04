@@ -1,6 +1,6 @@
 ---
-title: ecdev::IIoProfile
-summary: Facade-facing contract for a digital/analog I/O device (CiA 401 family). 
+title: "ecdev::IIoProfile"
+summary: "Facade-facing contract for a digital/analog I/O device (CiA 401 family)."
 
 slug: /lxmaster/api/classes/IIoProfile
 sidebar_label: "IIoProfile"

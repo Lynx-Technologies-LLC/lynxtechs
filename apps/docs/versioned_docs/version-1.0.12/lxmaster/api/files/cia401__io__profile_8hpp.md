@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/cia401_io_profile.hpp
+title: "libs/devices/include/devices/cia401_io_profile.hpp"
 
 slug: /lxmaster/api/files/cia401_io_profile_8hpp
 sidebar_label: "libs/devices/include/devices/cia401_io_profile.hpp"

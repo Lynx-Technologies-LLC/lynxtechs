@@ -1,6 +1,6 @@
 ---
-title: ecfacade::GenericDevice
-summary: Application handle for a device whose profile implements none of the typed capability contracts (not an Axis, IoModule, or Encoder)  e.g. 
+title: "ecfacade::GenericDevice"
+summary: "Application handle for a device whose profile implements none of the typed capability contracts (not an Axis, IoModule, or Encoder)  e.g."
 
 slug: /lxmaster/api/classes/GenericDevice
 sidebar_label: "GenericDevice"

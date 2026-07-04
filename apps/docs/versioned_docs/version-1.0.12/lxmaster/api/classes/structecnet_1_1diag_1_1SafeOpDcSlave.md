@@ -1,5 +1,5 @@
 ---
-title: ecnet::diag::SafeOpDcSlave
+title: "ecnet::diag::SafeOpDcSlave"
 
 slug: /lxmaster/api/classes/diag-SafeOpDcSlave
 sidebar_label: "SafeOpDcSlave"

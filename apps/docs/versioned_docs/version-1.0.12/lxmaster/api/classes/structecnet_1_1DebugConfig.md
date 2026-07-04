@@ -1,6 +1,6 @@
 ---
-title: ecnet::DebugConfig
-summary: Runtime logging configuration. 
+title: "ecnet::DebugConfig"
+summary: "Runtime logging configuration."
 
 slug: /lxmaster/api/classes/DebugConfig
 sidebar_label: "DebugConfig"

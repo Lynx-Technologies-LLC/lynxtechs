@@ -1,6 +1,6 @@
 ---
-title: ecdev::IEncoderProfile
-summary: Facade-facing contract for an encoder / position sensor (CiA 406 family). 
+title: "ecdev::IEncoderProfile"
+summary: "Facade-facing contract for an encoder / position sensor (CiA 406 family)."
 
 slug: /lxmaster/api/classes/IEncoderProfile
 sidebar_label: "IEncoderProfile"

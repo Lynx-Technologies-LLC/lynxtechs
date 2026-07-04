@@ -1,5 +1,5 @@
 ---
-title: libs/facade/include/facade/device_facade.hpp
+title: "libs/facade/include/facade/device_facade.hpp"
 
 slug: /lxmaster/api/files/device_facade_8hpp
 sidebar_label: "libs/facade/include/facade/device_facade.hpp"

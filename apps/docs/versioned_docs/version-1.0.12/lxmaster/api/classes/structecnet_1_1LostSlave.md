@@ -1,6 +1,6 @@
 ---
-title: ecnet::LostSlave
-summary: One slave that stopped responding when the bus fault was diagnosed. 
+title: "ecnet::LostSlave"
+summary: "One slave that stopped responding when the bus fault was diagnosed."
 
 slug: /lxmaster/api/classes/LostSlave
 sidebar_label: "LostSlave"

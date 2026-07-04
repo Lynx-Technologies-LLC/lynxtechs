@@ -1,6 +1,6 @@
 ---
-title: ecdev::PdoEntryRef
-summary: Resolved location of one mapped CoE object inside a slave's process image. 
+title: "ecdev::PdoEntryRef"
+summary: "Resolved location of one mapped CoE object inside a slave's process image."
 
 slug: /lxmaster/api/classes/PdoEntryRef
 sidebar_label: "PdoEntryRef"

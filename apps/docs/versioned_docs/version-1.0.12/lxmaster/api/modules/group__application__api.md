@@ -1,6 +1,6 @@
 ---
-title: Application API
-summary: The API used by control applications. 
+title: "Application API"
+summary: "The API used by control applications."
 
 slug: /lxmaster/api/modules/group_application_api
 sidebar_label: "Application API"

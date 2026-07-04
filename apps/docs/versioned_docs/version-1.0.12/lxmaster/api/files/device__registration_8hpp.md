@@ -1,5 +1,5 @@
 ---
-title: libs/devices/include/devices/device_registration.hpp
+title: "libs/devices/include/devices/device_registration.hpp"
 
 slug: /lxmaster/api/files/device_registration_8hpp
 sidebar_label: "libs/devices/include/devices/device_registration.hpp"

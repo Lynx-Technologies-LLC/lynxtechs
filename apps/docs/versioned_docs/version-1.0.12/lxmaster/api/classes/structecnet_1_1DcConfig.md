@@ -1,5 +1,5 @@
 ---
-title: ecnet::DcConfig
+title: "ecnet::DcConfig"
 
 slug: /lxmaster/api/classes/DcConfig
 sidebar_label: "DcConfig"

@@ -1,6 +1,6 @@
 ---
-title: ecdev::DeviceIdentityMatch
-summary: Exact device identity a device class serves. 
+title: "ecdev::DeviceIdentityMatch"
+summary: "Exact device identity a device class serves."
 
 slug: /lxmaster/api/classes/DeviceIdentityMatch
 sidebar_label: "DeviceIdentityMatch"

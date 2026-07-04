@@ -1,6 +1,6 @@
 ---
-title: ecfacade::IoModule
-summary: High-level digital/analog I/O handle. 
+title: "ecfacade::IoModule"
+summary: "High-level digital/analog I/O handle."
 
 slug: /lxmaster/api/classes/IoModule
 sidebar_label: "IoModule"

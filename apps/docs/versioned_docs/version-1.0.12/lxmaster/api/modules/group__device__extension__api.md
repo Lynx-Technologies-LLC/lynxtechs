@@ -1,6 +1,6 @@
 ---
-title: Device Extension API
-summary: The API for adding support for custom drives and I/O devices by authoring device profiles and registering them with the profile registry (for example via LXMASTER_REGISTER_DEVICE). 
+title: "Device Extension API"
+summary: "The API for adding support for custom drives and I/O devices by authoring device profiles and registering them with the profile registry (for example via LXMASTER_REGISTER_DEVICE)."
 
 slug: /lxmaster/api/modules/group_device_extension_api
 sidebar_label: "Device Extension API"

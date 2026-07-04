@@ -1,6 +1,6 @@
 ---
-title: ecdev::ProcessImage::Entry
-summary: All resolved entries, in image order (diagnostics / enumeration by facades). 
+title: "ecdev::ProcessImage::Entry"
+summary: "All resolved entries, in image order (diagnostics / enumeration by facades)."
 
 slug: /lxmaster/api/classes/ProcessImage-Entry
 sidebar_label: "Entry"

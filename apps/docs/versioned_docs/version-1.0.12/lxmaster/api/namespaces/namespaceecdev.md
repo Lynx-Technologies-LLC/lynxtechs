@@ -1,5 +1,5 @@
 ---
-title: ecdev
+title: "ecdev"
 
 slug: /lxmaster/api/namespaces/ecdev
 sidebar_label: "ecdev"

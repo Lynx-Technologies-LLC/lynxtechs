@@ -1,6 +1,6 @@
 ---
-title: ecnet::diag::SdoU8
-summary: Optional SDO scalar: present is false when the read failed / object is absent. 
+title: "ecnet::diag::SdoU8"
+summary: "Optional SDO scalar: present is false when the read failed / object is absent."
 
 slug: /lxmaster/api/classes/diag-SdoU8
 sidebar_label: "SdoU8"

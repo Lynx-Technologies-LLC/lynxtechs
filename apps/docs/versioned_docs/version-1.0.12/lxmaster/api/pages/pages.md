@@ -1,5 +1,5 @@
 ---
-title: Pages
+title: "Pages"
 
 ---
 <!-- GENERATED - do not edit. Produced from the LXMASTER public

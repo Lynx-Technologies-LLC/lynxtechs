@@ -1,6 +1,6 @@
 ---
-title: ecdev::PdoAssignment
-summary: Generic, ENI-driven CoE PDO assignment. 
+title: "ecdev::PdoAssignment"
+summary: "Generic, ENI-driven CoE PDO assignment."
 
 slug: /lxmaster/api/classes/PdoAssignment
 sidebar_label: "PdoAssignment"
