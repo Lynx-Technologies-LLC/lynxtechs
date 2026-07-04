@@ -109,12 +109,6 @@ const config: Config = {
           position: 'left',
           label: 'LXMASTER',
         },
-        {
-          type: 'docsVersionDropdown',
-          position: 'right',
-          docsPluginId: 'lxmaster',
-          dropdownActiveClassDisabled: true,
-        },
       ],
     },
     footer: {
