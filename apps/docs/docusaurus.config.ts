@@ -72,7 +72,9 @@ const config: Config = {
       title: 'Lynx Technologies',
       logo: {
         alt: 'Lynx Technologies Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
+        href: 'https://lynxtechs.com',
+        target: '_self',
       },
       items: [
         {
@@ -85,16 +87,6 @@ const config: Config = {
           type: 'docsVersionDropdown',
           position: 'right',
           dropdownActiveClassDisabled: true,
-        },
-        {
-          href: 'https://lynxtechs.com',
-          label: 'Main site',
-          position: 'right',
-        },
-        {
-          href: 'https://github.com/Lynx-Technologies-LLC/lxmaster',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
