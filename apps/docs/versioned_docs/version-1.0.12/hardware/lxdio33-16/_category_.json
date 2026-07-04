@@ -1,0 +1,10 @@
+{
+  "label": "LXDIO33-16",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/hardware/lxdio33-16",
+    "title": "LXDIO33-16",
+    "description": "3.3 V EtherCAT 16-channel digital I/O PCB module: overview, tutorials, and example projects."
+  }
+}

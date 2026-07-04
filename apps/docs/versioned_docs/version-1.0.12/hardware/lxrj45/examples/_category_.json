@@ -1,0 +1,10 @@
+{
+  "label": "Example Projects",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/hardware/lxrj45/examples",
+    "title": "LXRJ45 Example Projects",
+    "description": "Runnable example projects that use the LXRJ45 module."
+  }
+}

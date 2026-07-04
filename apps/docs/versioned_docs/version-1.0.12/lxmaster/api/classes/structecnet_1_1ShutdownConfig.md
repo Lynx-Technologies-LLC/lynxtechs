@@ -1,0 +1,63 @@
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
+---
+title: ecnet::ShutdownConfig
+
+---
+
+# ecnet::ShutdownConfig
+
+
+
+
+
+## Public Attributes
+
+|                | Name           |
+| -------------- | -------------- |
+| int | **[safeop_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-safeop-timeout-ms)**  |
+| int | **[post_sod_settle_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-post-sod-settle-ms)**  |
+| int | **[device_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-device-timeout-ms)**  |
+| int | **[al_state_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-al-state-timeout-ms)**  |
+| int | **[al_gate_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-al-gate-timeout-ms)**  |
+
+## Public Attributes Documentation
+
+### variable safeop_timeout_ms
+
+```cpp
+int safeop_timeout_ms {2000};
+```
+
+
+### variable post_sod_settle_ms
+
+```cpp
+int post_sod_settle_ms {200};
+```
+
+
+### variable device_timeout_ms
+
+```cpp
+int device_timeout_ms {500};
+```
+
+
+### variable al_state_timeout_ms
+
+```cpp
+int al_state_timeout_ms {2000};
+```
+
+
+### variable al_gate_timeout_ms
+
+```cpp
+int al_gate_timeout_ms {2000};
+```
+
+
+-------------------------------
+
+Updated on 2026-07-04 at 20:22:54 +0000

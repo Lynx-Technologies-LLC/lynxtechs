@@ -1,0 +1,10 @@
+{
+  "label": "LXRJ45",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "slug": "/hardware/lxrj45",
+    "title": "LXRJ45",
+    "description": "EtherCAT RJ45 interface module: overview, tutorials, and example projects."
+  }
+}

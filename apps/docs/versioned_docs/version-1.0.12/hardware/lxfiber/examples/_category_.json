@@ -1,0 +1,10 @@
+{
+  "label": "Example Projects",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "slug": "/hardware/lxfiber/examples",
+    "title": "LXFIBER Example Projects",
+    "description": "Runnable example projects that use the LXFIBER module."
+  }
+}
