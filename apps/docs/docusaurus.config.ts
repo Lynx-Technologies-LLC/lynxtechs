@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Lynx Technologies Docs',
   tagline:
     'LXMASTER software, API reference, tutorials, example projects, and hardware integration',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo.png',
 
   url: 'https://docs.lynxtechs.com',
   baseUrl: '/',
@@ -33,6 +33,26 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'lxmaster',
+        path: 'docs/lxmaster',
+        routeBasePath: '/lxmaster',
+        sidebarPath: './sidebars-lxmaster.ts',
+        // Never show an unversioned "Next" entry — docs/lxmaster/ is a
+        // placeholder; real content lives in lxmaster_versioned_docs/.
+        includeCurrentVersion: false,
+        editUrl:
+          'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
+        // Docusaurus auto-discovers lxmaster_versioned_docs/,
+        // lxmaster_versioned_sidebars/, and lxmaster_versions.json
+        // from the plugin id — no extra path config needed.
+      },
+    ],
+  ],
+
   themes: [
     [
       '@easyops-cn/docusaurus-search-local',
@@ -51,16 +71,10 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          // Edit links point at the docs app inside the lynxtechs monorepo.
-          // Generated sections (LXMASTER API reference, release notes) are
-          // produced by automation and intentionally have edit links disabled
-          // via the per-folder _category_.json / frontmatter where applicable.
+          // Exclude lxmaster — handled by the separate lxmaster plugin instance.
+          exclude: ['lxmaster/**'],
           editUrl:
             'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
-          // Hide the "Next" (unreleased) entry from the version dropdown.
-          // The live docs/ directory is still built and served as the default,
-          // but visitors only see labelled release versions in the picker.
-          includeCurrentVersion: false,
         },
         blog: false,
         theme: {
@@ -90,6 +104,7 @@ const config: Config = {
         {
           type: 'docsVersionDropdown',
           position: 'right',
+          docsPluginId: 'lxmaster',
           dropdownActiveClassDisabled: true,
         },
       ],
