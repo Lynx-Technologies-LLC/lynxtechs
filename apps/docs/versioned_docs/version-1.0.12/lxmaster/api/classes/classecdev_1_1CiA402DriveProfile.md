@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::CiA402DriveProfile
 summary: CiA 402 (CANopen-over-EtherCAT) servo-drive profile. 
@@ -7,6 +5,8 @@ summary: CiA 402 (CANopen-over-EtherCAT) servo-drive profile.
 slug: /lxmaster/api/classes/CiA402DriveProfile
 sidebar_label: "CiA402DriveProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::CiA402DriveProfile
 

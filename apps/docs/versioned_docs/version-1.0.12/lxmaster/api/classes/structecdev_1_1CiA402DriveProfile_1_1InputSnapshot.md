@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::CiA402DriveProfile::InputSnapshot
 
 slug: /lxmaster/api/classes/CiA402DriveProfile-InputSnapshot
 sidebar_label: "InputSnapshot"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::CiA402DriveProfile::InputSnapshot
 

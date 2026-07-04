@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecfacade::DeviceFacade
 summary: Shared base for every application-facing device handle (IoModule, Axis, Encoder). 
@@ -7,6 +5,8 @@ summary: Shared base for every application-facing device handle (IoModule, Axis,
 slug: /lxmaster/api/classes/DeviceFacade
 sidebar_label: "DeviceFacade"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecfacade::DeviceFacade
 

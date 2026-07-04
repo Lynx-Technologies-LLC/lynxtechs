@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::ProfileSelectionInput
 summary: Inputs a factory uses to decide on and build a profile for one ENI slave. 
@@ -7,6 +5,8 @@ summary: Inputs a factory uses to decide on and build a profile for one ENI slav
 slug: /lxmaster/api/classes/ProfileSelectionInput
 sidebar_label: "ProfileSelectionInput"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::ProfileSelectionInput
 

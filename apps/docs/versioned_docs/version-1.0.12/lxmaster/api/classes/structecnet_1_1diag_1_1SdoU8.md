@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::diag::SdoU8
 summary: Optional SDO scalar: present is false when the read failed / object is absent. 
@@ -7,6 +5,8 @@ summary: Optional SDO scalar: present is false when the read failed / object is 
 slug: /lxmaster/api/classes/diag-SdoU8
 sidebar_label: "SdoU8"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::diag::SdoU8
 

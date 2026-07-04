@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::NetworkConfig
 summary: User-facing configuration for an EcNetwork. 
@@ -7,6 +5,8 @@ summary: User-facing configuration for an EcNetwork.
 slug: /lxmaster/api/classes/NetworkConfig
 sidebar_label: "NetworkConfig"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::NetworkConfig
 

@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::DebugConfig
 summary: Runtime logging configuration. 
@@ -7,6 +5,8 @@ summary: Runtime logging configuration.
 slug: /lxmaster/api/classes/DebugConfig
 sidebar_label: "DebugConfig"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::DebugConfig
 

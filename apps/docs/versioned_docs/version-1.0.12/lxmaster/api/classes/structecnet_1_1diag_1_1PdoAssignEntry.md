@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::diag::PdoAssignEntry
 
 slug: /lxmaster/api/classes/diag-PdoAssignEntry
 sidebar_label: "PdoAssignEntry"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::diag::PdoAssignEntry
 

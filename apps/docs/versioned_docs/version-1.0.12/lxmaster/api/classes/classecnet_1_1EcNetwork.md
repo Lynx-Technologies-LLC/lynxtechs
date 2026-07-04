@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::EcNetwork
 summary: User-facing runtime facade for an EtherCAT network. 
@@ -7,6 +5,8 @@ summary: User-facing runtime facade for an EtherCAT network.
 slug: /lxmaster/api/classes/EcNetwork
 sidebar_label: "EcNetwork"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::EcNetwork
 

@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::BusFault
 summary: Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see NetworkConfig::watchdog_low_wkc_cycles). 
@@ -7,6 +5,8 @@ summary: Structured description of a cyclic-bus fault, built when the cycle-heal
 slug: /lxmaster/api/classes/BusFault
 sidebar_label: "BusFault"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::BusFault
 

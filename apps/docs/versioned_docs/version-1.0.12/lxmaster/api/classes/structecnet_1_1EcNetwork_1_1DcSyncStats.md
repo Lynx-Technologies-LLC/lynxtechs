@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::EcNetwork::DcSyncStats
 summary: End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock). 
@@ -7,6 +5,8 @@ summary: End-of-run DC-sync alignment summary (host wake vs reference-slave DC c
 slug: /lxmaster/api/classes/EcNetwork-DcSyncStats
 sidebar_label: "DcSyncStats"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::EcNetwork::DcSyncStats
 

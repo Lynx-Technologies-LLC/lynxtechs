@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::ProfileRegistry
 summary: Registry of IProfileFactory plugins. 
@@ -7,6 +5,8 @@ summary: Registry of IProfileFactory plugins.
 slug: /lxmaster/api/classes/ProfileRegistry
 sidebar_label: "ProfileRegistry"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::ProfileRegistry
 

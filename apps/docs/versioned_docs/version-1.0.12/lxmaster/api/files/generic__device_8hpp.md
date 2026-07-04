@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: libs/facade/include/facade/generic_device.hpp
 
 slug: /lxmaster/api/files/generic_device_8hpp
 sidebar_label: "libs/facade/include/facade/generic_device.hpp"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # libs/facade/include/facade/generic_device.hpp
 

@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::ProcessImage
 summary: Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use. 
@@ -7,6 +5,8 @@ summary: Per-slave process-image accessor: the narrow cyclic-path contract that 
 slug: /lxmaster/api/classes/ProcessImage
 sidebar_label: "ProcessImage"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::ProcessImage
 

@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::CiA406EncoderProfile
 summary: CiA 406 (encoder) profile. 
@@ -7,6 +5,8 @@ summary: CiA 406 (encoder) profile.
 slug: /lxmaster/api/classes/CiA406EncoderProfile
 sidebar_label: "CiA406EncoderProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::CiA406EncoderProfile
 

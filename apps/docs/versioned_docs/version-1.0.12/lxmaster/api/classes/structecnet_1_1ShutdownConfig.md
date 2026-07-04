@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::ShutdownConfig
 
 slug: /lxmaster/api/classes/ShutdownConfig
 sidebar_label: "ShutdownConfig"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::ShutdownConfig
 

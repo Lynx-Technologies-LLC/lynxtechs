@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: libs/facade/include/facade/encoder.hpp
 
 slug: /lxmaster/api/files/encoder_8hpp
 sidebar_label: "libs/facade/include/facade/encoder.hpp"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # libs/facade/include/facade/encoder.hpp
 

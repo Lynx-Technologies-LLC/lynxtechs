@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecfacade::GenericDevice
 summary: Application handle for a device whose profile implements none of the typed capability contracts (not an Axis, IoModule, or Encoder)  e.g. 
@@ -7,6 +5,8 @@ summary: Application handle for a device whose profile implements none of the ty
 slug: /lxmaster/api/classes/GenericDevice
 sidebar_label: "GenericDevice"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecfacade::GenericDevice
 

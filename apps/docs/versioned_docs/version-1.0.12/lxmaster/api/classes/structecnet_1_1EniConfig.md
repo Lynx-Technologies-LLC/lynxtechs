@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::EniConfig
 summary: ENI-driven configuration. 
@@ -7,6 +5,8 @@ summary: ENI-driven configuration.
 slug: /lxmaster/api/classes/EniConfig
 sidebar_label: "EniConfig"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::EniConfig
 

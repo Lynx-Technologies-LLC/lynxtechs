@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::IIoProfile
 summary: Facade-facing contract for a digital/analog I/O device (CiA 401 family). 
@@ -7,6 +5,8 @@ summary: Facade-facing contract for a digital/analog I/O device (CiA 401 family)
 slug: /lxmaster/api/classes/IIoProfile
 sidebar_label: "IIoProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::IIoProfile
 

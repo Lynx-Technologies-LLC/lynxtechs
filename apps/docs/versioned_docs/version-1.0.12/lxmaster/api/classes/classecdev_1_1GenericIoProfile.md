@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::GenericIoProfile
 summary: Protocol-agnostic digital/analog I/O profile. 
@@ -7,6 +5,8 @@ summary: Protocol-agnostic digital/analog I/O profile.
 slug: /lxmaster/api/classes/GenericIoProfile
 sidebar_label: "GenericIoProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::GenericIoProfile
 

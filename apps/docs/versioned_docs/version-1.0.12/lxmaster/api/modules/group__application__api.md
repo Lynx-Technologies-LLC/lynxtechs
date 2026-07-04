@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: Application API
 summary: The API used by control applications. 
@@ -7,6 +5,8 @@ summary: The API used by control applications.
 slug: /lxmaster/api/modules/group_application_api
 sidebar_label: "Application API"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # Application API
 

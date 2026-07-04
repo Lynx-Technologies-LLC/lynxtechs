@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::claim_score
 summary: Claim-score tiers for IProfileFactory::claim. 
@@ -7,6 +5,8 @@ summary: Claim-score tiers for IProfileFactory::claim.
 slug: /lxmaster/api/namespaces/ecdev-claim_score
 sidebar_label: "claim_score"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::claim_score
 

@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::PdoAssignment::SmGroup
 
 slug: /lxmaster/api/classes/PdoAssignment-SmGroup
 sidebar_label: "SmGroup"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::PdoAssignment::SmGroup
 

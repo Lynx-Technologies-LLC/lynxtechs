@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::EcNetwork::JitterStats
 summary: End-of-run jitter summary (populated by the cyclic thread). 
@@ -7,6 +5,8 @@ summary: End-of-run jitter summary (populated by the cyclic thread).
 slug: /lxmaster/api/classes/EcNetwork-JitterStats
 sidebar_label: "JitterStats"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::EcNetwork::JitterStats
 

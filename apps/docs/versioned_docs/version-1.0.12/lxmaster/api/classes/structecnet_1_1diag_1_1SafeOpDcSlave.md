@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::diag::SafeOpDcSlave
 
 slug: /lxmaster/api/classes/diag-SafeOpDcSlave
 sidebar_label: "SafeOpDcSlave"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::diag::SafeOpDcSlave
 

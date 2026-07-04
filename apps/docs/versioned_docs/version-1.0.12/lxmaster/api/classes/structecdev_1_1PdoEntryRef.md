@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::PdoEntryRef
 summary: Resolved location of one mapped CoE object inside a slave's process image. 
@@ -7,6 +5,8 @@ summary: Resolved location of one mapped CoE object inside a slave's process ima
 slug: /lxmaster/api/classes/PdoEntryRef
 sidebar_label: "PdoEntryRef"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::PdoEntryRef
 

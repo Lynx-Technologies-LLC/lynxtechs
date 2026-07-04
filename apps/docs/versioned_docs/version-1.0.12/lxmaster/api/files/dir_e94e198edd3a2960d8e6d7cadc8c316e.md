@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: libs/facade/include/facade
 
 slug: /lxmaster/api/files/dir_e94e198edd3a2960d8e6d7cadc8c316e
 sidebar_label: "libs/facade/include/facade"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # libs/facade/include/facade
 

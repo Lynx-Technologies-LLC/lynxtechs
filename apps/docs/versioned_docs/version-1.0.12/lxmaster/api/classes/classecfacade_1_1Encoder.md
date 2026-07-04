@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecfacade::Encoder
 summary: High-level encoder handle. 
@@ -7,6 +5,8 @@ summary: High-level encoder handle.
 slug: /lxmaster/api/classes/Encoder
 sidebar_label: "Encoder"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecfacade::Encoder
 

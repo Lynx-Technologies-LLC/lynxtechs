@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::diag
 summary: SAFE_OP bring-up diagnostics, split from the logging layer: each probe* reads the bus into a plain report struct, and format() renders it. 
@@ -7,6 +5,8 @@ summary: SAFE_OP bring-up diagnostics, split from the logging layer: each probe*
 slug: /lxmaster/api/namespaces/ecnet-diag
 sidebar_label: "diag"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::diag
 

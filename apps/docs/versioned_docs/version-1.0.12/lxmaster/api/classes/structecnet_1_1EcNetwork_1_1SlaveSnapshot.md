@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecnet::EcNetwork::SlaveSnapshot
 summary: Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing stop() does before master_->close()). 
@@ -7,6 +5,8 @@ summary: Snapshot of each slave's EtherCAT state + AL-status code taken while th
 slug: /lxmaster/api/classes/EcNetwork-SlaveSnapshot
 sidebar_label: "SlaveSnapshot"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecnet::EcNetwork::SlaveSnapshot
 

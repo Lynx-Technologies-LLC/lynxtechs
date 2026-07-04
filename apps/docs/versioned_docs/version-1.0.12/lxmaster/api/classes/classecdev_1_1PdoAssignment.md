@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::PdoAssignment
 summary: Generic, ENI-driven CoE PDO assignment. 
@@ -7,6 +5,8 @@ summary: Generic, ENI-driven CoE PDO assignment.
 slug: /lxmaster/api/classes/PdoAssignment
 sidebar_label: "PdoAssignment"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::PdoAssignment
 

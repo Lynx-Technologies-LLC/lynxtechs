@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecfacade::IoModule
 summary: High-level digital/analog I/O handle. 
@@ -7,6 +5,8 @@ summary: High-level digital/analog I/O handle.
 slug: /lxmaster/api/classes/IoModule
 sidebar_label: "IoModule"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecfacade::IoModule
 

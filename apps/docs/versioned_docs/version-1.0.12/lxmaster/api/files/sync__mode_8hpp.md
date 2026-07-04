@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: libs/devices/include/devices/sync_mode.hpp
 
 slug: /lxmaster/api/files/sync_mode_8hpp
 sidebar_label: "libs/devices/include/devices/sync_mode.hpp"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # libs/devices/include/devices/sync_mode.hpp
 

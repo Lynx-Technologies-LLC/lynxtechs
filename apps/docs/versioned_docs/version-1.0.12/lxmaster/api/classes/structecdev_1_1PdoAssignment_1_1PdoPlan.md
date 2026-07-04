@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::PdoAssignment::PdoPlan
 
 slug: /lxmaster/api/classes/PdoAssignment-PdoPlan
 sidebar_label: "PdoPlan"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::PdoAssignment::PdoPlan
 

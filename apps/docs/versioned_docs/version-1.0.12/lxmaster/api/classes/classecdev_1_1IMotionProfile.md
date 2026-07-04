@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::IMotionProfile
 summary: Facade-facing contract for a motion (drive) device. 
@@ -7,6 +5,8 @@ summary: Facade-facing contract for a motion (drive) device.
 slug: /lxmaster/api/classes/IMotionProfile
 sidebar_label: "IMotionProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::IMotionProfile
 

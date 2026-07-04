@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecdev::IEncoderProfile
 summary: Facade-facing contract for an encoder / position sensor (CiA 406 family). 
@@ -7,6 +5,8 @@ summary: Facade-facing contract for an encoder / position sensor (CiA 406 family
 slug: /lxmaster/api/classes/IEncoderProfile
 sidebar_label: "IEncoderProfile"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecdev::IEncoderProfile
 

@@ -1,5 +1,3 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: ecfacade::Axis
 summary: High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis". 
@@ -7,6 +5,8 @@ summary: High-level motion handle a PLC/application programmer uses, analogous t
 slug: /lxmaster/api/classes/Axis
 sidebar_label: "Axis"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # ecfacade::Axis
 

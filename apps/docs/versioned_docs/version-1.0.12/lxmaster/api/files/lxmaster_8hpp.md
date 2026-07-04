@@ -1,11 +1,11 @@
-<!-- GENERATED - do not edit. Produced from the LXMASTER public
-     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 ---
 title: libs/ecnet/include/lxmaster/lxmaster.hpp
 
 slug: /lxmaster/api/files/lxmaster_8hpp
 sidebar_label: "libs/ecnet/include/lxmaster/lxmaster.hpp"
 ---
+<!-- GENERATED - do not edit. Produced from the LXMASTER public
+     headers by docs/api/generate-api-docs.sh (Doxygen + doxybook2). -->
 
 # libs/ecnet/include/lxmaster/lxmaster.hpp
 
