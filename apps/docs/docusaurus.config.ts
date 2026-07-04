@@ -71,8 +71,8 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
-          // Exclude lxmaster — handled by the separate lxmaster plugin instance.
-          exclude: ['lxmaster/**'],
+          // Exclude lxmaster (separate plugin) and the old intro root page.
+          exclude: ['lxmaster/**', 'intro.md', 'master-software/**'],
           editUrl:
             'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
         },
@@ -97,9 +97,15 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'docsSidebar',
+          sidebarId: 'hardwareSidebar',
           position: 'left',
-          label: 'Documentation',
+          label: 'EtherCAT Modules',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'etherCatSidebar',
+          position: 'left',
+          label: 'EtherCAT Basics',
         },
         {
           type: 'docSidebar',
@@ -127,8 +133,8 @@ const config: Config = {
               to: '/lxmaster/overview',
             },
             {
-              label: 'Tutorials',
-              to: '/lxmaster/tutorials',
+              label: 'Getting Started',
+              to: '/lxmaster/getting-started',
             },
             {
               label: 'API Reference',
@@ -141,15 +147,32 @@ const config: Config = {
           ],
         },
         {
-          title: 'More',
+          title: 'EtherCAT Modules',
+          items: [
+            {
+              label: 'LXDIO33-16',
+              to: '/hardware/lxdio33-16',
+            },
+            {
+              label: 'LXFIBER',
+              to: '/hardware/lxfiber',
+            },
+            {
+              label: 'LXRJ45',
+              to: '/hardware/lxrj45',
+            },
+            {
+              label: 'PCB Integration',
+              to: '/hardware/pcb-integration',
+            },
+          ],
+        },
+        {
+          title: 'Resources',
           items: [
             {
               label: 'EtherCAT Basics',
               to: '/ethercat-basics',
-            },
-            {
-              label: 'Hardware',
-              to: '/hardware',
             },
             {
               label: 'Main site',
