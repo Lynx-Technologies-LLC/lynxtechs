@@ -15,11 +15,6 @@ The reference is intentionally limited to the public API. Internal implementatio
 
 
 
-* [Application API](/lxmaster/api/modules/group_application_api) - for control applications (start here).
-* [Device Extension API](/lxmaster/api/modules/group_device_extension_api) - for adding support for custom devices.
+Browse all classes in the [Class Index](/lxmaster/api/classes/classes).
 
-The public surface is defined by the headers installed by the project's CMake `install()` rules; this reference documents an explicit allowlist of those headers. 
-
--------------------------------
-
-Updated on 2026-07-04 at 20:22:54 +0000
+The public surface is defined by the headers installed by the project's CMake `install()` rules; this reference documents an explicit allowlist of those headers.
