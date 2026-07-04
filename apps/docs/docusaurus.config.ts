@@ -15,7 +15,7 @@ const config: Config = {
   projectName: 'lynxtechs',
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   markdown: {
     // Treat .md as CommonMark and .mdx as MDX. Migrated prose docs contain

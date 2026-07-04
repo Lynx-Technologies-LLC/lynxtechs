@@ -3,7 +3,8 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "build/**", ".docusaurus/**"]
+      "outputs": [".next/**", "!.next/cache/**", "build/**", ".docusaurus/**"],
+      "env": ["LXMASTER_DOCS_TOKEN", "GITHUB_TOKEN"]
     },
     "dev": {
       "cache": false,
