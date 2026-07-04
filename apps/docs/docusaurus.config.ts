@@ -57,6 +57,10 @@ const config: Config = {
           // via the per-folder _category_.json / frontmatter where applicable.
           editUrl:
             'https://github.com/Lynx-Technologies-LLC/lynxtechs/tree/main/apps/docs/',
+          // Hide the "Next" (unreleased) entry from the version dropdown.
+          // The live docs/ directory is still built and served as the default,
+          // but visitors only see labelled release versions in the picker.
+          includeCurrentVersion: false,
         },
         blog: false,
         theme: {
