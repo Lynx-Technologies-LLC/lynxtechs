@@ -1,31 +1,29 @@
 /**
  * Global styles. Docusaurus uses Infima (https://infima.dev/) under the hood.
- * Color scheme: black / white / gray.
+ * Override the CSS variables below to re-theme the site.
  */
 
 :root {
-  /* Light mode — dark charcoal primary */
-  --ifm-color-primary: #2c2c2c;
-  --ifm-color-primary-dark: #222222;
-  --ifm-color-primary-darker: #1e1e1e;
-  --ifm-color-primary-darkest: #111111;
-  --ifm-color-primary-light: #404040;
-  --ifm-color-primary-lighter: #4a4a4a;
-  --ifm-color-primary-lightest: #606060;
+  --ifm-color-primary: #1668b8;
+  --ifm-color-primary-dark: #145ea6;
+  --ifm-color-primary-darker: #13599d;
+  --ifm-color-primary-darkest: #0f4982;
+  --ifm-color-primary-light: #1872ca;
+  --ifm-color-primary-lighter: #1977d3;
+  --ifm-color-primary-lightest: #1f86e8;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.08);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  /* Dark mode — light gray primary so links/accents are visible */
-  --ifm-color-primary: #c8c8c8;
-  --ifm-color-primary-dark: #b8b8b8;
-  --ifm-color-primary-darker: #b0b0b0;
-  --ifm-color-primary-darkest: #909090;
-  --ifm-color-primary-light: #d4d4d4;
-  --ifm-color-primary-lighter: #dadada;
-  --ifm-color-primary-lightest: #e8e8e8;
-  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
+  --ifm-color-primary: #4fa3e3;
+  --ifm-color-primary-dark: #338fdc;
+  --ifm-color-primary-darker: #2686d8;
+  --ifm-color-primary-darkest: #1f6fb3;
+  --ifm-color-primary-light: #6bb3e8;
+  --ifm-color-primary-lighter: #78baea;
+  --ifm-color-primary-lightest: #9cccf0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
 /* Version dropdown visibility is handled by src/theme/Root.tsx via an inline
