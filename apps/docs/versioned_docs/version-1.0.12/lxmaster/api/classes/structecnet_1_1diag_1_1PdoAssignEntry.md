@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::PdoAssignEntry
 
+slug: /lxmaster/api/classes/diag-PdoAssignEntry
+sidebar_label: "PdoAssignEntry"
 ---
 
 # ecnet::diag::PdoAssignEntry
@@ -15,9 +17,9 @@ title: ecnet::diag::PdoAssignEntry
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint8_t | **[sub](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignentry#variable-sub)**  |
-| bool | **[readable](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignentry#variable-readable)**  |
-| std::uint16_t | **[pdo_index](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignentry#variable-pdo-index)**  |
+| std::uint8_t | **[sub](/lxmaster/api/classes/diag-PdoAssignEntry#variable-sub)**  |
+| bool | **[readable](/lxmaster/api/classes/diag-PdoAssignEntry#variable-readable)**  |
+| std::uint16_t | **[pdo_index](/lxmaster/api/classes/diag-PdoAssignEntry#variable-pdo-index)**  |
 
 ## Public Attributes Documentation
 

@@ -3,6 +3,8 @@
 ---
 title: libs/ecnet/include/ecnet/network_config.hpp
 
+slug: /lxmaster/api/files/network_config_8hpp
+sidebar_label: "libs/ecnet/include/ecnet/network_config.hpp"
 ---
 
 # libs/ecnet/include/ecnet/network_config.hpp
@@ -13,20 +15,20 @@ title: libs/ecnet/include/ecnet/network_config.hpp
 
 | Name           |
 | -------------- |
-| **[ecnet](/lxmaster/api/namespaces/namespaceecnet)**  |
+| **[ecnet](/lxmaster/api/namespaces/ecnet)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecnet::SyncTraceSample](/lxmaster/api/classes/structecnet_1_1synctracesample)**  |
-| struct | **[ecnet::ShutdownConfig](/lxmaster/api/classes/structecnet_1_1shutdownconfig)**  |
-| struct | **[ecnet::RtConfig](/lxmaster/api/classes/structecnet_1_1rtconfig)**  |
-| struct | **[ecnet::NetworkConfig](/lxmaster/api/classes/structecnet_1_1networkconfig)** <br>User-facing configuration for an [EcNetwork]().  |
-| struct | **[ecnet::EniConfig](/lxmaster/api/classes/structecnet_1_1eniconfig)** <br>ENI-driven configuration.  |
-| struct | **[ecnet::DebugConfig](/lxmaster/api/classes/structecnet_1_1debugconfig)** <br>Runtime logging configuration.  |
-| struct | **[ecnet::DcConfig](/lxmaster/api/classes/structecnet_1_1dcconfig)**  |
-| struct | **[ecnet::BusConfig](/lxmaster/api/classes/structecnet_1_1busconfig)**  |
+| struct | **[ecnet::SyncTraceSample](/lxmaster/api/classes/SyncTraceSample)**  |
+| struct | **[ecnet::ShutdownConfig](/lxmaster/api/classes/ShutdownConfig)**  |
+| struct | **[ecnet::RtConfig](/lxmaster/api/classes/RtConfig)**  |
+| struct | **[ecnet::NetworkConfig](/lxmaster/api/classes/NetworkConfig)** <br>User-facing configuration for an [EcNetwork]().  |
+| struct | **[ecnet::EniConfig](/lxmaster/api/classes/EniConfig)** <br>ENI-driven configuration.  |
+| struct | **[ecnet::DebugConfig](/lxmaster/api/classes/DebugConfig)** <br>Runtime logging configuration.  |
+| struct | **[ecnet::DcConfig](/lxmaster/api/classes/DcConfig)**  |
+| struct | **[ecnet::BusConfig](/lxmaster/api/classes/BusConfig)**  |
 
 
 

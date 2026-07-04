@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::PdoAssignObject
 
+slug: /lxmaster/api/classes/diag-PdoAssignObject
+sidebar_label: "PdoAssignObject"
 ---
 
 # ecnet::diag::PdoAssignObject
@@ -15,12 +17,12 @@ title: ecnet::diag::PdoAssignObject
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[subcount_readable](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-subcount-readable)**  |
-| unsigned | **[subcount](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-subcount)**  |
-| unsigned | **[not_printed](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-not-printed)**  |
-| std::uint16_t | **[index](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-index)**  |
-| std::vector< PdoAssignEntry > | **[entries](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-entries)**  |
-| bool | **[empty](/lxmaster/api/classes/structecnet_1_1diag_1_1pdoassignobject#variable-empty)**  |
+| bool | **[subcount_readable](/lxmaster/api/classes/diag-PdoAssignObject#variable-subcount-readable)**  |
+| unsigned | **[subcount](/lxmaster/api/classes/diag-PdoAssignObject#variable-subcount)**  |
+| unsigned | **[not_printed](/lxmaster/api/classes/diag-PdoAssignObject#variable-not-printed)**  |
+| std::uint16_t | **[index](/lxmaster/api/classes/diag-PdoAssignObject#variable-index)**  |
+| std::vector< PdoAssignEntry > | **[entries](/lxmaster/api/classes/diag-PdoAssignObject#variable-entries)**  |
+| bool | **[empty](/lxmaster/api/classes/diag-PdoAssignObject#variable-empty)**  |
 
 ## Public Attributes Documentation
 

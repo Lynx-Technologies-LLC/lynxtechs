@@ -4,6 +4,8 @@
 title: ecnet::NetworkConfig
 summary: User-facing configuration for an EcNetwork. 
 
+slug: /lxmaster/api/classes/NetworkConfig
+sidebar_label: "NetworkConfig"
 ---
 
 # ecnet::NetworkConfig
@@ -19,24 +21,24 @@ User-facing configuration for an [EcNetwork]().  [More...](#detailed-description
 
 |                | Name           |
 | -------------- | -------------- |
-| [NetworkConfig](/lxmaster/api/classes/structecnet_1_1networkconfig) | **[defaults](/lxmaster/api/classes/structecnet_1_1networkconfig#function-defaults)**()<br>Network defaults (DC-sync PI kp_div=3, ki_div=20).  |
+| [NetworkConfig](/lxmaster/api/classes/NetworkConfig) | **[defaults](/lxmaster/api/classes/NetworkConfig#function-defaults)**()<br>Network defaults (DC-sync PI kp_div=3, ki_div=20).  |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[watchdog_low_wkc_cycles](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-watchdog-low-wkc-cycles)**  |
-| ecmaster::Timeouts | **[timeouts](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-timeouts)** <br>Backend protocol timeouts / retries (microseconds).  |
-| ShutdownConfig | **[shutdown](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-shutdown)**  |
-| RtConfig | **[rt](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-rt)**  |
-| int | **[op_entry_cooldown_cycles](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-op-entry-cooldown-cycles)**  |
-| std::function< void(const [BusFault](/lxmaster/api/classes/structecnet_1_1busfault) &)> | **[on_bus_fault](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-on-bus-fault)** <br>Optional bus-fault notification.  |
-| constexpr std::int32_t | **[kDcSyncBusyWaitAuto](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-kdcsyncbusywaitauto)**  |
-| std::vector< std::shared_ptr< [ecdev::IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory) > > | **[extra_profile_factories](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-extra-profile-factories)** <br>App-supplied device classes, considered ahead of the self-registered built-ins when classifying each ENI slave (see `ecdev::ProfileRegistry::select`).  |
-| [EniConfig](/lxmaster/api/classes/structecnet_1_1eniconfig) | **[eni](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-eni)**  |
-| [DebugConfig](/lxmaster/api/classes/structecnet_1_1debugconfig) | **[debug](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-debug)**  |
-| DcConfig | **[dc](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-dc)**  |
-| BusConfig | **[bus](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-bus)**  |
+| int | **[watchdog_low_wkc_cycles](/lxmaster/api/classes/NetworkConfig#variable-watchdog-low-wkc-cycles)**  |
+| ecmaster::Timeouts | **[timeouts](/lxmaster/api/classes/NetworkConfig#variable-timeouts)** <br>Backend protocol timeouts / retries (microseconds).  |
+| ShutdownConfig | **[shutdown](/lxmaster/api/classes/NetworkConfig#variable-shutdown)**  |
+| RtConfig | **[rt](/lxmaster/api/classes/NetworkConfig#variable-rt)**  |
+| int | **[op_entry_cooldown_cycles](/lxmaster/api/classes/NetworkConfig#variable-op-entry-cooldown-cycles)**  |
+| std::function< void(const [BusFault](/lxmaster/api/classes/BusFault) &)> | **[on_bus_fault](/lxmaster/api/classes/NetworkConfig#variable-on-bus-fault)** <br>Optional bus-fault notification.  |
+| constexpr std::int32_t | **[kDcSyncBusyWaitAuto](/lxmaster/api/classes/NetworkConfig#variable-kdcsyncbusywaitauto)**  |
+| std::vector< std::shared_ptr< [ecdev::IProfileFactory](/lxmaster/api/classes/IProfileFactory) > > | **[extra_profile_factories](/lxmaster/api/classes/NetworkConfig#variable-extra-profile-factories)** <br>App-supplied device classes, considered ahead of the self-registered built-ins when classifying each ENI slave (see `ecdev::ProfileRegistry::select`).  |
+| [EniConfig](/lxmaster/api/classes/EniConfig) | **[eni](/lxmaster/api/classes/NetworkConfig#variable-eni)**  |
+| [DebugConfig](/lxmaster/api/classes/DebugConfig) | **[debug](/lxmaster/api/classes/NetworkConfig#variable-debug)**  |
+| DcConfig | **[dc](/lxmaster/api/classes/NetworkConfig#variable-dc)**  |
+| BusConfig | **[bus](/lxmaster/api/classes/NetworkConfig#variable-bus)**  |
 
 ## Detailed Description
 
@@ -114,9 +116,9 @@ std::function< void(const BusFault &)> on_bus_fault;
 
 Optional bus-fault notification. 
 
-Invoked exactly once when the cycle-health watchdog trips (a slave dropped out / cable unplugged / frames corrupted), carrying a structured `[BusFault](/lxmaster/api/classes/structecnet_1_1busfault)` that pinpoints the break (upstream slave + ESC port) and lists the slaves that went silent.
+Invoked exactly once when the cycle-health watchdog trips (a slave dropped out / cable unplugged / frames corrupted), carrying a structured `[BusFault](/lxmaster/api/classes/BusFault)` that pinpoints the break (upstream slave + ESC port) and lists the slaves that went silent.
 
-Delivery: called on a detached helper thread (NOT the RT cyclic thread), so the handler may do non-RT work and may safely call `[EcNetwork::stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)`. Because it runs detached, anything the handler captures by reference must outlive the network. Leave empty to opt out; lxmaster still renders the fault in `lastError()` / `reportDeviceStatus()`. 
+Delivery: called on a detached helper thread (NOT the RT cyclic thread), so the handler may do non-RT work and may safely call `[EcNetwork::stop()](/lxmaster/api/classes/EcNetwork#function-stop)`. Because it runs detached, anything the handler captures by reference must outlive the network. Leave empty to opt out; lxmaster still renders the fault in `lastError()` / `reportDeviceStatus()`. 
 
 
 ### variable kDcSyncBusyWaitAuto
@@ -134,7 +136,7 @@ std::vector< std::shared_ptr< ecdev::IProfileFactory > > extra_profile_factories
 
 App-supplied device classes, considered ahead of the self-registered built-ins when classifying each ENI slave (see `ecdev::ProfileRegistry::select`). 
 
-Use this to bind a device identity for a single run without static registration &ndash; e.g. `cfg.extra_profile_factories.push_back(ecdev::makeIdentityProfileFactory({vendor, product}, makeMyProfile, "my-device"));`. `shared_ptr` keeps `[NetworkConfig](/lxmaster/api/classes/structecnet_1_1networkconfig)` copyable. The durable path for a new device is still a self-registering file (LXMASTER_REGISTER_DEVICE). 
+Use this to bind a device identity for a single run without static registration &ndash; e.g. `cfg.extra_profile_factories.push_back(ecdev::makeIdentityProfileFactory({vendor, product}, makeMyProfile, "my-device"));`. `shared_ptr` keeps `[NetworkConfig](/lxmaster/api/classes/NetworkConfig)` copyable. The durable path for a new device is still a self-registering file (LXMASTER_REGISTER_DEVICE). 
 
 
 ### variable eni

@@ -4,6 +4,8 @@
 title: ecfacade::IoModule
 summary: High-level digital/analog I/O handle. 
 
+slug: /lxmaster/api/classes/IoModule
+sidebar_label: "IoModule"
 ---
 
 # ecfacade::IoModule
@@ -15,43 +17,43 @@ High-level digital/analog I/O handle.  [More...](#detailed-description)
 
 `#include <io_module.hpp>`
 
-Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/classecfacade_1_1devicefacade)
+Inherits from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| void | **[writeDigital](/lxmaster/api/classes/classecfacade_1_1iomodule#function-writedigital)**(std::size_t channel, bool value) |
-| void | **[writeAnalog](/lxmaster/api/classes/classecfacade_1_1iomodule#function-writeanalog)**(std::size_t channel, std::int32_t value) |
-| bool | **[readDigital](/lxmaster/api/classes/classecfacade_1_1iomodule#function-readdigital)**(std::size_t channel) const |
-| std::int32_t | **[readAnalog](/lxmaster/api/classes/classecfacade_1_1iomodule#function-readanalog)**(std::size_t channel) const |
-| [ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile) * | **[ioProfile](/lxmaster/api/classes/classecfacade_1_1iomodule#function-ioprofile)**() const |
-| bool | **[digitalOutputState](/lxmaster/api/classes/classecfacade_1_1iomodule#function-digitaloutputstate)**(std::size_t channel) const |
-| std::size_t | **[digitalOutputCount](/lxmaster/api/classes/classecfacade_1_1iomodule#function-digitaloutputcount)**() const |
-| std::size_t | **[digitalInputCount](/lxmaster/api/classes/classecfacade_1_1iomodule#function-digitalinputcount)**() const |
-| std::int32_t | **[analogOutputState](/lxmaster/api/classes/classecfacade_1_1iomodule#function-analogoutputstate)**(std::size_t channel) const |
-| std::size_t | **[analogOutputCount](/lxmaster/api/classes/classecfacade_1_1iomodule#function-analogoutputcount)**() const |
-| std::size_t | **[analogInputCount](/lxmaster/api/classes/classecfacade_1_1iomodule#function-analoginputcount)**() const |
-| | **[IoModule](/lxmaster/api/classes/classecfacade_1_1iomodule#function-iomodule)**([ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile) * io, std::string name, ecdev::IEthercatDevice * device) |
+| void | **[writeDigital](/lxmaster/api/classes/IoModule#function-writedigital)**(std::size_t channel, bool value) |
+| void | **[writeAnalog](/lxmaster/api/classes/IoModule#function-writeanalog)**(std::size_t channel, std::int32_t value) |
+| bool | **[readDigital](/lxmaster/api/classes/IoModule#function-readdigital)**(std::size_t channel) const |
+| std::int32_t | **[readAnalog](/lxmaster/api/classes/IoModule#function-readanalog)**(std::size_t channel) const |
+| [ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[ioProfile](/lxmaster/api/classes/IoModule#function-ioprofile)**() const |
+| bool | **[digitalOutputState](/lxmaster/api/classes/IoModule#function-digitaloutputstate)**(std::size_t channel) const |
+| std::size_t | **[digitalOutputCount](/lxmaster/api/classes/IoModule#function-digitaloutputcount)**() const |
+| std::size_t | **[digitalInputCount](/lxmaster/api/classes/IoModule#function-digitalinputcount)**() const |
+| std::int32_t | **[analogOutputState](/lxmaster/api/classes/IoModule#function-analogoutputstate)**(std::size_t channel) const |
+| std::size_t | **[analogOutputCount](/lxmaster/api/classes/IoModule#function-analogoutputcount)**() const |
+| std::size_t | **[analogInputCount](/lxmaster/api/classes/IoModule#function-analoginputcount)**() const |
+| | **[IoModule](/lxmaster/api/classes/IoModule#function-iomodule)**([ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile) * io, std::string name, ecdev::IEthercatDevice * device) |
 
 ## Additional inherited members
 
-**Public Functions inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/classecfacade_1_1devicefacade)**
+**Public Functions inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
 
 |                | Name           |
 | -------------- | -------------- |
-| const std::string & | **[name](/lxmaster/api/classes/classecfacade_1_1devicefacade#function-name)**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
-| [ecdev::IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) * | **[deviceProfile](/lxmaster/api/classes/classecfacade_1_1devicefacade#function-deviceprofile)**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
-| void | **[configure](/lxmaster/api/classes/classecfacade_1_1devicefacade#function-configure)**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
-| void | **[configure](/lxmaster/api/classes/classecfacade_1_1devicefacade#function-configure)**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
-| | **[DeviceFacade](/lxmaster/api/classes/classecfacade_1_1devicefacade#function-devicefacade)**(ecdev::IEthercatDevice * device, std::string name) |
+| const std::string & | **[name](/lxmaster/api/classes/DeviceFacade#function-name)**() const<br>ENI/ESI slave name this handle maps to (for logs / UI).  |
+| [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) * | **[deviceProfile](/lxmaster/api/classes/DeviceFacade#function-deviceprofile)**() const<br>The underlying device-class profile, for advanced callers that bound a custom profile (e.g.  |
+| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**(ecdev::BringupState maxState)<br>Opt this device into a maximum bring-up state.  |
+| void | **[configure](/lxmaster/api/classes/DeviceFacade#function-configure)**()<br>Convenience for the common "bring this device fully operational" case (configure(Op)).  |
+| | **[DeviceFacade](/lxmaster/api/classes/DeviceFacade#function-devicefacade)**(ecdev::IEthercatDevice * device, std::string name) |
 
-**Protected Attributes inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/classecfacade_1_1devicefacade)**
+**Protected Attributes inherited from [ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)**
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[name_](/lxmaster/api/classes/classecfacade_1_1devicefacade#variable-name-)**  |
-| ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/classecfacade_1_1devicefacade#variable-device-)**  |
+| std::string | **[name_](/lxmaster/api/classes/DeviceFacade#variable-name-)**  |
+| ecdev::IEthercatDevice * | **[device_](/lxmaster/api/classes/DeviceFacade#variable-device-)**  |
 
 
 ## Detailed Description
@@ -62,7 +64,7 @@ class ecfacade::IoModule;
 
 High-level digital/analog I/O handle. 
 
-Thin wrapper over an `[ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile)`; the application reads/writes named-by-index channels without seeing CoE objects, PDO offsets, or the backend. Safe to use from the application thread during the RT cycle. 
+Thin wrapper over an `[ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile)`; the application reads/writes named-by-index channels without seeing CoE objects, PDO offsets, or the backend. Safe to use from the application thread during the RT cycle. 
 
 ## Public Functions Documentation
 

@@ -4,6 +4,8 @@
 title: ecdev::claim_score
 summary: Claim-score tiers for IProfileFactory::claim. 
 
+slug: /lxmaster/api/namespaces/ecdev-claim_score
+sidebar_label: "claim_score"
 ---
 
 # ecdev::claim_score
@@ -14,9 +16,9 @@ Claim-score tiers for `[IProfileFactory::claim]()`.  [More...](#detailed-descrip
 
 |                | Name           |
 | -------------- | -------------- |
-| constexpr int | **[kProfileFamily](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score#variable-kprofilefamily)** <br>CANopen ProfileNo family fallback (no identity match).  |
-| constexpr int | **[kNone](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score#variable-knone)**  |
-| constexpr int | **[kIdentityPin](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score#variable-kidentitypin)** <br>Identity-matched device class (highest priority).  |
+| constexpr int | **[kProfileFamily](/lxmaster/api/namespaces/ecdev-claim_score#variable-kprofilefamily)** <br>CANopen ProfileNo family fallback (no identity match).  |
+| constexpr int | **[kNone](/lxmaster/api/namespaces/ecdev-claim_score#variable-knone)**  |
+| constexpr int | **[kIdentityPin](/lxmaster/api/namespaces/ecdev-claim_score#variable-kidentitypin)** <br>Identity-matched device class (highest priority).  |
 
 ## Detailed Description
 

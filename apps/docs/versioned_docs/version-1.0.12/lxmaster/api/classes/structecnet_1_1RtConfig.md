@@ -3,6 +3,8 @@
 ---
 title: ecnet::RtConfig
 
+slug: /lxmaster/api/classes/RtConfig
+sidebar_label: "RtConfig"
 ---
 
 # ecnet::RtConfig
@@ -15,9 +17,9 @@ title: ecnet::RtConfig
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[rt_priority](/lxmaster/api/classes/structecnet_1_1rtconfig#variable-rt-priority)**  |
-| bool | **[enable_rt_scheduling](/lxmaster/api/classes/structecnet_1_1rtconfig#variable-enable-rt-scheduling)**  |
-| int | **[cpu_affinity](/lxmaster/api/classes/structecnet_1_1rtconfig#variable-cpu-affinity)**  |
+| int | **[rt_priority](/lxmaster/api/classes/RtConfig#variable-rt-priority)**  |
+| bool | **[enable_rt_scheduling](/lxmaster/api/classes/RtConfig#variable-enable-rt-scheduling)**  |
+| int | **[cpu_affinity](/lxmaster/api/classes/RtConfig#variable-cpu-affinity)**  |
 
 ## Public Attributes Documentation
 

@@ -3,6 +3,8 @@
 ---
 title: ecdev::CiA402DriveProfile::InputSnapshot
 
+slug: /lxmaster/api/classes/CiA402DriveProfile-InputSnapshot
+sidebar_label: "InputSnapshot"
 ---
 
 # ecdev::CiA402DriveProfile::InputSnapshot
@@ -15,11 +17,11 @@ title: ecdev::CiA402DriveProfile::InputSnapshot
 
 |                | Name           |
 | -------------- | -------------- |
-| std::atomic< std::uint16_t > | **[statusword](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1inputsnapshot#variable-statusword)**  |
-| std::atomic< std::int32_t > | **[mode_display](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1inputsnapshot#variable-mode-display)**  |
-| std::atomic< std::int32_t > | **[actual_velocity](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1inputsnapshot#variable-actual-velocity)**  |
-| std::atomic< std::int32_t > | **[actual_torque](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1inputsnapshot#variable-actual-torque)**  |
-| std::atomic< std::int32_t > | **[actual_position](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1inputsnapshot#variable-actual-position)**  |
+| std::atomic< std::uint16_t > | **[statusword](/lxmaster/api/classes/CiA402DriveProfile-InputSnapshot#variable-statusword)**  |
+| std::atomic< std::int32_t > | **[mode_display](/lxmaster/api/classes/CiA402DriveProfile-InputSnapshot#variable-mode-display)**  |
+| std::atomic< std::int32_t > | **[actual_velocity](/lxmaster/api/classes/CiA402DriveProfile-InputSnapshot#variable-actual-velocity)**  |
+| std::atomic< std::int32_t > | **[actual_torque](/lxmaster/api/classes/CiA402DriveProfile-InputSnapshot#variable-actual-torque)**  |
+| std::atomic< std::int32_t > | **[actual_position](/lxmaster/api/classes/CiA402DriveProfile-InputSnapshot#variable-actual-position)**  |
 
 ## Public Attributes Documentation
 

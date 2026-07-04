@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/sync_mode.hpp
 
+slug: /lxmaster/api/files/sync_mode_8hpp
+sidebar_label: "libs/devices/include/devices/sync_mode.hpp"
 ---
 
 # libs/devices/include/devices/sync_mode.hpp
@@ -13,7 +15,7 @@ title: libs/devices/include/devices/sync_mode.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 
 

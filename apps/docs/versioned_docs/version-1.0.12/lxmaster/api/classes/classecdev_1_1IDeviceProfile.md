@@ -4,6 +4,8 @@
 title: ecdev::IDeviceProfile
 summary: Device-class behaviour plugged onto a GenericEniDevice. 
 
+slug: /lxmaster/api/classes/IDeviceProfile
+sidebar_label: "IDeviceProfile"
 ---
 
 # ecdev::IDeviceProfile
@@ -17,24 +19,24 @@ Device-class behaviour plugged onto a `[GenericEniDevice]`.  [More...](#detailed
 
 Inherits from IDeviceLifecycle
 
-Inherited by [ecdev::CiA402DriveProfile](/lxmaster/api/classes/classecdev_1_1cia402driveprofile), [ecdev::CiA406EncoderProfile](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile), [ecdev::GenericIoProfile](/lxmaster/api/classes/classecdev_1_1genericioprofile)
+Inherited by [ecdev::CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfile), [ecdev::CiA406EncoderProfile](/lxmaster/api/classes/CiA406EncoderProfile), [ecdev::GenericIoProfile](/lxmaster/api/classes/GenericIoProfile)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[~IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-~ideviceprofile)**() override =default |
-| virtual void | **[writeOutputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image, std::uint64_t cycle_count) |
-| virtual void | **[resolveTopology](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
-| virtual void | **[readInputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image, bool wkc_valid, bool operational) |
-| virtual const char * | **[profileName](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-profilename)**() const =0<br>Stable identifier for diagnostics (e.g.  |
-| virtual void | **[primeOutputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) |
-| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) |
-| virtual std::string | **[configurePreOp](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) |
-| virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
-| virtual [IMotionProfile](/lxmaster/api/classes/classecdev_1_1imotionprofile) * | **[asMotion](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asmotion)**() |
-| virtual [IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile) * | **[asIo](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asio)**() |
-| virtual [IEncoderProfile](/lxmaster/api/classes/classecdev_1_1iencoderprofile) * | **[asEncoder](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asencoder)**() |
+| | **[~IDeviceProfile](/lxmaster/api/classes/IDeviceProfile#function-~ideviceprofile)**() override =default |
+| virtual void | **[writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image, std::uint64_t cycle_count) |
+| virtual void | **[resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image)<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
+| virtual void | **[readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image, bool wkc_valid, bool operational) |
+| virtual const char * | **[profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)**() const =0<br>Stable identifier for diagnostics (e.g.  |
+| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual std::string | **[configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/IDeviceProfile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
+| virtual [IMotionProfile](/lxmaster/api/classes/IMotionProfile) * | **[asMotion](/lxmaster/api/classes/IDeviceProfile#function-asmotion)**() |
+| virtual [IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[asIo](/lxmaster/api/classes/IDeviceProfile#function-asio)**() |
+| virtual [IEncoderProfile](/lxmaster/api/classes/IEncoderProfile) * | **[asEncoder](/lxmaster/api/classes/IDeviceProfile#function-asencoder)**() |
 
 ## Detailed Description
 
@@ -49,9 +51,9 @@ A profile understands the PDO semantics of one EtherCAT device class (CiA 402 dr
 
 
 * `[ISlaveServices]` for setup-time SDO / register / PDO-pulse work (NOT on the RT path).
-* `[ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage)` for per-cycle reads/writes of mapped objects (RT path).
+* `[ProcessImage](/lxmaster/api/classes/ProcessImage)` for per-cycle reads/writes of mapped objects (RT path).
 
-Selection is done by a `[ProfileRegistry](/lxmaster/api/classes/classecdev_1_1profileregistry)`; a new device class is added by registering a new profile, with no change to the generic device or the orchestration layer.
+Selection is done by a `[ProfileRegistry](/lxmaster/api/classes/ProfileRegistry)`; a new device class is added by registering a new profile, with no change to the generic device or the orchestration layer.
 
 Threading: `configurePreOp`/`prepareSafeOp`/shutdown hooks run on the bring-up/shutdown thread while the bus is not in OPERATIONAL; `writeOutputs`/`readInputs` run on the RT cyclic thread. A profile that exposes data to application threads must do so through its own lock-free state (e.g. atomics), exactly as the facades expect. 
 
@@ -74,7 +76,7 @@ inline virtual void writeOutputs(
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::writeOutputs](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-writeoutputs), [ecdev::GenericIoProfile::writeOutputs](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-writeoutputs)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::writeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-writeoutputs), [ecdev::GenericIoProfile::writeOutputs](/lxmaster/api/classes/GenericIoProfile#function-writeoutputs)
 
 
 ### function resolveTopology
@@ -87,7 +89,7 @@ inline virtual void resolveTopology(
 
 Resolve the static channel/PDO topology from the ENI-derived process image. 
 
-**Reimplemented by**: [ecdev::GenericIoProfile::resolveTopology](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-resolvetopology)
+**Reimplemented by**: [ecdev::GenericIoProfile::resolveTopology](/lxmaster/api/classes/GenericIoProfile#function-resolvetopology)
 
 
 Called once when the profile is attached to its device (during binding, before `start()`), so facade capability queries such as `IIoProfile::digitalOutputCount()` are valid as soon as the bus is bound — before any live PRE_OP SDO work. The image carries only ENI geometry here (it is not yet bound to the live IOmap), which is all a structural resolve needs. Default: no-op. Idempotent: `configurePreOp` may resolve again from the same image during `start()`. 
@@ -104,7 +106,7 @@ inline virtual void readInputs(
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::readInputs](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-readinputs), [ecdev::CiA406EncoderProfile::readInputs](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-readinputs), [ecdev::GenericIoProfile::readInputs](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-readinputs)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::readInputs](/lxmaster/api/classes/CiA402DriveProfile#function-readinputs), [ecdev::CiA406EncoderProfile::readInputs](/lxmaster/api/classes/CiA406EncoderProfile#function-readinputs), [ecdev::GenericIoProfile::readInputs](/lxmaster/api/classes/GenericIoProfile#function-readinputs)
 
 
 ### function profileName
@@ -115,7 +117,7 @@ virtual const char * profileName() const =0
 
 Stable identifier for diagnostics (e.g. 
 
-**Reimplemented by**: [ecdev::CiA401IoProfile::profileName](/lxmaster/api/classes/classecdev_1_1cia401ioprofile#function-profilename), [ecdev::CiA402DriveProfile::profileName](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-profilename), [ecdev::CiA406EncoderProfile::profileName](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-profilename), [ecdev::GenericIoProfile::profileName](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-profilename)
+**Reimplemented by**: [ecdev::CiA401IoProfile::profileName](/lxmaster/api/classes/CiA401IoProfile#function-profilename), [ecdev::CiA402DriveProfile::profileName](/lxmaster/api/classes/CiA402DriveProfile#function-profilename), [ecdev::CiA406EncoderProfile::profileName](/lxmaster/api/classes/CiA406EncoderProfile#function-profilename), [ecdev::GenericIoProfile::profileName](/lxmaster/api/classes/GenericIoProfile#function-profilename)
 
 
 "CiA402-drive"). 
@@ -130,7 +132,7 @@ inline virtual void primeOutputs(
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::primeOutputs](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-primeoutputs)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::primeOutputs](/lxmaster/api/classes/CiA402DriveProfile#function-primeoutputs)
 
 
 ### function prepareSafeOp
@@ -143,7 +145,7 @@ inline virtual std::string prepareSafeOp(
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::prepareSafeOp](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-preparesafeop)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::prepareSafeOp](/lxmaster/api/classes/CiA402DriveProfile#function-preparesafeop)
 
 
 ### function configurePreOp
@@ -156,7 +158,7 @@ inline virtual std::string configurePreOp(
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::configurePreOp](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-configurepreop), [ecdev::CiA406EncoderProfile::configurePreOp](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-configurepreop), [ecdev::GenericIoProfile::configurePreOp](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-configurepreop)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::configurePreOp](/lxmaster/api/classes/CiA402DriveProfile#function-configurepreop), [ecdev::CiA406EncoderProfile::configurePreOp](/lxmaster/api/classes/CiA406EncoderProfile#function-configurepreop), [ecdev::GenericIoProfile::configurePreOp](/lxmaster/api/classes/GenericIoProfile#function-configurepreop)
 
 
 ### function captureExitDiagnostics
@@ -169,7 +171,7 @@ inline virtual void captureExitDiagnostics(
 
 End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`. 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::captureExitDiagnostics](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-captureexitdiagnostics)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::captureExitDiagnostics](/lxmaster/api/classes/CiA402DriveProfile#function-captureexitdiagnostics)
 
 
 ### function asMotion
@@ -179,7 +181,7 @@ inline virtual IMotionProfile * asMotion()
 ```
 
 
-**Reimplemented by**: [ecdev::CiA402DriveProfile::asMotion](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#function-asmotion)
+**Reimplemented by**: [ecdev::CiA402DriveProfile::asMotion](/lxmaster/api/classes/CiA402DriveProfile#function-asmotion)
 
 
 ### function asIo
@@ -189,7 +191,7 @@ inline virtual IIoProfile * asIo()
 ```
 
 
-**Reimplemented by**: [ecdev::GenericIoProfile::asIo](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-asio)
+**Reimplemented by**: [ecdev::GenericIoProfile::asIo](/lxmaster/api/classes/GenericIoProfile#function-asio)
 
 
 ### function asEncoder
@@ -199,7 +201,7 @@ inline virtual IEncoderProfile * asEncoder()
 ```
 
 
-**Reimplemented by**: [ecdev::CiA406EncoderProfile::asEncoder](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-asencoder)
+**Reimplemented by**: [ecdev::CiA406EncoderProfile::asEncoder](/lxmaster/api/classes/CiA406EncoderProfile#function-asencoder)
 
 
 -------------------------------

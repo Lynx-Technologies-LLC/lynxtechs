@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::StrictSyncSlave
 
+slug: /lxmaster/api/classes/diag-StrictSyncSlave
+sidebar_label: "StrictSyncSlave"
 ---
 
 # ecnet::diag::StrictSyncSlave
@@ -15,11 +17,11 @@ title: ecnet::diag::StrictSyncSlave
 
 |                | Name           |
 | -------------- | -------------- |
-| PdoAssignObject | **[tx](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncslave#variable-tx)** <br>0x1C13 (SM3)  |
-| PdoAssignObject | **[rx](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncslave#variable-rx)** <br>0x1C12 (SM2)  |
-| int | **[idx](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncslave#variable-idx)**  |
-| bool | **[has_dc](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncslave#variable-has-dc)**  |
-| bool | **[dc_path_enabled_but_absent](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncslave#variable-dc-path-enabled-but-absent)**  |
+| PdoAssignObject | **[tx](/lxmaster/api/classes/diag-StrictSyncSlave#variable-tx)** <br>0x1C13 (SM3)  |
+| PdoAssignObject | **[rx](/lxmaster/api/classes/diag-StrictSyncSlave#variable-rx)** <br>0x1C12 (SM2)  |
+| int | **[idx](/lxmaster/api/classes/diag-StrictSyncSlave#variable-idx)**  |
+| bool | **[has_dc](/lxmaster/api/classes/diag-StrictSyncSlave#variable-has-dc)**  |
+| bool | **[dc_path_enabled_but_absent](/lxmaster/api/classes/diag-StrictSyncSlave#variable-dc-path-enabled-but-absent)**  |
 
 ## Public Attributes Documentation
 

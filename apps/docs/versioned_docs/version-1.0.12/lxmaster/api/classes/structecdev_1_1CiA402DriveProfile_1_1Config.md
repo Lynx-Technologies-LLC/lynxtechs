@@ -3,6 +3,8 @@
 ---
 title: ecdev::CiA402DriveProfile::Config
 
+slug: /lxmaster/api/classes/CiA402DriveProfile-Config
+sidebar_label: "Config"
 ---
 
 # ecdev::CiA402DriveProfile::Config
@@ -15,13 +17,13 @@ title: ecdev::CiA402DriveProfile::Config
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[startup_fault_autoreset](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-startup-fault-autoreset)** <br>When a drive boots into OPERATIONAL already faulted (a residual fault from a prior run, before it has ever reached Operation Enabled this run), automatically pulse a bounded fault-reset and continue enabling instead of latching a terminal stop.  |
-| bool | **[shutdown_require_switch_on_disabled](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-shutdown-require-switch-on-disabled)**  |
-| [OpMode](/lxmaster/api/classes/classecdev_1_1cia402driveprofile#using-opmode) | **[op_mode](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-op-mode)**  |
-| bool | **[hold_actual_position](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-hold-actual-position)**  |
-| int | **[fault_reset_arm_cycles](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-fault-reset-arm-cycles)**  |
-| bool | **[enable_fsm](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-enable-fsm)**  |
-| bool | **[auto_fault_reset_and_recover](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config#variable-auto-fault-reset-and-recover)**  |
+| bool | **[startup_fault_autoreset](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-startup-fault-autoreset)** <br>When a drive boots into OPERATIONAL already faulted (a residual fault from a prior run, before it has ever reached Operation Enabled this run), automatically pulse a bounded fault-reset and continue enabling instead of latching a terminal stop.  |
+| bool | **[shutdown_require_switch_on_disabled](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-shutdown-require-switch-on-disabled)**  |
+| [OpMode](/lxmaster/api/classes/CiA402DriveProfile#using-opmode) | **[op_mode](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-op-mode)**  |
+| bool | **[hold_actual_position](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-hold-actual-position)**  |
+| int | **[fault_reset_arm_cycles](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-fault-reset-arm-cycles)**  |
+| bool | **[enable_fsm](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-enable-fsm)**  |
+| bool | **[auto_fault_reset_and_recover](/lxmaster/api/classes/CiA402DriveProfile-Config#variable-auto-fault-reset-and-recover)**  |
 
 ## Public Attributes Documentation
 

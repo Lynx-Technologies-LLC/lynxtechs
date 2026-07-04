@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/cia406_encoder_profile.hpp
 
+slug: /lxmaster/api/files/cia406_encoder_profile_8hpp
+sidebar_label: "libs/devices/include/devices/cia406_encoder_profile.hpp"
 ---
 
 # libs/devices/include/devices/cia406_encoder_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/cia406_encoder_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::CiA406EncoderProfile](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile)** <br>CiA 406 (encoder) profile.  |
+| class | **[ecdev::CiA406EncoderProfile](/lxmaster/api/classes/CiA406EncoderProfile)** <br>CiA 406 (encoder) profile.  |
 
 
 

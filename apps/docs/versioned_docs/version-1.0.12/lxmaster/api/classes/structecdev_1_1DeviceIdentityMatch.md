@@ -4,6 +4,8 @@
 title: ecdev::DeviceIdentityMatch
 summary: Exact device identity a device class serves. 
 
+slug: /lxmaster/api/classes/DeviceIdentityMatch
+sidebar_label: "DeviceIdentityMatch"
 ---
 
 # ecdev::DeviceIdentityMatch
@@ -19,16 +21,16 @@ Exact device identity a device class serves.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[matches](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch#function-matches)**(const eni::SlaveConfig & slave) const |
+| bool | **[matches](/lxmaster/api/classes/DeviceIdentityMatch#function-matches)**(const eni::SlaveConfig & slave) const |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint32_t | **[vendor_id](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch#variable-vendor-id)**  |
-| std::uint32_t | **[revision_min](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch#variable-revision-min)** <br>0 = no lower bound.  |
-| std::uint32_t | **[revision_max](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch#variable-revision-max)** <br>0 = no upper bound (any revision).  |
-| std::uint32_t | **[product_code](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch#variable-product-code)**  |
+| std::uint32_t | **[vendor_id](/lxmaster/api/classes/DeviceIdentityMatch#variable-vendor-id)**  |
+| std::uint32_t | **[revision_min](/lxmaster/api/classes/DeviceIdentityMatch#variable-revision-min)** <br>0 = no lower bound.  |
+| std::uint32_t | **[revision_max](/lxmaster/api/classes/DeviceIdentityMatch#variable-revision-max)** <br>0 = no upper bound (any revision).  |
+| std::uint32_t | **[product_code](/lxmaster/api/classes/DeviceIdentityMatch#variable-product-code)**  |
 
 ## Detailed Description
 

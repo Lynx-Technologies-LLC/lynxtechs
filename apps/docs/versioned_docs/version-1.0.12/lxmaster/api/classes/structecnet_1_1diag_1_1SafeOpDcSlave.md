@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::SafeOpDcSlave
 
+slug: /lxmaster/api/classes/diag-SafeOpDcSlave
+sidebar_label: "SafeOpDcSlave"
 ---
 
 # ecnet::diag::SafeOpDcSlave
@@ -15,23 +17,23 @@ title: ecnet::diag::SafeOpDcSlave
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint16_t | **[state](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-state)**  |
-| SdoU16 | **[sm3_sync_mode](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm3-sync-mode)**  |
-| SdoU16 | **[sm3_subcount](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm3-subcount)**  |
-| SdoU32 | **[sm3_shift_time](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm3-shift-time)**  |
-| SdoU32 | **[sm3_cycle_time](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm3-cycle-time)**  |
-| SdoU16 | **[sm2_sync_mode](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm2-sync-mode)**  |
-| SdoU16 | **[sm2_subcount](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm2-subcount)**  |
-| SdoU32 | **[sm2_shift_time](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm2-shift-time)**  |
-| SdoU32 | **[sm2_cycle_time](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-sm2-cycle-time)**  |
-| SdoU16 | **[interp_time_period](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-interp-time-period)**  |
-| SdoU16 | **[interp_time_index](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-interp-time-index)**  |
-| bool | **[in_safe_op](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-in-safe-op)**  |
-| int | **[idx](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-idx)**  |
-| bool | **[has_dc](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-has-dc)**  |
-| bool | **[dc_requested_but_absent](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-dc-requested-but-absent)**  |
-| std::uint16_t | **[al_status_code](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-al-status-code)**  |
-| bool | **[al_error](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcslave#variable-al-error)**  |
+| std::uint16_t | **[state](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-state)**  |
+| SdoU16 | **[sm3_sync_mode](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm3-sync-mode)**  |
+| SdoU16 | **[sm3_subcount](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm3-subcount)**  |
+| SdoU32 | **[sm3_shift_time](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm3-shift-time)**  |
+| SdoU32 | **[sm3_cycle_time](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm3-cycle-time)**  |
+| SdoU16 | **[sm2_sync_mode](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm2-sync-mode)**  |
+| SdoU16 | **[sm2_subcount](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm2-subcount)**  |
+| SdoU32 | **[sm2_shift_time](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm2-shift-time)**  |
+| SdoU32 | **[sm2_cycle_time](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-sm2-cycle-time)**  |
+| SdoU16 | **[interp_time_period](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-interp-time-period)**  |
+| SdoU16 | **[interp_time_index](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-interp-time-index)**  |
+| bool | **[in_safe_op](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-in-safe-op)**  |
+| int | **[idx](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-idx)**  |
+| bool | **[has_dc](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-has-dc)**  |
+| bool | **[dc_requested_but_absent](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-dc-requested-but-absent)**  |
+| std::uint16_t | **[al_status_code](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-al-status-code)**  |
+| bool | **[al_error](/lxmaster/api/classes/diag-SafeOpDcSlave#variable-al-error)**  |
 
 ## Public Attributes Documentation
 

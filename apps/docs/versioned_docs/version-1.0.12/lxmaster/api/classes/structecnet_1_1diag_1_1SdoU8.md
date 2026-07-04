@@ -4,6 +4,8 @@
 title: ecnet::diag::SdoU8
 summary: Optional SDO scalar: present is false when the read failed / object is absent. 
 
+slug: /lxmaster/api/classes/diag-SdoU8
+sidebar_label: "SdoU8"
 ---
 
 # ecnet::diag::SdoU8
@@ -19,8 +21,8 @@ Optional SDO scalar: `present` is false when the read failed / object is absent.
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint8_t | **[value](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou8#variable-value)**  |
-| bool | **[present](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou8#variable-present)**  |
+| std::uint8_t | **[value](/lxmaster/api/classes/diag-SdoU8#variable-value)**  |
+| bool | **[present](/lxmaster/api/classes/diag-SdoU8#variable-present)**  |
 
 ## Public Attributes Documentation
 

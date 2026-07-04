@@ -3,6 +3,8 @@
 ---
 title: libs/facade/include/facade/generic_device.hpp
 
+slug: /lxmaster/api/files/generic_device_8hpp
+sidebar_label: "libs/facade/include/facade/generic_device.hpp"
 ---
 
 # libs/facade/include/facade/generic_device.hpp
@@ -13,13 +15,13 @@ title: libs/facade/include/facade/generic_device.hpp
 
 | Name           |
 | -------------- |
-| **[ecfacade](/lxmaster/api/namespaces/namespaceecfacade)**  |
+| **[ecfacade](/lxmaster/api/namespaces/ecfacade)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecfacade::GenericDevice](/lxmaster/api/classes/classecfacade_1_1genericdevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/classecfacade_1_1iomodule)`, or `[Encoder]()`) &ndash; e.g.  |
+| class | **[ecfacade::GenericDevice](/lxmaster/api/classes/GenericDevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g.  |
 
 
 

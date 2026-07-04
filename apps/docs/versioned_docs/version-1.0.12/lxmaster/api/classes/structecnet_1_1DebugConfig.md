@@ -4,6 +4,8 @@
 title: ecnet::DebugConfig
 summary: Runtime logging configuration. 
 
+slug: /lxmaster/api/classes/DebugConfig
+sidebar_label: "DebugConfig"
 ---
 
 # ecnet::DebugConfig
@@ -19,13 +21,13 @@ Runtime logging configuration.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint32_t | **[sync_trace_window_ns](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-sync-trace-window-ns)**  |
-| std::size_t | **[sync_trace_capacity](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-sync-trace-capacity)**  |
-| ecdev::LogLevel | **[min_level](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-min-level)**  |
-| std::string | **[log_file](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-log-file)** <br>Empty => ConsoleSink (cerr for Error/Warn, cout otherwise); non-empty => rotating FileSink.  |
-| bool | **[enabled](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-enabled)**  |
-| std::size_t | **[debug_ring_capacity](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-debug-ring-capacity)** <br>Debug ring capacity (process-data snapshots) for the RT->worker hand-off.  |
-| std::uint32_t | **[category_mask](/lxmaster/api/classes/structecnet_1_1debugconfig#variable-category-mask)**  |
+| std::uint32_t | **[sync_trace_window_ns](/lxmaster/api/classes/DebugConfig#variable-sync-trace-window-ns)**  |
+| std::size_t | **[sync_trace_capacity](/lxmaster/api/classes/DebugConfig#variable-sync-trace-capacity)**  |
+| ecdev::LogLevel | **[min_level](/lxmaster/api/classes/DebugConfig#variable-min-level)**  |
+| std::string | **[log_file](/lxmaster/api/classes/DebugConfig#variable-log-file)** <br>Empty => ConsoleSink (cerr for Error/Warn, cout otherwise); non-empty => rotating FileSink.  |
+| bool | **[enabled](/lxmaster/api/classes/DebugConfig#variable-enabled)**  |
+| std::size_t | **[debug_ring_capacity](/lxmaster/api/classes/DebugConfig#variable-debug-ring-capacity)** <br>Debug ring capacity (process-data snapshots) for the RT->worker hand-off.  |
+| std::uint32_t | **[category_mask](/lxmaster/api/classes/DebugConfig#variable-category-mask)**  |
 
 ## Detailed Description
 

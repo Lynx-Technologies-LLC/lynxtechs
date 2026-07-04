@@ -4,6 +4,8 @@
 title: ecdev::GenericIoProfile
 summary: Protocol-agnostic digital/analog I/O profile. 
 
+slug: /lxmaster/api/classes/GenericIoProfile
+sidebar_label: "GenericIoProfile"
 ---
 
 # ecdev::GenericIoProfile
@@ -15,56 +17,56 @@ Protocol-agnostic digital/analog I/O profile.  [More...](#detailed-description)
 
 `#include <generic_io_profile.hpp>`
 
-Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile), [ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile), IDeviceLifecycle
+Inherits from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile), [ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile), IDeviceLifecycle
 
-Inherited by [ecdev::CiA401IoProfile](/lxmaster/api/classes/classecdev_1_1cia401ioprofile)
+Inherited by [ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual void | **[writeOutputs](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image, std::uint64_t cycle_count) override |
-| virtual void | **[setDigitalOutput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-setdigitaloutput)**(std::size_t channel, bool value) override<br>Command a digital output channel; out-of-range is a no-op.  |
-| virtual void | **[setAnalogOutput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-setanalogoutput)**(std::size_t channel, std::int32_t value) override<br>Command an analog output channel (raw counts); out-of-range is a no-op.  |
-| virtual void | **[resolveTopology](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) override<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
-| virtual void | **[readInputs](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image, bool wkc_valid, bool operational) override |
-| virtual const char * | **[profileName](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-profilename)**() const override<br>Stable identifier for diagnostics (e.g.  |
-| virtual std::size_t | **[digitalOutputCount](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-digitaloutputcount)**() const override |
-| virtual bool | **[digitalOutput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-digitaloutput)**(std::size_t ch) const override |
-| virtual std::size_t | **[digitalInputCount](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-digitalinputcount)**() const override |
-| virtual bool | **[digitalInput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-digitalinput)**(std::size_t channel) const override<br>Read a digital input/output channel; out-of-range returns false.  |
-| virtual std::string | **[configurePreOp](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) override |
-| virtual [IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile) * | **[asIo](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-asio)**() override |
-| virtual std::size_t | **[analogOutputCount](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-analogoutputcount)**() const override |
-| virtual std::int32_t | **[analogOutput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-analogoutput)**(std::size_t ch) const override |
-| virtual std::size_t | **[analogInputCount](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-analoginputcount)**() const override |
-| virtual std::int32_t | **[analogInput](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-analoginput)**(std::size_t channel) const override<br>Read an analog input/output channel (raw counts); out-of-range returns 0.  |
+| virtual void | **[writeOutputs](/lxmaster/api/classes/GenericIoProfile#function-writeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image, std::uint64_t cycle_count) override |
+| virtual void | **[setDigitalOutput](/lxmaster/api/classes/GenericIoProfile#function-setdigitaloutput)**(std::size_t channel, bool value) override<br>Command a digital output channel; out-of-range is a no-op.  |
+| virtual void | **[setAnalogOutput](/lxmaster/api/classes/GenericIoProfile#function-setanalogoutput)**(std::size_t channel, std::int32_t value) override<br>Command an analog output channel (raw counts); out-of-range is a no-op.  |
+| virtual void | **[resolveTopology](/lxmaster/api/classes/GenericIoProfile#function-resolvetopology)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override<br>Resolve the static channel/PDO topology from the ENI-derived process image.  |
+| virtual void | **[readInputs](/lxmaster/api/classes/GenericIoProfile#function-readinputs)**(const [ProcessImage](/lxmaster/api/classes/ProcessImage) & image, bool wkc_valid, bool operational) override |
+| virtual const char * | **[profileName](/lxmaster/api/classes/GenericIoProfile#function-profilename)**() const override<br>Stable identifier for diagnostics (e.g.  |
+| virtual std::size_t | **[digitalOutputCount](/lxmaster/api/classes/GenericIoProfile#function-digitaloutputcount)**() const override |
+| virtual bool | **[digitalOutput](/lxmaster/api/classes/GenericIoProfile#function-digitaloutput)**(std::size_t ch) const override |
+| virtual std::size_t | **[digitalInputCount](/lxmaster/api/classes/GenericIoProfile#function-digitalinputcount)**() const override |
+| virtual bool | **[digitalInput](/lxmaster/api/classes/GenericIoProfile#function-digitalinput)**(std::size_t channel) const override<br>Read a digital input/output channel; out-of-range returns false.  |
+| virtual std::string | **[configurePreOp](/lxmaster/api/classes/GenericIoProfile#function-configurepreop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) override |
+| virtual [IIoProfile](/lxmaster/api/classes/IIoProfile) * | **[asIo](/lxmaster/api/classes/GenericIoProfile#function-asio)**() override |
+| virtual std::size_t | **[analogOutputCount](/lxmaster/api/classes/GenericIoProfile#function-analogoutputcount)**() const override |
+| virtual std::int32_t | **[analogOutput](/lxmaster/api/classes/GenericIoProfile#function-analogoutput)**(std::size_t ch) const override |
+| virtual std::size_t | **[analogInputCount](/lxmaster/api/classes/GenericIoProfile#function-analoginputcount)**() const override |
+| virtual std::int32_t | **[analogInput](/lxmaster/api/classes/GenericIoProfile#function-analoginput)**(std::size_t channel) const override<br>Read an analog input/output channel (raw counts); out-of-range returns 0.  |
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| constexpr std::size_t | **[kMaxDigital](/lxmaster/api/classes/classecdev_1_1genericioprofile#variable-kmaxdigital)**  |
-| constexpr std::size_t | **[kMaxAnalog](/lxmaster/api/classes/classecdev_1_1genericioprofile#variable-kmaxanalog)**  |
+| constexpr std::size_t | **[kMaxDigital](/lxmaster/api/classes/GenericIoProfile#variable-kmaxdigital)**  |
+| constexpr std::size_t | **[kMaxAnalog](/lxmaster/api/classes/GenericIoProfile#variable-kmaxanalog)**  |
 
 ## Additional inherited members
 
-**Public Functions inherited from [ecdev::IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile)**
+**Public Functions inherited from [ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)**
 
 |                | Name           |
 | -------------- | -------------- |
-| | **[~IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-~ideviceprofile)**() override =default |
-| virtual void | **[primeOutputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) |
-| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) & image) |
-| virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
-| virtual [IMotionProfile](/lxmaster/api/classes/classecdev_1_1imotionprofile) * | **[asMotion](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asmotion)**() |
-| virtual [IEncoderProfile](/lxmaster/api/classes/classecdev_1_1iencoderprofile) * | **[asEncoder](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asencoder)**() |
+| | **[~IDeviceProfile](/lxmaster/api/classes/IDeviceProfile#function-~ideviceprofile)**() override =default |
+| virtual void | **[primeOutputs](/lxmaster/api/classes/IDeviceProfile#function-primeoutputs)**([ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual std::string | **[prepareSafeOp](/lxmaster/api/classes/IDeviceProfile#function-preparesafeop)**(ISlaveServices & svc, [ProcessImage](/lxmaster/api/classes/ProcessImage) & image) |
+| virtual void | **[captureExitDiagnostics](/lxmaster/api/classes/IDeviceProfile#function-captureexitdiagnostics)**(ISlaveServices & svc)<br>End-of-run, after the RT thread has joined; safe to do SDO reads via `svc`.  |
+| virtual [IMotionProfile](/lxmaster/api/classes/IMotionProfile) * | **[asMotion](/lxmaster/api/classes/IDeviceProfile#function-asmotion)**() |
+| virtual [IEncoderProfile](/lxmaster/api/classes/IEncoderProfile) * | **[asEncoder](/lxmaster/api/classes/IDeviceProfile#function-asencoder)**() |
 
-**Public Functions inherited from [ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile)**
+**Public Functions inherited from [ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile)**
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile#function-~iioprofile)**() =default |
+| virtual | **[~IIoProfile](/lxmaster/api/classes/IIoProfile#function-~iioprofile)**() =default |
 
 
 ## Detailed Description
@@ -75,7 +77,7 @@ class ecdev::GenericIoProfile;
 
 Protocol-agnostic digital/analog I/O profile. 
 
-Exposes a slave's mapped process data as typed channels through `[IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile)`, which the `IoModule` facade wraps &ndash; with no dependence on CoE, a specific CiA profile, or any vendor object layout. Works for simple (non-CoE) terminals (e.g. Beckhoff EL2xxx/EL1xxx) as well as CoE I/O.
+Exposes a slave's mapped process data as typed channels through `[IIoProfile](/lxmaster/api/classes/IIoProfile)`, which the `IoModule` facade wraps &ndash; with no dependence on CoE, a specific CiA profile, or any vendor object layout. Works for simple (non-CoE) terminals (e.g. Beckhoff EL2xxx/EL1xxx) as well as CoE I/O.
 
 Channel model (purely structural, from the process image):
 
@@ -83,7 +85,7 @@ Channel model (purely structural, from the process image):
 * Any other 1-bit entry is a single digital channel (e.g. Beckhoff 0x7000:01 BOOL outputs).
 * Any wider entry is a scalar analog channel (8/16/32-bit). Direction follows the PDO (RxPDO = output, TxPDO = input).
 
-Subclasses (e.g. `[CiA401IoProfile](/lxmaster/api/classes/classecdev_1_1cia401ioprofile)`) may override `[profileName()](/lxmaster/api/classes/classecdev_1_1genericioprofile#function-profilename)` and add device-class specific setup; the channel logic here is shared. 
+Subclasses (e.g. `[CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)`) may override `[profileName()](/lxmaster/api/classes/GenericIoProfile#function-profilename)` and add device-class specific setup; the channel logic here is shared. 
 
 ## Public Functions Documentation
 
@@ -97,7 +99,7 @@ virtual void writeOutputs(
 ```
 
 
-**Reimplements**: [ecdev::IDeviceProfile::writeOutputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-writeoutputs)
+**Reimplements**: [ecdev::IDeviceProfile::writeOutputs](/lxmaster/api/classes/IDeviceProfile#function-writeoutputs)
 
 
 ### function setDigitalOutput
@@ -111,7 +113,7 @@ inline virtual void setDigitalOutput(
 
 Command a digital output channel; out-of-range is a no-op. 
 
-**Reimplements**: [ecdev::IIoProfile::setDigitalOutput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-setdigitaloutput)
+**Reimplements**: [ecdev::IIoProfile::setDigitalOutput](/lxmaster/api/classes/IIoProfile#function-setdigitaloutput)
 
 
 ### function setAnalogOutput
@@ -125,7 +127,7 @@ inline virtual void setAnalogOutput(
 
 Command an analog output channel (raw counts); out-of-range is a no-op. 
 
-**Reimplements**: [ecdev::IIoProfile::setAnalogOutput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-setanalogoutput)
+**Reimplements**: [ecdev::IIoProfile::setAnalogOutput](/lxmaster/api/classes/IIoProfile#function-setanalogoutput)
 
 
 ### function resolveTopology
@@ -138,7 +140,7 @@ inline virtual void resolveTopology(
 
 Resolve the static channel/PDO topology from the ENI-derived process image. 
 
-**Reimplements**: [ecdev::IDeviceProfile::resolveTopology](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-resolvetopology)
+**Reimplements**: [ecdev::IDeviceProfile::resolveTopology](/lxmaster/api/classes/IDeviceProfile#function-resolvetopology)
 
 
 Called once when the profile is attached to its device (during binding, before `start()`), so facade capability queries such as `IIoProfile::digitalOutputCount()` are valid as soon as the bus is bound — before any live PRE_OP SDO work. The image carries only ENI geometry here (it is not yet bound to the live IOmap), which is all a structural resolve needs. Default: no-op. Idempotent: `configurePreOp` may resolve again from the same image during `start()`. 
@@ -155,7 +157,7 @@ virtual void readInputs(
 ```
 
 
-**Reimplements**: [ecdev::IDeviceProfile::readInputs](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-readinputs)
+**Reimplements**: [ecdev::IDeviceProfile::readInputs](/lxmaster/api/classes/IDeviceProfile#function-readinputs)
 
 
 ### function profileName
@@ -166,7 +168,7 @@ inline virtual const char * profileName() const override
 
 Stable identifier for diagnostics (e.g. 
 
-**Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-profilename)
+**Reimplements**: [ecdev::IDeviceProfile::profileName](/lxmaster/api/classes/IDeviceProfile#function-profilename)
 
 
 "CiA402-drive"). 
@@ -179,7 +181,7 @@ inline virtual std::size_t digitalOutputCount() const override
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::digitalOutputCount](/lxmaster/api/classes/classecdev_1_1iioprofile#function-digitaloutputcount)
+**Reimplements**: [ecdev::IIoProfile::digitalOutputCount](/lxmaster/api/classes/IIoProfile#function-digitaloutputcount)
 
 
 ### function digitalOutput
@@ -191,7 +193,7 @@ inline virtual bool digitalOutput(
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::digitalOutput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-digitaloutput)
+**Reimplements**: [ecdev::IIoProfile::digitalOutput](/lxmaster/api/classes/IIoProfile#function-digitaloutput)
 
 
 ### function digitalInputCount
@@ -201,7 +203,7 @@ inline virtual std::size_t digitalInputCount() const override
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::digitalInputCount](/lxmaster/api/classes/classecdev_1_1iioprofile#function-digitalinputcount)
+**Reimplements**: [ecdev::IIoProfile::digitalInputCount](/lxmaster/api/classes/IIoProfile#function-digitalinputcount)
 
 
 ### function digitalInput
@@ -214,7 +216,7 @@ inline virtual bool digitalInput(
 
 Read a digital input/output channel; out-of-range returns false. 
 
-**Reimplements**: [ecdev::IIoProfile::digitalInput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-digitalinput)
+**Reimplements**: [ecdev::IIoProfile::digitalInput](/lxmaster/api/classes/IIoProfile#function-digitalinput)
 
 
 ### function configurePreOp
@@ -227,7 +229,7 @@ virtual std::string configurePreOp(
 ```
 
 
-**Reimplements**: [ecdev::IDeviceProfile::configurePreOp](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-configurepreop)
+**Reimplements**: [ecdev::IDeviceProfile::configurePreOp](/lxmaster/api/classes/IDeviceProfile#function-configurepreop)
 
 
 ### function asIo
@@ -237,7 +239,7 @@ inline virtual IIoProfile * asIo() override
 ```
 
 
-**Reimplements**: [ecdev::IDeviceProfile::asIo](/lxmaster/api/classes/classecdev_1_1ideviceprofile#function-asio)
+**Reimplements**: [ecdev::IDeviceProfile::asIo](/lxmaster/api/classes/IDeviceProfile#function-asio)
 
 
 ### function analogOutputCount
@@ -247,7 +249,7 @@ inline virtual std::size_t analogOutputCount() const override
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::analogOutputCount](/lxmaster/api/classes/classecdev_1_1iioprofile#function-analogoutputcount)
+**Reimplements**: [ecdev::IIoProfile::analogOutputCount](/lxmaster/api/classes/IIoProfile#function-analogoutputcount)
 
 
 ### function analogOutput
@@ -259,7 +261,7 @@ inline virtual std::int32_t analogOutput(
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::analogOutput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-analogoutput)
+**Reimplements**: [ecdev::IIoProfile::analogOutput](/lxmaster/api/classes/IIoProfile#function-analogoutput)
 
 
 ### function analogInputCount
@@ -269,7 +271,7 @@ inline virtual std::size_t analogInputCount() const override
 ```
 
 
-**Reimplements**: [ecdev::IIoProfile::analogInputCount](/lxmaster/api/classes/classecdev_1_1iioprofile#function-analoginputcount)
+**Reimplements**: [ecdev::IIoProfile::analogInputCount](/lxmaster/api/classes/IIoProfile#function-analoginputcount)
 
 
 ### function analogInput
@@ -282,7 +284,7 @@ inline virtual std::int32_t analogInput(
 
 Read an analog input/output channel (raw counts); out-of-range returns 0. 
 
-**Reimplements**: [ecdev::IIoProfile::analogInput](/lxmaster/api/classes/classecdev_1_1iioprofile#function-analoginput)
+**Reimplements**: [ecdev::IIoProfile::analogInput](/lxmaster/api/classes/IIoProfile#function-analoginput)
 
 
 ## Public Attributes Documentation

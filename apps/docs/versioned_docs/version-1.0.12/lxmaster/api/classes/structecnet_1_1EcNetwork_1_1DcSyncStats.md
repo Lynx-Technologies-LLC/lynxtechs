@@ -4,6 +4,8 @@
 title: ecnet::EcNetwork::DcSyncStats
 summary: End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock). 
 
+slug: /lxmaster/api/classes/EcNetwork-DcSyncStats
+sidebar_label: "DcSyncStats"
 ---
 
 # ecnet::EcNetwork::DcSyncStats
@@ -19,12 +21,12 @@ End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock).
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint64_t | **[samples](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-samples)**  |
-| std::int64_t | **[min_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-min-ns)**  |
-| std::int64_t | **[mean_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-mean-ns)**  |
-| std::int64_t | **[mean_abs_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-mean-abs-ns)**  |
-| std::int64_t | **[max_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-max-ns)**  |
-| std::int64_t | **[final_integral](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats#variable-final-integral)**  |
+| std::uint64_t | **[samples](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-samples)**  |
+| std::int64_t | **[min_ns](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-min-ns)**  |
+| std::int64_t | **[mean_ns](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-mean-ns)**  |
+| std::int64_t | **[mean_abs_ns](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-mean-abs-ns)**  |
+| std::int64_t | **[max_ns](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-max-ns)**  |
+| std::int64_t | **[final_integral](/lxmaster/api/classes/EcNetwork-DcSyncStats#variable-final-integral)**  |
 
 ## Public Attributes Documentation
 

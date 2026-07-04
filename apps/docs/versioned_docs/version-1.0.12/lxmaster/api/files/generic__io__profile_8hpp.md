@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/generic_io_profile.hpp
 
+slug: /lxmaster/api/files/generic_io_profile_8hpp
+sidebar_label: "libs/devices/include/devices/generic_io_profile.hpp"
 ---
 
 # libs/devices/include/devices/generic_io_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/generic_io_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::GenericIoProfile](/lxmaster/api/classes/classecdev_1_1genericioprofile)** <br>Protocol-agnostic digital/analog I/O profile.  |
+| class | **[ecdev::GenericIoProfile](/lxmaster/api/classes/GenericIoProfile)** <br>Protocol-agnostic digital/analog I/O profile.  |
 
 
 

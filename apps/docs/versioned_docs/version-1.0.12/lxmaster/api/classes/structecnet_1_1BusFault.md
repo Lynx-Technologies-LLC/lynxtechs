@@ -4,6 +4,8 @@
 title: ecnet::BusFault
 summary: Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see NetworkConfig::watchdog_low_wkc_cycles). 
 
+slug: /lxmaster/api/classes/BusFault
+sidebar_label: "BusFault"
 ---
 
 # ecnet::BusFault
@@ -19,14 +21,14 @@ Structured description of a cyclic-bus fault, built when the cycle-health watchd
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[wkc](/lxmaster/api/classes/structecnet_1_1busfault#variable-wkc)** <br>Work counter observed on the tripping cycle and the expected value.  |
-| bool | **[occurred](/lxmaster/api/classes/structecnet_1_1busfault#variable-occurred)** <br>True when a fault was detected and this struct is meaningful.  |
-| std::vector< [LostSlave](/lxmaster/api/classes/structecnet_1_1lostslave) > | **[lost_slaves](/lxmaster/api/classes/structecnet_1_1busfault#variable-lost-slaves)** <br>Slaves that stopped responding (downstream of the break).  |
-| int | **[expected_wkc](/lxmaster/api/classes/structecnet_1_1busfault#variable-expected-wkc)**  |
-| std::string | **[description](/lxmaster/api/classes/structecnet_1_1busfault#variable-description)** <br>Pre-rendered human-readable summary so simple apps can just print it.  |
-| std::string | **[break_slave_name](/lxmaster/api/classes/structecnet_1_1busfault#variable-break-slave-name)** <br>SII/ENI name of `break_slave` (empty when `break_slave == 0`).  |
-| int | **[break_slave](/lxmaster/api/classes/structecnet_1_1busfault#variable-break-slave)** <br>1-based bus index of the still-responding slave whose downstream port dropped its link.  |
-| int | **[break_port](/lxmaster/api/classes/structecnet_1_1busfault#variable-break-port)** <br>ESC port index (0-3) on `break_slave` whose link dropped, or -1 if unknown.  |
+| int | **[wkc](/lxmaster/api/classes/BusFault#variable-wkc)** <br>Work counter observed on the tripping cycle and the expected value.  |
+| bool | **[occurred](/lxmaster/api/classes/BusFault#variable-occurred)** <br>True when a fault was detected and this struct is meaningful.  |
+| std::vector< [LostSlave](/lxmaster/api/classes/LostSlave) > | **[lost_slaves](/lxmaster/api/classes/BusFault#variable-lost-slaves)** <br>Slaves that stopped responding (downstream of the break).  |
+| int | **[expected_wkc](/lxmaster/api/classes/BusFault#variable-expected-wkc)**  |
+| std::string | **[description](/lxmaster/api/classes/BusFault#variable-description)** <br>Pre-rendered human-readable summary so simple apps can just print it.  |
+| std::string | **[break_slave_name](/lxmaster/api/classes/BusFault#variable-break-slave-name)** <br>SII/ENI name of `break_slave` (empty when `break_slave == 0`).  |
+| int | **[break_slave](/lxmaster/api/classes/BusFault#variable-break-slave)** <br>1-based bus index of the still-responding slave whose downstream port dropped its link.  |
+| int | **[break_port](/lxmaster/api/classes/BusFault#variable-break-port)** <br>ESC port index (0-3) on `break_slave` whose link dropped, or -1 if unknown.  |
 
 ## Detailed Description
 
@@ -36,7 +38,7 @@ struct ecnet::BusFault;
 
 Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`). 
 
-Delivered to the application through the optional `[NetworkConfig::on_bus_fault](/lxmaster/api/classes/structecnet_1_1networkconfig#variable-on-bus-fault)` callback and also used by lxmaster to render the default `lastError()` / `reportDeviceStatus()` text.
+Delivered to the application through the optional `[NetworkConfig::on_bus_fault](/lxmaster/api/classes/NetworkConfig#variable-on-bus-fault)` callback and also used by lxmaster to render the default `lastError()` / `reportDeviceStatus()` text.
 
 The break point is reconstructed from the standard DL-status register (0x0110): the still-responding slave whose previously-active port lost its link is the upstream side of the cable break, and `lost_slaves` are the devices that went silent behind it. 
 

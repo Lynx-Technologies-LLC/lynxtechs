@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::SdoU16
 
+slug: /lxmaster/api/classes/diag-SdoU16
+sidebar_label: "SdoU16"
 ---
 
 # ecnet::diag::SdoU16
@@ -15,8 +17,8 @@ title: ecnet::diag::SdoU16
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint16_t | **[value](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou16#variable-value)**  |
-| bool | **[present](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou16#variable-present)**  |
+| std::uint16_t | **[value](/lxmaster/api/classes/diag-SdoU16#variable-value)**  |
+| bool | **[present](/lxmaster/api/classes/diag-SdoU16#variable-present)**  |
 
 ## Public Attributes Documentation
 

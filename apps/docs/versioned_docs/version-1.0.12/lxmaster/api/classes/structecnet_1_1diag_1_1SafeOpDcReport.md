@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::SafeOpDcReport
 
+slug: /lxmaster/api/classes/diag-SafeOpDcReport
+sidebar_label: "SafeOpDcReport"
 ---
 
 # ecnet::diag::SafeOpDcReport
@@ -15,11 +17,11 @@ title: ecnet::diag::SafeOpDcReport
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[sync0_enabled](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcreport#variable-sync0-enabled)**  |
-| std::vector< SafeOpDcSlave > | **[slaves](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcreport#variable-slaves)**  |
-| bool | **[ok](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcreport#variable-ok)**  |
-| bool | **[dc_or_sync0_disabled_note](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcreport#variable-dc-or-sync0-disabled-note)**  |
-| bool | **[dc_enabled](/lxmaster/api/classes/structecnet_1_1diag_1_1safeopdcreport#variable-dc-enabled)**  |
+| bool | **[sync0_enabled](/lxmaster/api/classes/diag-SafeOpDcReport#variable-sync0-enabled)**  |
+| std::vector< SafeOpDcSlave > | **[slaves](/lxmaster/api/classes/diag-SafeOpDcReport#variable-slaves)**  |
+| bool | **[ok](/lxmaster/api/classes/diag-SafeOpDcReport#variable-ok)**  |
+| bool | **[dc_or_sync0_disabled_note](/lxmaster/api/classes/diag-SafeOpDcReport#variable-dc-or-sync0-disabled-note)**  |
+| bool | **[dc_enabled](/lxmaster/api/classes/diag-SafeOpDcReport#variable-dc-enabled)**  |
 
 ## Public Attributes Documentation
 

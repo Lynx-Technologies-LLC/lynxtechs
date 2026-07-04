@@ -3,6 +3,8 @@
 ---
 title: ecdev::CiA402DriveProfile::OutputSnapshot
 
+slug: /lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot
+sidebar_label: "OutputSnapshot"
 ---
 
 # ecdev::CiA402DriveProfile::OutputSnapshot
@@ -15,13 +17,13 @@ title: ecdev::CiA402DriveProfile::OutputSnapshot
 
 |                | Name           |
 | -------------- | -------------- |
-| std::atomic< std::int32_t > | **[target_velocity](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-target-velocity)**  |
-| std::atomic< std::int32_t > | **[target_torque](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-target-torque)**  |
-| std::atomic< std::int32_t > | **[target_position](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-target-position)**  |
-| std::atomic< bool > | **[request_fault_reset](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-request-fault-reset)**  |
-| std::atomic< bool > | **[request_disable](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-request-disable)**  |
-| std::atomic< bool > | **[have_target_position](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-have-target-position)**  |
-| std::atomic< DriveOpMode > | **[desired_mode](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1outputsnapshot#variable-desired-mode)** <br>Live operating-mode request (PDO mode control).  |
+| std::atomic< std::int32_t > | **[target_velocity](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-target-velocity)**  |
+| std::atomic< std::int32_t > | **[target_torque](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-target-torque)**  |
+| std::atomic< std::int32_t > | **[target_position](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-target-position)**  |
+| std::atomic< bool > | **[request_fault_reset](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-request-fault-reset)**  |
+| std::atomic< bool > | **[request_disable](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-request-disable)**  |
+| std::atomic< bool > | **[have_target_position](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-have-target-position)**  |
+| std::atomic< DriveOpMode > | **[desired_mode](/lxmaster/api/classes/CiA402DriveProfile-OutputSnapshot#variable-desired-mode)** <br>Live operating-mode request (PDO mode control).  |
 
 ## Public Attributes Documentation
 

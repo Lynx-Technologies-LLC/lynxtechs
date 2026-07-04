@@ -3,6 +3,8 @@
 ---
 title: libs/facade/include/facade/encoder.hpp
 
+slug: /lxmaster/api/files/encoder_8hpp
+sidebar_label: "libs/facade/include/facade/encoder.hpp"
 ---
 
 # libs/facade/include/facade/encoder.hpp
@@ -13,13 +15,13 @@ title: libs/facade/include/facade/encoder.hpp
 
 | Name           |
 | -------------- |
-| **[ecfacade](/lxmaster/api/namespaces/namespaceecfacade)**  |
+| **[ecfacade](/lxmaster/api/namespaces/ecfacade)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecfacade::Encoder](/lxmaster/api/classes/classecfacade_1_1encoder)** <br>High-level encoder handle.  |
+| class | **[ecfacade::Encoder](/lxmaster/api/classes/Encoder)** <br>High-level encoder handle.  |
 
 
 

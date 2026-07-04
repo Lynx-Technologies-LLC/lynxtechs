@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/io_profile.hpp
 
+slug: /lxmaster/api/files/io_profile_8hpp
+sidebar_label: "libs/devices/include/devices/io_profile.hpp"
 ---
 
 # libs/devices/include/devices/io_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/io_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile)** <br>Facade-facing contract for a digital/analog I/O device (CiA 401 family).  |
+| class | **[ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile)** <br>Facade-facing contract for a digital/analog I/O device (CiA 401 family).  |
 
 
 

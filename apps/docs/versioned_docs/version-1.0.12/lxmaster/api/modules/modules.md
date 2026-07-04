@@ -10,8 +10,8 @@ title: Modules
 
 
 
-* **group [Application API](/lxmaster/api/modules/group__application__api)** <br>The API used by control applications. 
-* **group [Device Extension API](/lxmaster/api/modules/group__device__extension__api)** <br>The API for adding support for custom drives and I/O devices by authoring device profiles and registering them with the profile registry (for example via `LXMASTER_REGISTER_DEVICE`). 
+* **group [Application API](/lxmaster/api/modules/group_application_api)** <br>The API used by control applications. 
+* **group [Device Extension API](/lxmaster/api/modules/group_device_extension_api)** <br>The API for adding support for custom drives and I/O devices by authoring device profiles and registering them with the profile registry (for example via `LXMASTER_REGISTER_DEVICE`). 
 
 
 

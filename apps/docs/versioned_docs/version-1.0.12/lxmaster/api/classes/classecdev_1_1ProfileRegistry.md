@@ -4,6 +4,8 @@
 title: ecdev::ProfileRegistry
 summary: Registry of IProfileFactory plugins. 
 
+slug: /lxmaster/api/classes/ProfileRegistry
+sidebar_label: "ProfileRegistry"
 ---
 
 # ecdev::ProfileRegistry
@@ -19,10 +21,10 @@ Registry of `[IProfileFactory]()` plugins.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[select](/lxmaster/api/classes/classecdev_1_1profileregistry#function-select)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in) const |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[select](/lxmaster/api/classes/classecdev_1_1profileregistry#function-select)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in, const std::vector< std::shared_ptr< [IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory) > > & extra_factories) const<br>Like `select(in)`, but also considers app-supplied factories (e.g.  |
-| void | **[registerFactory](/lxmaster/api/classes/classecdev_1_1profileregistry#function-registerfactory)**(std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory) > factory) |
-| [ProfileRegistry](/lxmaster/api/classes/classecdev_1_1profileregistry) & | **[builtin](/lxmaster/api/classes/classecdev_1_1profileregistry#function-builtin)**()<br>The process-wide registry, populated by self-registering device-class TUs at static init.  |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[select](/lxmaster/api/classes/ProfileRegistry#function-select)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in) const |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[select](/lxmaster/api/classes/ProfileRegistry#function-select)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in, const std::vector< std::shared_ptr< [IProfileFactory](/lxmaster/api/classes/IProfileFactory) > > & extra_factories) const<br>Like `select(in)`, but also considers app-supplied factories (e.g.  |
+| void | **[registerFactory](/lxmaster/api/classes/ProfileRegistry#function-registerfactory)**(std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/IProfileFactory) > factory) |
+| [ProfileRegistry](/lxmaster/api/classes/ProfileRegistry) & | **[builtin](/lxmaster/api/classes/ProfileRegistry#function-builtin)**()<br>The process-wide registry, populated by self-registering device-class TUs at static init.  |
 
 ## Detailed Description
 
@@ -34,7 +36,7 @@ Registry of `[IProfileFactory]()` plugins.
 
 `select()` returns the best-claiming profile for a slave, or null when no factory claims it (the caller decides what an unmatched slave means).
 
-The process-wide `[builtin](/lxmaster/api/classes/classecdev_1_1profileregistry#function-builtin)` registry is populated entirely by self-registering device-class translation units (`LXMASTER_REGISTER_DEVICE`); there is no central list of built-in factories. 
+The process-wide `[builtin](/lxmaster/api/classes/ProfileRegistry#function-builtin)` registry is populated entirely by self-registering device-class translation units (`LXMASTER_REGISTER_DEVICE`); there is no central list of built-in factories. 
 
 ## Public Functions Documentation
 

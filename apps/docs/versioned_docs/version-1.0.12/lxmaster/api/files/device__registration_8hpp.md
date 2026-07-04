@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/device_registration.hpp
 
+slug: /lxmaster/api/files/device_registration_8hpp
+sidebar_label: "libs/devices/include/devices/device_registration.hpp"
 ---
 
 # libs/devices/include/devices/device_registration.hpp
@@ -13,7 +15,7 @@ title: libs/devices/include/devices/device_registration.hpp
 
 |                | Name           |
 | -------------- | -------------- |
-|  | **[LXMASTER_REGISTER_DEVICE](/lxmaster/api/files/device__registration_8hpp#define-lxmaster-register-device)**(tag, factory_expr) <br>Register a device class into the process-wide `[ecdev::ProfileRegistry::builtin](/lxmaster/api/classes/classecdev_1_1profileregistry#function-builtin)` registry at static-initialization time.  |
+|  | **[LXMASTER_REGISTER_DEVICE](/lxmaster/api/files/device_registration_8hpp#define-lxmaster-register-device)**(tag, factory_expr) <br>Register a device class into the process-wide `[ecdev::ProfileRegistry::builtin](/lxmaster/api/classes/ProfileRegistry#function-builtin)` registry at static-initialization time.  |
 
 
 
@@ -35,9 +37,9 @@ title: libs/devices/include/devices/device_registration.hpp
   }
 ```
 
-Register a device class into the process-wide `[ecdev::ProfileRegistry::builtin](/lxmaster/api/classes/classecdev_1_1profileregistry#function-builtin)` registry at static-initialization time. 
+Register a device class into the process-wide `[ecdev::ProfileRegistry::builtin](/lxmaster/api/classes/ProfileRegistry#function-builtin)` registry at static-initialization time. 
 
-`tag` is a unique identifier within the translation unit (used to name the internal-linkage registrar); `factory_expr` is an expression yielding a `std::unique_ptr<[ecdev::IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory)>` (typically `ecdev::makeIdentityProfileFactory(...)`).
+`tag` is a unique identifier within the translation unit (used to name the internal-linkage registrar); `factory_expr` is an expression yielding a `std::unique_ptr<[ecdev::IProfileFactory](/lxmaster/api/classes/IProfileFactory)>` (typically `ecdev::makeIdentityProfileFactory(...)`).
 
 Usage (one per device file): LXMASTER_REGISTER_DEVICE(a6, ecdev::makeIdentityProfileFactory({0x00400000, 0x0715}, ecdev::makeCiA402DriveProfile, "cia402:stepperonline-a6"));
 

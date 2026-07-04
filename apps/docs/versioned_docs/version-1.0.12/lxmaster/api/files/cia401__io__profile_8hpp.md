@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/cia401_io_profile.hpp
 
+slug: /lxmaster/api/files/cia401_io_profile_8hpp
+sidebar_label: "libs/devices/include/devices/cia401_io_profile.hpp"
 ---
 
 # libs/devices/include/devices/cia401_io_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/cia401_io_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::CiA401IoProfile](/lxmaster/api/classes/classecdev_1_1cia401ioprofile)** <br>CiA 401 (CANopen generic I/O) profile.  |
+| class | **[ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)** <br>CiA 401 (CANopen generic I/O) profile.  |
 
 
 

@@ -3,6 +3,8 @@
 ---
 title: libs/ecnet/include/ecnet/bus_fault.hpp
 
+slug: /lxmaster/api/files/bus_fault_8hpp
+sidebar_label: "libs/ecnet/include/ecnet/bus_fault.hpp"
 ---
 
 # libs/ecnet/include/ecnet/bus_fault.hpp
@@ -13,14 +15,14 @@ title: libs/ecnet/include/ecnet/bus_fault.hpp
 
 | Name           |
 | -------------- |
-| **[ecnet](/lxmaster/api/namespaces/namespaceecnet)**  |
+| **[ecnet](/lxmaster/api/namespaces/ecnet)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecnet::LostSlave](/lxmaster/api/classes/structecnet_1_1lostslave)** <br>One slave that stopped responding when the bus fault was diagnosed.  |
-| struct | **[ecnet::BusFault](/lxmaster/api/classes/structecnet_1_1busfault)** <br>Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`).  |
+| struct | **[ecnet::LostSlave](/lxmaster/api/classes/LostSlave)** <br>One slave that stopped responding when the bus fault was diagnosed.  |
+| struct | **[ecnet::BusFault](/lxmaster/api/classes/BusFault)** <br>Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`).  |
 
 
 

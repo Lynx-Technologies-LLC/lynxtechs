@@ -4,6 +4,8 @@
 title: ecdev::PdoEntryRef
 summary: Resolved location of one mapped CoE object inside a slave's process image. 
 
+slug: /lxmaster/api/classes/PdoEntryRef
+sidebar_label: "PdoEntryRef"
 ---
 
 # ecdev::PdoEntryRef
@@ -19,11 +21,11 @@ Resolved location of one mapped CoE object inside a slave's process image.  [Mor
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[valid](/lxmaster/api/classes/structecdev_1_1pdoentryref#variable-valid)**  |
-| bool | **[is_output](/lxmaster/api/classes/structecdev_1_1pdoentryref#variable-is-output)** <br>true: lives in the output (RxPdo) image; false: input (TxPdo).  |
-| std::uint32_t | **[byte_offset](/lxmaster/api/classes/structecdev_1_1pdoentryref#variable-byte-offset)** <br>Byte offset within the slave's output/input region.  |
-| std::uint8_t | **[bit_offset](/lxmaster/api/classes/structecdev_1_1pdoentryref#variable-bit-offset)** <br>Sub-byte bit offset (0..7) for packed booleans.  |
-| std::uint8_t | **[bit_len](/lxmaster/api/classes/structecdev_1_1pdoentryref#variable-bit-len)** <br>Object width in bits.  |
+| bool | **[valid](/lxmaster/api/classes/PdoEntryRef#variable-valid)**  |
+| bool | **[is_output](/lxmaster/api/classes/PdoEntryRef#variable-is-output)** <br>true: lives in the output (RxPdo) image; false: input (TxPdo).  |
+| std::uint32_t | **[byte_offset](/lxmaster/api/classes/PdoEntryRef#variable-byte-offset)** <br>Byte offset within the slave's output/input region.  |
+| std::uint8_t | **[bit_offset](/lxmaster/api/classes/PdoEntryRef#variable-bit-offset)** <br>Sub-byte bit offset (0..7) for packed booleans.  |
+| std::uint8_t | **[bit_len](/lxmaster/api/classes/PdoEntryRef#variable-bit-len)** <br>Object width in bits.  |
 
 ## Detailed Description
 
@@ -33,7 +35,7 @@ struct ecdev::PdoEntryRef;
 
 Resolved location of one mapped CoE object inside a slave's process image. 
 
-Produced once at setup time by `[ProcessImage::resolve](/lxmaster/api/classes/classecdev_1_1processimage#function-resolve)`; the profile then reads/writes via this handle on the RT cyclic path with no map lookup. `valid == false` means the object is not mapped into the slave's PDOs (the profile must handle that gracefully). 
+Produced once at setup time by `[ProcessImage::resolve](/lxmaster/api/classes/ProcessImage#function-resolve)`; the profile then reads/writes via this handle on the RT cyclic path with no map lookup. `valid == false` means the object is not mapped into the slave's PDOs (the profile must handle that gracefully). 
 
 ## Public Attributes Documentation
 

@@ -3,6 +3,8 @@
 ---
 title: mainpage.dox
 
+slug: /lxmaster/api/files/mainpage_8dox
+sidebar_label: "mainpage.dox"
 ---
 
 # mainpage.dox

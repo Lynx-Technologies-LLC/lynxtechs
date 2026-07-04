@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::CoEErrorReport
 
+slug: /lxmaster/api/classes/diag-CoEErrorReport
+sidebar_label: "CoEErrorReport"
 ---
 
 # ecnet::diag::CoEErrorReport
@@ -15,8 +17,8 @@ title: ecnet::diag::CoEErrorReport
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[when_label](/lxmaster/api/classes/structecnet_1_1diag_1_1coeerrorreport#variable-when-label)**  |
-| std::vector< CoEErrorSlave > | **[slaves](/lxmaster/api/classes/structecnet_1_1diag_1_1coeerrorreport#variable-slaves)**  |
+| std::string | **[when_label](/lxmaster/api/classes/diag-CoEErrorReport#variable-when-label)**  |
+| std::vector< CoEErrorSlave > | **[slaves](/lxmaster/api/classes/diag-CoEErrorReport#variable-slaves)**  |
 
 ## Public Attributes Documentation
 

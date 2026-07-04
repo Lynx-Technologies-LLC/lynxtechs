@@ -4,6 +4,8 @@
 title: ecnet::LostSlave
 summary: One slave that stopped responding when the bus fault was diagnosed. 
 
+slug: /lxmaster/api/classes/LostSlave
+sidebar_label: "LostSlave"
 ---
 
 # ecnet::LostSlave
@@ -19,8 +21,8 @@ One slave that stopped responding when the bus fault was diagnosed.  [More...](#
 
 |                | Name           |
 | -------------- | -------------- |
-| std::string | **[name](/lxmaster/api/classes/structecnet_1_1lostslave#variable-name)**  |
-| int | **[index](/lxmaster/api/classes/structecnet_1_1lostslave#variable-index)**  |
+| std::string | **[name](/lxmaster/api/classes/LostSlave#variable-name)**  |
+| int | **[index](/lxmaster/api/classes/LostSlave#variable-index)**  |
 
 ## Detailed Description
 

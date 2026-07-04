@@ -4,6 +4,8 @@
 title: ecdev::ProcessImage
 summary: Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use. 
 
+slug: /lxmaster/api/classes/ProcessImage
+sidebar_label: "ProcessImage"
 ---
 
 # ecdev::ProcessImage
@@ -19,31 +21,31 @@ Per-slave process-image accessor: the narrow cyclic-path contract that device pr
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[Entry](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry)** <br>All resolved entries, in image order (diagnostics / enumeration by facades).  |
+| struct | **[Entry](/lxmaster/api/classes/ProcessImage-Entry)** <br>All resolved entries, in image order (diagnostics / enumeration by facades).  |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[writeU8](/lxmaster/api/classes/classecdev_1_1processimage#function-writeu8)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint8_t value) |
-| bool | **[writeU32](/lxmaster/api/classes/classecdev_1_1processimage#function-writeu32)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint32_t value) |
-| bool | **[writeU16](/lxmaster/api/classes/classecdev_1_1processimage#function-writeu16)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint16_t value) |
-| bool | **[writeI8](/lxmaster/api/classes/classecdev_1_1processimage#function-writei8)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int8_t value) |
-| bool | **[writeI32](/lxmaster/api/classes/classecdev_1_1processimage#function-writei32)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int32_t value) |
-| bool | **[writeI16](/lxmaster/api/classes/classecdev_1_1processimage#function-writei16)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int16_t value) |
-| bool | **[writeBit](/lxmaster/api/classes/classecdev_1_1processimage#function-writebit)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, bool value) |
-| [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) | **[resolve](/lxmaster/api/classes/classecdev_1_1processimage#function-resolve)**(std::uint16_t index, std::uint8_t sub) const<br>Resolve a CoE object (index:sub) to a stable handle.  |
-| bool | **[readU8](/lxmaster/api/classes/classecdev_1_1processimage#function-readu8)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint8_t * out) const |
-| bool | **[readU32](/lxmaster/api/classes/classecdev_1_1processimage#function-readu32)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint32_t * out) const |
-| bool | **[readU16](/lxmaster/api/classes/classecdev_1_1processimage#function-readu16)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::uint16_t * out) const |
-| bool | **[readI8](/lxmaster/api/classes/classecdev_1_1processimage#function-readi8)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int8_t * out) const |
-| bool | **[readI32](/lxmaster/api/classes/classecdev_1_1processimage#function-readi32)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int32_t * out) const |
-| bool | **[readI16](/lxmaster/api/classes/classecdev_1_1processimage#function-readi16)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, std::int16_t * out) const |
-| bool | **[readBit](/lxmaster/api/classes/classecdev_1_1processimage#function-readbit)**(const [PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref) & ref, bool * out) const |
-| [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) | **[fromSlaveConfig](/lxmaster/api/classes/classecdev_1_1processimage#function-fromslaveconfig)**(const eni::SlaveConfig & slave)<br>Build the offset tables from an ENI slave (walks rx_pdos then tx_pdos in order).  |
-| const std::vector< [Entry](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry) > & | **[entries](/lxmaster/api/classes/classecdev_1_1processimage#function-entries)**() const |
-| void | **[bind](/lxmaster/api/classes/classecdev_1_1processimage#function-bind)**(std::uint8_t * outputs, std::size_t output_bytes, const std::uint8_t * inputs, std::size_t input_bytes)<br>Bind the live PDO byte buffers for the current cycle.  |
-| | **[ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage#function-processimage)**() =default |
+| bool | **[writeU8](/lxmaster/api/classes/ProcessImage#function-writeu8)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint8_t value) |
+| bool | **[writeU32](/lxmaster/api/classes/ProcessImage#function-writeu32)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint32_t value) |
+| bool | **[writeU16](/lxmaster/api/classes/ProcessImage#function-writeu16)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint16_t value) |
+| bool | **[writeI8](/lxmaster/api/classes/ProcessImage#function-writei8)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int8_t value) |
+| bool | **[writeI32](/lxmaster/api/classes/ProcessImage#function-writei32)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int32_t value) |
+| bool | **[writeI16](/lxmaster/api/classes/ProcessImage#function-writei16)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int16_t value) |
+| bool | **[writeBit](/lxmaster/api/classes/ProcessImage#function-writebit)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, bool value) |
+| [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) | **[resolve](/lxmaster/api/classes/ProcessImage#function-resolve)**(std::uint16_t index, std::uint8_t sub) const<br>Resolve a CoE object (index:sub) to a stable handle.  |
+| bool | **[readU8](/lxmaster/api/classes/ProcessImage#function-readu8)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint8_t * out) const |
+| bool | **[readU32](/lxmaster/api/classes/ProcessImage#function-readu32)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint32_t * out) const |
+| bool | **[readU16](/lxmaster/api/classes/ProcessImage#function-readu16)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::uint16_t * out) const |
+| bool | **[readI8](/lxmaster/api/classes/ProcessImage#function-readi8)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int8_t * out) const |
+| bool | **[readI32](/lxmaster/api/classes/ProcessImage#function-readi32)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int32_t * out) const |
+| bool | **[readI16](/lxmaster/api/classes/ProcessImage#function-readi16)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, std::int16_t * out) const |
+| bool | **[readBit](/lxmaster/api/classes/ProcessImage#function-readbit)**(const [PdoEntryRef](/lxmaster/api/classes/PdoEntryRef) & ref, bool * out) const |
+| [ProcessImage](/lxmaster/api/classes/ProcessImage) | **[fromSlaveConfig](/lxmaster/api/classes/ProcessImage#function-fromslaveconfig)**(const eni::SlaveConfig & slave)<br>Build the offset tables from an ENI slave (walks rx_pdos then tx_pdos in order).  |
+| const std::vector< [Entry](/lxmaster/api/classes/ProcessImage-Entry) > & | **[entries](/lxmaster/api/classes/ProcessImage#function-entries)**() const |
+| void | **[bind](/lxmaster/api/classes/ProcessImage#function-bind)**(std::uint8_t * outputs, std::size_t output_bytes, const std::uint8_t * inputs, std::size_t input_bytes)<br>Bind the live PDO byte buffers for the current cycle.  |
+| | **[ProcessImage](/lxmaster/api/classes/ProcessImage#function-processimage)**() =default |
 
 ## Detailed Description
 
@@ -53,9 +55,9 @@ class ecdev::ProcessImage;
 
 Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use. 
 
-It owns the offset tables derived from an ENI `<Slave>`'s RxPdo/TxPdo entry lists (CoE object index:sub and human name -> byte/bit offset) and binds, each cycle, to the live PDO byte buffers the backend exposes for that slave. Profiles `[resolve()](/lxmaster/api/classes/classecdev_1_1processimage#function-resolve)` the objects they care about once, then use the typed read/write helpers in `writeOutputs`/`readInputs`.
+It owns the offset tables derived from an ENI `<Slave>`'s RxPdo/TxPdo entry lists (CoE object index:sub and human name -> byte/bit offset) and binds, each cycle, to the live PDO byte buffers the backend exposes for that slave. Profiles `[resolve()](/lxmaster/api/classes/ProcessImage#function-resolve)` the objects they care about once, then use the typed read/write helpers in `writeOutputs`/`readInputs`.
 
-Deliberately holds NO backend types and no EtherCAT master reference: the only thing a profile can do through a [ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage) is shuffle bytes in the bound PDO window. That makes the RT path auditable &ndash; a profile physically cannot issue a blocking SDO from a cyclic hook. 
+Deliberately holds NO backend types and no EtherCAT master reference: the only thing a profile can do through a [ProcessImage](/lxmaster/api/classes/ProcessImage) is shuffle bytes in the bound PDO window. That makes the RT path auditable &ndash; a profile physically cannot issue a blocking SDO from a cyclic hook. 
 
 ## Public Functions Documentation
 

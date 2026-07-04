@@ -4,22 +4,24 @@
 title: ecnet::EcNetwork::SlaveSnapshot
 summary: Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing stop() does before master_->close()). 
 
+slug: /lxmaster/api/classes/EcNetwork-SlaveSnapshot
+sidebar_label: "SlaveSnapshot"
 ---
 
 # ecnet::EcNetwork::SlaveSnapshot
 
 
 
-Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)` does before `master_->close()`).  [More...](#detailed-description)
+Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` does before `master_->close()`).  [More...](#detailed-description)
 
 ## Public Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[valid](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1slavesnapshot#variable-valid)**  |
-| std::uint16_t | **[state](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1slavesnapshot#variable-state)**  |
-| bool | **[is_lost](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1slavesnapshot#variable-is-lost)**  |
-| std::uint16_t | **[al_statuscode](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1slavesnapshot#variable-al-statuscode)**  |
+| bool | **[valid](/lxmaster/api/classes/EcNetwork-SlaveSnapshot#variable-valid)**  |
+| std::uint16_t | **[state](/lxmaster/api/classes/EcNetwork-SlaveSnapshot#variable-state)**  |
+| bool | **[is_lost](/lxmaster/api/classes/EcNetwork-SlaveSnapshot#variable-is-lost)**  |
+| std::uint16_t | **[al_statuscode](/lxmaster/api/classes/EcNetwork-SlaveSnapshot#variable-al-statuscode)**  |
 
 ## Detailed Description
 
@@ -27,9 +29,9 @@ Snapshot of each slave's EtherCAT state + AL-status code taken while the master 
 struct ecnet::EcNetwork::SlaveSnapshot;
 ```
 
-Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)` does before `master_->close()`). 
+Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` does before `master_->close()`). 
 
-`[reportDeviceStatus()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-reportdevicestatus)` prints from this so the operator sees what the bus actually looked like at shutdown instead of the zeroed slave table you get after the NIC socket is closed. Index 0 is unused to match the backend's 1-based slave numbering. 
+`[reportDeviceStatus()](/lxmaster/api/classes/EcNetwork#function-reportdevicestatus)` prints from this so the operator sees what the bus actually looked like at shutdown instead of the zeroed slave table you get after the NIC socket is closed. Index 0 is unused to match the backend's 1-based slave numbering. 
 
 ## Public Attributes Documentation
 

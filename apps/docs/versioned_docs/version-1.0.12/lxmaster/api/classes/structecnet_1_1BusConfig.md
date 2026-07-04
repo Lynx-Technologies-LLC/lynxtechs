@@ -3,6 +3,8 @@
 ---
 title: ecnet::BusConfig
 
+slug: /lxmaster/api/classes/BusConfig
+sidebar_label: "BusConfig"
 ---
 
 # ecnet::BusConfig
@@ -15,9 +17,9 @@ title: ecnet::BusConfig
 
 |                | Name           |
 | -------------- | -------------- |
-| SyncMode | **[sync_mode](/lxmaster/api/classes/structecnet_1_1busconfig#variable-sync-mode)** <br>Resolved output, not an input: `EcNetwork::loadAndValidateEni` sets this from the ENI (DcSync0 when the bus carries a SYNC0 device, else SmEvent).  |
-| std::string | **[ifname](/lxmaster/api/classes/structecnet_1_1busconfig#variable-ifname)**  |
-| std::uint32_t | **[cycle_ns](/lxmaster/api/classes/structecnet_1_1busconfig#variable-cycle-ns)** <br>Cyclic period in ns.  |
+| SyncMode | **[sync_mode](/lxmaster/api/classes/BusConfig#variable-sync-mode)** <br>Resolved output, not an input: `EcNetwork::loadAndValidateEni` sets this from the ENI (DcSync0 when the bus carries a SYNC0 device, else SmEvent).  |
+| std::string | **[ifname](/lxmaster/api/classes/BusConfig#variable-ifname)**  |
+| std::uint32_t | **[cycle_ns](/lxmaster/api/classes/BusConfig#variable-cycle-ns)** <br>Cyclic period in ns.  |
 
 ## Public Attributes Documentation
 
@@ -47,7 +49,7 @@ std::uint32_t cycle_ns {0};
 
 Cyclic period in ns. 
 
-0 = unset until the ENI is loaded; `[EcNetwork](/lxmaster/api/classes/classecnet_1_1ecnetwork)` adopts the ENI's `<Config><Cyclic><CycleTime>` as the single source of truth. There is no CLI/code override. 
+0 = unset until the ENI is loaded; `[EcNetwork](/lxmaster/api/classes/EcNetwork)` adopts the ENI's `<Config><Cyclic><CycleTime>` as the single source of truth. There is no CLI/code override. 
 
 
 -------------------------------

@@ -3,6 +3,8 @@
 ---
 title: groups.dox
 
+slug: /lxmaster/api/files/groups_8dox
+sidebar_label: "groups.dox"
 ---
 
 # groups.dox

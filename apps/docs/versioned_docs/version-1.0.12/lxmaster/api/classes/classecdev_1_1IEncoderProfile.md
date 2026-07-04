@@ -4,6 +4,8 @@
 title: ecdev::IEncoderProfile
 summary: Facade-facing contract for an encoder / position sensor (CiA 406 family). 
 
+slug: /lxmaster/api/classes/IEncoderProfile
+sidebar_label: "IEncoderProfile"
 ---
 
 # ecdev::IEncoderProfile
@@ -15,16 +17,16 @@ Facade-facing contract for an encoder / position sensor (CiA 406 family).  [More
 
 `#include <encoder_profile.hpp>`
 
-Inherited by [ecdev::CiA406EncoderProfile](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile)
+Inherited by [ecdev::CiA406EncoderProfile](/lxmaster/api/classes/CiA406EncoderProfile)
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| virtual | **[~IEncoderProfile](/lxmaster/api/classes/classecdev_1_1iencoderprofile#function-~iencoderprofile)**() =default |
-| virtual std::int32_t | **[velocity](/lxmaster/api/classes/classecdev_1_1iencoderprofile#function-velocity)**() const =0<br>Latest velocity value, if the sensor maps one (otherwise 0).  |
-| virtual std::uint16_t | **[status](/lxmaster/api/classes/classecdev_1_1iencoderprofile#function-status)**() const =0<br>Raw status/operating-status word, if mapped (otherwise 0).  |
-| virtual std::int32_t | **[position](/lxmaster/api/classes/classecdev_1_1iencoderprofile#function-position)**() const =0<br>Latest position value (counts) from the sensor.  |
+| virtual | **[~IEncoderProfile](/lxmaster/api/classes/IEncoderProfile#function-~iencoderprofile)**() =default |
+| virtual std::int32_t | **[velocity](/lxmaster/api/classes/IEncoderProfile#function-velocity)**() const =0<br>Latest velocity value, if the sensor maps one (otherwise 0).  |
+| virtual std::uint16_t | **[status](/lxmaster/api/classes/IEncoderProfile#function-status)**() const =0<br>Raw status/operating-status word, if mapped (otherwise 0).  |
+| virtual std::int32_t | **[position](/lxmaster/api/classes/IEncoderProfile#function-position)**() const =0<br>Latest position value (counts) from the sensor.  |
 
 ## Detailed Description
 
@@ -53,7 +55,7 @@ virtual std::int32_t velocity() const =0
 
 Latest velocity value, if the sensor maps one (otherwise 0). 
 
-**Reimplemented by**: [ecdev::CiA406EncoderProfile::velocity](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-velocity)
+**Reimplemented by**: [ecdev::CiA406EncoderProfile::velocity](/lxmaster/api/classes/CiA406EncoderProfile#function-velocity)
 
 
 ### function status
@@ -64,7 +66,7 @@ virtual std::uint16_t status() const =0
 
 Raw status/operating-status word, if mapped (otherwise 0). 
 
-**Reimplemented by**: [ecdev::CiA406EncoderProfile::status](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-status)
+**Reimplemented by**: [ecdev::CiA406EncoderProfile::status](/lxmaster/api/classes/CiA406EncoderProfile#function-status)
 
 
 ### function position
@@ -75,7 +77,7 @@ virtual std::int32_t position() const =0
 
 Latest position value (counts) from the sensor. 
 
-**Reimplemented by**: [ecdev::CiA406EncoderProfile::position](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile#function-position)
+**Reimplemented by**: [ecdev::CiA406EncoderProfile::position](/lxmaster/api/classes/CiA406EncoderProfile#function-position)
 
 
 -------------------------------

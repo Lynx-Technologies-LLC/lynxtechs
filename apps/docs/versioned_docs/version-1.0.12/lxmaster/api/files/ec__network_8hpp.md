@@ -3,6 +3,8 @@
 ---
 title: libs/ecnet/include/ecnet/ec_network.hpp
 
+slug: /lxmaster/api/files/ec_network_8hpp
+sidebar_label: "libs/ecnet/include/ecnet/ec_network.hpp"
 ---
 
 # libs/ecnet/include/ecnet/ec_network.hpp
@@ -13,16 +15,16 @@ title: libs/ecnet/include/ecnet/ec_network.hpp
 
 | Name           |
 | -------------- |
-| **[ecnet](/lxmaster/api/namespaces/namespaceecnet)**  |
+| **[ecnet](/lxmaster/api/namespaces/ecnet)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecnet::EcNetwork::SyncTraceReport](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1synctracereport)** <br>Cached at `[stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`).  |
-| struct | **[ecnet::EcNetwork::JitterStats](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats)** <br>End-of-run jitter summary (populated by the cyclic thread).  |
-| struct | **[ecnet::EcNetwork::DcSyncStats](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1dcsyncstats)** <br>End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock).  |
-| class | **[ecnet::EcNetwork](/lxmaster/api/classes/classecnet_1_1ecnetwork)** <br>User-facing runtime facade for an EtherCAT network.  |
+| struct | **[ecnet::EcNetwork::SyncTraceReport](/lxmaster/api/classes/EcNetwork-SyncTraceReport)** <br>Cached at `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`).  |
+| struct | **[ecnet::EcNetwork::JitterStats](/lxmaster/api/classes/EcNetwork-JitterStats)** <br>End-of-run jitter summary (populated by the cyclic thread).  |
+| struct | **[ecnet::EcNetwork::DcSyncStats](/lxmaster/api/classes/EcNetwork-DcSyncStats)** <br>End-of-run DC-sync alignment summary (host wake vs reference-slave DC clock).  |
+| class | **[ecnet::EcNetwork](/lxmaster/api/classes/EcNetwork)** <br>User-facing runtime facade for an EtherCAT network.  |
 
 
 

@@ -4,13 +4,15 @@
 title: ecnet::EcNetwork::SyncTraceReport
 summary: Cached at stop() from the cyclic executor's sync trace ring (see NetworkConfig::sync_trace_capacity). 
 
+slug: /lxmaster/api/classes/EcNetwork-SyncTraceReport
+sidebar_label: "SyncTraceReport"
 ---
 
 # ecnet::EcNetwork::SyncTraceReport
 
 
 
-Cached at `[stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`). 
+Cached at `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`). 
 
 
 `#include <ec_network.hpp>`
@@ -19,10 +21,10 @@ Cached at `[stop()](/lxmaster/api/classes/classecnet_1_1ecnetwork#function-stop)
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint64_t | **[violation_count](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1synctracereport#variable-violation-count)** <br>Cycles where `|dc_delta|` exceeded `NetworkConfig::sync_trace_window_ns` (window == 0 ⇒ always 0).  |
-| std::uint64_t | **[total_writes](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1synctracereport#variable-total-writes)**  |
-| std::vector< SyncTraceSample > | **[samples](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1synctracereport#variable-samples)**  |
-| std::size_t | **[ring_capacity](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1synctracereport#variable-ring-capacity)**  |
+| std::uint64_t | **[violation_count](/lxmaster/api/classes/EcNetwork-SyncTraceReport#variable-violation-count)** <br>Cycles where `|dc_delta|` exceeded `NetworkConfig::sync_trace_window_ns` (window == 0 ⇒ always 0).  |
+| std::uint64_t | **[total_writes](/lxmaster/api/classes/EcNetwork-SyncTraceReport#variable-total-writes)**  |
+| std::vector< SyncTraceSample > | **[samples](/lxmaster/api/classes/EcNetwork-SyncTraceReport#variable-samples)**  |
+| std::size_t | **[ring_capacity](/lxmaster/api/classes/EcNetwork-SyncTraceReport#variable-ring-capacity)**  |
 
 ## Public Attributes Documentation
 

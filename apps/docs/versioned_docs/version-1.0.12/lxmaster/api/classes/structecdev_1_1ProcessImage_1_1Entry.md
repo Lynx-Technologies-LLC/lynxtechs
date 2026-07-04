@@ -4,6 +4,8 @@
 title: ecdev::ProcessImage::Entry
 summary: All resolved entries, in image order (diagnostics / enumeration by facades). 
 
+slug: /lxmaster/api/classes/ProcessImage-Entry
+sidebar_label: "Entry"
 ---
 
 # ecdev::ProcessImage::Entry
@@ -19,12 +21,12 @@ All resolved entries, in image order (diagnostics / enumeration by facades).
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint8_t | **[sub_index](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-sub-index)**  |
-| bool | **[is_output](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-is-output)**  |
-| std::uint16_t | **[index](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-index)**  |
-| std::uint32_t | **[byte_offset](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-byte-offset)**  |
-| std::uint8_t | **[bit_offset](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-bit-offset)**  |
-| std::uint8_t | **[bit_len](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry#variable-bit-len)**  |
+| std::uint8_t | **[sub_index](/lxmaster/api/classes/ProcessImage-Entry#variable-sub-index)**  |
+| bool | **[is_output](/lxmaster/api/classes/ProcessImage-Entry#variable-is-output)**  |
+| std::uint16_t | **[index](/lxmaster/api/classes/ProcessImage-Entry#variable-index)**  |
+| std::uint32_t | **[byte_offset](/lxmaster/api/classes/ProcessImage-Entry#variable-byte-offset)**  |
+| std::uint8_t | **[bit_offset](/lxmaster/api/classes/ProcessImage-Entry#variable-bit-offset)**  |
+| std::uint8_t | **[bit_len](/lxmaster/api/classes/ProcessImage-Entry#variable-bit-len)**  |
 
 ## Public Attributes Documentation
 

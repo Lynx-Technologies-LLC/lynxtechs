@@ -3,6 +3,8 @@
 ---
 title: ecnet::SyncTraceSample
 
+slug: /lxmaster/api/classes/SyncTraceSample
+sidebar_label: "SyncTraceSample"
 ---
 
 # ecnet::SyncTraceSample
@@ -15,15 +17,15 @@ title: ecnet::SyncTraceSample
 
 |                | Name           |
 | -------------- | -------------- |
-| std::int64_t | **[toff_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-toff-ns)**  |
-| std::uint64_t | **[rt_cycle](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-rt-cycle)**  |
-| SyncTracePhase | **[phase](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-phase)**  |
-| std::uint64_t | **[operational_cycle_seq](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-operational-cycle-seq)**  |
-| std::int64_t | **[jitter_err_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-jitter-err-ns)**  |
-| std::int64_t | **[integral_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-integral-ns)**  |
-| std::int64_t | **[expected_dc_reftime_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-expected-dc-reftime-ns)**  |
-| std::int64_t | **[dc_reftime_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-dc-reftime-ns)**  |
-| std::int64_t | **[dc_delta_ns](/lxmaster/api/classes/structecnet_1_1synctracesample#variable-dc-delta-ns)**  |
+| std::int64_t | **[toff_ns](/lxmaster/api/classes/SyncTraceSample#variable-toff-ns)**  |
+| std::uint64_t | **[rt_cycle](/lxmaster/api/classes/SyncTraceSample#variable-rt-cycle)**  |
+| SyncTracePhase | **[phase](/lxmaster/api/classes/SyncTraceSample#variable-phase)**  |
+| std::uint64_t | **[operational_cycle_seq](/lxmaster/api/classes/SyncTraceSample#variable-operational-cycle-seq)**  |
+| std::int64_t | **[jitter_err_ns](/lxmaster/api/classes/SyncTraceSample#variable-jitter-err-ns)**  |
+| std::int64_t | **[integral_ns](/lxmaster/api/classes/SyncTraceSample#variable-integral-ns)**  |
+| std::int64_t | **[expected_dc_reftime_ns](/lxmaster/api/classes/SyncTraceSample#variable-expected-dc-reftime-ns)**  |
+| std::int64_t | **[dc_reftime_ns](/lxmaster/api/classes/SyncTraceSample#variable-dc-reftime-ns)**  |
+| std::int64_t | **[dc_delta_ns](/lxmaster/api/classes/SyncTraceSample#variable-dc-delta-ns)**  |
 
 ## Public Attributes Documentation
 

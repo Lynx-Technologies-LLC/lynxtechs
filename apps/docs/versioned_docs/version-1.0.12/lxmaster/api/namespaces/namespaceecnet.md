@@ -3,6 +3,8 @@
 ---
 title: ecnet
 
+slug: /lxmaster/api/namespaces/ecnet
+sidebar_label: "ecnet"
 ---
 
 # ecnet
@@ -13,36 +15,36 @@ title: ecnet
 
 | Name           |
 | -------------- |
-| **[ecnet::diag](/lxmaster/api/namespaces/namespaceecnet_1_1diag)** <br>SAFE_OP bring-up diagnostics, split from the logging layer: each `probe*` reads the bus into a plain report struct, and `format()` renders it.  |
+| **[ecnet::diag](/lxmaster/api/namespaces/ecnet-diag)** <br>SAFE_OP bring-up diagnostics, split from the logging layer: each `probe*` reads the bus into a plain report struct, and `format()` renders it.  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecnet::SyncTraceSample](/lxmaster/api/classes/structecnet_1_1synctracesample)**  |
-| struct | **[ecnet::ShutdownConfig](/lxmaster/api/classes/structecnet_1_1shutdownconfig)**  |
-| struct | **[ecnet::RtConfig](/lxmaster/api/classes/structecnet_1_1rtconfig)**  |
-| struct | **[ecnet::NetworkConfig](/lxmaster/api/classes/structecnet_1_1networkconfig)** <br>User-facing configuration for an [EcNetwork]().  |
-| struct | **[ecnet::LostSlave](/lxmaster/api/classes/structecnet_1_1lostslave)** <br>One slave that stopped responding when the bus fault was diagnosed.  |
-| struct | **[ecnet::EniConfig](/lxmaster/api/classes/structecnet_1_1eniconfig)** <br>ENI-driven configuration.  |
-| class | **[ecnet::EcNetwork](/lxmaster/api/classes/classecnet_1_1ecnetwork)** <br>User-facing runtime facade for an EtherCAT network.  |
-| struct | **[ecnet::DebugConfig](/lxmaster/api/classes/structecnet_1_1debugconfig)** <br>Runtime logging configuration.  |
-| struct | **[ecnet::DcConfig](/lxmaster/api/classes/structecnet_1_1dcconfig)**  |
-| struct | **[ecnet::BusFault](/lxmaster/api/classes/structecnet_1_1busfault)** <br>Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`).  |
-| struct | **[ecnet::BusConfig](/lxmaster/api/classes/structecnet_1_1busconfig)**  |
+| struct | **[ecnet::SyncTraceSample](/lxmaster/api/classes/SyncTraceSample)**  |
+| struct | **[ecnet::ShutdownConfig](/lxmaster/api/classes/ShutdownConfig)**  |
+| struct | **[ecnet::RtConfig](/lxmaster/api/classes/RtConfig)**  |
+| struct | **[ecnet::NetworkConfig](/lxmaster/api/classes/NetworkConfig)** <br>User-facing configuration for an [EcNetwork]().  |
+| struct | **[ecnet::LostSlave](/lxmaster/api/classes/LostSlave)** <br>One slave that stopped responding when the bus fault was diagnosed.  |
+| struct | **[ecnet::EniConfig](/lxmaster/api/classes/EniConfig)** <br>ENI-driven configuration.  |
+| class | **[ecnet::EcNetwork](/lxmaster/api/classes/EcNetwork)** <br>User-facing runtime facade for an EtherCAT network.  |
+| struct | **[ecnet::DebugConfig](/lxmaster/api/classes/DebugConfig)** <br>Runtime logging configuration.  |
+| struct | **[ecnet::DcConfig](/lxmaster/api/classes/DcConfig)**  |
+| struct | **[ecnet::BusFault](/lxmaster/api/classes/BusFault)** <br>Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`).  |
+| struct | **[ecnet::BusConfig](/lxmaster/api/classes/BusConfig)**  |
 
 ## Types
 
 |                | Name           |
 | -------------- | -------------- |
-| enum class std::uint8_t | **[SyncTracePhase](/lxmaster/api/namespaces/namespaceecnet#enum-synctracephase)** { Warmup = 0, Shutdown = 4, Operational = 3, DcGate = 1, Cooldown = 2} |
-| using ecdev::SyncMode | **[SyncMode](/lxmaster/api/namespaces/namespaceecnet#using-syncmode)** <br>Re-exported here so callers only need `[ecnet/network_config.hpp]`.  |
+| enum class std::uint8_t | **[SyncTracePhase](/lxmaster/api/namespaces/ecnet#enum-synctracephase)** { Warmup = 0, Shutdown = 4, Operational = 3, DcGate = 1, Cooldown = 2} |
+| using ecdev::SyncMode | **[SyncMode](/lxmaster/api/namespaces/ecnet#using-syncmode)** <br>Re-exported here so callers only need `[ecnet/network_config.hpp]`.  |
 
 ## Attributes
 
 |                | Name           |
 | -------------- | -------------- |
-| constexpr std::int32_t | **[kDcSyncBusyWaitAuto](/lxmaster/api/namespaces/namespaceecnet#variable-kdcsyncbusywaitauto)** <br>Pass to `DcConfig::dc_sync_busy_wait_ns` to use `bus.cycle_ns / 4`.  |
+| constexpr std::int32_t | **[kDcSyncBusyWaitAuto](/lxmaster/api/namespaces/ecnet#variable-kdcsyncbusywaitauto)** <br>Pass to `DcConfig::dc_sync_busy_wait_ns` to use `bus.cycle_ns / 4`.  |
 
 ## Types Documentation
 

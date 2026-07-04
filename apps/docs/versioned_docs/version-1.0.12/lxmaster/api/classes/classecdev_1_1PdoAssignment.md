@@ -4,6 +4,8 @@
 title: ecdev::PdoAssignment
 summary: Generic, ENI-driven CoE PDO assignment. 
 
+slug: /lxmaster/api/classes/PdoAssignment
+sidebar_label: "PdoAssignment"
 ---
 
 # ecdev::PdoAssignment
@@ -19,18 +21,18 @@ Generic, ENI-driven CoE PDO assignment.  [More...](#detailed-description)
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[SmGroup](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1smgroup)**  |
-| struct | **[PdoPlan](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1pdoplan)**  |
+| struct | **[SmGroup](/lxmaster/api/classes/PdoAssignment-SmGroup)**  |
+| struct | **[PdoPlan](/lxmaster/api/classes/PdoAssignment-PdoPlan)**  |
 
 ## Public Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[verify](/lxmaster/api/classes/classecdev_1_1pdoassignment#function-verify)**(ISlaveServices & svc) const<br>Read back assignment + mapping counts to confirm the plan is active.  |
-| [PdoAssignment](/lxmaster/api/classes/classecdev_1_1pdoassignment) | **[fromSlaveConfig](/lxmaster/api/classes/classecdev_1_1pdoassignment#function-fromslaveconfig)**(const eni::SlaveConfig & slave)<br>Build the assignment plan from an ENI slave (its sync managers + rx/tx PDOs).  |
-| int | **[expectedWkc](/lxmaster/api/classes/classecdev_1_1pdoassignment#function-expectedwkc)**() const<br>Aggregate WKC expected from `[apply()]()` when every SDO succeeds once.  |
-| bool | **[empty](/lxmaster/api/classes/classecdev_1_1pdoassignment#function-empty)**() const<br>True when there is at least one mapped data SM to program.  |
-| int | **[apply](/lxmaster/api/classes/classecdev_1_1pdoassignment#function-apply)**(ISlaveServices & svc) const<br>Program the assignment over CoE.  |
+| bool | **[verify](/lxmaster/api/classes/PdoAssignment#function-verify)**(ISlaveServices & svc) const<br>Read back assignment + mapping counts to confirm the plan is active.  |
+| [PdoAssignment](/lxmaster/api/classes/PdoAssignment) | **[fromSlaveConfig](/lxmaster/api/classes/PdoAssignment#function-fromslaveconfig)**(const eni::SlaveConfig & slave)<br>Build the assignment plan from an ENI slave (its sync managers + rx/tx PDOs).  |
+| int | **[expectedWkc](/lxmaster/api/classes/PdoAssignment#function-expectedwkc)**() const<br>Aggregate WKC expected from `[apply()]()` when every SDO succeeds once.  |
+| bool | **[empty](/lxmaster/api/classes/PdoAssignment#function-empty)**() const<br>True when there is at least one mapped data SM to program.  |
+| int | **[apply](/lxmaster/api/classes/PdoAssignment#function-apply)**(ISlaveServices & svc) const<br>Program the assignment over CoE.  |
 
 ## Detailed Description
 
@@ -42,7 +44,7 @@ Generic, ENI-driven CoE PDO assignment.
 
 Programs each data SyncManager's assignment object (0x1C1x) and the contained mapping objects (0x16xx RxPDO / 0x1Axx TxPDO) to EXACTLY what the ENI `<Slave>` describes &ndash; for any CoE device, not just CiA402 drives. This replaces the hardcoded 0x1600/0x1A00 remap that used to live in `CiA402Device`/`CiA402PdoCodec`.
 
-It is applied generically by `[GenericEniDevice]` in the PreOP PO2SO hook, before the device profile's own configuration. The backend's config-map step then computes the SM lengths, FMMUs, and the logical process image from the assignment we just programmed &ndash; so the byte offsets in the `[ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage)` (also derived from the same ENI PDOs) line up with the live IOmap.
+It is applied generically by `[GenericEniDevice]` in the PreOP PO2SO hook, before the device profile's own configuration. The backend's config-map step then computes the SM lengths, FMMUs, and the logical process image from the assignment we just programmed &ndash; so the byte offsets in the `[ProcessImage](/lxmaster/api/classes/ProcessImage)` (also derived from the same ENI PDOs) line up with the live IOmap.
 
 Reaches the master only through `[ISlaveServices]` (no backend types here). 
 

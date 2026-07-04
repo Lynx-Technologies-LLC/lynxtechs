@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/family_profile.hpp
 
+slug: /lxmaster/api/files/family_profile_8hpp
+sidebar_label: "libs/devices/include/devices/family_profile.hpp"
 ---
 
 # libs/devices/include/devices/family_profile.hpp
@@ -13,7 +15,7 @@ title: libs/devices/include/devices/family_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 
 

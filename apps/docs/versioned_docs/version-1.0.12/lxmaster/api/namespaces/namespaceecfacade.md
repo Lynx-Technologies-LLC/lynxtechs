@@ -3,6 +3,8 @@
 ---
 title: ecfacade
 
+slug: /lxmaster/api/namespaces/ecfacade
+sidebar_label: "ecfacade"
 ---
 
 # ecfacade
@@ -13,11 +15,11 @@ title: ecfacade
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecfacade::IoModule](/lxmaster/api/classes/classecfacade_1_1iomodule)** <br>High-level digital/analog I/O handle.  |
-| class | **[ecfacade::GenericDevice](/lxmaster/api/classes/classecfacade_1_1genericdevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/classecfacade_1_1iomodule)`, or `[Encoder]()`) &ndash; e.g.  |
-| class | **[ecfacade::Encoder](/lxmaster/api/classes/classecfacade_1_1encoder)** <br>High-level encoder handle.  |
-| class | **[ecfacade::DeviceFacade](/lxmaster/api/classes/classecfacade_1_1devicefacade)** <br>Shared base for every application-facing device handle ([IoModule](/lxmaster/api/classes/classecfacade_1_1iomodule), [Axis](), [Encoder](/lxmaster/api/classes/classecfacade_1_1encoder)).  |
-| class | **[ecfacade::Axis](/lxmaster/api/classes/classecfacade_1_1axis)** <br>High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis".  |
+| class | **[ecfacade::IoModule](/lxmaster/api/classes/IoModule)** <br>High-level digital/analog I/O handle.  |
+| class | **[ecfacade::GenericDevice](/lxmaster/api/classes/GenericDevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g.  |
+| class | **[ecfacade::Encoder](/lxmaster/api/classes/Encoder)** <br>High-level encoder handle.  |
+| class | **[ecfacade::DeviceFacade](/lxmaster/api/classes/DeviceFacade)** <br>Shared base for every application-facing device handle ([IoModule](/lxmaster/api/classes/IoModule), [Axis](), [Encoder](/lxmaster/api/classes/Encoder)).  |
+| class | **[ecfacade::Axis](/lxmaster/api/classes/Axis)** <br>High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis".  |
 
 
 

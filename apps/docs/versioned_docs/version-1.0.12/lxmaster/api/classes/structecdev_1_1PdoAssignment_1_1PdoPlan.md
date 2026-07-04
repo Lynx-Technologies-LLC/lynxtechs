@@ -3,6 +3,8 @@
 ---
 title: ecdev::PdoAssignment::PdoPlan
 
+slug: /lxmaster/api/classes/PdoAssignment-PdoPlan
+sidebar_label: "PdoPlan"
 ---
 
 # ecdev::PdoAssignment::PdoPlan
@@ -15,8 +17,8 @@ title: ecdev::PdoAssignment::PdoPlan
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint16_t | **[index](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1pdoplan#variable-index)** <br>Mapping object index (0x16xx / 0x1Axx).  |
-| std::vector< std::uint32_t > | **[entries](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1pdoplan#variable-entries)** <br>Packed mapping words (index<<16|sub<<8|bitlen).  |
+| std::uint16_t | **[index](/lxmaster/api/classes/PdoAssignment-PdoPlan#variable-index)** <br>Mapping object index (0x16xx / 0x1Axx).  |
+| std::vector< std::uint32_t > | **[entries](/lxmaster/api/classes/PdoAssignment-PdoPlan#variable-entries)** <br>Packed mapping words (index<<16|sub<<8|bitlen).  |
 
 ## Public Attributes Documentation
 

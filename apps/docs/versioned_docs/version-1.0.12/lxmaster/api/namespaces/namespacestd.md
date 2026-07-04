@@ -4,6 +4,8 @@
 title: std
 summary: STL namespace. 
 
+slug: /lxmaster/api/namespaces/std
+sidebar_label: "std"
 ---
 
 # std

@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/pdo_assignment.hpp
 
+slug: /lxmaster/api/files/pdo_assignment_8hpp
+sidebar_label: "libs/devices/include/devices/pdo_assignment.hpp"
 ---
 
 # libs/devices/include/devices/pdo_assignment.hpp
@@ -13,15 +15,15 @@ title: libs/devices/include/devices/pdo_assignment.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecdev::PdoAssignment::SmGroup](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1smgroup)**  |
-| struct | **[ecdev::PdoAssignment::PdoPlan](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1pdoplan)**  |
-| class | **[ecdev::PdoAssignment](/lxmaster/api/classes/classecdev_1_1pdoassignment)** <br>Generic, ENI-driven CoE PDO assignment.  |
+| struct | **[ecdev::PdoAssignment::SmGroup](/lxmaster/api/classes/PdoAssignment-SmGroup)**  |
+| struct | **[ecdev::PdoAssignment::PdoPlan](/lxmaster/api/classes/PdoAssignment-PdoPlan)**  |
+| class | **[ecdev::PdoAssignment](/lxmaster/api/classes/PdoAssignment)** <br>Generic, ENI-driven CoE PDO assignment.  |
 
 
 

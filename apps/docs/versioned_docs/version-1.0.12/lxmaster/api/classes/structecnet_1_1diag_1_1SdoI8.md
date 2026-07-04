@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::SdoI8
 
+slug: /lxmaster/api/classes/diag-SdoI8
+sidebar_label: "SdoI8"
 ---
 
 # ecnet::diag::SdoI8
@@ -15,8 +17,8 @@ title: ecnet::diag::SdoI8
 
 |                | Name           |
 | -------------- | -------------- |
-| std::int8_t | **[value](/lxmaster/api/classes/structecnet_1_1diag_1_1sdoi8#variable-value)**  |
-| bool | **[present](/lxmaster/api/classes/structecnet_1_1diag_1_1sdoi8#variable-present)**  |
+| std::int8_t | **[value](/lxmaster/api/classes/diag-SdoI8#variable-value)**  |
+| bool | **[present](/lxmaster/api/classes/diag-SdoI8#variable-present)**  |
 
 ## Public Attributes Documentation
 

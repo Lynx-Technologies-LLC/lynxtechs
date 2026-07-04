@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/identity_profile.hpp
 
+slug: /lxmaster/api/files/identity_profile_8hpp
+sidebar_label: "libs/devices/include/devices/identity_profile.hpp"
 ---
 
 # libs/devices/include/devices/identity_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/identity_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecdev::DeviceIdentityMatch](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch)** <br>Exact device identity a device class serves.  |
+| struct | **[ecdev::DeviceIdentityMatch](/lxmaster/api/classes/DeviceIdentityMatch)** <br>Exact device identity a device class serves.  |
 
 
 

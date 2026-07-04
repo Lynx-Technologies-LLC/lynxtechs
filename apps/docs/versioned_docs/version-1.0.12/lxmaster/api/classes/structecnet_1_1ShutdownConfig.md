@@ -3,6 +3,8 @@
 ---
 title: ecnet::ShutdownConfig
 
+slug: /lxmaster/api/classes/ShutdownConfig
+sidebar_label: "ShutdownConfig"
 ---
 
 # ecnet::ShutdownConfig
@@ -15,11 +17,11 @@ title: ecnet::ShutdownConfig
 
 |                | Name           |
 | -------------- | -------------- |
-| int | **[safeop_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-safeop-timeout-ms)**  |
-| int | **[post_sod_settle_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-post-sod-settle-ms)**  |
-| int | **[device_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-device-timeout-ms)**  |
-| int | **[al_state_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-al-state-timeout-ms)**  |
-| int | **[al_gate_timeout_ms](/lxmaster/api/classes/structecnet_1_1shutdownconfig#variable-al-gate-timeout-ms)**  |
+| int | **[safeop_timeout_ms](/lxmaster/api/classes/ShutdownConfig#variable-safeop-timeout-ms)**  |
+| int | **[post_sod_settle_ms](/lxmaster/api/classes/ShutdownConfig#variable-post-sod-settle-ms)**  |
+| int | **[device_timeout_ms](/lxmaster/api/classes/ShutdownConfig#variable-device-timeout-ms)**  |
+| int | **[al_state_timeout_ms](/lxmaster/api/classes/ShutdownConfig#variable-al-state-timeout-ms)**  |
+| int | **[al_gate_timeout_ms](/lxmaster/api/classes/ShutdownConfig#variable-al-gate-timeout-ms)**  |
 
 ## Public Attributes Documentation
 

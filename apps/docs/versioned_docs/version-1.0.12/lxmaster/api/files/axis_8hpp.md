@@ -3,6 +3,8 @@
 ---
 title: libs/facade/include/facade/axis.hpp
 
+slug: /lxmaster/api/files/axis_8hpp
+sidebar_label: "libs/facade/include/facade/axis.hpp"
 ---
 
 # libs/facade/include/facade/axis.hpp
@@ -13,13 +15,13 @@ title: libs/facade/include/facade/axis.hpp
 
 | Name           |
 | -------------- |
-| **[ecfacade](/lxmaster/api/namespaces/namespaceecfacade)**  |
+| **[ecfacade](/lxmaster/api/namespaces/ecfacade)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecfacade::Axis](/lxmaster/api/classes/classecfacade_1_1axis)** <br>High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis".  |
+| class | **[ecfacade::Axis](/lxmaster/api/classes/Axis)** <br>High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis".  |
 
 
 

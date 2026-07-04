@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::StrictSyncReport
 
+slug: /lxmaster/api/classes/diag-StrictSyncReport
+sidebar_label: "StrictSyncReport"
 ---
 
 # ecnet::diag::StrictSyncReport
@@ -15,8 +17,8 @@ title: ecnet::diag::StrictSyncReport
 
 |                | Name           |
 | -------------- | -------------- |
-| std::vector< StrictSyncSlave > | **[slaves](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncreport#variable-slaves)**  |
-| bool | **[ok](/lxmaster/api/classes/structecnet_1_1diag_1_1strictsyncreport#variable-ok)**  |
+| std::vector< StrictSyncSlave > | **[slaves](/lxmaster/api/classes/diag-StrictSyncReport#variable-slaves)**  |
+| bool | **[ok](/lxmaster/api/classes/diag-StrictSyncReport#variable-ok)**  |
 
 ## Public Attributes Documentation
 

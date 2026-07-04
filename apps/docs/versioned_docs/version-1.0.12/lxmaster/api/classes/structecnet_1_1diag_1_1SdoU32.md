@@ -3,6 +3,8 @@
 ---
 title: ecnet::diag::SdoU32
 
+slug: /lxmaster/api/classes/diag-SdoU32
+sidebar_label: "SdoU32"
 ---
 
 # ecnet::diag::SdoU32
@@ -15,8 +17,8 @@ title: ecnet::diag::SdoU32
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint32_t | **[value](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou32#variable-value)**  |
-| bool | **[present](/lxmaster/api/classes/structecnet_1_1diag_1_1sdou32#variable-present)**  |
+| std::uint32_t | **[value](/lxmaster/api/classes/diag-SdoU32#variable-value)**  |
+| bool | **[present](/lxmaster/api/classes/diag-SdoU32#variable-present)**  |
 
 ## Public Attributes Documentation
 

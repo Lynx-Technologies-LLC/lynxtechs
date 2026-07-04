@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/device_profile.hpp
 
+slug: /lxmaster/api/files/device_profile_8hpp
+sidebar_label: "libs/devices/include/devices/device_profile.hpp"
 ---
 
 # libs/devices/include/devices/device_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/device_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile)** <br>Device-class behaviour plugged onto a `[GenericEniDevice]`.  |
+| class | **[ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)** <br>Device-class behaviour plugged onto a `[GenericEniDevice]`.  |
 
 
 

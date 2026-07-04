@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/cia402_drive_profile.hpp
 
+slug: /lxmaster/api/files/cia402_drive_profile_8hpp
+sidebar_label: "libs/devices/include/devices/cia402_drive_profile.hpp"
 ---
 
 # libs/devices/include/devices/cia402_drive_profile.hpp
@@ -13,14 +15,14 @@ title: libs/devices/include/devices/cia402_drive_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecdev::CiA402DriveProfile::Config](/lxmaster/api/classes/structecdev_1_1cia402driveprofile_1_1config)**  |
-| class | **[ecdev::CiA402DriveProfile](/lxmaster/api/classes/classecdev_1_1cia402driveprofile)** <br>CiA 402 (CANopen-over-EtherCAT) servo-drive profile.  |
+| struct | **[ecdev::CiA402DriveProfile::Config](/lxmaster/api/classes/CiA402DriveProfile-Config)**  |
+| class | **[ecdev::CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfile)** <br>CiA 402 (CANopen-over-EtherCAT) servo-drive profile.  |
 
 
 

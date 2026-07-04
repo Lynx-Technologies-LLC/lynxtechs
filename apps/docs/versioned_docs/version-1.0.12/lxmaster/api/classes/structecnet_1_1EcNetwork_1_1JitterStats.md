@@ -4,6 +4,8 @@
 title: ecnet::EcNetwork::JitterStats
 summary: End-of-run jitter summary (populated by the cyclic thread). 
 
+slug: /lxmaster/api/classes/EcNetwork-JitterStats
+sidebar_label: "JitterStats"
 ---
 
 # ecnet::EcNetwork::JitterStats
@@ -19,11 +21,11 @@ End-of-run jitter summary (populated by the cyclic thread).
 
 |                | Name           |
 | -------------- | -------------- |
-| std::uint64_t | **[samples](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats#variable-samples)**  |
-| std::int64_t | **[min_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats#variable-min-ns)**  |
-| std::int64_t | **[mean_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats#variable-mean-ns)**  |
-| std::int64_t | **[mean_abs_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats#variable-mean-abs-ns)**  |
-| std::int64_t | **[max_ns](/lxmaster/api/classes/structecnet_1_1ecnetwork_1_1jitterstats#variable-max-ns)**  |
+| std::uint64_t | **[samples](/lxmaster/api/classes/EcNetwork-JitterStats#variable-samples)**  |
+| std::int64_t | **[min_ns](/lxmaster/api/classes/EcNetwork-JitterStats#variable-min-ns)**  |
+| std::int64_t | **[mean_ns](/lxmaster/api/classes/EcNetwork-JitterStats#variable-mean-ns)**  |
+| std::int64_t | **[mean_abs_ns](/lxmaster/api/classes/EcNetwork-JitterStats#variable-mean-abs-ns)**  |
+| std::int64_t | **[max_ns](/lxmaster/api/classes/EcNetwork-JitterStats#variable-max-ns)**  |
 
 ## Public Attributes Documentation
 

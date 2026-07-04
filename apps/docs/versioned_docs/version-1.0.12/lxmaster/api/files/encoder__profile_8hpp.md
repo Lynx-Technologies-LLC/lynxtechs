@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/encoder_profile.hpp
 
+slug: /lxmaster/api/files/encoder_profile_8hpp
+sidebar_label: "libs/devices/include/devices/encoder_profile.hpp"
 ---
 
 # libs/devices/include/devices/encoder_profile.hpp
@@ -13,13 +15,13 @@ title: libs/devices/include/devices/encoder_profile.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| class | **[ecdev::IEncoderProfile](/lxmaster/api/classes/classecdev_1_1iencoderprofile)** <br>Facade-facing contract for an encoder / position sensor (CiA 406 family).  |
+| class | **[ecdev::IEncoderProfile](/lxmaster/api/classes/IEncoderProfile)** <br>Facade-facing contract for an encoder / position sensor (CiA 406 family).  |
 
 
 

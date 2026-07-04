@@ -3,6 +3,8 @@
 ---
 title: libs/devices/include/devices/process_image.hpp
 
+slug: /lxmaster/api/files/process_image_8hpp
+sidebar_label: "libs/devices/include/devices/process_image.hpp"
 ---
 
 # libs/devices/include/devices/process_image.hpp
@@ -13,15 +15,15 @@ title: libs/devices/include/devices/process_image.hpp
 
 | Name           |
 | -------------- |
-| **[ecdev](/lxmaster/api/namespaces/namespaceecdev)**  |
+| **[ecdev](/lxmaster/api/namespaces/ecdev)**  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecdev::ProcessImage::Entry](/lxmaster/api/classes/structecdev_1_1processimage_1_1entry)** <br>All resolved entries, in image order (diagnostics / enumeration by facades).  |
-| class | **[ecdev::ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage)** <br>Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use.  |
-| struct | **[ecdev::PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref)** <br>Resolved location of one mapped CoE object inside a slave's process image.  |
+| struct | **[ecdev::ProcessImage::Entry](/lxmaster/api/classes/ProcessImage-Entry)** <br>All resolved entries, in image order (diagnostics / enumeration by facades).  |
+| class | **[ecdev::ProcessImage](/lxmaster/api/classes/ProcessImage)** <br>Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use.  |
+| struct | **[ecdev::PdoEntryRef](/lxmaster/api/classes/PdoEntryRef)** <br>Resolved location of one mapped CoE object inside a slave's process image.  |
 
 
 

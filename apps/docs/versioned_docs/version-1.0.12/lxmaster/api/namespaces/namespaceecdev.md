@@ -3,6 +3,8 @@
 ---
 title: ecdev
 
+slug: /lxmaster/api/namespaces/ecdev
+sidebar_label: "ecdev"
 ---
 
 # ecdev
@@ -13,46 +15,46 @@ title: ecdev
 
 | Name           |
 | -------------- |
-| **[ecdev::claim_score](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score)** <br>Claim-score tiers for `[IProfileFactory::claim]()`.  |
+| **[ecdev::claim_score](/lxmaster/api/namespaces/ecdev-claim_score)** <br>Claim-score tiers for `[IProfileFactory::claim]()`.  |
 
 ## Classes
 
 |                | Name           |
 | -------------- | -------------- |
-| struct | **[ecdev::ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput)** <br>Inputs a factory uses to decide on and build a profile for one ENI slave.  |
-| class | **[ecdev::ProfileRegistry](/lxmaster/api/classes/classecdev_1_1profileregistry)** <br>Registry of `[IProfileFactory]()` plugins.  |
-| class | **[ecdev::ProcessImage](/lxmaster/api/classes/classecdev_1_1processimage)** <br>Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use.  |
-| struct | **[ecdev::PdoEntryRef](/lxmaster/api/classes/structecdev_1_1pdoentryref)** <br>Resolved location of one mapped CoE object inside a slave's process image.  |
-| class | **[ecdev::PdoAssignment](/lxmaster/api/classes/classecdev_1_1pdoassignment)** <br>Generic, ENI-driven CoE PDO assignment.  |
-| class | **[ecdev::IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory)** <br>Builds the device-class profile for one slave.  |
-| class | **[ecdev::IMotionProfile](/lxmaster/api/classes/classecdev_1_1imotionprofile)** <br>Facade-facing contract for a motion (drive) device.  |
-| class | **[ecdev::IIoProfile](/lxmaster/api/classes/classecdev_1_1iioprofile)** <br>Facade-facing contract for a digital/analog I/O device (CiA 401 family).  |
-| class | **[ecdev::IEncoderProfile](/lxmaster/api/classes/classecdev_1_1iencoderprofile)** <br>Facade-facing contract for an encoder / position sensor (CiA 406 family).  |
-| class | **[ecdev::IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile)** <br>Device-class behaviour plugged onto a `[GenericEniDevice]`.  |
-| class | **[ecdev::GenericIoProfile](/lxmaster/api/classes/classecdev_1_1genericioprofile)** <br>Protocol-agnostic digital/analog I/O profile.  |
-| struct | **[ecdev::DeviceIdentityMatch](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch)** <br>Exact device identity a device class serves.  |
-| class | **[ecdev::CiA406EncoderProfile](/lxmaster/api/classes/classecdev_1_1cia406encoderprofile)** <br>CiA 406 (encoder) profile.  |
-| class | **[ecdev::CiA402DriveProfile](/lxmaster/api/classes/classecdev_1_1cia402driveprofile)** <br>CiA 402 (CANopen-over-EtherCAT) servo-drive profile.  |
-| class | **[ecdev::CiA401IoProfile](/lxmaster/api/classes/classecdev_1_1cia401ioprofile)** <br>CiA 401 (CANopen generic I/O) profile.  |
+| struct | **[ecdev::ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput)** <br>Inputs a factory uses to decide on and build a profile for one ENI slave.  |
+| class | **[ecdev::ProfileRegistry](/lxmaster/api/classes/ProfileRegistry)** <br>Registry of `[IProfileFactory]()` plugins.  |
+| class | **[ecdev::ProcessImage](/lxmaster/api/classes/ProcessImage)** <br>Per-slave process-image accessor: the narrow cyclic-path contract that device profiles use.  |
+| struct | **[ecdev::PdoEntryRef](/lxmaster/api/classes/PdoEntryRef)** <br>Resolved location of one mapped CoE object inside a slave's process image.  |
+| class | **[ecdev::PdoAssignment](/lxmaster/api/classes/PdoAssignment)** <br>Generic, ENI-driven CoE PDO assignment.  |
+| class | **[ecdev::IProfileFactory](/lxmaster/api/classes/IProfileFactory)** <br>Builds the device-class profile for one slave.  |
+| class | **[ecdev::IMotionProfile](/lxmaster/api/classes/IMotionProfile)** <br>Facade-facing contract for a motion (drive) device.  |
+| class | **[ecdev::IIoProfile](/lxmaster/api/classes/IIoProfile)** <br>Facade-facing contract for a digital/analog I/O device (CiA 401 family).  |
+| class | **[ecdev::IEncoderProfile](/lxmaster/api/classes/IEncoderProfile)** <br>Facade-facing contract for an encoder / position sensor (CiA 406 family).  |
+| class | **[ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)** <br>Device-class behaviour plugged onto a `[GenericEniDevice]`.  |
+| class | **[ecdev::GenericIoProfile](/lxmaster/api/classes/GenericIoProfile)** <br>Protocol-agnostic digital/analog I/O profile.  |
+| struct | **[ecdev::DeviceIdentityMatch](/lxmaster/api/classes/DeviceIdentityMatch)** <br>Exact device identity a device class serves.  |
+| class | **[ecdev::CiA406EncoderProfile](/lxmaster/api/classes/CiA406EncoderProfile)** <br>CiA 406 (encoder) profile.  |
+| class | **[ecdev::CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfile)** <br>CiA 402 (CANopen-over-EtherCAT) servo-drive profile.  |
+| class | **[ecdev::CiA401IoProfile](/lxmaster/api/classes/CiA401IoProfile)** <br>CiA 401 (CANopen generic I/O) profile.  |
 
 ## Types
 
 |                | Name           |
 | -------------- | -------------- |
-| enum class| **[SyncMode](/lxmaster/api/namespaces/namespaceecdev#enum-syncmode)** { SmEvent, DcSync0}<br>How the EtherCAT bus synchronizes PDO cycles with the slave's internal control loop.  |
-| using std::function< std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) >(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) &)> | **[ProfileCreateFn](/lxmaster/api/namespaces/namespaceecdev#using-profilecreatefn)** <br>Builds the device-class profile for a matched slave.  |
-| enum class| **[DriveOpMode](/lxmaster/api/namespaces/namespaceecdev#enum-driveopmode)** { Csv, Cst, Csp}<br>Cyclic operating mode for a CiA 402 (CANopen-over-EtherCAT) servo drive.  |
+| enum class| **[SyncMode](/lxmaster/api/namespaces/ecdev#enum-syncmode)** { SmEvent, DcSync0}<br>How the EtherCAT bus synchronizes PDO cycles with the slave's internal control loop.  |
+| using std::function< std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) >(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) &)> | **[ProfileCreateFn](/lxmaster/api/namespaces/ecdev#using-profilecreatefn)** <br>Builds the device-class profile for a matched slave.  |
+| enum class| **[DriveOpMode](/lxmaster/api/namespaces/ecdev#enum-driveopmode)** { Csv, Cst, Csp}<br>Cyclic operating mode for a CiA 402 (CANopen-over-EtherCAT) servo drive.  |
 
 ## Functions
 
 |                | Name           |
 | -------------- | -------------- |
-| std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory) > | **[makeProfileFamilyFactory](/lxmaster/api/namespaces/namespaceecdev#function-makeprofilefamilyfactory)**()<br>Family-fallback factory.  |
-| std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/classecdev_1_1iprofilefactory) > | **[makeIdentityProfileFactory](/lxmaster/api/namespaces/namespaceecdev#function-makeidentityprofilefactory)**([DeviceIdentityMatch](/lxmaster/api/classes/structecdev_1_1deviceidentitymatch) match, ProfileCreateFn fn, const char * name)<br>Make an `[IProfileFactory]()` that claims a slave (at `[claim_score::kIdentityPin]()`) exactly when `match` matches its identity, and builds the profile via `fn`.  |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[makeGenericIoProfile](/lxmaster/api/namespaces/namespaceecdev#function-makegenericioprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in)<br>Build a [GenericIoProfile]().  |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[makeCiA406EncoderProfile](/lxmaster/api/namespaces/namespaceecdev#function-makecia406encoderprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in)<br>Build a [CiA406EncoderProfile]().  |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[makeCiA402DriveProfile](/lxmaster/api/namespaces/namespaceecdev#function-makecia402driveprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in)<br>Build a [CiA402DriveProfile]() from the selection input (op-mode / fault-policy flags).  |
-| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile) > | **[makeCiA401IoProfile](/lxmaster/api/namespaces/namespaceecdev#function-makecia401ioprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/structecdev_1_1profileselectioninput) & in)<br>Build a [CiA401IoProfile]().  |
+| std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/IProfileFactory) > | **[makeProfileFamilyFactory](/lxmaster/api/namespaces/ecdev#function-makeprofilefamilyfactory)**()<br>Family-fallback factory.  |
+| std::unique_ptr< [IProfileFactory](/lxmaster/api/classes/IProfileFactory) > | **[makeIdentityProfileFactory](/lxmaster/api/namespaces/ecdev#function-makeidentityprofilefactory)**([DeviceIdentityMatch](/lxmaster/api/classes/DeviceIdentityMatch) match, ProfileCreateFn fn, const char * name)<br>Make an `[IProfileFactory]()` that claims a slave (at `[claim_score::kIdentityPin]()`) exactly when `match` matches its identity, and builds the profile via `fn`.  |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[makeGenericIoProfile](/lxmaster/api/namespaces/ecdev#function-makegenericioprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in)<br>Build a [GenericIoProfile]().  |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[makeCiA406EncoderProfile](/lxmaster/api/namespaces/ecdev#function-makecia406encoderprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in)<br>Build a [CiA406EncoderProfile]().  |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[makeCiA402DriveProfile](/lxmaster/api/namespaces/ecdev#function-makecia402driveprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in)<br>Build a [CiA402DriveProfile]() from the selection input (op-mode / fault-policy flags).  |
+| std::unique_ptr< [IDeviceProfile](/lxmaster/api/classes/IDeviceProfile) > | **[makeCiA401IoProfile](/lxmaster/api/namespaces/ecdev#function-makecia401ioprofile)**(const [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput) & in)<br>Build a [CiA401IoProfile]().  |
 
 ## Types Documentation
 
@@ -121,7 +123,7 @@ std::unique_ptr< IProfileFactory > makeProfileFamilyFactory()
 
 Family-fallback factory. 
 
-When no identity class matches a slave, this claims it (at `[claim_score::kProfileFamily](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score#variable-kprofilefamily)`) by the slave's CANopen profile number (`eni::SlaveConfig::profile_no`) and builds the matching behavioural profile:
+When no identity class matches a slave, this claims it (at `[claim_score::kProfileFamily](/lxmaster/api/namespaces/ecdev-claim_score#variable-kprofilefamily)`) by the slave's CANopen profile number (`eni::SlaveConfig::profile_no`) and builds the matching behavioural profile:
 
 * 402 -> CiA402 drive (`[makeCiA402DriveProfile]`)
 * 401 -> CiA401 I/O (`[makeCiA401IoProfile]`)
@@ -144,7 +146,7 @@ Make an `[IProfileFactory]()` that claims a slave (at `[claim_score::kIdentityPi
 
 `name` is a stable diagnostic label and must outlive the factory (a string literal in practice).
 
-This is the low-boilerplate way to author a device class: bind an identity to any profile (an existing behaviour like `[CiA402DriveProfile](/lxmaster/api/classes/classecdev_1_1cia402driveprofile)`, or a brand-new `[IDeviceProfile](/lxmaster/api/classes/classecdev_1_1ideviceprofile)`/facade subclass) and register it with `LXMASTER_REGISTER_DEVICE`. 
+This is the low-boilerplate way to author a device class: bind an identity to any profile (an existing behaviour like `[CiA402DriveProfile](/lxmaster/api/classes/CiA402DriveProfile)`, or a brand-new `[IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)`/facade subclass) and register it with `LXMASTER_REGISTER_DEVICE`. 
 
 
 ### function makeGenericIoProfile

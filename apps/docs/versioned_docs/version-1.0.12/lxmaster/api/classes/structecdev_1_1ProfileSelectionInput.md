@@ -4,6 +4,8 @@
 title: ecdev::ProfileSelectionInput
 summary: Inputs a factory uses to decide on and build a profile for one ENI slave. 
 
+slug: /lxmaster/api/classes/ProfileSelectionInput
+sidebar_label: "ProfileSelectionInput"
 ---
 
 # ecdev::ProfileSelectionInput
@@ -19,10 +21,10 @@ Inputs a factory uses to decide on and build a profile for one ENI slave.
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[startup_fault_autoreset](/lxmaster/api/classes/structecdev_1_1profileselectioninput#variable-startup-fault-autoreset)** <br>Clear a residual fault present at OP entry (before the drive has ever enabled this run) with a bounded reset window instead of latching a stop.  |
-| const eni::SlaveConfig * | **[slave](/lxmaster/api/classes/structecdev_1_1profileselectioninput#variable-slave)**  |
-| DriveOpMode | **[op_mode](/lxmaster/api/classes/structecdev_1_1profileselectioninput#variable-op-mode)** <br>Initial operating mode baked into the profile at construction (CSP default).  |
-| bool | **[auto_fault_reset_and_recover](/lxmaster/api/classes/structecdev_1_1profileselectioninput#variable-auto-fault-reset-and-recover)** <br>Initial auto fault-reset/recover flag (off by default).  |
+| bool | **[startup_fault_autoreset](/lxmaster/api/classes/ProfileSelectionInput#variable-startup-fault-autoreset)** <br>Clear a residual fault present at OP entry (before the drive has ever enabled this run) with a bounded reset window instead of latching a stop.  |
+| const eni::SlaveConfig * | **[slave](/lxmaster/api/classes/ProfileSelectionInput#variable-slave)**  |
+| DriveOpMode | **[op_mode](/lxmaster/api/classes/ProfileSelectionInput#variable-op-mode)** <br>Initial operating mode baked into the profile at construction (CSP default).  |
+| bool | **[auto_fault_reset_and_recover](/lxmaster/api/classes/ProfileSelectionInput#variable-auto-fault-reset-and-recover)** <br>Initial auto fault-reset/recover flag (off by default).  |
 
 ## Public Attributes Documentation
 

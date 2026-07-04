@@ -3,6 +3,8 @@
 ---
 title: ecnet::DcConfig
 
+slug: /lxmaster/api/classes/DcConfig
+sidebar_label: "DcConfig"
 ---
 
 # ecnet::DcConfig
@@ -15,17 +17,17 @@ title: ecnet::DcConfig
 
 |                | Name           |
 | -------------- | -------------- |
-| bool | **[use_sync0](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-use-sync0)**  |
-| bool | **[use_dc](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-use-dc)** <br>DC + SYNC0 enablement.  |
-| bool | **[sync_trace_include_warmup](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-sync-trace-include-warmup)**  |
-| bool | **[ec_sync_to_dc](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-ec-sync-to-dc)**  |
-| std::int32_t | **[dc_sync_kp_div](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-sync-kp-div)**  |
-| std::int32_t | **[dc_sync_ki_div](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-sync-ki-div)**  |
-| std::int32_t | **[dc_sync_busy_wait_ns](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-sync-busy-wait-ns)**  |
-| int | **[dc_lock_warmup_cycles](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-lock-warmup-cycles)**  |
-| int | **[dc_diff_op_gate_timeout_cycles](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-diff-op-gate-timeout-cycles)**  |
-| int | **[dc_diff_op_gate_stable_cycles](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-diff-op-gate-stable-cycles)**  |
-| std::uint32_t | **[dc_diff_op_gate_max_ns](/lxmaster/api/classes/structecnet_1_1dcconfig#variable-dc-diff-op-gate-max-ns)**  |
+| bool | **[use_sync0](/lxmaster/api/classes/DcConfig#variable-use-sync0)**  |
+| bool | **[use_dc](/lxmaster/api/classes/DcConfig#variable-use-dc)** <br>DC + SYNC0 enablement.  |
+| bool | **[sync_trace_include_warmup](/lxmaster/api/classes/DcConfig#variable-sync-trace-include-warmup)**  |
+| bool | **[ec_sync_to_dc](/lxmaster/api/classes/DcConfig#variable-ec-sync-to-dc)**  |
+| std::int32_t | **[dc_sync_kp_div](/lxmaster/api/classes/DcConfig#variable-dc-sync-kp-div)**  |
+| std::int32_t | **[dc_sync_ki_div](/lxmaster/api/classes/DcConfig#variable-dc-sync-ki-div)**  |
+| std::int32_t | **[dc_sync_busy_wait_ns](/lxmaster/api/classes/DcConfig#variable-dc-sync-busy-wait-ns)**  |
+| int | **[dc_lock_warmup_cycles](/lxmaster/api/classes/DcConfig#variable-dc-lock-warmup-cycles)**  |
+| int | **[dc_diff_op_gate_timeout_cycles](/lxmaster/api/classes/DcConfig#variable-dc-diff-op-gate-timeout-cycles)**  |
+| int | **[dc_diff_op_gate_stable_cycles](/lxmaster/api/classes/DcConfig#variable-dc-diff-op-gate-stable-cycles)**  |
+| std::uint32_t | **[dc_diff_op_gate_max_ns](/lxmaster/api/classes/DcConfig#variable-dc-diff-op-gate-max-ns)**  |
 
 ## Public Attributes Documentation
 

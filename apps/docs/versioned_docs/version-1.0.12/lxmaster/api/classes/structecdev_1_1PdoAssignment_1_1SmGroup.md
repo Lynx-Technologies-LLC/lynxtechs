@@ -3,6 +3,8 @@
 ---
 title: ecdev::PdoAssignment::SmGroup
 
+slug: /lxmaster/api/classes/PdoAssignment-SmGroup
+sidebar_label: "SmGroup"
 ---
 
 # ecdev::PdoAssignment::SmGroup
@@ -15,8 +17,8 @@ title: ecdev::PdoAssignment::SmGroup
 
 |                | Name           |
 | -------------- | -------------- |
-| std::vector< PdoPlan > | **[pdos](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1smgroup#variable-pdos)**  |
-| std::uint16_t | **[assignment_index](/lxmaster/api/classes/structecdev_1_1pdoassignment_1_1smgroup#variable-assignment-index)** <br>0x1C10 + sm_index.  |
+| std::vector< PdoPlan > | **[pdos](/lxmaster/api/classes/PdoAssignment-SmGroup#variable-pdos)**  |
+| std::uint16_t | **[assignment_index](/lxmaster/api/classes/PdoAssignment-SmGroup#variable-assignment-index)** <br>0x1C10 + sm_index.  |
 
 ## Public Attributes Documentation
 
