@@ -1,0 +1,10 @@
+{
+  "label": "EtherCAT Basics",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "slug": "/ethercat-basics",
+    "title": "EtherCAT Basics",
+    "description": "A high-level introduction to EtherCAT concepts, devices, and communication."
+  }
+}

@@ -1,0 +1,72 @@
+name: docs version cut
+
+# Cut a new Docusaurus docs version keyed to an LXMASTER release. Trigger it
+# manually, or automatically from the lxmaster release workflow via a
+# repository_dispatch of type "lxmaster-release" (client_payload.version).
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'LXMASTER version to cut (e.g. 1.0.10)'
+        required: true
+        type: string
+  repository_dispatch:
+    types: [lxmaster-release]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  cut:
+    name: cut docs version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve version
+        id: v
+        run: |
+          VERSION="${{ github.event.inputs.version || github.event.client_payload.version }}"
+          VERSION="${VERSION#v}"
+          if [ -z "${VERSION}" ]; then
+            echo "No version provided" >&2
+            exit 1
+          fi
+          echo "version=${VERSION}" >> "${GITHUB_OUTPUT}"
+
+      - name: Cut the docs version
+        working-directory: apps/docs
+        env:
+          # Token used by the sync scripts to fetch release assets / notes from
+          # the (possibly private) lxmaster repo.
+          LXMASTER_DOCS_TOKEN: ${{ secrets.LXMASTER_DOCS_TOKEN }}
+        run: node scripts/cut-version.mjs "${{ steps.v.outputs.version }}"
+
+      - name: Open a pull request with the new version
+        uses: peter-evans/create-pull-request@v6
+        with:
+          # Uses GITHUB_TOKEN so the PR is authored by github-actions[bot],
+          # which allows any team member (including the repo owner) to approve it.
+          # Requires "Allow GitHub Actions to create and approve pull requests"
+          # to be enabled in repo Settings → Actions → General.
+          branch: docs/version-${{ steps.v.outputs.version }}
+          title: "docs: cut LXMASTER ${{ steps.v.outputs.version }} version"
+          commit-message: "docs: cut LXMASTER ${{ steps.v.outputs.version }} version"
+          body: |
+            Automated docs version cut for LXMASTER `${{ steps.v.outputs.version }}`.
+
+            This snapshots the current docs (including the generated API reference
+            and release notes for this version) into `versioned_docs/`.
+          add-paths: |
+            apps/docs/lxmaster_versioned_docs/**
+            apps/docs/lxmaster_versioned_sidebars/**
+            apps/docs/lxmaster_versions.json

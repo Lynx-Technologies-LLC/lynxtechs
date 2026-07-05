@@ -11,11 +11,21 @@
   ],
   "scripts": {
     "dev": "turbo dev --filter=@lynxtechs/web",
-    "build": "turbo build --filter=@lynxtechs/web",
+    "dev:docs": "turbo dev --filter=@lynxtechs/docs",
+    "build": "turbo build --filter=@lynxtechs/web --filter=@lynxtechs/docs",
+    "build:web": "turbo build --filter=@lynxtechs/web",
+    "build:docs": "turbo build --filter=@lynxtechs/docs",
     "lint": "turbo lint --filter=@lynxtechs/web",
-    "start": "turbo start --filter=@lynxtechs/web"
+    "typecheck:docs": "turbo typecheck --filter=@lynxtechs/docs",
+    "start": "turbo start --filter=@lynxtechs/web",
+    "compress-glb": "node scripts/compress-glb.mjs"
   },
   "devDependencies": {
+    "@gltf-transform/core": "^4.4.0",
+    "@gltf-transform/extensions": "^4.4.0",
+    "@gltf-transform/functions": "^4.4.0",
+    "draco3dgltf": "^1.5.7",
+    "meshoptimizer": "^1.1.1",
     "turbo": "^2.5.4"
   }
 }

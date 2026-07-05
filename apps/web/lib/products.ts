@@ -6,6 +6,7 @@ import type {
   Product,
   ProductFileFrontmatter,
   ProductFrontmatter,
+  ProductModel3d,
   ProductSummary,
 } from "@/lib/product-types";
 
@@ -62,6 +63,26 @@ function getProductFilePath(handle: string): string | null {
   return fs.existsSync(filePath) ? filePath : null;
 }
 
+function resolveModel3d(
+  product: ProductFrontmatter,
+  handle: string,
+): ProductModel3d | undefined {
+  if (!product.model3d?.src) {
+    return undefined;
+  }
+
+  const poster =
+    product.model3d.poster ??
+    product.images?.[0]?.src ??
+    getDefaultHeroImage(handle);
+
+  return {
+    src: cacheBustLocalSrc(product.model3d.src),
+    alt: product.model3d.alt ?? product.name,
+    poster: cacheBustLocalSrc(poster),
+  };
+}
+
 function fileToProduct(handle: string, filePath: string): Product | null {
   const fileContents = fs.readFileSync(filePath, "utf8");
   const { data } = matter(fileContents);
@@ -81,6 +102,7 @@ function fileToProduct(handle: string, filePath: string): Product | null {
     summary: frontmatter.summary,
     sku: frontmatter.sku,
     images: resolveImages(frontmatter, handle),
+    model3d: resolveModel3d(frontmatter, handle),
     overview: frontmatter.overview,
     specs: frontmatter.specs,
     documentation: frontmatter.documentation,

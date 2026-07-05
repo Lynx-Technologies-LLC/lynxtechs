@@ -1,0 +1,28 @@
+/**
+ * Global styles. Docusaurus uses Infima (https://infima.dev/) under the hood.
+ * Override the CSS variables below to re-theme the site.
+ */
+
+:root {
+  --ifm-color-primary: #1668b8;
+  --ifm-color-primary-dark: #145ea6;
+  --ifm-color-primary-darker: #13599d;
+  --ifm-color-primary-darkest: #0f4982;
+  --ifm-color-primary-light: #1872ca;
+  --ifm-color-primary-lighter: #1977d3;
+  --ifm-color-primary-lightest: #1f86e8;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4fa3e3;
+  --ifm-color-primary-dark: #338fdc;
+  --ifm-color-primary-darker: #2686d8;
+  --ifm-color-primary-darkest: #1f6fb3;
+  --ifm-color-primary-light: #6bb3e8;
+  --ifm-color-primary-lighter: #78baea;
+  --ifm-color-primary-lightest: #9cccf0;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+

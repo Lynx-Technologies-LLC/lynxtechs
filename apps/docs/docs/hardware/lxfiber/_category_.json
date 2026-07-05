@@ -1,0 +1,10 @@
+{
+  "label": "LXFIBER",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "slug": "/hardware/lxfiber",
+    "title": "LXFIBER",
+    "description": "EtherCAT fiber-optic media module: overview, tutorials, and example projects."
+  }
+}
