@@ -81,6 +81,11 @@ const config: Config = {
   ],
 
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     image: 'img/social-card.jpg',
     navbar: {
       title: 'Lynx Technologies',
