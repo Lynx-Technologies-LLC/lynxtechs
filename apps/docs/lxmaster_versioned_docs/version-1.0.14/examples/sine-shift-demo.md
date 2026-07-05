@@ -1,6 +1,6 @@
 ---
 title: "Sine Shift Demo"
-sidebar_position: 7
+sidebar_position: 9
 ---
 
 <!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->

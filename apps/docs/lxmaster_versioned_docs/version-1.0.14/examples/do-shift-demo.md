@@ -1,6 +1,6 @@
 ---
 title: "Do Shift Demo"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 <!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->

@@ -1,6 +1,6 @@
 ---
 title: "Servo Sin Torque Demo"
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 <!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->

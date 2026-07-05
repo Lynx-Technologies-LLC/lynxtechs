@@ -1,6 +1,6 @@
 ---
 title: "Servo Sin Vel Demo"
-sidebar_position: 6
+sidebar_position: 8
 ---
 
 <!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->

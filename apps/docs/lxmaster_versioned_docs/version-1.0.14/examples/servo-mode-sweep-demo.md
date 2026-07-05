@@ -1,6 +1,6 @@
 ---
 title: "Servo Mode Sweep Demo"
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 <!-- GENERATED - do not edit. Synced from lxmaster-demos by scripts/sync-examples.mjs. -->
