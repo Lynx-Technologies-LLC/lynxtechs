@@ -21,9 +21,8 @@ target_link_libraries(my_app PRIVATE lxmaster::lxmaster)
 ```
 
 :::info Content synced from `lxmaster-demos`
-The example catalog on this page is generated at build time from the
-``lxmaster-demos``
-repository. Until the first sync runs, this is placeholder content.
+The individual example pages are generated at build time by syncing from the
+`lxmaster-demos` repository. The list below reflects the current set of demos.
 :::
 
 ## Available demos
