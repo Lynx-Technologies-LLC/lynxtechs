@@ -199,7 +199,7 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Lynx Technologies. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.vsLight,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['cpp', 'bash', 'cmake'],
     },
