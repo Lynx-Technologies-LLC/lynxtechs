@@ -58,11 +58,12 @@ its own slice; on return, every slice has been updated in a single round trip.
 
 Every cycle, the master follows the same four steps:
 
-```
-1. Write outputs  →  place the desired output values into the IOmap
-2. Send frame     →  transmit the process-data frame onto the wire
-3. Receive frame  →  wait for the frame to return after circling all devices
-4. Read inputs    →  extract the fresh input values from the IOmap
+```mermaid
+flowchart LR
+    A["1. Write outputs\nPlace desired values\ninto the IOmap"] --> B["2. Send frame\nTransmit onto the wire"]
+    B --> C["3. Receive frame\nWait for the frame\nto return"]
+    C --> D["4. Read inputs\nExtract fresh data\nfrom the IOmap"]
+    D --> A
 ```
 
 The time between step 2 and step 3 is the network round-trip time. On a well-configured
@@ -116,16 +117,21 @@ and used only during configuration or for occasional diagnostic reads.
 
 ### When each is used
 
-```
-Before running:
-  Master ──SDO──► Device   (configure PDO layout, sync mode, parameters)
-
-While running:
-  Master ──PDO──► Device   (send outputs every cycle)
-  Device ──PDO──► Master   (send inputs every cycle)
-
-Occasionally:
-  Master ──SDO──► Device   (read a fault register, update a parameter)
+```mermaid
+sequenceDiagram
+    participant M as Master
+    participant D as Device
+    Note over M,D: Before running — configuration
+    M->>D: SDO write (PDO layout, sync mode, parameters)
+    D-->>M: SDO acknowledgement
+    Note over M,D: While running — every cycle
+    loop Every cycle
+        M->>D: PDO outputs (commands)
+        D->>M: PDO inputs (sensor data)
+    end
+    Note over M,D: Occasionally — diagnostics
+    M->>D: SDO read (fault register)
+    D-->>M: SDO response
 ```
 
 The strict separation between configuration (SDO) and operation (PDO) is fundamental to

@@ -27,10 +27,12 @@ bytes addressed to it and writes its own response bytes into the same frame — 
 stopping the frame**. The frame continues to the next device, reaches the end of the
 chain, and loops back to the controller, now carrying data from every device.
 
-```
-Controller → Device 1 → Device 2 → Device 3 ──┐
-     ▲                                          │
-     └──────────── frame returns ───────────────┘
+```mermaid
+flowchart LR
+    Master -->|"frame out"| D1["Device 1"]
+    D1 -->|"read & write"| D2["Device 2"]
+    D2 -->|"read & write"| D3["Device 3"]
+    D3 -->|"frame returns\n(filled with data)"| Master
 ```
 
 One frame, one round trip, every device updated simultaneously. This is the key to

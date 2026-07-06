@@ -49,12 +49,12 @@ During startup, the master performs a clock synchronization procedure:
 The result is that every device on the segment shares a common time base, synchronized to
 within a few tens of nanoseconds of each other — even across a long chain of devices.
 
-```
-Reference device     Device 2       Device 3       Device 4
-     │                  │               │               │
-     ▼ clock tick        ▼ clock tick    ▼ clock tick    ▼ clock tick
-  ───────────────────────────────────────────────────────────────────
-         All ticks aligned to within ~20–30 ns
+```mermaid
+flowchart TD
+    REF["Reference Device\n(clock source)"]
+    REF -->|"disciplines"| D2["Device 2\naligned clock"]
+    REF -->|"disciplines"| D3["Device 3\naligned clock"]
+    REF -->|"disciplines"| D4["Device 4\naligned clock"]
 ```
 
 ## SYNC0: the shared heartbeat
@@ -83,16 +83,16 @@ device to have fresh data before SYNC0 fires.
 Maintaining this phase relationship cycle after cycle, despite small drifts between the
 master's clock and the reference device's clock, is the master's synchronization task.
 
-```
-SYNC0 pulses (all devices, aligned):
-─────┬─────────┬─────────┬─────────┬──────
-     │         │         │         │
-     ↑         ↑         ↑         ↑     ← devices execute control loop here
-
-Master frame arrival (must be before each SYNC0):
-────┬──────────┬─────────┬─────────┬─────
-    │          │         │         │
-    ↑          ↑         ↑         ↑     ← frame delivers fresh commands here
+```mermaid
+sequenceDiagram
+    participant M as Master
+    participant D as Device
+    loop Every cycle
+        M->>D: PDO frame arrives (fresh commands)
+        Note over D: SYNC0 fires → control loop executes on fresh data
+        D->>M: PDO frame returns (with inputs)
+    end
+    Note over M,D: Frame must always arrive before SYNC0 fires
 ```
 
 ## Two synchronization approaches

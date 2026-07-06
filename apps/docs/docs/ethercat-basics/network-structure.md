@@ -45,10 +45,12 @@ EtherCAT treats the segment as a **logical ring**. The frame leaves the master, 
 through every device in sequence, and the last device sends it back along the return path
 to the master.
 
-```
-Master ──► Device 1 ──► Device 2 ──► Device 3 ──┐
-  ▲                                               │
-  └────────────── frame returns ─────────────────┘
+```mermaid
+flowchart LR
+    Master -->|"frame out"| D1["Device 1"]
+    D1 --> D2["Device 2"]
+    D2 --> D3["Device 3"]
+    D3 -->|"frame returns"| Master
 ```
 
 This ring property means:
@@ -77,8 +79,9 @@ EtherCAT is flexible about how devices are physically wired. Three layouts are c
 The simplest topology. Each device has an IN port and an OUT port; you connect them one
 after another in a chain.
 
-```
-Master ── Device 1 ── Device 2 ── Device 3 ── Device 4
+```mermaid
+flowchart LR
+    Master --- D1["Device 1"] --- D2["Device 2"] --- D3["Device 3"] --- D4["Device 4"]
 ```
 
 Most EtherCAT deployments use a line. It is easy to wire, easy to trace, and requires no
@@ -90,10 +93,11 @@ A branch is created by inserting a **junction device** (sometimes called a coupl
 switch) at any point in the line. Downstream devices connect to the branch port of the
 junction.
 
-```
-Master ── Device 1 ── Junction ── Device 2 ── Device 3
-                          │
-                       Device 4 ── Device 5
+```mermaid
+flowchart LR
+    Master --- D1["Device 1"] --- J["Junction"]
+    J --- D2["Device 2"] --- D3["Device 3"]
+    J --- D4["Device 4"] --- D5["Device 5"]
 ```
 
 Tree topologies are useful when devices are spread across physically separate parts of a
@@ -105,10 +109,9 @@ The OUT port of the last device is connected back to a second Ethernet port on t
 closing a physical ring. If a cable breaks, the master can detect the break and switch to
 the remaining path, keeping the network running.
 
-```
-               ┌─── Device 1 ── Device 2 ── Device 3 ───┐
-Master port A ─┤                                         ├─ Master port B
-               └─────────────────────────────────────────┘
+```mermaid
+flowchart LR
+    PA["Master\nPort A"] --- D1["Device 1"] --- D2["Device 2"] --- D3["Device 3"] --- PB["Master\nPort B"]
 ```
 
 Ring topology requires master software that supports redundancy and a second NIC on the
