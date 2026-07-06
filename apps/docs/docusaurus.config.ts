@@ -101,7 +101,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'hardwareSidebar',
           position: 'left',
-          label: 'EtherCAT Modules',
+          label: 'EtherCAT PCB Modules',
         },
         {
           type: 'docSidebar',

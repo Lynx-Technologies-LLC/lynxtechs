@@ -10,24 +10,24 @@ const icons = [Cpu, Network, Settings2, Wrench];
 
 const services = [
   {
-    title: "EtherCAT hardware architecture",
+    title: "EtherCAT System Design",
     description:
-      "Network topology, cycle-time budgeting, slave selection, and control stack planning.",
+      "End-to-end EtherCAT network design — topology planning, ENI generation, real-time host setup, and full commissioning.",
   },
   {
-    title: "Custom PCB and I/O design",
+    title: "PCB Design Services",
     description:
-      "Digital and analog I/O modules, safety interfaces, and application-specific carrier boards.",
+      "EtherCAT-ready PCBs built on our module IP. Hard real-time, zero firmware. Compress your hardware timeline from 1–2 years to weeks.",
   },
   {
-    title: "Bring-up and validation",
+    title: "Real-time commissioning",
     description:
-      "Lab verification, timing analysis, and integration with LXMASTER or third-party masters.",
+      "DC-sync tuning, jitter analysis, drive bring-up, and system-level validation against your motion and I/O requirements.",
   },
   {
-    title: "Production support",
+    title: "LXMASTER integration",
     description:
-      "Design-for-manufacturing, documentation, and ongoing engineering engagement.",
+      "Working application code delivered with your hardware — axes, I/O, and custom device profiles fully wired up and validated.",
   },
 ];
 

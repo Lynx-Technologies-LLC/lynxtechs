@@ -1,8 +1,8 @@
 const stats = [
-  { value: "EtherCAT", label: "Deterministic fieldbus" },
-  { value: "μs", label: "Cycle-time precision" },
-  { value: "16-ch", label: "Digital I/O per module" },
-  { value: "Linux", label: "Embedded master targets" },
+  { value: "1–2 yrs → weeks", label: "Electronics design timeline" },
+  { value: "Zero firmware", label: "Hard real-time, no firmware stack" },
+  { value: "Drop-in modules", label: "No EtherCAT IP development" },
+  { value: "NASA · FANUC · Toyota", label: "Trusted by industry leaders" },
 ];
 
 export function StatsBar() {

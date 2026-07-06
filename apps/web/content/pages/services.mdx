@@ -1,25 +1,84 @@
 ---
 title: Services
-description: EtherCAT real-time hardware design services for robotics and industrial automation
+description: EtherCAT system design and PCB design services for robotics and automation — Lynx Technologies compresses electronics timelines from 1–2 years to weeks.
 hero:
-  headline: EtherCAT real-time hardware design services
-  subcopy: We help customers architect, design, and validate EtherCAT-based real-time hardware for robotics and industrial automation — from first prototype to production.
+  headline: EtherCAT system design for robotics and automation
+  subcopy: Lynx Technologies provides EtherCAT network design and EtherCAT-ready PCB design services that compress electronics development from 1–2 years to just a few weeks. We have worked with NASA, FANUC, Toyota, Scythe Robotics, and Picknik Robotics.
 ---
 
-## EtherCAT hardware architecture
+## What sets us apart
 
-Network topology, cycle-time budgeting, slave selection, and control stack planning for deterministic real-time systems.
+Our work sits at the intersection of EtherCAT protocol expertise and hands-on robotics hardware engineering. Systems we design are **hard real-time** and require **zero firmware development** — the EtherCAT protocol is handled entirely in hardware using our proven PCB module IP, so your team never has to write or maintain an EtherCAT firmware stack.
 
-## Custom PCB and I/O design
+The result: electronics programs that would normally take 1–2 years reach production in just a few weeks.
 
-Digital and analog I/O modules, safety interfaces, and application-specific carrier boards tailored to your automation platform.
+---
 
-## Bring-up and validation
+## EtherCAT System Design
 
-Lab verification, timing analysis, and integration with your master stack — including LXMASTER and third-party EtherCAT slaves.
+End-to-end EtherCAT network design for robotics and automation — from topology planning through real-time commissioning.
 
-## Production support
+### Network architecture and topology planning
 
-Design-for-manufacturing, documentation, and ongoing engineering engagement to keep your hardware program on schedule.
+We design the network topology, select EtherCAT slave devices, budget cycle times across all axes and I/O, and plan the control stack architecture so the system is deterministic from the first power-on.
 
-Discuss your project with our sales team at [sales@lynxtechs.com](mailto:sales@lynxtechs.com).
+### ENI generation and validation
+
+We produce and validate the EtherCAT Network Information (ENI) file for your exact hardware configuration — ESI file integration, PDO mapping, sync manager layout, and distributed clock settings all verified against the live bus.
+
+### Real-time host setup
+
+Full PREEMPT_RT kernel configuration, CPU isolation, IRQ affinity tuning, and DC-sync qualification so the Linux host meets hard real-time requirements before your application code runs a single cycle.
+
+### Commissioning and tuning
+
+On-site or remote commissioning of complete motion systems — drive tuning, distributed clock alignment, jitter measurement, and system-level validation against your motion and I/O performance requirements.
+
+### Integration with LXMASTER
+
+We deliver working application code integrated with your hardware using LXMASTER — axes, I/O modules, encoders, and any custom device profiles fully wired up and validated.
+
+---
+
+## PCB Design Services
+
+Custom EtherCAT-ready PCBs designed around our proven module IP — hard real-time, zero firmware, manufacture-ready.
+
+### Zero firmware, hard real-time
+
+PCBs built around Lynx EtherCAT modules do not require any firmware. The EtherCAT protocol is implemented in hardware on the module itself. Your board is hard real-time from day one with no microcontroller firmware stack to develop, certify, or maintain.
+
+### Robotics-focused board design
+
+We design for the mechanical and electrical realities of robotics — compact form factors, high connector density, multi-rail power delivery, EMI management, and the thermal constraints of enclosed machine environments.
+
+### Full schematic and layout
+
+End-to-end PCB design from schematic capture through layout, DRC, design-rule checks, and Gerber delivery. Designs are manufacture-ready and test-ready on the first spin.
+
+### Bring-up and validation support
+
+Hardware bring-up support including signal integrity review, power-on sequencing validation, and functional testing alongside LXMASTER and your application layer.
+
+### Accelerated timelines
+
+By combining our EtherCAT module IP with deep robotics PCB design experience, we consistently compress hardware development from **1–2 years to just a few weeks**.
+
+---
+
+## Industries and applications
+
+- Industrial robot arms and collaborative robots
+- Mobile manipulation platforms
+- Precision motion stages
+- Conveyor and material handling systems
+- Agricultural and field robotics
+- Research and prototyping platforms
+
+---
+
+## Get in touch
+
+Tell us about your application — timeline, constraints, and where you are in the design process. We respond with a concrete proposal.
+
+Contact us at [sales@lynxtechs.com](mailto:sales@lynxtechs.com).
