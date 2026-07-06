@@ -4,7 +4,7 @@ import { FeatureShowcase } from "@/components/sections/FeatureShowcase";
 import { IndustriesGrid } from "@/components/sections/IndustriesGrid";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { StatsBar } from "@/components/sections/StatsBar";
-import { Testimonials } from "@/components/sections/Testimonials";
+// import { Testimonials } from "@/components/sections/Testimonials";
 import { getListedProductSummaries } from "@/lib/products";
 import { getSiteConfig } from "@/lib/site";
 
@@ -25,7 +25,7 @@ export default function HomePage() {
       <FeatureShowcase />
       <ProcessSteps />
       <IndustriesGrid />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <CTA
         headline="Ready to design your next real-time system?"
         subcopy={`Talk with our sales team at ${site.salesEmail} about EtherCAT hardware, LXMASTER, or custom engineering support.`}

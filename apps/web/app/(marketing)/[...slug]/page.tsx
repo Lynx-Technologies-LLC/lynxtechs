@@ -13,7 +13,7 @@ type PageProps = {
   params: Promise<{ slug: string[] }>;
 };
 
-const DEDICATED_PAGE_SLUGS = new Set(["products"]);
+const DEDICATED_PAGE_SLUGS = new Set(["products", "services"]);
 
 export async function generateStaticParams() {
   return getAllPageSlugs()
