@@ -1,10 +1,10 @@
 {
-  "label": "Hardware",
+  "label": "EtherCAT PCB Modules",
   "position": 3,
   "link": {
     "type": "generated-index",
     "slug": "/hardware",
-    "title": "Hardware Integration",
-    "description": "How to integrate the EtherCAT hardware modules into your own PCB."
+    "title": "EtherCAT PCB Modules",
+    "description": "Compact solderable EtherCAT modules for integrating into your own PCB designs."
   }
 }
