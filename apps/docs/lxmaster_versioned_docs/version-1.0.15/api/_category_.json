@@ -1,6 +1,6 @@
 {
-  "label": "C++ API Reference",
-  "position": 6,
+  "label": "API Reference",
+  "position": 7,
   "link": {
     "type": "doc",
     "id": "api/index"
