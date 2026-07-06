@@ -21,6 +21,7 @@ const config: Config = {
     // Treat .md as CommonMark and .mdx as MDX. Migrated prose docs contain
     // characters (`<`, `{`, comparison operators) that strict MDX would reject.
     format: 'detect',
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: 'warn',
     },
@@ -52,6 +53,7 @@ const config: Config = {
   ],
 
   themes: [
+    '@docusaurus/theme-mermaid',
     [
       '@easyops-cn/docusaurus-search-local',
       {
