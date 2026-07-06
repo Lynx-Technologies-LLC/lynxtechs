@@ -151,8 +151,8 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        headline="EtherCAT system design for robotics and automation"
-        subcopy="Lynx Technologies provides software consulting and PCB design services that compress electronics development from 1–2 years to just a few weeks. Trusted by NASA, FANUC, Toyota, Scythe Robotics, and Picknik Robotics."
+        headline="We build the hardware stack. You build the product."
+        subcopy="EtherCAT consulting and PCB design — 1–2 years compressed to weeks."
       />
 
       {/* Trusted-by strip */}
