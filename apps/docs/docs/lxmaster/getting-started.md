@@ -21,10 +21,13 @@ Lynx apt repository. Adjust the interface name and ENI file to match your setup.
 
 ## Installation
 
-Install from the Lynx apt repository:
+Add the Lynx apt repository, then install:
 
 ```bash
-sudo apt install lxmaster
+curl -fsSL https://apt.lynxtechs.com/lxmaster.gpg | sudo tee /usr/share/keyrings/lxmaster.gpg >/dev/null
+echo "deb [signed-by=/usr/share/keyrings/lxmaster.gpg] https://apt.lynxtechs.com stable main" \
+  | sudo tee /etc/apt/sources.list.d/lxmaster.list
+sudo apt update && sudo apt install lxmaster
 ```
 
 This installs the shared library (`liblxmaster.so`), the public headers, the
