@@ -117,6 +117,11 @@ const config: Config = {
           label: 'LXMASTER',
         },
         {
+          to: '/services',
+          label: 'Services',
+          position: 'left',
+        },
+        {
           type: 'docsVersionDropdown',
           docsPluginId: 'lxmaster',
           position: 'right',
@@ -161,6 +166,19 @@ const config: Config = {
             {
               label: 'LXRJ45',
               to: '/hardware/lxrj45',
+            },
+          ],
+        },
+        {
+          title: 'Services',
+          items: [
+            {
+              label: 'EtherCAT System Design',
+              to: '/services',
+            },
+            {
+              label: 'PCB Design Services',
+              to: '/services',
             },
           ],
         },

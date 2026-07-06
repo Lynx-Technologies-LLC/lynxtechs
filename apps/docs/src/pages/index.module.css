@@ -8,7 +8,7 @@
 }
 
 .heroInner {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -33,10 +33,88 @@
 }
 
 .heroSubtitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.85);
-  margin: 0;
-  line-height: 1.6;
+  margin: 0 0 2rem;
+  line-height: 1.7;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: background 0.18s, transform 0.15s;
+}
+
+.ctaPrimary:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: border-color 0.18s, background 0.18s, transform 0.15s;
+}
+
+.ctaSecondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+/* ─── Stats strip ───────────────────────────────────────────────────────────── */
+
+.statsStrip {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: #1e2327;
+  color: #fff;
+  flex-wrap: wrap;
+}
+
+.statItem {
+  flex: 1 1 200px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statValue {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #4fa3e3;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.01em;
+}
+
+.statLabel {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
 }
 
 /* ─── Main layout ───────────────────────────────────────────────────────────── */
@@ -64,6 +142,17 @@
   color: var(--ifm-color-emphasis-700);
   margin-bottom: 1.5rem;
   margin-top: 0.4rem;
+  max-width: 680px;
+}
+
+.sectionNote {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.sectionNote a {
+  color: var(--ifm-color-primary);
 }
 
 /* ─── Product cards ─────────────────────────────────────────────────────────── */
@@ -106,12 +195,31 @@
   transform: translateY(-2px);
 }
 
+.cardComingSoon {
+  opacity: 0.7;
+}
+
+.cardComingSoon:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--ifm-color-emphasis-300);
+}
+
 .cardBadge {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--card-accent, var(--ifm-color-primary));
+  margin-bottom: 0.5rem;
+}
+
+.cardBadgeComingSoon {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ifm-color-emphasis-500);
   margin-bottom: 0.5rem;
 }
 
@@ -142,6 +250,52 @@
 }
 
 .cardLink:hover {
+  text-decoration: underline !important;
+}
+
+/* ─── Service cards ─────────────────────────────────────────────────────────── */
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.serviceCard {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-left: 4px solid #0ea5a0;
+  border-radius: 10px;
+  padding: 1.5rem 1.75rem;
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.serviceCard:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.serviceCardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.serviceCardDesc {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.serviceContact {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0ea5a0 !important;
+  text-decoration: none !important;
+}
+
+.serviceContact:hover {
   text-decoration: underline !important;
 }
 
@@ -195,6 +349,18 @@
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
 }
 
+[data-theme='dark'] .cardComingSoon:hover {
+  box-shadow: none;
+}
+
+[data-theme='dark'] .serviceCard:hover {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
 [data-theme='dark'] .resourceCard:hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .statValue {
+  color: #4fa3e3;
 }

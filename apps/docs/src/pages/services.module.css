@@ -1,0 +1,220 @@
+/* ─── Hero ─────────────────────────────────────────────────────────────────── */
+
+.hero {
+  padding: 5rem 1.5rem 4.5rem;
+  text-align: center;
+  background: #2e3338;
+  color: #fff;
+}
+
+.heroInner {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.heroBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.heroTitle {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+  color: #fff;
+  line-height: 1.15;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 2rem;
+  line-height: 1.75;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  background: #0ea5a0;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: background 0.18s, transform 0.15s;
+}
+
+.ctaPrimary:hover {
+  background: #0c9490;
+  transform: translateY(-1px);
+}
+
+/* ─── Clients strip ─────────────────────────────────────────────────────────── */
+
+.clientsStrip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 1.5rem;
+  background: #1e2327;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.clientsLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  white-space: nowrap;
+}
+
+.clientsList {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.clientName {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* ─── Main ─────────────────────────────────────────────────────────────────── */
+
+.main {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 5rem;
+}
+
+/* ─── Service sections ──────────────────────────────────────────────────────── */
+
+.serviceSection {
+  margin-bottom: 5rem;
+}
+
+.serviceSectionHeader {
+  margin-bottom: 2rem;
+}
+
+.serviceTag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0ea5a0;
+  margin-bottom: 0.6rem;
+}
+
+.serviceSectionTitle {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 800;
+  margin: 0 0 0.85rem;
+  line-height: 1.2;
+}
+
+.serviceSectionDesc {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 760px;
+  margin: 0;
+}
+
+/* ─── Feature grid ──────────────────────────────────────────────────────────── */
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.featureItem {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-left: 4px solid #0ea5a0;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+}
+
+.featureHeading {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.featureBody {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* ─── CTA section ───────────────────────────────────────────────────────────── */
+
+.ctaSection {
+  text-align: center;
+  padding: 3.5rem 2rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 14px;
+  background: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+}
+
+.ctaTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+}
+
+.ctaDesc {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 520px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.7rem 1.75rem;
+  background: #0ea5a0;
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  text-decoration: none !important;
+  transition: background 0.18s, transform 0.15s;
+}
+
+.ctaButton:hover {
+  background: #0c9490;
+  transform: translateY(-1px);
+}
+
+/* ─── Dark mode ─────────────────────────────────────────────────────────────── */
+
+[data-theme='dark'] .featureItem:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .clientName {
+  color: rgba(255, 255, 255, 0.65);
+}
