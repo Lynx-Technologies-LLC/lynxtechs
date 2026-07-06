@@ -26,18 +26,13 @@ small, safe C++ API instead of raw fieldbus plumbing.
 
 ## Architecture
 
-```text
-+---------------------------+
-|   Your control app (C++)  |
-+-------------+-------------+
-              |  #include <lxmaster/lxmaster.hpp>
-+-------------v-------------+
-|   liblxmaster.so          |
-+-------------+-------------+
-              |  raw Ethernet
-+-------------v-------------+
-|   NIC  -->  EtherCAT bus  |
-+---------------------------+
+```mermaid
+flowchart TD
+    App["Your control app (C++)"]
+    Lib["liblxmaster.so"]
+    Bus["NIC → EtherCAT bus"]
+    App -->|"#include &lt;lxmaster/lxmaster.hpp&gt;"| Lib
+    Lib -->|"raw Ethernet"| Bus
 ```
 
 Application code uses `lxmaster::EcNetwork` and the device classes; the EtherCAT
