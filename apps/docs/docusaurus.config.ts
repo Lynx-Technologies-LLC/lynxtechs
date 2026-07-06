@@ -157,15 +157,15 @@ const config: Config = {
           items: [
             {
               label: 'LXDIO33-16',
-              to: '/hardware/lxdio33-16',
+              to: '/hardware/lxdio33-16/overview',
             },
             {
               label: 'LXFIBER',
-              to: '/hardware/lxfiber',
+              to: '/hardware/lxfiber/overview',
             },
             {
               label: 'LXRJ45',
-              to: '/hardware/lxrj45',
+              to: '/hardware/lxrj45/overview',
             },
           ],
         },

@@ -27,11 +27,30 @@ Add the Lynx apt repository, then install:
 curl -fsSL https://apt.lynxtechs.com/lxmaster.gpg | sudo tee /usr/share/keyrings/lxmaster.gpg >/dev/null
 echo "deb [signed-by=/usr/share/keyrings/lxmaster.gpg] https://apt.lynxtechs.com stable main" \
   | sudo tee /etc/apt/sources.list.d/lxmaster.list
-sudo apt update && sudo apt install lxmaster
+sudo apt update
+sudo apt install lxmaster
 ```
 
 This installs the shared library (`liblxmaster.so`), the public headers, the
 `lxmaster` CLI, and the CMake package config.
+
+## Host setup
+
+Before running any application, configure the Linux host for real-time
+EtherCAT operation. This is a one-time step per machine:
+
+```bash
+sudo lxmaster host setup
+```
+
+The interactive wizard picks a real-time profile, configures CPU isolation,
+applies IRQ affinity, and runs a timing benchmark to qualify the machine for
+DC-sync. Re-run after any reboot it requests until setup completes. Settings
+are written to `/etc/profile.d/lxmaster-config.sh` and picked up automatically
+by the library at runtime.
+
+See the [CLI Reference — `host setup`](./cli.md#host-setup) for all flags,
+profiles, and non-interactive options.
 
 ## Hello, EtherCAT (C++)
 
@@ -96,6 +115,6 @@ sudo lxmaster run test_servo --eni network.eni.xml
 ## Next steps
 
 - Read the [Overview](./overview.md) for the architecture.
-- See the [C++ API Reference](./c++-api.md) for every public type and method.
+- See the [C++ API Reference](./api) for every public type and method.
 - See the [CLI Reference](./cli.md) for host setup, diagnostics, and workload launching.
 - Explore the [Example Projects](./examples) and the [API Reference](./api).
