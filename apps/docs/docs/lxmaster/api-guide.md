@@ -1,9 +1,13 @@
 ---
-sidebar_position: 1
-title: C++ API Reference
+sidebar_position: 6
+title: API Guide
 ---
 
-# LXMASTER C++ API Reference
+# LXMASTER API Guide
+
+:::caution
+This page is a narrative guide and may lag behind the latest release. For the authoritative and up-to-date interface, refer to the [API Reference](/lxmaster/api).
+:::
 
 The entire library is consumed through a single umbrella header and the flat
 `lxmaster::` namespace alias:
