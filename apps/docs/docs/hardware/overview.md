@@ -21,8 +21,7 @@ application electronics; the module handles the EtherCAT communication.
 | [LXFIBER](./lxfiber/overview.md) | Fiber media | EtherCAT fiber-optic media module |
 | [LXRJ45](./lxrj45/overview.md) | RJ45 ports | EtherCAT RJ45 interface module |
 
-Each module has its own **tutorials** and **example projects** under its section
-in the sidebar.
+Select a module in the sidebar for its full documentation.
 
 ## What's on the module
 

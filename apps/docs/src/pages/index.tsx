@@ -28,8 +28,7 @@ const HARDWARE_CARDS = [
     description:
       '3.3 V 16-channel digital I/O PCB module. Drop-in EtherCAT connectivity for custom PCBs with minimal BOM.',
     links: [
-      { label: 'Overview', to: '/hardware/lxdio33-16' },
-      { label: 'Getting Started', to: '/hardware/lxdio33-16/tutorials/getting-started' },
+      { label: 'Learn More', to: '/hardware/lxdio33-16' },
     ],
     accent: '#0ea5a0',
   },
@@ -39,8 +38,7 @@ const HARDWARE_CARDS = [
     description:
       'Fiber-optic EtherCAT media module. Extend your EtherCAT segment over long distances with full electrical isolation.',
     links: [
-      { label: 'Overview', to: '/hardware/lxfiber' },
-      { label: 'Getting Started', to: '/hardware/lxfiber/tutorials/getting-started' },
+      { label: 'Learn More', to: '/hardware/lxfiber' },
     ],
     accent: '#0ea5a0',
   },
@@ -50,8 +48,7 @@ const HARDWARE_CARDS = [
     description:
       'RJ45 EtherCAT interface module. Standard copper connectivity for EtherCAT networks in industrial enclosures.',
     links: [
-      { label: 'Overview', to: '/hardware/lxrj45' },
-      { label: 'Getting Started', to: '/hardware/lxrj45/tutorials/getting-started' },
+      { label: 'Learn More', to: '/hardware/lxrj45' },
     ],
     accent: '#0ea5a0',
   },

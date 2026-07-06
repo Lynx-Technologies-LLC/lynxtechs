@@ -11,9 +11,4 @@ title: Overview
 The **LXFIBER** module provides fiber-optic media for EtherCAT networks, enabling
 long-distance, electrically isolated segments.
 
-## In this section
-
-- **[Tutorials](./tutorials)** - integrating LXFIBER into a segment.
-- **[Example Projects](./examples)** - runnable examples using this module.
-
 See the general [Hardware Overview](../overview.md) for shared integration guidance.

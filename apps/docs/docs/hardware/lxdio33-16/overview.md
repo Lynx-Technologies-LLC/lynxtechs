@@ -20,9 +20,4 @@ networks, operating at 3.3 V logic levels.
 | Interface | EtherCAT (IN / OUT ports) |
 | Form factor | PCB module |
 
-## In this section
-
-- **[Tutorials](./tutorials)** - bring-up and driving the module from LXMASTER.
-- **[Example Projects](./examples)** - runnable examples using this module.
-
 See the general [Hardware Overview](../overview.md) for shared integration guidance.
