@@ -117,11 +117,6 @@ const config: Config = {
           label: 'LXMASTER',
         },
         {
-          to: '/services',
-          label: 'Services',
-          position: 'left',
-        },
-        {
           type: 'docsVersionDropdown',
           docsPluginId: 'lxmaster',
           position: 'right',

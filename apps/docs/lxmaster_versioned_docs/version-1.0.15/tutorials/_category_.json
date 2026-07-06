@@ -1,0 +1,9 @@
+{
+  "label": "Tutorials",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "LXMASTER Tutorials",
+    "description": "Task-focused guides for real-time host setup, startup bring-up, DC-sync tuning, and more."
+  }
+}
