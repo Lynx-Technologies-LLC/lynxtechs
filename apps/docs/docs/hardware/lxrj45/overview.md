@@ -16,5 +16,4 @@ devices over copper cabling.
 - **[Tutorials](./tutorials)** - integrating LXRJ45 into a segment.
 - **[Example Projects](./examples)** - runnable examples using this module.
 
-See the general [Hardware Overview](../overview.md) and
-[PCB Integration](../pcb-integration.md) guides for shared integration guidance.
+See the general [Hardware Overview](../overview.md) for shared integration guidance.

@@ -64,12 +64,6 @@ const RESOURCES = [
     to: '/ethercat-basics',
     icon: '📡',
   },
-  {
-    title: 'PCB Integration',
-    description: 'Design guidelines and footprint references for integrating Lynx EtherCAT modules into your PCB.',
-    to: '/hardware/pcb-integration',
-    icon: '🔌',
-  },
 ];
 
 // ─── Components ──────────────────────────────────────────────────────────────

@@ -38,4 +38,4 @@ in the sidebar.
 3. Connect the host interface to your application processor.
 4. Load/verify the device description (ESI) for your configuration.
 
-See [PCB Integration](./pcb-integration.md) for the details.
+Refer to each module's datasheet for the details.

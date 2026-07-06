@@ -13,7 +13,7 @@ reading/writing its digital channels from the
 
 ## 1. Wire the module
 
-1. Power the module per the [PCB Integration](../../pcb-integration.md) guide.
+1. Power the module per its datasheet specifications.
 2. Connect the EtherCAT **IN** port to the upstream device (or the master NIC).
 3. Optionally daisy-chain the **OUT** port to the next device.
 

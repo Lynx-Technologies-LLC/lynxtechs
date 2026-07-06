@@ -11,7 +11,7 @@ This tutorial covers adding LXRJ45 RJ45 ports into an EtherCAT segment.
 
 ## 1. Wire the ports
 
-1. Power the module per the [PCB Integration](../../pcb-integration.md) guide.
+1. Power the module per its datasheet specifications.
 2. Connect the **IN** port to the upstream EtherCAT device.
 3. Daisy-chain the **OUT** port to the next device.
 

@@ -16,5 +16,4 @@ long-distance, electrically isolated segments.
 - **[Tutorials](./tutorials)** - integrating LXFIBER into a segment.
 - **[Example Projects](./examples)** - runnable examples using this module.
 
-See the general [Hardware Overview](../overview.md) and
-[PCB Integration](../pcb-integration.md) guides for shared integration guidance.
+See the general [Hardware Overview](../overview.md) for shared integration guidance.

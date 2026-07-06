@@ -11,7 +11,7 @@ This tutorial covers adding an LXFIBER fiber-optic link into an EtherCAT segment
 
 ## 1. Insert the fiber link
 
-1. Power the module per the [PCB Integration](../../pcb-integration.md) guide.
+1. Power the module per its datasheet specifications.
 2. Connect the copper side to the upstream EtherCAT device.
 3. Run the fiber to the downstream LXFIBER module and continue the segment.
 

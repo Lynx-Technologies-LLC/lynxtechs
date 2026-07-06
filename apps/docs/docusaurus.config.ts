@@ -160,10 +160,6 @@ const config: Config = {
               label: 'LXRJ45',
               to: '/hardware/lxrj45',
             },
-            {
-              label: 'PCB Integration',
-              to: '/hardware/pcb-integration',
-            },
           ],
         },
         {
