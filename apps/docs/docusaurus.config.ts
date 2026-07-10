@@ -102,6 +102,7 @@ const config: Config = {
           sidebarId: 'hardwareSidebar',
           position: 'left',
           label: 'EtherCAT PCB Modules',
+          className: 'navbar-tab navbar-tab--hardware',
         },
         {
           type: 'docSidebar',
@@ -109,6 +110,7 @@ const config: Config = {
           docsPluginId: 'lxmaster',
           position: 'left',
           label: 'LXMASTER',
+          className: 'navbar-tab navbar-tab--lxmaster',
         },
         {
           type: 'docsVersionDropdown',
