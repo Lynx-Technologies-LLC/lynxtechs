@@ -51,6 +51,29 @@ Generated folders are git-ignored except their placeholder `index.md` /
 | `LXMASTER_REPO_SLUG` | api / release-notes sync | Default `Lynx-Technologies-LLC/lxmaster`. |
 | `LXMASTER_DEMOS_SLUG` | examples sync | Default `Lynx-Technologies-LLC/lxmaster-demos`. |
 | `SYNC_STRICT=1` | prebuild | Make a failed sync fatal (used by the version cut). |
+| `ANTHROPIC_API_KEY` | Ask AI (`api/docs-chat`) | Required in Vercel for the navbar Ask AI chat. Never expose in the browser. |
+| `ANTHROPIC_MODEL` | Ask AI | Optional Claude model override. |
+
+## Ask AI
+
+The navbar **Ask AI** button opens a chat panel backed by the Anthropic API.
+
+- **Frontend:** `src/components/AskAi/`, wired through `src/theme/Root.tsx` and a custom navbar item.
+- **API:** `api/docs-chat.ts` (Vercel serverless function).
+
+### Local testing
+
+`docusaurus start` serves the UI only. To test chat locally with the API route:
+
+```bash
+cd apps/docs
+cp .env.example .env.local   # add ANTHROPIC_API_KEY
+npx vercel dev
+```
+
+Deploy to Vercel with `ANTHROPIC_API_KEY` set in the project environment variables.
+
+Internal doc retrieval (RAG) can be added later inside `api/docs-chat.ts` before the Anthropic request.
 
 ## Versioning
 

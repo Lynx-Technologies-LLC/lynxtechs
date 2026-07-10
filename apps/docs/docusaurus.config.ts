@@ -113,6 +113,11 @@ const config: Config = {
           className: 'navbar-tab navbar-tab--lxmaster',
         },
         {
+          type: 'custom-askAi',
+          position: 'right',
+          label: 'Ask AI',
+        },
+        {
           type: 'docsVersionDropdown',
           docsPluginId: 'lxmaster',
           position: 'right',
