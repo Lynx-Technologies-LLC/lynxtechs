@@ -33,13 +33,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <CinematicHero
-        headline={page.frontmatter.title}
-        subcopy={page.frontmatter.description ?? ""}
-        products={products}
-        primaryCta={{ label: "Contact Sales", href: "/contact" }}
-        secondaryCta={{ label: "View Catalog", href: "#products" }}
-      />
+      <CinematicHero products={products} showOverlay={false} />
       <section id="products" className="py-12">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6">
           {page.content.trim() ? (
