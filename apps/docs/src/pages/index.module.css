@@ -8,15 +8,6 @@
   background: var(--ifm-background-color);
 }
 
-.prompt {
-  margin: 0 0 2.5rem;
-  font-size: clamp(1.35rem, 3vw, 1.85rem);
-  font-weight: 600;
-  color: var(--ifm-font-color-base);
-  text-align: center;
-  letter-spacing: -0.02em;
-}
-
 .choices {
   display: grid;
   grid-template-columns: repeat(2, minmax(280px, 360px));
@@ -67,22 +58,12 @@
   border-color: var(--ifm-color-primary);
 }
 
-.choiceLabel {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ifm-color-emphasis-600);
-}
-
 .choiceText {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.25rem 0;
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.25rem, 2.8vw, 1.6rem);
   font-weight: 700;
   line-height: 1.45;
   text-align: center;
