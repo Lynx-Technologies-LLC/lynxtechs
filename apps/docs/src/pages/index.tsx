@@ -7,7 +7,7 @@ export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title="Documentation" description={siteConfig.tagline} noFooter>
+    <Layout title="Documentation" description={siteConfig.tagline}>
       <main className={styles.page}>
         <p className={styles.prompt}>What do you want to learn about?</p>
 
