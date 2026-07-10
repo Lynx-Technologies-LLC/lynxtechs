@@ -20,7 +20,7 @@ always builds.
 
 | Path | Source | Committed? |
 | --- | --- | --- |
-| `docs/intro.md`, `docs/ethercat-basics/**` | Hand-authored | Yes |
+| `docs/intro.md`, `docs/lxmaster/ethercat-basics/**` | Hand-authored | Yes |
 | `docs/lxmaster/overview.md`, `getting-started.md` | Hand-authored | Yes |
 | `docs/lxmaster/tutorials/**` | Migrated from lxmaster (`scripts/migrate-recovered-docs.mjs`) | Yes |
 | `docs/hardware/**` | Hand-authored | Yes |

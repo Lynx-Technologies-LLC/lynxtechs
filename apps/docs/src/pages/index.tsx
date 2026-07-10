@@ -116,7 +116,7 @@ const RESOURCES = [
     title: 'EtherCAT Basics',
     description:
       'New to EtherCAT? Start here for an overview of the protocol, device types, and communication model.',
-    to: '/ethercat-basics',
+    to: '/lxmaster/ethercat-basics',
     icon: '📡',
   },
 ];
@@ -220,7 +220,7 @@ export default function Home() {
             <a className={styles.ctaPrimary} href="#products">
               Explore Products
             </a>
-            <Link className={styles.ctaSecondary} to="/ethercat-basics">
+            <Link className={styles.ctaSecondary} to="/lxmaster/ethercat-basics">
               EtherCAT Basics
             </Link>
           </div>

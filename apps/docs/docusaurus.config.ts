@@ -105,12 +105,6 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'etherCatSidebar',
-          position: 'left',
-          label: 'EtherCAT Basics',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'lxmasterSidebar',
           docsPluginId: 'lxmaster',
           position: 'left',
@@ -182,7 +176,7 @@ const config: Config = {
           items: [
             {
               label: 'EtherCAT Basics',
-              to: '/ethercat-basics',
+              to: '/lxmaster/ethercat-basics',
             },
             {
               label: 'Main site',

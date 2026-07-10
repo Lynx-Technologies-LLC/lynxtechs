@@ -58,6 +58,7 @@ See [Getting Started](./getting-started.md) for a full build and run walkthrough
 
 ## Where to next
 
+- **[EtherCAT Basics](./ethercat-basics)** — foundational EtherCAT concepts before diving into LXMASTER.
 - **[Getting Started](./getting-started.md)** — install LXMASTER and run your first application.
 - **[C++ API Reference](./api)** — full library reference.
 - **[Release Notes](./release-notes)** — version history and upgrade notes.
