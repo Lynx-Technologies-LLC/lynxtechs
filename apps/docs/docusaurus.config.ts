@@ -185,7 +185,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Lynx Technologies. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Lynx Technologies.`,
     },
     prism: {
       theme: prismThemes.vsLight,
