@@ -33,7 +33,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <CinematicHero products={products} showOverlay={false} />
+      <CinematicHero products={products} showOverlay={false} compact />
       <section id="products" className="py-12">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6">
           {page.content.trim() ? (
