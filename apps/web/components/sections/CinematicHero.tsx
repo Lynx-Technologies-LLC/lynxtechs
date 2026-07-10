@@ -15,7 +15,8 @@ const INTERVAL_MS = 5000;
 type CinematicHeroProps = {
   headline: string;
   subcopy: string;
-  products: ProductSummary[];
+  products?: ProductSummary[];
+  videoSrc?: string;
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
 };
@@ -23,7 +24,8 @@ type CinematicHeroProps = {
 export function CinematicHero({
   headline,
   subcopy,
-  products,
+  products = [],
+  videoSrc,
   primaryCta = { label: "Contact Sales", href: "/contact" },
   secondaryCta = { label: "View Products", href: "/products" },
 }: CinematicHeroProps) {
@@ -44,23 +46,35 @@ export function CinematicHero({
   const prev = useCallback(() => goTo(current - 1), [current, goTo]);
 
   useEffect(() => {
-    if (products.length <= 1) {
+    if (videoSrc || products.length <= 1) {
       return;
     }
 
     const timer = setInterval(next, INTERVAL_MS);
     return () => clearInterval(timer);
-  }, [next, products.length]);
+  }, [next, products.length, videoSrc]);
 
   const slide = products[current];
+  const isSlideshow = !videoSrc && products.length > 0;
 
   return (
     <section
       className="relative min-h-[88vh] overflow-hidden border-b border-border bg-black"
-      aria-label="Product slideshow"
-      aria-roledescription="carousel"
+      aria-label={isSlideshow ? "Product slideshow" : "Hero"}
+      aria-roledescription={isSlideshow ? "carousel" : undefined}
     >
-      {slide ? (
+      {videoSrc ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
+          aria-hidden
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      ) : slide ? (
         <AnimatePresence mode="wait">
           <motion.div
             key={slide.handle}
@@ -116,7 +130,7 @@ export function CinematicHero({
             </div>
           </motion.div>
 
-          {slide ? (
+          {isSlideshow && slide ? (
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
@@ -140,7 +154,7 @@ export function CinematicHero({
           ) : null}
         </div>
 
-        {products.length > 1 ? (
+        {isSlideshow && products.length > 1 ? (
           <div className="mt-12 flex items-center justify-between">
             <div className="flex gap-2">
               {products.map((item, index) => (

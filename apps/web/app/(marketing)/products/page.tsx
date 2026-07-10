@@ -3,6 +3,7 @@ import { Suspense } from "react";
 
 import { MdxContent } from "@/components/mdx/MdxContent";
 import { CTA } from "@/components/sections/CTA";
+import { CinematicHero } from "@/components/sections/CinematicHero";
 import { ProductCatalog } from "@/components/sections/ProductCatalog";
 import { getPageBySlug } from "@/lib/mdx";
 import { getListedProductSummaries } from "@/lib/products";
@@ -32,7 +33,14 @@ export default function ProductsPage() {
 
   return (
     <>
-      <section className="py-12">
+      <CinematicHero
+        headline={page.frontmatter.title}
+        subcopy={page.frontmatter.description ?? ""}
+        products={products}
+        primaryCta={{ label: "Contact Sales", href: "/contact" }}
+        secondaryCta={{ label: "View Catalog", href: "#products" }}
+      />
+      <section id="products" className="py-12">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6">
           {page.content.trim() ? (
             <div className="max-w-3xl text-muted-foreground">
