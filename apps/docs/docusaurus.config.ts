@@ -27,7 +27,7 @@ const config: Config = {
     },
   },
 
-  onBrokenAnchors: 'warn',
+  onBrokenAnchors: 'ignore',
 
   i18n: {
     defaultLocale: 'en',

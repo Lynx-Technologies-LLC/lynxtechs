@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "docusaurus-2",
-  "outputDirectory": "build"
+  "outputDirectory": "build",
+  "cleanUrls": true,
+  "functions": {
+    "api/docs-chat.mjs": {
+      "includeFiles": "{docs,lxmaster_versioned_docs,lib}/**"
+    }
+  }
 }

@@ -10,7 +10,7 @@ sidebar_label: "NetworkConfig"
 
 # ecnet::NetworkConfig
 
-User-facing configuration for an [EcNetwork]().  [More...](#detailed-description)
+User-facing configuration for an EcNetwork.  [More...](#detailed-description)
 
 `#include <network_config.hpp>`
 
@@ -43,7 +43,7 @@ User-facing configuration for an [EcNetwork]().  [More...](#detailed-description
 struct ecnet::NetworkConfig;
 ```
 
-User-facing configuration for an [EcNetwork](). 
+User-facing configuration for an EcNetwork. 
 
 Bus timing, DC, RT scheduling, and shutdown policy live here; drive-specific PDO/FSM options live on `CiA402Config` / vendor configs.
 

@@ -33,9 +33,9 @@ User-facing runtime facade for an EtherCAT network.  [More...](#detailed-descrip
 | [SyncTraceReport](/lxmaster/api/classes/EcNetwork-SyncTraceReport) | **[syncTraceReport](/lxmaster/api/classes/EcNetwork#function-synctracereport)**() const<br>Per-cycle DC-sync + host jitter capture from the last session (`NetworkConfig::sync_trace_capacity`).  |
 | SyncMode | **[syncMode](/lxmaster/api/classes/EcNetwork#function-syncmode)**() const<br>Synchronization mode resolved from the ENI (DcSync0 when the bus carries a SYNC0 device, else SmEvent).  |
 | void | **[stop](/lxmaster/api/classes/EcNetwork#function-stop)**()<br>Stop the cyclic thread and close the master.  |
-| bool | **[start](/lxmaster/api/classes/EcNetwork#function-start)**()<br>Phase 2 of bring-up (runs `[prepare()]()` first if it has not been called): per-device CoE configuration (commits each drive's operating mode to 0x6060), configures DC, reaches SAFE_OP + OPERATIONAL, and spawns the cyclic thread.  |
+| bool | **[start](/lxmaster/api/classes/EcNetwork#function-start)**()<br>Phase 2 of bring-up (runs `prepare()` first if it has not been called): per-device CoE configuration (commits each drive's operating mode to 0x6060), configures DC, reaches SAFE_OP + OPERATIONAL, and spawns the cyclic thread.  |
 | void | **[reportDeviceStatus](/lxmaster/api/classes/EcNetwork#function-reportdevicestatus)**(std::ostream & os) const<br>Print each device's exit status via `reportExitStatus` to `os`.  |
-| bool | **[prepare](/lxmaster/api/classes/EcNetwork#function-prepare)**()<br>Phase 1 of bring-up: applies RT scheduling, loads + validates the ENI, opens the NIC, verifies the scanned hardware, reaches PRE_OP, and binds devices so that `[axes()]()` / `[ioModules()]()` / `[encoders()]()` become valid.  |
+| bool | **[prepare](/lxmaster/api/classes/EcNetwork#function-prepare)**()<br>Phase 1 of bring-up: applies RT scheduling, loads + validates the ENI, opens the NIC, verifies the scanned hardware, reaches PRE_OP, and binds devices so that `axes()` / `ioModules()` / `encoders()` become valid.  |
 | [EcNetwork](/lxmaster/api/classes/EcNetwork) & | **[operator=](/lxmaster/api/classes/EcNetwork#function-operator=)**(const [EcNetwork](/lxmaster/api/classes/EcNetwork) & ) =delete |
 | std::string | **[lastError](/lxmaster/api/classes/EcNetwork#function-lasterror)**() const<br>Last human-readable error captured from the library (thread-safe).  |
 | [JitterStats](/lxmaster/api/classes/EcNetwork-JitterStats) | **[jitterStats](/lxmaster/api/classes/EcNetwork#function-jitterstats)**() const<br>Snapshot of cycle-timing jitter (updated throughout the run; final at `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)`).  |
@@ -129,7 +129,7 @@ Safe to call multiple times.
 bool start()
 ```
 
-Phase 2 of bring-up (runs `[prepare()]()` first if it has not been called): per-device CoE configuration (commits each drive's operating mode to 0x6060), configures DC, reaches SAFE_OP + OPERATIONAL, and spawns the cyclic thread. 
+Phase 2 of bring-up (runs `prepare()` first if it has not been called): per-device CoE configuration (commits each drive's operating mode to 0x6060), configures DC, reaches SAFE_OP + OPERATIONAL, and spawns the cyclic thread. 
 
 Returns true on success; false + `[lastError()](/lxmaster/api/classes/EcNetwork#function-lasterror)` on failure. Failures at any step tear down what was initialized. 
 
@@ -153,7 +153,7 @@ Call after `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` to surface 
 bool prepare()
 ```
 
-Phase 1 of bring-up: applies RT scheduling, loads + validates the ENI, opens the NIC, verifies the scanned hardware, reaches PRE_OP, and binds devices so that `[axes()]()` / `[ioModules()]()` / `[encoders()]()` become valid. 
+Phase 1 of bring-up: applies RT scheduling, loads + validates the ENI, opens the NIC, verifies the scanned hardware, reaches PRE_OP, and binds devices so that `axes()` / `ioModules()` / `encoders()` become valid. 
 
 Crucially it stops _before_ any per-device CoE configuration, so the application can set per-axis intent (e.g. `axis->setOperatingMode(...)`) on the discovered drives before the operating mode is committed to the drive in `[start()](/lxmaster/api/classes/EcNetwork#function-start)`. Returns true on success; false + `[lastError()](/lxmaster/api/classes/EcNetwork#function-lasterror)` on failure (which tears down what was initialized). Idempotent: a second call after success is a no-op success. Calling it after `[start()](/lxmaster/api/classes/EcNetwork#function-start)` is an error. 
 

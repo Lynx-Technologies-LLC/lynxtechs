@@ -17,6 +17,8 @@ import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {tmpdir} from 'node:os';
 
+import {sanitizeApiDocs} from './sanitize-api-docs.mjs';
+
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const apiDir = resolve(scriptDir, '..', 'docs', 'lxmaster', 'api');
 
@@ -72,6 +74,12 @@ export async function syncApiReference() {
   // Overlay the generated Markdown onto the api/ folder (replaces the
   // placeholder index; the generated bundle carries its own _category_.json).
   execFileSync('tar', ['-xzf', tmpFile, '-C', apiDir]);
+
+  const appRoot = resolve(scriptDir, '..');
+  const sanitized = sanitizeApiDocs(appRoot);
+  console.log(
+    `[sync-api] Sanitized API docs: ${sanitized.changedFiles} file(s) updated.`,
+  );
 
   console.log(`[sync-api] Unpacked ${assetName} into docs/lxmaster/api/`);
 }

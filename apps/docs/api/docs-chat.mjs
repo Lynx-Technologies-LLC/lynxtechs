@@ -1,8 +1,6 @@
-import type {VercelRequest, VercelResponse} from '@vercel/node';
-
 import {isValidMessages, runDocsChat} from '../lib/docs-chat.mjs';
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({error: 'Method not allowed'});
   }
