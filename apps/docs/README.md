@@ -52,7 +52,7 @@ Generated folders are git-ignored except their placeholder `index.md` /
 | `LXMASTER_DEMOS_SLUG` | examples sync | Default `Lynx-Technologies-LLC/lxmaster-demos`. |
 | `SYNC_STRICT=1` | prebuild | Make a failed sync fatal (used by the version cut). |
 | `ANTHROPIC_API_KEY` | Ask AI (`api/docs-chat`) | Required in Vercel for the navbar Ask AI chat. Never expose in the browser. |
-| `ANTHROPIC_MODEL` | Ask AI | Optional Claude model override. |
+| `ANTHROPIC_MODEL` | Ask AI | Optional Claude model override. Defaults to `claude-haiku-4-5`. |
 
 ## Ask AI
 
@@ -60,16 +60,20 @@ The navbar **Ask AI** button opens a chat panel backed by the Anthropic API.
 
 - **Frontend:** `src/components/AskAi/`, wired through `src/theme/Root.tsx` and a custom navbar item.
 - **API:** `api/docs-chat.ts` (Vercel serverless function).
+- **Prompts & scope rules:** `lib/docs-chat-prompts.mjs` — edit `SYSTEM_PROMPT`, `OFF_TOPIC_REFUSAL`, or the on/off-topic pattern lists. Restart the dev server after changes.
+- **Doc retrieval for answers:** `lib/docs-chat-context.mjs` — searches local Lynx docs and injects relevant excerpts into each Ask AI request.
 
 ### Local testing
 
-`docusaurus start` serves the UI only. To test chat locally with the API route:
+`npm run dev` serves the UI and the `/api/docs-chat` route in development.
 
 ```bash
 cd apps/docs
 cp .env.example .env.local   # add ANTHROPIC_API_KEY
-npx vercel dev
+npm run dev
 ```
+
+Restart the dev server after creating or changing `.env.local`.
 
 Deploy to Vercel with `ANTHROPIC_API_KEY` set in the project environment variables.
 

@@ -1,5 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 
+import ChatMessageContent from './ChatMessageContent';
 import {useAskAi} from './AskAiProvider';
 import styles from './AskAi.module.css';
 
@@ -89,7 +90,11 @@ export default function AskAiPanel() {
               <span className={styles.messageLabel}>
                 {message.role === 'user' ? 'You' : 'Assistant'}
               </span>
-              <p className={styles.messageBody}>{message.content}</p>
+              {message.role === 'assistant' ? (
+                <ChatMessageContent content={message.content} />
+              ) : (
+                <p className={styles.messageBody}>{message.content}</p>
+              )}
             </div>
           ))}
 

@@ -54,7 +54,20 @@ export function AskAiProvider({children}: {children: ReactNode}) {
         body: JSON.stringify({messages: nextMessages}),
       });
 
-      const data = (await response.json()) as {message?: string; error?: string};
+      const raw = await response.text();
+      let data: {message?: string; error?: string} = {};
+
+      try {
+        data = raw ? (JSON.parse(raw) as {message?: string; error?: string}) : {};
+      } catch {
+        if (response.status === 404) {
+          throw new Error(
+            'Ask AI API is unavailable in dev. Restart the dev server after adding ANTHROPIC_API_KEY=your-key to apps/docs/.env.local.',
+          );
+        }
+
+        throw new Error('Failed to reach the assistant');
+      }
 
       if (!response.ok) {
         throw new Error(data.error ?? 'Failed to reach the assistant');
