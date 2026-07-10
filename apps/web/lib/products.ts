@@ -109,6 +109,7 @@ function fileToProduct(handle: string, filePath: string): Product | null {
     highlights: frontmatter.highlights,
     cta: frontmatter.cta,
     listed: frontmatter.listed ?? true,
+    featured: frontmatter.featured ?? true,
     order: frontmatter.order ?? 0,
   };
 }
@@ -158,6 +159,10 @@ export function getListedProducts(): Product[] {
   return getAllProducts().filter((product) => product.listed);
 }
 
+export function getFeaturedProducts(): Product[] {
+  return getListedProducts().filter((product) => product.featured);
+}
+
 export function toProductSummary(product: Product): ProductSummary {
   const primaryImage = product.images[0];
 
@@ -174,4 +179,8 @@ export function toProductSummary(product: Product): ProductSummary {
 
 export function getListedProductSummaries(): ProductSummary[] {
   return getListedProducts().map(toProductSummary);
+}
+
+export function getFeaturedProductSummaries(): ProductSummary[] {
+  return getFeaturedProducts().map(toProductSummary);
 }

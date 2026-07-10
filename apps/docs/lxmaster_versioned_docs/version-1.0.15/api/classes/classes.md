@@ -22,12 +22,12 @@ title: Classes
 * **class [IIoProfile](/lxmaster/api/classes/IIoProfile)** <br>Facade-facing contract for a digital/analog I/O device (CiA 401 family). 
 * **class [IMotionProfile](/lxmaster/api/classes/IMotionProfile)** <br>Facade-facing contract for a motion (drive) device. 
 * **class [IProfileFactory](/lxmaster/api/classes/IProfileFactory)** <br>Builds the device-class profile for one slave. 
-* **class [ProfileRegistry](/lxmaster/api/classes/ProfileRegistry)** <br>Registry of `[IProfileFactory]()` plugins. 
+* **class [ProfileRegistry](/lxmaster/api/classes/ProfileRegistry)** <br>Registry of `IProfileFactory` plugins. 
 * **struct [ProfileSelectionInput](/lxmaster/api/classes/ProfileSelectionInput)** <br>Inputs a factory uses to decide on and build a profile for one ENI slave. 
-* **namespace [claim_score](/lxmaster/api/namespaces/namespaceecdev_1_1claim__score)** <br>Claim-score tiers for `[IProfileFactory::claim]()`. 
+* **namespace claim_score** <br>Claim-score tiers for `IProfileFactory::claim`. 
 * **class [Axis](/lxmaster/api/classes/Axis)** <br>High-level motion handle a PLC/application programmer uses, analogous to a TwinCAT "NC axis". 
 * **class [Encoder](/lxmaster/api/classes/Encoder)** <br>High-level encoder handle. 
-* **class [GenericDevice](/lxmaster/api/classes/GenericDevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g. 
+* **class [GenericDevice](/lxmaster/api/classes/GenericDevice)** <br>Application handle for a device whose profile implements none of the typed capability contracts (not an `Axis`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `Encoder`) &ndash; e.g. 
 * **class [IoModule](/lxmaster/api/classes/IoModule)** <br>High-level digital/analog I/O handle. 
 * **struct [BusFault](/lxmaster/api/classes/BusFault)** <br>Structured description of a cyclic-bus fault, built when the cycle-health watchdog trips (see `NetworkConfig::watchdog_low_wkc_cycles`). 
 * **class [EcNetwork](/lxmaster/api/classes/EcNetwork)** <br>User-facing runtime facade for an EtherCAT network. 
@@ -36,7 +36,7 @@ title: Classes
     * **struct [SlaveSnapshot](/lxmaster/api/classes/EcNetwork-SlaveSnapshot)** <br>Snapshot of each slave's EtherCAT state + AL-status code taken while the master is still open (the last thing `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` does before `master_->close()`). 
     * **struct [SyncTraceReport](/lxmaster/api/classes/EcNetwork-SyncTraceReport)** <br>Cached at `[stop()](/lxmaster/api/classes/EcNetwork#function-stop)` from the cyclic executor's sync trace ring (see `NetworkConfig::sync_trace_capacity`). 
 * **struct [LostSlave](/lxmaster/api/classes/LostSlave)** <br>One slave that stopped responding when the bus fault was diagnosed. 
-* **struct [NetworkConfig](/lxmaster/api/classes/NetworkConfig)** <br>User-facing configuration for an [EcNetwork](). 
+* **struct [NetworkConfig](/lxmaster/api/classes/NetworkConfig)** <br>User-facing configuration for an EcNetwork. 
 
 
 

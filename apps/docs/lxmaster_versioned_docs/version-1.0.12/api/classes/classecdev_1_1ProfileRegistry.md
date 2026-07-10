@@ -10,7 +10,7 @@ sidebar_label: "ProfileRegistry"
 
 # ecdev::ProfileRegistry
 
-Registry of `[IProfileFactory]()` plugins.  [More...](#detailed-description)
+Registry of `IProfileFactory` plugins.  [More...](#detailed-description)
 
 `#include <profile_registry.hpp>`
 
@@ -29,7 +29,7 @@ Registry of `[IProfileFactory]()` plugins.  [More...](#detailed-description)
 class ecdev::ProfileRegistry;
 ```
 
-Registry of `[IProfileFactory]()` plugins. 
+Registry of `IProfileFactory` plugins. 
 
 `select()` returns the best-claiming profile for a slave, or null when no factory claims it (the caller decides what an unmatched slave means).
 

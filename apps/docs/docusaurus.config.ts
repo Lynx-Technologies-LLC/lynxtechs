@@ -27,7 +27,7 @@ const config: Config = {
     },
   },
 
-  onBrokenAnchors: 'warn',
+  onBrokenAnchors: 'ignore',
 
   i18n: {
     defaultLocale: 'en',
@@ -35,6 +35,7 @@ const config: Config = {
   },
 
   plugins: [
+    './plugins/ask-ai-dev-plugin.mjs',
     [
       '@docusaurus/plugin-content-docs',
       {
@@ -102,12 +103,7 @@ const config: Config = {
           sidebarId: 'hardwareSidebar',
           position: 'left',
           label: 'EtherCAT PCB Modules',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'etherCatSidebar',
-          position: 'left',
-          label: 'EtherCAT Basics',
+          className: 'navbar-tab navbar-tab--hardware',
         },
         {
           type: 'docSidebar',
@@ -115,6 +111,12 @@ const config: Config = {
           docsPluginId: 'lxmaster',
           position: 'left',
           label: 'LXMASTER',
+          className: 'navbar-tab navbar-tab--lxmaster',
+        },
+        {
+          type: 'custom-askAi',
+          position: 'right',
+          label: 'Ask AI',
         },
         {
           type: 'docsVersionDropdown',
@@ -122,76 +124,6 @@ const config: Config = {
           position: 'right',
         },
       ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'LXMASTER',
-          items: [
-            {
-              label: 'Overview',
-              to: '/lxmaster/overview',
-            },
-            {
-              label: 'Getting Started',
-              to: '/lxmaster/getting-started',
-            },
-            {
-              label: 'API Reference',
-              to: '/lxmaster/api',
-            },
-            {
-              label: 'Release Notes',
-              to: '/lxmaster/release-notes',
-            },
-          ],
-        },
-        {
-          title: 'EtherCAT Modules',
-          items: [
-            {
-              label: 'LXDIO33-16',
-              to: '/hardware/lxdio33-16/overview',
-            },
-            {
-              label: 'LXFIBER',
-              to: '/hardware/lxfiber/overview',
-            },
-            {
-              label: 'LXRJ45',
-              to: '/hardware/lxrj45/overview',
-            },
-          ],
-        },
-        {
-          title: 'Services',
-          items: [
-            {
-              label: 'EtherCAT System Design',
-              to: '/services',
-            },
-            {
-              label: 'PCB Design Services',
-              to: '/services',
-            },
-          ],
-        },
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'EtherCAT Basics',
-              to: '/ethercat-basics',
-            },
-            {
-              label: 'Main site',
-              href: 'https://lynxtechs.com',
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Lynx Technologies. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.vsLight,

@@ -21,6 +21,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.110.0",
     "@docusaurus/core": "3.10.1",
     "@docusaurus/preset-classic": "3.10.1",
     "@docusaurus/theme-mermaid": "^3.10.1",
@@ -29,12 +30,15 @@
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
     "@docusaurus/tsconfig": "3.10.1",
     "@docusaurus/types": "3.10.1",
+    "@vercel/node": "^5.8.23",
     "typescript": "~5.6.2"
   },
   "browserslist": {
@@ -50,6 +54,6 @@
     ]
   },
   "engines": {
-    "node": ">=20.9.0"
+    "node": "24.x"
   }
 }

@@ -5,6 +5,10 @@
 // step logs a warning and leaves the committed placeholder content in place so
 // the site still builds. Set SYNC_STRICT=1 to fail the build if a step errors.
 
+import {dirname, resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+import {sanitizeApiDocs} from './sanitize-api-docs.mjs';
 import {syncApiReference} from './sync-api.mjs';
 import {syncReleaseNotes} from './sync-release-notes.mjs';
 import {syncExamples} from './sync-examples.mjs';
@@ -38,3 +42,9 @@ if (failed && strict) {
 }
 
 console.log('[prebuild] Done.');
+
+const appRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const sanitized = sanitizeApiDocs(appRoot);
+console.log(
+  `[prebuild] Sanitized API docs: ${sanitized.changedFiles} file(s) updated.`,
+);

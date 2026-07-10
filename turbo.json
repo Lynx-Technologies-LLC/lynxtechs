@@ -4,7 +4,12 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "build/**", ".docusaurus/**"],
-      "env": ["LXMASTER_DOCS_TOKEN", "GITHUB_TOKEN"]
+      "env": [
+        "LXMASTER_DOCS_TOKEN",
+        "GITHUB_TOKEN",
+        "ANTHROPIC_API_KEY",
+        "ANTHROPIC_MODEL"
+      ]
     },
     "dev": {
       "cache": false,

@@ -16,8 +16,8 @@ to integrate them into your own designs.
 - **[LXMASTER Software](/lxmaster/overview)** - the Linux EtherCAT master
   stack: overview, getting started, tutorials, example projects, the API
   reference, and release notes.
-- **[EtherCAT Basics](./ethercat-basics/overview.md)** - a high-level
-  introduction to EtherCAT concepts, devices, and communication.
+- **[EtherCAT Basics](/lxmaster/ethercat-basics)** - a high-level
+  introduction to EtherCAT concepts, devices, and communication (under LXMASTER).
 - **[Hardware](./hardware/overview.md)** - the EtherCAT hardware module family,
   PCB integration guidance, per-module tutorials, and example projects.
 

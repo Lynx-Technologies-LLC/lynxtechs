@@ -10,7 +10,7 @@ sidebar_label: "GenericDevice"
 
 # ecfacade::GenericDevice
 
-Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g.  [More...](#detailed-description)
+Application handle for a device whose profile implements none of the typed capability contracts (not an `Axis`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `Encoder`) &ndash; e.g.  [More...](#detailed-description)
 
 `#include <generic_device.hpp>`
 
@@ -46,7 +46,7 @@ Inherits from ecfacade::DeviceFacade
 class ecfacade::GenericDevice;
 ```
 
-Application handle for a device whose profile implements none of the typed capability contracts (not an `[Axis]()`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `[Encoder]()`) &ndash; e.g. 
+Application handle for a device whose profile implements none of the typed capability contracts (not an `Axis`, `[IoModule](/lxmaster/api/classes/IoModule)`, or `Encoder`) &ndash; e.g. 
 
 an EtherCAT IMU or any other vendor device modelled by a custom `[ecdev::IDeviceProfile](/lxmaster/api/classes/IDeviceProfile)`.
 

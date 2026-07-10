@@ -20,7 +20,7 @@ always builds.
 
 | Path | Source | Committed? |
 | --- | --- | --- |
-| `docs/intro.md`, `docs/ethercat-basics/**` | Hand-authored | Yes |
+| `docs/intro.md`, `docs/lxmaster/ethercat-basics/**` | Hand-authored | Yes |
 | `docs/lxmaster/overview.md`, `getting-started.md` | Hand-authored | Yes |
 | `docs/lxmaster/tutorials/**` | Migrated from lxmaster (`scripts/migrate-recovered-docs.mjs`) | Yes |
 | `docs/hardware/**` | Hand-authored | Yes |
@@ -51,6 +51,33 @@ Generated folders are git-ignored except their placeholder `index.md` /
 | `LXMASTER_REPO_SLUG` | api / release-notes sync | Default `Lynx-Technologies-LLC/lxmaster`. |
 | `LXMASTER_DEMOS_SLUG` | examples sync | Default `Lynx-Technologies-LLC/lxmaster-demos`. |
 | `SYNC_STRICT=1` | prebuild | Make a failed sync fatal (used by the version cut). |
+| `ANTHROPIC_API_KEY` | Ask AI (`api/docs-chat`) | Required in Vercel for the navbar Ask AI chat. Never expose in the browser. |
+| `ANTHROPIC_MODEL` | Ask AI | Optional Claude model override. Defaults to `claude-haiku-4-5`. |
+
+## Ask AI
+
+The navbar **Ask AI** button opens a chat panel backed by the Anthropic API.
+
+- **Frontend:** `src/components/AskAi/`, wired through `src/theme/Root.tsx` and a custom navbar item.
+- **API:** `api/docs-chat.mjs` (Vercel serverless function).
+- **Prompts & scope rules:** `lib/docs-chat-prompts.mjs` — edit `SYSTEM_PROMPT`, `OFF_TOPIC_REFUSAL`, or the on/off-topic pattern lists. Restart the dev server after changes.
+- **Doc retrieval for answers:** `lib/docs-chat-context.mjs` — searches local Lynx docs and injects relevant excerpts into each Ask AI request.
+
+### Local testing
+
+`npm run dev` serves the UI and the `/api/docs-chat` route in development.
+
+```bash
+cd apps/docs
+cp .env.example .env.local   # add ANTHROPIC_API_KEY
+npm run dev
+```
+
+Restart the dev server after creating or changing `.env.local`.
+
+Deploy to Vercel with `ANTHROPIC_API_KEY` set in the project environment variables.
+
+Internal doc retrieval (RAG) can be added later inside `api/docs-chat.mjs` before the Anthropic request.
 
 ## Versioning
 
@@ -75,7 +102,8 @@ Deploy as a **separate Vercel project** from the same repo:
 - **Output directory:** `build`
 - **Domain:** `docs.lynxtechs.com`
 - **Environment variables:** set `LXMASTER_DOCS_TOKEN` (if the lxmaster repos are
-  private) and optionally `LXMASTER_DOCS_VERSION`.
+  private), optionally `LXMASTER_DOCS_VERSION`, and `ANTHROPIC_API_KEY` for Ask AI.
+  Redeploy after adding or changing environment variables.
 
 The marketing site (`apps/web`) already links to `https://docs.lynxtechs.com`, so
 no change is needed there.
