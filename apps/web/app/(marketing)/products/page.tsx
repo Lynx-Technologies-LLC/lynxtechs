@@ -6,7 +6,7 @@ import { CTA } from "@/components/sections/CTA";
 import { CinematicHero } from "@/components/sections/CinematicHero";
 import { ProductCatalog } from "@/components/sections/ProductCatalog";
 import { getPageBySlug } from "@/lib/mdx";
-import { getListedProductSummaries } from "@/lib/products";
+import { getFeaturedProductSummaries, getListedProductSummaries } from "@/lib/products";
 import { getSiteConfig } from "@/lib/site";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,6 +26,7 @@ export default function ProductsPage() {
   const page = getPageBySlug(["products"]);
   const site = getSiteConfig();
   const products = getListedProductSummaries();
+  const featuredProducts = getFeaturedProductSummaries();
 
   if (!page) {
     return null;
@@ -33,7 +34,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      <CinematicHero products={products} showOverlay={false} compact />
+      <CinematicHero products={featuredProducts} showOverlay={false} compact />
       <section id="products" className="py-12">
         <div className="mx-auto max-w-6xl space-y-10 px-4 sm:px-6">
           {page.content.trim() ? (

@@ -17,6 +17,7 @@ export type ProductFrontmatter = {
   highlights?: string[];
   cta?: string;
   listed?: boolean;
+  featured?: boolean;
   order?: number;
 };
 
@@ -42,6 +43,7 @@ export type Product = {
   highlights?: string[];
   cta?: string;
   listed: boolean;
+  featured: boolean;
   order: number;
 };
 
