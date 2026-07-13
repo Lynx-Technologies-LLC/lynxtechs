@@ -78,7 +78,7 @@ bring-up is **two-phase**:
   and spawns the real-time cyclic thread.
 
 If you do not need the PRE-OP window, calling `start()` directly runs `prepare()`
-for you. For more depth see [Device States](../../ethercat-basics/state-machine).
+for you. For more depth see [Device States](../../ethercat-basics/state-machine.md).
 
 ## The minimal program
 

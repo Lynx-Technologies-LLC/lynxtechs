@@ -77,7 +77,7 @@ for the target position; on the next EtherCAT frame that value reaches the drive
 When you read `actualPosition()`, you get the value the drive placed in its TxPDO
 on the most recent cycle. This is why reads and commands are effectively
 instantaneous from your code's point of view but only take physical effect on the
-next cycle. See [How Data Flows](../../ethercat-basics/data-communication) for
+next cycle. See [How Data Flows](../../ethercat-basics/data-communication.md) for
 detail.
 
 ## Everything a facade does is RT-safe

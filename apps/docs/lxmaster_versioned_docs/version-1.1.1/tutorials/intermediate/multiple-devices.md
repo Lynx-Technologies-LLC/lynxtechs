@@ -24,7 +24,7 @@ The practical consequence for your code: when you set a servo position **and** a
 digital output in the same loop iteration, LXMASTER packs both into the next
 frame, and both take effect on the same cycle. There is no per-device transaction
 to manage — you just update the facades you care about and the RT thread does the
-rest. See [How Data Flows](../../ethercat-basics/data-communication) for the frame
+rest. See [How Data Flows](../../ethercat-basics/data-communication.md) for the frame
 mechanics.
 
 ## Configuring a mixed bus

@@ -66,7 +66,7 @@ interoperate:
 Because these are standards, LXMASTER can ship *one* CiA402 profile that drives
 almost any compliant servo — which is exactly why swapping drive brands does not
 change your `Axis` code. See
-[How Data Flows](../../ethercat-basics/data-communication) for the CoE/PDO split.
+[How Data Flows](../../ethercat-basics/data-communication.md) for the CoE/PDO split.
 
 ## How LXMASTER picks a profile for each slave
 

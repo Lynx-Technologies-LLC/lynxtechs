@@ -23,7 +23,7 @@ The `IoModule` facade addresses channels by a **0-based index in process-image
 order** — you do not compute byte offsets or bit masks. Under the hood a
 `writeDigital(3, true)` sets the correct bit in the output PDO, which reaches the
 terminal on the next EtherCAT frame (see
-[How Data Flows](../../ethercat-basics/data-communication)).
+[How Data Flows](../../ethercat-basics/data-communication.md)).
 
 ## Discovering an I/O module
 

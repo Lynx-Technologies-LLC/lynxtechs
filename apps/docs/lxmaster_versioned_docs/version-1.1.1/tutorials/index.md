@@ -28,7 +28,7 @@ drive hardware it has never seen before.
 You are comfortable with modern C++ and want to control EtherCAT drives, I/O, or
 custom devices from a Linux host. No prior EtherCAT experience is required —
 every page that needs it includes a short **EtherCAT background** section and
-links to the [EtherCAT Basics](../ethercat-basics/what-is-ethercat) reference for
+links to the [EtherCAT Basics](../ethercat-basics/what-is-ethercat.md) reference for
 more depth.
 
 ## Before you start

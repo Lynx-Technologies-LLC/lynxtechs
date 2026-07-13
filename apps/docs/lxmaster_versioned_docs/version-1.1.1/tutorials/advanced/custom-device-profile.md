@@ -39,7 +39,7 @@ process image to **resolve** a CoE index + subindex into a fast handle
 ```
 
 Resolving once at PRE-OP and reading via the handle each cycle keeps the real-time
-path free of map lookups. See [How Data Flows](../../ethercat-basics/data-communication)
+path free of map lookups. See [How Data Flows](../../ethercat-basics/data-communication.md)
 for the object-dictionary/PDO relationship.
 
 ## The `IDeviceProfile` contract
@@ -218,4 +218,4 @@ about brand-new hardware. From here:
   source.
 - Revisit the [LXMASTER overview](../../overview) and the API reference for every
   method and option.
-- Deepen the fundamentals in [EtherCAT Basics](../../ethercat-basics/what-is-ethercat).
+- Deepen the fundamentals in [EtherCAT Basics](../../ethercat-basics/what-is-ethercat.md).

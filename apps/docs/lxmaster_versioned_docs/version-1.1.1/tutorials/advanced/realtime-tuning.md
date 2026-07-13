@@ -29,7 +29,7 @@ Real-time EtherCAT is built on two forms of timing:
 
 Good motion needs both small: low jitter so frames leave on time, and tight DC
 alignment so distributed drives act in lockstep. See
-[Clocks and Synchronization](../../ethercat-basics/synchronization) for the full
+[Clocks and Synchronization](../../ethercat-basics/synchronization.md) for the full
 picture.
 
 ## The real-time thread and its knobs
