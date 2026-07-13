@@ -5,6 +5,8 @@ title: Overview
 
 # LXRJ45
 
+![LXRJ45](/img/products/LXRJ45.png)
+
 > Sample content. Replace with the finalized module specifications and part
 > numbers; always refer to the datasheet for production designs.
 

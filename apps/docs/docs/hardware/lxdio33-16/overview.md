@@ -5,6 +5,8 @@ title: Overview
 
 # LXDIO33-16
 
+![LXDIO33-16](/img/products/LXDIO33-16.png)
+
 > Sample content. Replace with the finalized module specifications and part
 > numbers; always refer to the datasheet for production designs.
 
