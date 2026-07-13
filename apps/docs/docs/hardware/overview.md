@@ -19,18 +19,11 @@ application electronics; the module handles the EtherCAT communication.
 
 Select a module in the sidebar for its full documentation.
 
-## What's on the module
-
-- EtherCAT Slave Controller (ESC) and dual PHYs.
-- Two RJ45/M8-ready ports (IN and OUT) for daisy-chaining.
-- Configuration EEPROM holding the ESI (device description).
-- A host interface (SPI or parallel) for your application MCU.
-
-## Integration at a glance
-
-1. Place the module on your carrier PCB.
-2. Provide power and route the two Ethernet ports to your connectors.
-3. Connect the host interface to your application processor.
-4. Load and verify the device description (ESI) for your configuration.
+:::note Under development
+The hardware documentation pages are currently under development. Content and
+specifications are subject to change. Refer to the datasheet for production
+details, or contact [support@lynxtechs.com](mailto:support@lynxtechs.com) with
+questions.
+:::
 
 Refer to each module's datasheet for the full electrical and mechanical specifications.
