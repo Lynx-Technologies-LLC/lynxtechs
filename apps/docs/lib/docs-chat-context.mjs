@@ -26,7 +26,7 @@ function walkMarkdownFiles(dir, files = []) {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      if (entry.name === 'api' || entry.name === 'release-notes') {
+      if (entry.name === 'release-notes') {
         continue;
       }
       walkMarkdownFiles(fullPath, files);
