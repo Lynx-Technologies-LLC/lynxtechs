@@ -7,6 +7,7 @@ import {
   isObviouslyOffTopic,
   OFF_TOPIC_REFUSAL,
   SYSTEM_PROMPT,
+  getSystemPrompt,
 } from './docs-chat-prompts.mjs';
 
 export {SYSTEM_PROMPT} from './docs-chat-prompts.mjs';
@@ -69,7 +70,7 @@ function formatAnthropicError(error) {
   return 'Failed to get a response. Please try again.';
 }
 
-export async function runDocsChat(messages) {
+export async function runDocsChat(messages, domain = 'software') {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
     const error = new Error(
@@ -89,7 +90,8 @@ export async function runDocsChat(messages) {
 
   const client = new Anthropic({apiKey});
   const modelCandidates = getModelCandidates();
-  const systemPrompt = buildSystemPrompt(SYSTEM_PROMPT, latestUserMessage ?? '');
+  const basePrompt = getSystemPrompt(domain);
+  const systemPrompt = buildSystemPrompt(basePrompt, latestUserMessage ?? '', domain);
   let lastModelError = null;
 
   for (const model of modelCandidates) {

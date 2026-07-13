@@ -4,17 +4,48 @@ import {fileURLToPath} from 'url';
 
 const DOCS_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
-const FALLBACK_DOC_PATHS = [
-  'docs/lxmaster/getting-started.md',
-  'docs/lxmaster/examples/index.md',
-  'docs/lxmaster/overview.md',
-  'docs/hardware/overview.md',
-];
+// Fallback sources per domain, used when no scored results match.
+const FALLBACK_DOC_PATHS = {
+  software: [
+    'docs/lxmaster/getting-started.md',
+    'docs/lxmaster/overview.md',
+    'docs/lxmaster/examples/index.md',
+  ],
+  hardware: [
+    'docs/hardware/overview.md',
+    'docs/hardware/lxdio33-16/overview.md',
+    'docs/hardware/lxfiber/overview.md',
+    'docs/hardware/lxrj45/overview.md',
+  ],
+};
 
 let cachedSources = null;
 
 function stripFrontmatter(content) {
   return content.replace(/^---[\s\S]*?---\n?/, '').trim();
+}
+
+/**
+ * Derive the domain tags for a source file.
+ * - 'software': LXMASTER docs (lxmaster_versioned_docs/ or docs/lxmaster/)
+ * - 'hardware': PCB module docs (docs/hardware/)
+ * - ['software','hardware']: ethercat-basics pages (relevant to both)
+ */
+function getDomainTags(relativePath) {
+  const p = relativePath.replace(/\\/g, '/');
+  const isEthercat = p.includes('ethercat-basics');
+  const isLxmaster =
+    p.startsWith('lxmaster_versioned_docs/') ||
+    p.startsWith('docs/lxmaster/') ||
+    p.startsWith('lxmaster_versioned_docs\\') ||
+    p.startsWith('docs\\lxmaster\\');
+  const isHardware =
+    p.startsWith('docs/hardware/') || p.startsWith('docs\\hardware\\');
+
+  if (isEthercat) return ['software', 'hardware'];
+  if (isLxmaster) return ['software'];
+  if (isHardware) return ['hardware'];
+  return ['software', 'hardware']; // other docs default to both
 }
 
 function walkMarkdownFiles(dir, files = []) {
@@ -72,9 +103,11 @@ function loadDocSources() {
     .filter((filePath, index, all) => all.indexOf(filePath) === index)
     .map((filePath) => {
       const raw = fs.readFileSync(filePath, 'utf8');
+      const relativePath = path.relative(DOCS_ROOT, filePath);
       return {
         filePath,
-        relativePath: path.relative(DOCS_ROOT, filePath),
+        relativePath,
+        domains: getDomainTags(relativePath),
         content: stripFrontmatter(raw),
       };
     });
@@ -136,33 +169,46 @@ function scoreSource(queryTokens, source) {
   return score;
 }
 
-function readFallbackSources() {
-  return FALLBACK_DOC_PATHS.map((relativePath) => {
-    const filePath = path.join(DOCS_ROOT, relativePath);
-    if (!fs.existsSync(filePath)) {
-      return null;
-    }
+function readFallbackSources(domain) {
+  const paths = domain === 'hardware'
+    ? FALLBACK_DOC_PATHS.hardware
+    : FALLBACK_DOC_PATHS.software;
 
-    return {
-      filePath,
-      relativePath,
-      content: stripFrontmatter(fs.readFileSync(filePath, 'utf8')),
-      score: 1,
-    };
-  }).filter(Boolean);
+  return paths
+    .map((relativePath) => {
+      const filePath = path.join(DOCS_ROOT, relativePath);
+      if (!fs.existsSync(filePath)) {
+        return null;
+      }
+
+      return {
+        filePath,
+        relativePath,
+        domains: getDomainTags(relativePath),
+        content: stripFrontmatter(fs.readFileSync(filePath, 'utf8')),
+        score: 1,
+      };
+    })
+    .filter(Boolean);
 }
 
-export function retrieveDocsContext(query, {maxChars = 14000, maxSources = 6} = {}) {
+export function retrieveDocsContext(query, {domain = 'software', maxChars = 14000, maxSources = 6} = {}) {
   const queryTokens = tokenize(query);
-  const sources = loadDocSources();
+  const allSources = loadDocSources();
 
-  let ranked = sources
+  // Filter to sources relevant to the requested domain.
+  const domainSources = allSources.filter((s) => s.domains.includes(domain));
+
+  let ranked = domainSources
     .map((source) => ({...source, score: scoreSource(queryTokens, source)}))
     .filter((source) => source.score > 0)
     .sort((left, right) => right.score - left.score);
 
-  if (ranked.length === 0 && /\b(lynx|lxmaster|ethercat|example|demo|hardware|lxdio|lxfiber|lxrj45)\b/i.test(query)) {
-    ranked = readFallbackSources();
+  if (
+    ranked.length === 0 &&
+    /\b(lynx|lxmaster|ethercat|example|demo|hardware|lxdio|lxfiber|lxrj45)\b/i.test(query)
+  ) {
+    ranked = readFallbackSources(domain);
   }
 
   const selected = ranked.slice(0, maxSources);
@@ -179,8 +225,8 @@ export function retrieveDocsContext(query, {maxChars = 14000, maxSources = 6} = 
   return context.trim();
 }
 
-export function buildSystemPrompt(basePrompt, query) {
-  const context = retrieveDocsContext(query);
+export function buildSystemPrompt(basePrompt, query, domain = 'software') {
+  const context = retrieveDocsContext(query, {domain});
 
   if (!context) {
     return basePrompt;

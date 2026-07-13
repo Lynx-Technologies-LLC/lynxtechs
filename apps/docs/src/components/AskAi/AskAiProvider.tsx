@@ -7,15 +7,18 @@ import React, {
   type ReactNode,
 } from 'react';
 
-import type {ChatMessage} from './types';
+import type {AskAiDomain, ChatMessage} from './types';
 
 type AskAiContextValue = {
   isOpen: boolean;
+  domain: AskAiDomain | null;
   messages: ChatMessage[];
   isLoading: boolean;
   error: string | null;
   open: () => void;
   close: () => void;
+  setDomain: (domain: AskAiDomain) => void;
+  resetDomain: () => void;
   sendMessage: (content: string) => Promise<void>;
   clearError: () => void;
 };
@@ -24,6 +27,7 @@ const AskAiContext = createContext<AskAiContextValue | null>(null);
 
 export function AskAiProvider({children}: {children: ReactNode}) {
   const [isOpen, setIsOpen] = useState(false);
+  const [domain, setDomainState] = useState<AskAiDomain | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -31,6 +35,17 @@ export function AskAiProvider({children}: {children: ReactNode}) {
   const open = useCallback(() => setIsOpen(true), []);
   const close = useCallback(() => setIsOpen(false), []);
   const clearError = useCallback(() => setError(null), []);
+
+  const setDomain = useCallback((d: AskAiDomain) => {
+    setDomainState(d);
+  }, []);
+
+  // Reset to the domain picker, clearing the current conversation.
+  const resetDomain = useCallback(() => {
+    setDomainState(null);
+    setMessages([]);
+    setError(null);
+  }, []);
 
   const sendMessage = useCallback(async (content: string) => {
     const trimmed = content.trim();
@@ -51,7 +66,7 @@ export function AskAiProvider({children}: {children: ReactNode}) {
       const response = await fetch('/api/docs-chat', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({messages: nextMessages}),
+        body: JSON.stringify({messages: nextMessages, domain: domain ?? 'software'}),
       });
 
       const raw = await response.text();
@@ -90,20 +105,23 @@ export function AskAiProvider({children}: {children: ReactNode}) {
     } finally {
       setIsLoading(false);
     }
-  }, [isLoading, messages]);
+  }, [domain, isLoading, messages]);
 
   const value = useMemo(
     () => ({
       isOpen,
+      domain,
       messages,
       isLoading,
       error,
       open,
       close,
+      setDomain,
+      resetDomain,
       sendMessage,
       clearError,
     }),
-    [clearError, close, error, isLoading, isOpen, messages, open, sendMessage],
+    [clearError, close, domain, error, isLoading, isOpen, messages, open, resetDomain, sendMessage, setDomain],
   );
 
   return <AskAiContext.Provider value={value}>{children}</AskAiContext.Provider>;
