@@ -5,7 +5,7 @@ title: Overview
 
 # LXRJ45
 
-![LXRJ45](/img/products/LXRJ45.png)
+<img src="/img/products/LXRJ45.png" alt="LXRJ45" width="50%" />
 
 > Sample content. Replace with the finalized module specifications and part
 > numbers; always refer to the datasheet for production designs.

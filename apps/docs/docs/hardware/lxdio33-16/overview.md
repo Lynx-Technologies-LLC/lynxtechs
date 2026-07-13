@@ -5,7 +5,7 @@ title: Overview
 
 # LXDIO33-16
 
-![LXDIO33-16](/img/products/LXDIO33-16.png)
+<img src="/img/products/LXDIO33-16.png" alt="LXDIO33-16" width="50%" />
 
 > Sample content. Replace with the finalized module specifications and part
 > numbers; always refer to the datasheet for production designs.

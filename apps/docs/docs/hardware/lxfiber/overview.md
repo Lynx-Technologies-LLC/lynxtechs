@@ -5,7 +5,7 @@ title: Overview
 
 # LXFIBER
 
-![LXFIBER](/img/products/LXFIBER.png)
+<img src="/img/products/LXFIBER.png" alt="LXFIBER" width="50%" />
 
 > Sample content. Replace with the finalized module specifications and part
 > numbers; always refer to the datasheet for production designs.
