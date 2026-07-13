@@ -29,7 +29,7 @@ The `lxmaster` command-line tool prepares the host and manages the network befor
 - **Run on the RT core** — launch any application inside the isolated real-time CPU slice with all environment variables forwarded, so you get deterministic scheduling without modifying your binary.
 - **Debug and diagnose** — run jitter benchmarks, inspect slave states, and read DC-sync telemetry directly from the command line, without starting your application.
 
-See the [CLI Reference](./cli.md) for the full command listing and flags.
+See the [CLI Tutorials](./cli/) for step-by-step guides to each command.
 
 ---
 
@@ -60,5 +60,7 @@ See [Getting Started](./getting-started.md) for a full build and run walkthrough
 
 - **[EtherCAT Basics](./ethercat-basics)** — foundational EtherCAT concepts before diving into LXMASTER.
 - **[Getting Started](./getting-started.md)** — install LXMASTER and run your first application.
+- **[C++ Application Tutorials](./tutorials)** — learn facades and device profiles from basics to advanced.
+- **[CLI Tutorials](./cli/)** — step-by-step guides to the `lxmaster` command-line tool.
 - **[C++ API Reference](./api)** — full library reference.
 - **[Release Notes](./release-notes)** — version history and upgrade notes.

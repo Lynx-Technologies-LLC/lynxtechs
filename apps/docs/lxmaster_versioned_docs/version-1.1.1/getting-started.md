@@ -49,7 +49,7 @@ DC-sync. Re-run after any reboot it requests until setup completes. Settings
 are written to `/etc/profile.d/lxmaster-config.sh` and picked up automatically
 by the library at runtime.
 
-See the [CLI Reference — `host setup`](./cli.md#host-setup) for all flags,
+See the [CLI Tutorials — `host`](./cli/host) for all flags,
 profiles, and non-interactive options.
 
 ## Hello, EtherCAT (C++)
@@ -115,6 +115,7 @@ sudo lxmaster run test_servo --eni network.eni.xml
 ## Next steps
 
 - Read the [Overview](./overview.md) for the architecture.
+- Work through the [C++ Application Tutorials](./tutorials) to learn facades and device profiles.
 - See the [C++ API Reference](./api) for every public type and method.
-- See the [CLI Reference](./cli.md) for host setup, diagnostics, and workload launching.
+- See the [CLI Tutorials](./cli/) for host setup, diagnostics, and workload launching.
 - Explore the [Example Projects](./examples) and the [API Reference](./api).
