@@ -35,12 +35,16 @@ more depth.
 
 You will need:
 
-1. **LXMASTER installed** on your machine (`find_package(lxmaster CONFIG REQUIRED)`
+1. **A valid license** — a demo, developer, or device license is required to run
+   LXMASTER. Contact [license@lynxtechs.com](mailto:license@lynxtechs.com) to
+   request a demo license. See the [license tutorial](../cli/license) for
+   activation steps.
+2. **LXMASTER installed** on your machine (`find_package(lxmaster CONFIG REQUIRED)`
    must resolve). See [Getting Started](../getting-started).
-2. **A configured host** — run `lxmaster host setup` once so the EtherCAT
+3. **A configured host** — run `lxmaster host setup` once so the EtherCAT
    interface name is published to the environment. See the
    [host tutorial](../cli/host).
-3. **An ENI file** describing your bus. Generate one with
+4. **An ENI file** describing your bus. Generate one with
    [`lxmaster scan`](../cli/scan) + [`lxmaster eni gen`](../cli/eni).
 
 Every example in this series uses the same skeleton to build against the
