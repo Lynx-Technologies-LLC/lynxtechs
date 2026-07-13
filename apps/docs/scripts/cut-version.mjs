@@ -36,10 +36,4 @@ execFileSync('npx', ['docusaurus', 'docs:version:lxmaster', version], {
   env,
 });
 
-console.log(`==> Updating docs/lxmaster symlink to version-${version}`);
-import {rmSync, symlinkSync} from 'node:fs';
-const symlinkPath = resolve(appDir, 'docs/lxmaster');
-rmSync(symlinkPath, {recursive: true, force: true});
-symlinkSync(`../../lxmaster_versioned_docs/version-${version}`, symlinkPath);
-
 console.log(`==> Done. Review lxmaster_versioned_docs/version-${version}/ and commit.`);
