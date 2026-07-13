@@ -5,6 +5,7 @@
 // step logs a warning and leaves the committed placeholder content in place so
 // the site still builds. Set SYNC_STRICT=1 to fail the build if a step errors.
 
+import {cpSync, readFileSync, rmSync} from 'node:fs';
 import {dirname, resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -14,6 +15,19 @@ import {syncReleaseNotes} from './sync-release-notes.mjs';
 import {syncExamples} from './sync-examples.mjs';
 
 const strict = process.env.SYNC_STRICT === '1';
+
+// Populate docs/lxmaster/ from the latest versioned docs so Docusaurus always
+// has a valid current-version source, without a git-committed symlink (which
+// breaks on Vercel and Windows). This runs before every start/build.
+const appRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const versionsFile = resolve(appRoot, 'lxmaster_versions.json');
+const versions = JSON.parse(readFileSync(versionsFile, 'utf8'));
+const latestVersion = versions[0];
+const versionedSrc = resolve(appRoot, `lxmaster_versioned_docs/version-${latestVersion}`);
+const currentDst  = resolve(appRoot, 'docs/lxmaster');
+console.log(`[prebuild] Seeding docs/lxmaster from version-${latestVersion}`);
+rmSync(currentDst, {recursive: true, force: true});
+cpSync(versionedSrc, currentDst, {recursive: true});
 
 const steps = [
   {name: 'LXMASTER API reference', run: syncApiReference},
@@ -43,7 +57,6 @@ if (failed && strict) {
 
 console.log('[prebuild] Done.');
 
-const appRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sanitized = sanitizeApiDocs(appRoot);
 console.log(
   `[prebuild] Sanitized API docs: ${sanitized.changedFiles} file(s) updated.`,
