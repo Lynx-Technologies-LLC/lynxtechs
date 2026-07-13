@@ -1,0 +1,235 @@
+.root {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Stat cards ─────────────────────────────────────────────────── */
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .statsRow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  border-radius: var(--ifm-border-radius);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+  gap: 0.25rem;
+}
+
+.statCount {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  text-align: center;
+}
+
+.statCard--available {
+  border-color: var(--ifm-color-success);
+  background: color-mix(in srgb, var(--ifm-color-success) 8%, var(--ifm-background-surface-color));
+}
+.statCard--available .statCount {
+  color: var(--ifm-color-success-dark);
+}
+
+.statCard--in-development {
+  border-color: var(--ifm-color-info);
+  background: color-mix(in srgb, var(--ifm-color-info) 8%, var(--ifm-background-surface-color));
+}
+.statCard--in-development .statCount {
+  color: var(--ifm-color-info-dark);
+}
+
+.statCard--planned {
+  border-color: var(--ifm-color-warning);
+  background: color-mix(in srgb, var(--ifm-color-warning) 8%, var(--ifm-background-surface-color));
+}
+.statCard--planned .statCount {
+  color: var(--ifm-color-warning-dark);
+}
+
+.statCard--not-planned {
+  border-color: var(--ifm-color-emphasis-300);
+}
+.statCard--not-planned .statCount {
+  color: var(--ifm-color-emphasis-500);
+}
+
+/* ── Filter pills ───────────────────────────────────────────────── */
+.filterRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--ifm-color-emphasis-300);
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.pill:hover {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.pill--active {
+  background: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrast-foreground, #fff);
+}
+
+.pill--active:hover {
+  background: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary-contrast-foreground, #fff);
+}
+
+/* ── Category blocks ────────────────────────────────────────────── */
+.categoryBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.categoryTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-800);
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+/* ── Table ──────────────────────────────────────────────────────── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-border-radius);
+  overflow: hidden;
+}
+
+.table thead tr {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.table th {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.table td {
+  padding: 0.65rem 0.9rem;
+  vertical-align: top;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  line-height: 1.5;
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.colFeature { width: 28%; }
+.colStatus  { width: 14%; }
+.colNote    { width: 58%; }
+
+.cellFeature {
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.cellStatus {
+  white-space: nowrap;
+}
+
+.cellNote {
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Row tinting */
+.row--available {
+  background: color-mix(in srgb, var(--ifm-color-success) 4%, transparent);
+}
+.row--in-development {
+  background: color-mix(in srgb, var(--ifm-color-info) 4%, transparent);
+}
+.row--planned {
+  background: color-mix(in srgb, var(--ifm-color-warning) 4%, transparent);
+}
+.row--not-planned {
+  opacity: 0.75;
+}
+
+/* ── Status badges ──────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge--available {
+  background: color-mix(in srgb, var(--ifm-color-success) 18%, transparent);
+  color: var(--ifm-color-success-darkest, var(--ifm-color-success-dark));
+  border: 1px solid color-mix(in srgb, var(--ifm-color-success) 35%, transparent);
+}
+
+.badge--in-development {
+  background: color-mix(in srgb, var(--ifm-color-info) 18%, transparent);
+  color: var(--ifm-color-info-darkest, var(--ifm-color-info-dark));
+  border: 1px solid color-mix(in srgb, var(--ifm-color-info) 35%, transparent);
+}
+
+.badge--planned {
+  background: color-mix(in srgb, var(--ifm-color-warning) 18%, transparent);
+  color: var(--ifm-color-warning-darkest, var(--ifm-color-warning-dark));
+  border: 1px solid color-mix(in srgb, var(--ifm-color-warning) 35%, transparent);
+}
+
+.badge--not-planned {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-600);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* ── Empty state ────────────────────────────────────────────────── */
+.emptyMsg {
+  color: var(--ifm-color-emphasis-500);
+  font-style: italic;
+  margin: 0;
+}
