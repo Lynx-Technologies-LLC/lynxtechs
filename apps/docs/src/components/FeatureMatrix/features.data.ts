@@ -80,7 +80,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'Multiple cyclic tasks (multi-rate)',
-        status: 'in-development',
+        status: 'not-planned',
         note: 'The backend supports multi-group process data, but only a single cyclic task is exposed. Wire on demand.',
       },
       {
@@ -170,7 +170,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'CoE Emergency messages',
-        status: 'in-development',
+        status: 'not-planned',
         note: 'Emergency messages are decoded internally into the error log but not yet surfaced as application callbacks.',
       },
       {
@@ -184,7 +184,7 @@ export const CATEGORIES: Category[] = [
     title: 'Mailbox protocols (EoE / FoE / SoE / AoE / VoE)',
     features: [
       {
-        name: 'EoE — EtherCAT over Ethernet',
+        name: 'EoE — Ethernet over EtherCAT',
         status: 'in-development',
         note: 'IP config, fragmented send/recv, and reassembly are in the backend; not yet exposed through the public API.',
       },
@@ -205,7 +205,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'SoE — Servo drive profile over EtherCAT (IDN)',
-        status: 'in-development',
+        status: 'not-planned',
         note: 'SoE read_idn/write_idn/map_idns is in the backend; not yet exposed through the public API.',
       },
       {
@@ -285,7 +285,7 @@ export const FEATURE_PACKS: FeaturePack[] = [
   },
   {
     name: 'Motion control — SERCOS / SoE drive profile',
-    status: 'in-development',
+    status: 'not-planned',
     note: 'SoE transport is available; no SERCOS drive profile layer on top.',
   },
   {
