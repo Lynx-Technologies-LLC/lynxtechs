@@ -80,7 +80,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'Multiple cyclic tasks (multi-rate)',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'The backend supports multi-group process data, but only a single cyclic task is exposed. Wire on demand.',
       },
       {
@@ -115,7 +115,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'EEPROM read / write / reload',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'Full EEPROM access (read, write, reload, dump) is available in the backend but not yet surfaced through the public API.',
       },
     ],
@@ -135,7 +135,7 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'Cyclic mailbox polling (unsolicited input data)',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'Cyclic mailbox handler exists in the backend but is not wired in the public API.',
       },
       {
@@ -160,17 +160,17 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'SDO complete access',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'Backend supports complete access but callers do not yet use it.',
       },
       {
         name: 'SDO information service (object dictionary listing)',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'OD listing is available in the backend but not exposed through the public API.',
       },
       {
         name: 'CoE Emergency messages',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'Emergency messages are decoded internally into the error log but not yet surfaced as application callbacks.',
       },
       {
@@ -185,7 +185,7 @@ export const CATEGORIES: Category[] = [
     features: [
       {
         name: 'EoE — EtherCAT over Ethernet',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'IP config, fragmented send/recv, and reassembly are in the backend; not yet exposed through the public API.',
       },
       {
@@ -195,17 +195,17 @@ export const CATEGORIES: Category[] = [
       },
       {
         name: 'FoE — File over EtherCAT (firmware up/download)',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'Full FoE get_file/put_file with password and progress hook is in the backend; not yet exposed through the public API.',
       },
       {
         name: 'BOOT state for firmware update',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'BOOT state exists; needs wiring in the bring-up sequence for firmware update use cases.',
       },
       {
         name: 'SoE — Servo drive profile over EtherCAT (IDN)',
-        status: 'not-planned',
+        status: 'in-development',
         note: 'SoE read_idn/write_idn/map_idns is in the backend; not yet exposed through the public API.',
       },
       {
@@ -280,12 +280,12 @@ export const FEATURE_PACKS: FeaturePack[] = [
   },
   {
     name: 'Cable redundancy',
-    status: 'not-planned',
+    status: 'in-development',
     note: 'Ring-topology plumbing exists in the backend; break-localisation and facade wiring remain.',
   },
   {
     name: 'Motion control — SERCOS / SoE drive profile',
-    status: 'not-planned',
+    status: 'in-development',
     note: 'SoE transport is available; no SERCOS drive profile layer on top.',
   },
   {
