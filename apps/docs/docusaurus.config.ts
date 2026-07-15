@@ -36,6 +36,7 @@ const config: Config = {
 
   plugins: [
     './plugins/ask-ai-dev-plugin.mjs',
+    '@docusaurus/plugin-vercel-analytics',
     [
       '@docusaurus/plugin-content-docs',
       {
