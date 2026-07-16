@@ -9,7 +9,7 @@ Before you run any EtherCAT workload, the Linux machine needs to be tuned for
 deterministic, real-time operation. The `host` command does this for you. You
 run it once per machine, and it is resumable across the reboots it asks for.
 
-## Step 1 — Run the guided setup
+## Run the guided setup
 
 ```bash
 sudo lxmaster host setup
@@ -76,10 +76,10 @@ stays on your current kernel and only sets up the essentials; `lowlatency` and
 ¹ DC-sync is enabled once the benchmark has run; jitter is advisory only.
 ² `realtime` enables DC-sync regardless of whether the benchmark has run.
 
-The values above are the profile defaults; the prompts in Step 1 (or `--enable`
+The values above are the profile defaults; the setup prompts (or `--enable`
 for automated runs) let you override them and opt into the optional extras.
 
-## Step 2 — Reboot when asked, then re-run
+## Reboot when asked, then re-run
 
 Setup may ask you to reboot (for example, to load a new kernel). After the
 reboot, run the same command again:
@@ -91,7 +91,7 @@ sudo lxmaster host setup
 **What you'll see:** it detects where it left off and continues from that stage.
 Repeat until it reports that setup is complete.
 
-## Step 3 — Confirm the result
+## Confirm the result
 
 Check the current state at any time (no root needed):
 
