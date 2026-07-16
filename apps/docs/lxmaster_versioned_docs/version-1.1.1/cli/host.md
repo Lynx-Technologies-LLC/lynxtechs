@@ -73,9 +73,8 @@ stays on your current kernel and only sets up the essentials; `lowlatency` and
 | Per-boot re-tuning service (re-pins IRQs / NIC / cpufreq each boot) | — | ✓ | ✓ |
 | Max OS isolation (systemd `AllowedCPUs` slices, `irqbalance` masked) | — | prompt (off) | ✓ |
 
-¹ **Gated:** DC-sync (distributed clocks) is enabled only if the benchmark passes.
-² `realtime` trusts the `PREEMPT_RT` kernel and enables DC-sync regardless of the
-benchmark result.
+¹ DC-sync is enabled once the benchmark has run; jitter is advisory only.
+² `realtime` enables DC-sync regardless of whether the benchmark has run.
 
 The values above are the profile defaults; the prompts in Step 1 (or `--enable`
 for automated runs) let you override them and opt into the optional extras.
