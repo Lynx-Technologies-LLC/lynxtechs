@@ -19,8 +19,8 @@ This starts an interactive wizard that picks a real-time profile, adjusts the
 kernel command line, applies real-time scheduling limits and IRQ affinity, and
 finishes with a timing benchmark.
 
-**What you'll see:** a series of prompts guiding you through each choice. Pick
-the profile that matches your goal:
+**What you'll see:** a series of prompts, each with a short explanation of what
+it does and why. First you pick the profile that matches your goal:
 
 | Profile | Best for |
 | --- | --- |
@@ -28,16 +28,57 @@ the profile that matches your goal:
 | `lowlatency` | Good timing on a low-latency kernel |
 | `realtime` | Best timing on a `PREEMPT_RT` kernel |
 
-:::warning
-The `realtime` profile requires a `PREEMPT_RT` kernel, and **you must install
-that kernel yourself** — this step is not done by lxmaster. Setup prints the
-exact install command for your distribution (for example
-`sudo apt install linux-image-rt-amd64` on Debian, or
-`sudo pro enable realtime-kernel` on Ubuntu), but you run it, reboot into the new
-kernel, and then re-run `sudo lxmaster host setup` to continue. (The
-`lowlatency` profile is different — setup can install the lowlatency kernel for
-you via apt.)
+After the profile, setup asks for the real-time details it needs (RT CPU core,
+EtherCAT interface, `SCHED_FIFO` priority, NIC handoff, and isolation), each
+prompt self-explaining and pre-filled with your saved value. It also offers an
+**optional checklist** of extra optimizations that are **off by default** — each
+trades power, security, or throughput for lower jitter, so enable only the ones
+that fit your host. Setup prints one line per optimization as it works, and a
+run interrupted by a reboot picks up where it left off.
+
+:::warning Install the real-time kernel yourself
+The `lowlatency` and `realtime` profiles assume the matching kernel is **already
+installed and booted** — lxmaster does **not** install a kernel for you. Use your
+distribution's package manager first, for example:
+
+- **Low-latency kernel** (for the `lowlatency` profile):
+  `sudo apt install linux-lowlatency` (Ubuntu).
+- **`PREEMPT_RT` kernel** (for the `realtime` profile):
+  `sudo pro enable realtime-kernel` (Ubuntu Pro), or
+  `sudo apt install linux-image-rt-amd64` (Debian).
+
+Reboot into the new kernel, then run `sudo lxmaster host setup`. For the
+`realtime` profile, setup checks the running kernel and warns (but continues) if
+it is not `PREEMPT_RT`.
 :::
+
+## What each profile applies
+
+The table below lists the optimizations each profile turns on by default. `demo`
+stays on your current kernel and only sets up the essentials; `lowlatency` and
+`realtime` add kernel isolation, NIC tuning, and per-boot re-tuning.
+
+| Optimization | `demo` | `lowlatency` | `realtime` |
+| --- | :---: | :---: | :---: |
+| RT scheduling limits (memlock unlimited, rtprio 99) | ✓ | ✓ | ✓ |
+| Host RT identity file (`/etc/profile.d/lxmaster-config.sh`) | ✓ | ✓ | ✓ |
+| Timing benchmark + DC-sync gate | ✓ ¹ | ✓ ¹ | ✓ ² |
+| Kernel cmdline isolation (`isolcpus`/`nohz_full`/`rcu_nocbs` + latency tokens) | — | ✓ | ✓ |
+| `vm.swappiness = 10` (sysctl) | — | ✓ | ✓ |
+| `kernel.sched_rt_runtime_us = -1` (sysctl) | — | — | ✓ |
+| EtherCAT NIC set unmanaged in NetworkManager | — | ✓ | ✓ |
+| NIC tuning (coalescing/offloads off, rings maxed, EEE/WoL off) | — | ✓ | ✓ |
+| NIC hardware IRQs pinned to the RT CPU | — | ✓ | ✓ |
+| `performance` governor + shallow cpuidle on the RT CPU | — | ✓ | ✓ |
+| Per-boot re-tuning service (re-pins IRQs / NIC / cpufreq each boot) | — | ✓ | ✓ |
+| Max OS isolation (systemd `AllowedCPUs` slices, `irqbalance` masked) | — | prompt (off) | ✓ |
+
+¹ **Gated:** DC-sync (distributed clocks) is enabled only if the benchmark passes.
+² `realtime` trusts the `PREEMPT_RT` kernel and enables DC-sync regardless of the
+benchmark result.
+
+The values above are the profile defaults; the prompts in Step 1 (or `--enable`
+for automated runs) let you override them and opt into the optional extras.
 
 ## Step 2 — Reboot when asked, then re-run
 
@@ -59,9 +100,9 @@ Check the current state at any time (no root needed):
 lxmaster host status
 ```
 
-**What you'll see:** the chosen profile, the setup stage, your real-time
-identity (such as `LXMASTER_RT_CPU` and `LXMASTER_RT_IFACE`), and whether the
-DC-sync timing gate passed.
+**What you'll see:** the chosen profile followed by a per-optimization table —
+each rule marked verified, skipped, pending, or failed. The timing benchmark row
+shows its result (scheduler p99 jitter and whether the DC-sync gate was allowed).
 
 To confirm the running machine still matches the profile, use:
 
@@ -69,8 +110,58 @@ To confirm the running machine still matches the profile, use:
 sudo lxmaster host verify
 ```
 
-**What you'll see:** a pass message, or a non-zero exit and a list of mismatches
-if something drifted.
+**What you'll see:** the same per-optimization table, re-checked live against the
+running system, and a non-zero exit if any applied optimization has drifted.
+
+:::tip Re-running the timing benchmark
+The timing benchmark runs once and its result is remembered. To force it to run
+again (for example after changing hardware or freeing up the machine):
+
+```bash
+sudo lxmaster host setup --requalify
+```
+
+If the benchmark binary wasn't available on an earlier run, a normal
+`sudo lxmaster host setup` will re-attempt it automatically.
+:::
+
+## Automating setup (no prompts)
+
+For provisioning scripts or CI, you can run setup without any interaction by
+supplying the answers up front. Set the profile and the required details as
+environment variables, and every prompt is skipped:
+
+```bash
+sudo env \
+  LXMASTER_SETUP_PROFILE=lowlatency \
+  LXMASTER_SETUP_CPU=3 \
+  LXMASTER_SETUP_IFACE=eno1 \
+  LXMASTER_SETUP_RT_PRIO=49 \
+  LXMASTER_SETUP_NM_UNMANAGED=y \
+  LXMASTER_SETUP_MAX_ISOLATION=y \
+  lxmaster host setup
+```
+
+To turn on optional checklist optimizations non-interactively, pass `--enable`
+with a comma-separated list of rule IDs (repeatable), or `--enable-all-optional`
+to turn on every one:
+
+```bash
+# just a couple
+sudo lxmaster host setup --enable mem.swapoff,mem.thp_never
+
+# everything the checklist offers
+sudo lxmaster host setup --enable-all-optional
+```
+
+The rule IDs are the ones shown in the left column of `lxmaster host status`
+(for example `mem.swapoff`, `cmdline.nosmt`, `nic.rps_xps`, `cpu.fixed_freq`).
+
+:::note
+A profile that changes the kernel command line still needs its reboot. In an
+automated flow, run setup, reboot, then run the same command again — it resumes
+from where it left off.
+:::
 
 ## Undoing the setup
 
